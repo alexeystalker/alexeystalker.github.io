@@ -1,10 +1,10 @@
-site_name: alexeystalker.github.io
-site_description: Сайт
+site_name: Цифровой сад и огород
+site_description: Мой цифровой сад.
 site_url: https://alexeystalker.github.io/
 
 theme:
     name: 'material'
-    logo: assets/logo/favicons.png
+    logo: assets/logo.png
     favicon: assets/logo/favicons.png
     custom_dir: overrides
     font:
