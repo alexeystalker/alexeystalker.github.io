@@ -1,7 +1,6 @@
 ---
-share: True
-tags: 
-- Obsidian/publish
+tags: [Obsidian/publish]
+share: true
 ---
 # Паблишер для Obsidian
 Опенсорсный паблишер для Обсидиана. Заточен для работы с Github Pages.
