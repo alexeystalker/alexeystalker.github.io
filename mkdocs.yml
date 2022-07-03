@@ -5,7 +5,7 @@ site_url: https://alexeystalker.github.io/
 theme:
     name: 'material'
     logo: assets/logo/logo.png
-    favicon: assets/logo/favicons.png
+    favicon: assets/logo/logo.png
     custom_dir: overrides
     font:
         text: Karla
