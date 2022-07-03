@@ -1,5 +1,5 @@
 ---
-share: true
+share: True
 ---
 # Цифровой сад и огород
 Всем привет! Это мой сайт для публикации некоторых карточек из моего хранилища [[Заметки/note-on-obsidian|Obsidian]]. Публикация осуществляется на Github Pages при помощи инструментария [[Obsidian/obsidian-publisher|Obsidian publisher]].
