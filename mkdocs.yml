@@ -4,7 +4,7 @@ site_url: https://alexeystalker.github.io/
 
 theme:
     name: 'material'
-    logo: assets/logo.png
+    logo: assets/logo/logo.png
     favicon: assets/logo/favicons.png
     custom_dir: overrides
     font:
