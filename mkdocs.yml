@@ -36,6 +36,8 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - navigation.expand
+        - search.suggest
+        - search.highlight
 # Extensions
 markdown_extensions:
   - footnotes
@@ -77,7 +79,10 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:mermaid2.fence_mermaid
 plugins:
-  - search
+  - search:
+        lang:
+            - ru
+            - en
   - ezlinks:
         wikilinks: true
   - mermaid2
