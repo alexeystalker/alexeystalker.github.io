@@ -1,8 +1,6 @@
 ---
-share: True
-tags: 
-- Obsidian/publish
-- github
+tags: [Obsidian/publish, github]
+share: true
 ---
 # Паблишер для Obsidian
 Опенсорсный паблишер для Обсидиана. Заточен для работы с Github Pages.
@@ -23,6 +21,9 @@ tags:
 -    Sharing state and custom folder hierarchy
 -    Mobile and desktop
 -    File mini preview on Hover - пока не разобрался, как включить.
+
+## Не поддерживаются
+- Обратные ссылки (в идеале - некий список карточек, ссылающихся на открытую карточку)
 
 ## Ссылки
 https://obsidianmkdocs.github.io/obsidian_mkdocs_publisher_docs/
