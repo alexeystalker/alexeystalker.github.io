@@ -121,3 +121,7 @@ extra_css:
     - assets/css/admonition.css
 extra:
   generator: false
+  analytics:
+    provider: google
+    property: G-34CEYP9XGS
+
