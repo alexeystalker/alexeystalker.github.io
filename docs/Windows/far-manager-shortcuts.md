@@ -1,7 +1,6 @@
 ---
-share: True
-tags: 
-- FAR
+tags: [FAR]
+share: true
 ---
 # Шорткаты в FAR Manager
-![[far-manager-shortcuts]]
+![[cheatography.com_alexzaitzev_cheat-sheets_far-3_.png]]
