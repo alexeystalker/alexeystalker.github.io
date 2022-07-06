@@ -1,6 +1,7 @@
 ---
-tags: [REST]
-share: true
+share: True
+tags: 
+- REST
 ---
 # Модель зрелости REST
 ![[Pasted image 20211123103606.png]]
