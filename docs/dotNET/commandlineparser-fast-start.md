@@ -1,7 +1,6 @@
 ---
-share: True
-tags: 
-- NET
+tags: [NET]
+share: true
 ---
 # Быстрый старт с библиотекой CommandLineParser
 ```csharp
@@ -23,13 +22,11 @@ namespace GetStartedSample
   }
 }
 ```
-
 `Options` - POCO класс, размеченный примерно так:
 ```csharp
 [Option('o',"option",HelpText = "Help text for option")]
 public string Option { get; set; }
 ```
-
 Также полезно сразу изучить пункт `Verbs` - это подкоманды в стиле git типа `git push`:
 ```csharp
 static int Main(string[] args) =>
@@ -41,8 +38,6 @@ static int Main(string[] args) =>
       errors => 1);
 ```
 
-
 ## Ссылки
-[[commandlineparser-fast-start|CommandLineParser]]
 https://github.com/commandlineparser/commandline/wiki/Getting-Started
 https://github.com/commandlineparser/commandline/wiki/Verbs
