@@ -39,6 +39,6 @@ static int Main(string[] args) =>
 ```
 
 ## Ссылки
-[[commandlineparser-fast-start]]
+[[commandlineparser-fast-start|CommandLineParser]]
 https://github.com/commandlineparser/commandline/wiki/Getting-Started
 https://github.com/commandlineparser/commandline/wiki/Verbs
