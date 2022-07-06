@@ -1,8 +1,6 @@
 ---
-share: True
-tags: 
-- NET/async
-- NET/ContinueWith
+tags: [NET/async, NET/ContinueWith]
+share: true
 ---
 # await ContinueWith
 Зачем может быть нужна конструкция `await someTask.ContinueWith(_ => {})`?
