@@ -36,7 +36,6 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - navigation.sections
-        - navigation.expand
         - search.suggest
         - search.highlight
 # Extensions
