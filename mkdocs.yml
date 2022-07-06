@@ -33,6 +33,7 @@ theme:
     features:
         - navigation.indexes
         - navigation.top
+        - navigation.sections
         - search.suggest
         - search.highlight
 # Extensions
