@@ -1,7 +1,6 @@
 ---
-hide: 
-- toc
-share: True
+hide: [toc, navigation]
+share: true
 ---
 # Цифровой сад и огород
 Всем привет! Это мой сайт для публикации некоторых карточек из моего хранилища [[note-on-obsidian|Obsidian]]. Публикация осуществляется на Github Pages при помощи инструментария [[obsidian-publisher|Obsidian publisher]].
