@@ -43,6 +43,6 @@ static int Main(string[] args) =>
 
 
 ## Ссылки
-[Библиотека CommandLineParser](commandlineparser-fast-start)
+[[library-commandlineparser|Библиотека CommandLineParser]]
 https://github.com/commandlineparser/commandline/wiki/Getting-Started
 https://github.com/commandlineparser/commandline/wiki/Verbs
