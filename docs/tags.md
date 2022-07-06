@@ -1,6 +1,7 @@
 ---
-share: true
-hide: [navigation]
+share: True
+hide: 
+- navigation
 ---
 # Теги
 
