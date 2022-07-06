@@ -1,6 +1,8 @@
 ---
-tags: [NET/library,console]
-share: true
+share: True
+tags: 
+- NET/library
+- console
 ---
 # CommandLineParser
 Библиотека для реализации UNIX-подобного стиля параметров командной строки. Очень крутая.
