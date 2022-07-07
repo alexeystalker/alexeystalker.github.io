@@ -1,6 +1,7 @@
 ---
-tags: [Web/pattern]
-share: true
+share: True
+tags: 
+- Web/pattern
 ---
 # Шаблон POST-REDIRECT-GET
 *POST-REDIRECT-GET (PRG)* - шаблон веб-разработки, который не дает пользователю случайно отправить одни и те же данные несколько раз.
