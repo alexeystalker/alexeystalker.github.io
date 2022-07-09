@@ -1,6 +1,7 @@
 ---
-tags: [Elasticsearch]
-share: true
+share: True
+tags: 
+- Elasticsearch
 ---
 # Clear Cache Api
 Используем для очистки кэшей эластика (нужно, например, для профилирования).
@@ -8,6 +9,7 @@ share: true
 ```bash
 curl -X POST "localhost:9200/my-index-000001/_cache/clear?pretty"
 ```
+
 ## Варианты запроса
 - `POST /<index>/_cache/clear`
 - `POST /_cache/clear`  
