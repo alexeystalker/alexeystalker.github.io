@@ -1,6 +1,7 @@
 ---
-tags: [NET/library]
-share: true
+share: True
+tags: 
+- NET/library
 ---
 # Polly
 Библиотека, реализующая паттерны [[retry-pattern|Retry]], [[circuit-breaker-pattern|Circute Breaker]],  [[timeout-pattern|Timeout]], [[bulkhead-isolation-pattern|Bulkhead Isolation]], и [[fallback-pattern|Fallback]]
