@@ -1,6 +1,7 @@
 ---
-tags: [Elasticsearch/mapping]
-share: true
+share: True
+tags: 
+- Elasticsearch/mapping
 ---
 # Меняем mapping в Elastic 
 Чтобы обновить маппинг в Эластике, нужно отправить PUT запрос с измененными маппингами, примерно так:
@@ -14,4 +15,3 @@ PUT /my-index-000001/_mapping
 	} 
 }
 ```
-

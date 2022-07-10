@@ -1,6 +1,7 @@
 ---
-tags: [Elasticsearch/администрирование]
-share: true
+share: True
+tags: 
+- Elasticsearch/администрирование
 ---
 # Elastic heap size
 При запуске Эластика (особенно на проде) нужно указать размер Java Heap, который выделяется и будет использован Эластиком.
