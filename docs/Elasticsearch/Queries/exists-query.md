@@ -1,6 +1,8 @@
 ---
-tags: [Elasticsearch/query, Elasticsearch/term-level]
-share: true
+share: True
+tags: 
+- Elasticsearch/query
+- Elasticsearch/term-level
 ---
 # Запрос exists в Elastic
 Возвращает документы, в которых присутствует указанное поле
@@ -14,6 +16,7 @@ GET /_search
 	} 
 }
 ```
+
 Считается, что поле "отсутствует" в следующих случаях
 - поле равно `null` или `[]`
 - В маппинге для поля указано `"index": false` [[index-map-param|см]]

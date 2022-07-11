@@ -1,8 +1,9 @@
 ---
-tags: [Elasticsearch/query, Elasticsearch/term-level]
-share: true
+share: True
+tags: 
+- Elasticsearch/query
+- Elasticsearch/term-level
 ---
-
 # Range query
 Возвращает документы, которые содержат значения в заданном диапазоне.
 Пример:
@@ -20,6 +21,7 @@ GET /_search
   }
 }
 ```
+
 ## Параметры
 `field` (required) - поле, по которому нужно осуществить поиск. Указывается как имя поля запроса, а не как значение поля `field`. Является объектом.
 ## Параметры `field`
@@ -37,7 +39,6 @@ GET /_search
 - `boost` - используется для увеличения или уменьшения показателя релевантности
 
 ## Замечания
-см. в [документации](https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl-range-query.html#range-query-notes) %% Если столкнусь, дополнить %%
 
 ## Ссылки
 https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl-range-query.html
