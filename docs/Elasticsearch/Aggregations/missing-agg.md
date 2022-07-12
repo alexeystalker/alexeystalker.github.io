@@ -1,6 +1,7 @@
 ---
-tags: [Elasticsearch/aggs]
-share: true
+share: True
+tags: 
+- Elasticsearch/aggs
 ---
 # Missing aggregation
 "Однокорзинная" агрегация, создает корзину c документами, в которых отсуствует поле (или имеет [[null-config|сконфигуренное]] NULL значение).
@@ -13,6 +14,7 @@ share: true
     }
 }
 ```
+
 Хорошо сочетается с [[range-agg|range]] агрегацией, когда нужно выделить документы без значений в отдельную колонку:
 ```json
 {
@@ -45,5 +47,6 @@ share: true
     }
 }
 ```
+
 ## Ссылки
 https://www.elastic.co/guide/en/elasticsearch/reference/7.8/search-aggregations-bucket-missing-aggregation.html

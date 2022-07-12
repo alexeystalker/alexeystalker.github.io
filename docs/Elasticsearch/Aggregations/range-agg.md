@@ -1,6 +1,7 @@
 ---
-tags: [Elasticsearch/aggs]
-share: true
+share: True
+tags: 
+- Elasticsearch/aggs
 ---
 # Range aggregation
 Агрегация на фиксированное число корзин - заданных диапазонов. Запрос примерно такой:
@@ -33,6 +34,7 @@ share: true
     }
 }
 ```
+
 При этом `to` ВХОДИТ в диапазон, а `from` - НЕ ВХОДИТ. Иными словами, `{ "from": 0, "to": 1 }` => `[0,1)`
 В корзины попадают только документы с имеющимися значениями, так что если нужно учесть также количество документов БЕЗ значения, **R.A.** удобно использовать в связке с [[missing-agg| Missing]], примерно так:
 ```json
@@ -66,5 +68,6 @@ share: true
     }
 }
 ```
+
 ## Ссылки
 https://www.elastic.co/guide/en/elasticsearch/reference/7.8/search-aggregations-bucket-range-aggregation.html
