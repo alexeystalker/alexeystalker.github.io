@@ -1,6 +1,8 @@
 ---
-tags: [OOP/pattern, Web/pattern]
-share: true
+share: True
+tags: 
+- OOP/pattern
+- Web/pattern
 ---
 # Шаблон "Request-Endpoint-Response"
 *REPR* (reaper) - шаблон проектирования, предназначенный для приложений с API.
