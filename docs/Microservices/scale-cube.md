@@ -1,6 +1,7 @@
 ---
-tags: [microservice]
-share: true
+share: True
+tags: 
+- microservice
 ---
 # Куб масштабирования
 Масштабировать (scale) приложение можно тремя способами, по **трём осям куба**.

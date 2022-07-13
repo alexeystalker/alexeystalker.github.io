@@ -1,6 +1,8 @@
 ---
-tags: [microservice/pattern,architecture]
-share: true
+share: True
+tags: 
+- microservice/pattern
+- architecture
 ---
 # Шаблон "Микросервисная архитектура"
 ![[Pasted image 20210829152253.png]]
