@@ -1,7 +1,7 @@
 ---
-tags:
- - microservice/patterns
-share: true
+share: True
+tags: 
+- microservice/patterns
 ---
 # Список шаблонов микросервисной архитектуры
 Перед списком надо упомянуть, что все шаблоны относятся к одному из трёх уровней:
