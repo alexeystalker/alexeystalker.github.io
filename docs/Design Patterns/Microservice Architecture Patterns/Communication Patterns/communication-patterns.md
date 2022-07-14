@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/patterns
-- microservice/communication
+share: true
+tags:
+ - microservice/patterns
+ - microservice/communication
 ---
 # Шаблоны взаимодействия
 ![[Pasted image 20210826151226.png]]
@@ -19,6 +19,7 @@ tags:
 	+ [[server-side-discovery-pattern|Обнаружение на стороне сервера]]
 + *Надежность* - Как обеспечить надежное взаимодействие с учетом того, что некоторые сервисы могут быть недоступны?
 	+ [[circuit-breaker-pattern|Предохранитель]]
+	+ [[retry-pattern|Повтор]]
 + *Транзакционный обмен сообщениями* - как интегрировать отправку сообщений и публикацию событий с транзакциями БД?
 	+ [[transactional-outbox-pattern|Outbox - публикация событий]]
 	+ [[polling-publisher-pattern|Опрашивающий издатель]]
