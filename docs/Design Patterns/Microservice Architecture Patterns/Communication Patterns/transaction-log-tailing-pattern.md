@@ -1,10 +1,10 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/communication
- - microservice/messaging
- - microservice/transactions
+share: True
+tags: 
+- microservice/pattern
+- microservice/communication
+- microservice/messaging
+- microservice/transactions
 ---
 # Шаблон "Отслеживание транзакционного журнала"
 Суть в том, что ретранслятор *отслеживает* транзакционный журнал БД. Каждое обновление БД представляется в виде записи в журнале транзакций. Можно прочитать этот журнал и опубликовать каждое изменение в качестве сообщения для брокера.

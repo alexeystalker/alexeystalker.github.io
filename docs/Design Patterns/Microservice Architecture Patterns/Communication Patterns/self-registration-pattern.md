@@ -1,8 +1,8 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/communication
+share: True
+tags: 
+- microservice/pattern
+- microservice/communication
 ---
 # Шаблон "Саморегистрация"
 Экземпляр сервиса регистрирует себя в реестре.

@@ -1,10 +1,10 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/communication
- - microservice/messaging
- - microservice/transactions
+share: True
+tags: 
+- microservice/pattern
+- microservice/communication
+- microservice/messaging
+- microservice/transactions
 ---
 # Шаблон "публикация событий" или Outbox
 ![[Pasted image 20210916203747.png]]

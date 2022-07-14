@@ -1,9 +1,9 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/communication
- - microservice/messaging
+share: True
+tags: 
+- microservice/pattern
+- microservice/communication
+- microservice/messaging
 ---
 # Шаблон "Идемпотентный потребитель"
 ![[Pasted image 20210916201007.png]]
