@@ -1,7 +1,7 @@
 ---
-share: true
-tags:
- - microservice/patterns
+share: True
+tags: 
+- microservice/patterns
 ---
 # Шаблоны для решения сквозных проблем
 - [[externalized-configuration-pattern|Конфигурация, вынесенная вовне]]
