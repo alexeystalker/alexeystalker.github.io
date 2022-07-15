@@ -1,6 +1,8 @@
 ---
-hide: [toc, navigation]
-share: true
+hide: 
+- toc
+- navigation
+share: True
 ---
 # Цифровой сад и огород
 Всем привет! Это мой сайт для публикации некоторых карточек из моего хранилища [[note-on-obsidian|Obsidian]]. Публикация осуществляется на Github Pages при помощи инструментария [[obsidian-publisher|Obsidian publisher]].
@@ -11,4 +13,3 @@ share: true
 
 ## Новости
 13.07.22 - Начинаю выкладывать [[microservice-architecture-patterns|справочник шаблонов микросервисной архитектуры]] из книжки Криса Ричардсона "Шаблоны микросервисной архитектуры".
-
