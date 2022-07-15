@@ -124,4 +124,6 @@ extra:
   analytics:
     provider: google
     property: G-34CEYP9XGS
-
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/AlexStalkerConnectionBot
