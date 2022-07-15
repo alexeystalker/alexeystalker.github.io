@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /tags
+Sitemap: https://garden.stalker-home.xyz/sitemap.xml

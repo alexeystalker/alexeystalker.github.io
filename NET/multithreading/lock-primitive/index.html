@@ -1,0 +1,1161 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Мой цифровой сад." name="description"/>
+<link href="https://garden.stalker-home.xyz/NET/multithreading/lock-primitive/" rel="canonical"/>
+<link href="../../../assets/logo/logo.png" rel="icon"/>
+<meta content="mkdocs-1.3.0, mkdocs-material-8.3.9" name="generator"/>
+<title>lock (Monitor.Enter / Monitor.Exit) - Цифровой сад и огород</title>
+<link href="../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Karla:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Karla";--md-code-font:"Ubuntu Mono"}</style>
+<link href="../../../assets/css/img-grids-floats.css" rel="stylesheet"/>
+<link href="../../../assets/css/utils.css" rel="stylesheet"/>
+<link href="../../../assets/css/custom_attributes.css" rel="stylesheet"/>
+<link href="../../../assets/css/tooltipster.bundle.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link href="../../../assets/css/grid.css" rel="stylesheet"/>
+<link href="../../../assets/css/admonition.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-34CEYP9XGS",{page_path:e.pathname})})})</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+                $(document).ready(function() {
+                    $('.link-tooltip').tooltipster();
+                });
+        </script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<meta content="lock (Monitor.Enter / Monitor.Exit)" property="og:title"/>
+<meta content="lock (Monitor.Enter / Monitor.Exit)" name="twitter:title"/>
+<meta content="Мой цифровой сад." name="og:description"/>
+<meta content="Мой цифровой сад." name="twitter:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="" property="og:image"/>
+<meta content="" name="twitter:image"/>
+</link></head>
+<body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#lock-monitorenter-monitorexit">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--lifted" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="Цифровой сад и огород" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Цифровой сад и огород">
+<img alt="logo" src="../../../assets/logo/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Цифровой сад и огород
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              lock (Monitor.Enter / Monitor.Exit)
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="light-blue" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="blue" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Вкладки" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      Цифровой сад и огород
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../tags/">
+      Теги
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Design%20Patterns/memento-pattern/">
+        Design Patterns
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Elasticsearch/analyze-api/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Microservices/scale-cube/">
+        Microservices
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../await-continuewith/">
+        NET
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Obsidian/obsidian-publisher/">
+        Obsidian
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Router/Asuswrt-Merlin/">
+        Router
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Windows/far-manager-shortcuts/">
+        Windows
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/note-on-digital-garden/">
+        Заметки
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/">
+        Интернет
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authentication/">
+        Определения
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/cap-theorem/">
+        Цитаты
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Цифровой сад и огород" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Цифровой сад и огород">
+<img alt="logo" src="../../../assets/logo/logo.png"/>
+</a>
+    Цифровой сад и огород
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Цифровой сад и огород
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tags/">
+        Теги
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Design Patterns" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/memento-pattern/">
+        Шаблон "Хранитель"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/mvc-pattern/">
+        Шаблон "Model-View-Controller"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/prg-pattern/">
+        Шаблон POST-REDIRECT-GET
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/repr-pattern/">
+        Шаблон "Request-Endpoint-Response"
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+          Microservice Architecture Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Microservice Architecture Patterns" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Microservice Architecture Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/microservice-architecture-patterns/">
+        Список шаблонов микросервисной архитектуры
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_2" id="__nav_3_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5_2">
+          Application Architecture Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Application Architecture Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Application Architecture Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/application-architecture-patterns/">
+        Шаблоны архитектуры приложения
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/">
+        Шаблон "Микросервисная архитектура"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/">
+        Шаблон "Монолитная архитектура"
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3" id="__nav_3_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5_3">
+          Communication Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Communication Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Communication Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/">
+        Шаблон "API-шлюз"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/bff-pattern/">
+        Шаблон "Бэкенды для фронтендов" (BFF)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/">
+        Шаблон "Предохранитель"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/client-side-discovery-pattern/">
+        Шаблон "Обнаружение на клиентской стороне"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/communication-patterns/">
+        Шаблоны взаимодействия
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/">
+        Шаблон "Идемпотентный потребитель"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">
+        Шаблон "Обмен сообщениями"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/polling-publisher-pattern/">
+        Шаблон "Опрашивающий издатель"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/retry-pattern/">
+        Шаблон "Повтор"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/rpi-pattern/">
+        Шаблон "Удаленный вызов процедур"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/self-registration-pattern/">
+        Шаблон "Саморегистрация"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/server-side-discovery-pattern/">
+        Шаблон "Обнаружение на стороне сервера"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">
+        Шаблон "Реестр сервисов"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/third-party-registration-pattern/">
+        Шаблон "Сторонняя регистрация"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transaction-log-tailing-pattern/">
+        Шаблон "Отслеживание транзакционного журнала"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">
+        Шаблон "публикация событий" или Outbox
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_4" id="__nav_3_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5_4">
+          Cross Cutting Conserns Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Cross Cutting Conserns Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_5_4">
+<span class="md-nav__icon md-icon"></span>
+          Cross Cutting Conserns Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/cross-cutting-concerns-patterns/">
+        Шаблоны для решения сквозных проблем
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/externalized-configuration-pattern/">
+        Шаблон "Конфигурация, вынесенная вовне"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/microservice-chassis-pattern/">
+        Шаблон "Шасси микросервисов"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/service-template-pattern/">
+        Шаблон "Заготовка сервиса"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/sidecar-pattern/">
+        Шаблон Sidecar
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Elasticsearch
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Elasticsearch" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Elasticsearch
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/analyze-api/">
+        Analyze API
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/clear-cache-api/">
+        Clear Cache Api
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/elastic-clone/">
+        Как склонировать индекс Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/has-child-oom/">
+        OutOfMemory в Эластике при has_child запросе
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5">
+          Aggregations
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Aggregations" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+          Aggregations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Aggregations/bucket-aggs/">
+        Bucket aggregations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Aggregations/bucket-sort-agg/">
+        bucket_sort agg
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Aggregations/elastic-aggs/">
+        Агрегации в Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Aggregations/filter-agg/">
+        Filter Aggregation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Aggregations/missing-agg/">
+        Missing aggregation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Aggregations/pipeline-aggs/">
+        Конвеерные агрегации (pipeline aggs)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Aggregations/range-agg/">
+        Range aggregation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Aggregations/terms-agg/">
+        Terms Aggregation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" id="__nav_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_6">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Configuration" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_6">
+<span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Configuration/blocks-write/">
+        Закрыть на запись индекс Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Configuration/heap-size/">
+        Elastic heap size
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Configuration/mapping-update/">
+        Меняем mapping в Elastic
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Configuration/number-of-replicas/">
+        Настройка числа реплик Elasticsearch
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" id="__nav_4_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_7">
+          Queries
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Queries" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_7">
+<span class="md-nav__icon md-icon"></span>
+          Queries
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Queries/exists-query/">
+        Запрос exists в Elastic
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Queries/joining-queries/">
+        Joining queries
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Queries/nested-query/">
+        Query в nested документах
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Queries/query-dsl/">
+        Query DSL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Queries/range-query/">
+        Range query
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Queries/term-level-queries/">
+        Term-level queries
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/Queries/term-query/">
+        term query
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Microservices
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Microservices" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Microservices
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Microservices/scale-cube/">
+        Куб масштабирования
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Microservices/service-definition/">
+        Что такое сервис
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          NET
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="NET" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          NET
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../await-continuewith/">
+        await ContinueWith
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../commandlineparser-fast-start/">
+        Быстрый старт с библиотекой CommandLineParser
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../encoding-net-core/">
+        Encoding в NetCore
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4">
+          AspNetCore
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="AspNetCore" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+          AspNetCore
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AspNetCore/httpcontext/">
+        Объект HttpContext
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5">
+          Libraries
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Libraries" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          Libraries
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../libraries/library-commandlineparser/">
+        CommandLineParser
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../libraries/library-polly/">
+        Polly
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" id="__nav_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_6">
+          Multithreading
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Multithreading" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_6">
+<span class="md-nav__icon md-icon"></span>
+          Multithreading
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interlocked-primitive/">
+        Interlocked
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          lock (Monitor.Enter / Monitor.Exit)
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        lock (Monitor.Enter / Monitor.Exit)
+      </a>
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitorenterobject-boolean">
+    Monitor.Enter(Object, Boolean)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitorenter-monitorexit-valuetype">
+    Monitor.Enter / Monitor.Exit и ValueType
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    Ссылки
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../monitor-wait-pulse-all-primitive/">
+        Monitor.Wait / Monitor.Pulse / Monitor.PulseAll
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+          Obsidian
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Obsidian" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Obsidian
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Obsidian/obsidian-publisher/">
+        Паблишер для Obsidian
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+          Router
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Router" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Router
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Router/Asuswrt-Merlin/">
+        Asuswrt-Merlin
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Windows" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Windows/far-manager-shortcuts/">
+        Шорткаты в FAR Manager
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Windows/myhomelib/">
+        MyHomeLib
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10">
+          Заметки
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Заметки" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Заметки
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/note-on-digital-garden/">
+        Цифровой сад
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/note-on-obsidian/">
+        Заметка про Obsidian
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          Интернет
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Интернет" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          Интернет
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" id="__nav_11_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/">REST</a>
+<label for="__nav_11_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="REST" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_1">
+<span class="md-nav__icon md-icon"></span>
+          REST
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-maturity-model/">
+        Модель зрелости REST
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-operation-binding-difficulty/">
+        Трудности с привязкой операций к HTTP-командам
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-several-resources-difficulty/">
+        Трудности извлечения нескольких ресурсов за один запрос
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" id="__nav_11_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_2">
+          Протоколы
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Протоколы" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_2">
+<span class="md-nav__icon md-icon"></span>
+          Протоколы
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/">
+        gRPC (Remote Procedure Call от Google)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/http/">
+        HTTP - Hypertext Transfer Protocol
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">
+        OAuth 2.0
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12">
+          Определения
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Определения" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          Определения
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authentication/">
+        Аутентификация
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authorization/">
+        Авторизация
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/cohesion/">
+        Cohesion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/coupling/">
+        Coupling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/linked-list/">
+        Связный список
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/optimistic-lock/">
+        Оптимистическая блокировка
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/pessimistic-lock/">
+        Пессимистическая блокировка
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/semantic-versioning/">
+        Семантическая нумерация версий
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" id="__nav_13" type="checkbox"/>
+<label class="md-nav__link" for="__nav_13">
+          Цитаты
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Цитаты" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+          Цитаты
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/cap-theorem/">
+        CAP-теорема
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/conways-law/">
+        Закон Конвея
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/law-of-holes/">
+        Закон ямы
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitorenterobject-boolean">
+    Monitor.Enter(Object, Boolean)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitorenter-monitorexit-valuetype">
+    Monitor.Enter / Monitor.Exit и ValueType
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    Ссылки
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag" href="../../../tags/#netmultithreading">
+          NET/multithreading
+        </a>
+</nav>
+<h1 id="lock-monitorenter-monitorexit">lock (Monitor.Enter / Monitor.Exit)<a class="headerlink" href="#lock-monitorenter-monitorexit" title="Permanent link">¶</a></h1>
+<p>Ключевое слово <code>lock</code> используется для реализации идеи критической секции.<br/>
+Использует ссылочный объект в качестве объекта синхронизации.<br/>
+Критическая секция оформляется следующим образом:<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">lock</span><span class="p">(</span><span class="n">syncObj</span><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="cm">/*код критической секции*/</span><span class="w"></span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<p>Является синтаксическим сахаром над следующей конструкцией:<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Monitor</span><span class="p">.</span><span class="n">Enter</span><span class="p">(</span><span class="n">syncObj</span><span class="p">);</span><span class="w"></span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">try</span><span class="w"></span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="cm">/*код критической секции*/</span><span class="w"></span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">finally</span><span class="w"></span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="n">Monitor</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="n">syncObj</span><span class="p">);</span><span class="w"></span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<p>Желательно не использовать внутри такой критической секции асинхронные методы (с <code>await</code>), так как <code>Monitor.Exit()</code> должен выполняться на том же потоке, что и <code>Monitor.Enter()</code>, иначе будет выброшено исключение <code>SynchronizationLockException</code>. Исключение из этого правила составляет случай, когда существует контекст синхронизации, и управление вернется в тот же поток (например, UI-поток WinForms или WPF).</p>
+<h2 id="monitorenterobject-boolean">Monitor.Enter(Object, Boolean)<a class="headerlink" href="#monitorenterobject-boolean" title="Permanent link">¶</a></h2>
+<p><code>Monitor.Enter(Object, Boolean)</code> - перегрузка метода Enter, помимо взятия блокировки атомарно записывающая во второй параметр состояние блокировки. </p>
+<h2 id="monitorenter-monitorexit-valuetype">Monitor.Enter / Monitor.Exit и ValueType<a class="headerlink" href="#monitorenter-monitorexit-valuetype" title="Permanent link">¶</a></h2>
+<p>Если передавать в <code>Monitor.Enter()</code>переменную <code>ValueType</code> типа, она подвергнется боксингу. При этом каждый раз создается новый ссылочный объект, и, соответственно, блокировка не выполнится. То же в случае с <code>Monitor.Exit()</code> - так как в метод передалась ссылка на новую переменную, <code>Monitor.Exit()</code> выбросит исключение <code>SynchronizationLockException</code>.</p>
+<h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor.enter?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor.enter?view=net-6.0</a><br/>
+<a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor.exit?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor.exit?view=net-6.0</a><br/>
+<a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor?view=net-6.0</a><strong>the-monitor-class-an-overview</strong>{: <strong class="hash" id="the">the</strong>-monitor-class-an-overview .hash}</p>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Последнее обновление:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 15, 2022</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            К началу
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Interlocked" class="md-footer__link md-footer__link--prev" href="../interlocked-primitive/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Назад
+              </span>
+              Interlocked
+            </div>
+</div>
+</a>
+<a aria-label="Вперед: Monitor.Wait / Monitor.Pulse / Monitor.PulseAll" class="md-footer__link md-footer__link--next" href="../monitor-wait-pulse-all-primitive/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+              Monitor.Wait / Monitor.Pulse / Monitor.PulseAll
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://t.me/AlexStalkerConnectionBot" rel="noopener" target="_blank" title="t.me">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+<script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+<script src="../../../assets/js/mathjax.js"></script>
+<script src="../../../assets/js/utils.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../../../assets/js/tooltipster.bundle.js"></script>
+</body>
+</html>
