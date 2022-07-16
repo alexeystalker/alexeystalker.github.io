@@ -361,6 +361,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-fastendpoints/</loc>
+         <lastmod>2022-07-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-polly/</loc>
          <lastmod>2022-07-16</lastmod>
          <changefreq>daily</changefreq>
