@@ -15,30 +15,32 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Karla:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Karla";--md-code-font:"Ubuntu Mono"}</style>
-<link href="../../../assets/css/img-grids-floats.css" rel="stylesheet"/>
-<link href="../../../assets/css/utils.css" rel="stylesheet"/>
-<link href="../../../assets/css/custom_attributes.css" rel="stylesheet"/>
-<link href="../../../assets/css/tooltipster.bundle.min.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
-<link href="../../../assets/css/grid.css" rel="stylesheet"/>
+<link href="../../../assets/css/template/blog.css" rel="stylesheet"/>
+<link href="../../../assets/css/template/grid.css" rel="stylesheet"/>
+<link href="../../../assets/css/template/img-grids-float.css" rel="stylesheet"/>
+<link href="../../../assets/css/template/tooltipster.bundle.min.css" rel="stylesheet"/>
+<link href="../../../assets/css/template/utils.css" rel="stylesheet"/>
 <link href="../../../assets/css/admonition.css" rel="stylesheet"/>
+<link href="../../../assets/css/custom_attributes.css" rel="stylesheet"/>
+<link href="../../../assets/css/customization.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-34CEYP9XGS",{page_path:e.pathname})})})</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-                $(document).ready(function() {
-                    $('.link-tooltip').tooltipster();
-                });
-        </script>
+    $(document).ready(function () {
+      $('.link-tooltip').tooltipster();
+    });
+  </script>
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Elastic heap size" property="og:title"/>
 <meta content="Elastic heap size" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
 <meta content="Мой цифровой сад." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="" property="og:image"/>
-<meta content="" name="twitter:image"/>
+<meta content="https://garden.stalker-home.xyz/" property="og:image"/>
+<meta content="https://garden.stalker-home.xyz/" name="twitter:image"/>
 </link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
@@ -172,7 +174,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/">
+<a class="md-tabs__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-maturity-model/">
         Интернет
       </a>
 </li>
@@ -428,6 +430,56 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_5" id="__nav_3_5_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5_5">
+          Data Management Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Data Management Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_5_5">
+<span class="md-nav__icon md-icon"></span>
+          Data Management Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">
+        Шаблон "Агрегат" из DDD
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/data-management-patterns/">
+        Шаблоны согласованности данных
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/">
+        Шаблон "Своя БД у сервиса"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">
+        Шаблон "Доменное событие" из DDD
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/">
+        Шаблон "Порождение событий"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/">
+        Шаблон "Повествование"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/shared-database-pattern/">
+        Шаблон "Одна БД для сервисов"
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -649,6 +701,41 @@
         Что такое сервис
       </a>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3">
+          Sagas
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Sagas" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Sagas
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Microservices/Sagas/saga-compensating/">
+        Компенсируемые транзакции
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Microservices/Sagas/saga-repeatable/">
+        Повторяемые транзакции
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Microservices/Sagas/saga-structure/">
+        Структура повествования
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Microservices/Sagas/saga-turning-point/">
+        Поворотная транзакция
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -861,12 +948,10 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" id="__nav_11_1" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/">REST</a>
-<label for="__nav_11_1">
-<span class="md-nav__icon md-icon"></span>
+<label class="md-nav__link" for="__nav_11_1">
+          REST
+          <span class="md-nav__icon md-icon"></span>
 </label>
-</div>
 <nav aria-label="REST" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_11_1">
 <span class="md-nav__icon md-icon"></span>
@@ -886,6 +971,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-several-resources-difficulty/">
         Трудности извлечения нескольких ресурсов за один запрос
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/">
+        REST (REpresentational State Transfer)
       </a>
 </li>
 </ul>
@@ -1050,9 +1140,41 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 10, 2022</span>
 </small>
 </div>
+<!-- Giscus -->
+<h2 id="__comments">Комментарии</h2>
+<script async="" crossorigin="anonymous" data-category-id="DIC_kwDOGlyxGM4CQMx1" data-emit-metadata="0" data-input-position="top" data-lang="fr" data-mapping="url" data-reactions-enabled="1" data-repo="mara-Li/Seed_Publish" data-repo-id="R_kgDOGlyxGA" data-theme="dark_dimmed" src="https://giscus.app/client.js">
+</script>
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light"
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
 </article>
 </div>
 </div>
