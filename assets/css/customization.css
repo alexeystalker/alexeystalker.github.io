@@ -1,6 +1,6 @@
 /*
 Customize your blog as you want here!
 */
-.md-footer__inner {
+.md-footer__inner .md-footer__inner:not([hidden]) {
   display: none;
 }
