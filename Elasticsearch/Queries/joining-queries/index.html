@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Joining queries" property="og:title"/>
 <meta content="Joining queries" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1235,8 +1235,8 @@
 <h1 id="joining-queries">Joining queries<a class="headerlink" href="#joining-queries" title="Permanent link">¶</a></h1>
 <p>Аналог Join запросов в SQL. Эластиковые join-подобные запросы спроектированы масштабироваться горизонтально.</p>
 <ul>
-<li><a href="../nested-query/" title="nested">nested</a> - для поиска по <code>nested</code> документам</li>
-<li><a href="../../has-child-query" title="has_child">has_child</a> и <a href="../../has-parent-query" title="has_parent">has_parent</a> - для parent-child документов</li>
+<li><a class="link-tooltip" data-tooltip-content="#nested_tooltip_id" href="../nested-query/" title="nested">nested</a> - для поиска по <code>nested</code> документам</li>
+<li><a class="link-tooltip" data-tooltip-content="#has_child_tooltip_id" href="../../has-child-query" title="has_child">has_child</a> и <a class="link-tooltip" data-tooltip-content="#has_parent_tooltip_id" href="../../has-parent-query" title="has_parent">has_parent</a> - для parent-child документов</li>
 </ul>
 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.8/joining-queries.html">https://www.elastic.co/guide/en/elasticsearch/reference/7.8/joining-queries.html</a></p>
@@ -1340,5 +1340,17 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="nested_tooltip_id"><p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/exists-query/">Exists</a> запрос для вложенного поля:<br/>
+```json<br/>
+{<br/>
+  “query”: {<br/>
+    “nested”: {<br/>
+      “path”: “leasing”,<br/>
+      …</p></div></div><div class="tooltip_templates"><div id="has_child_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="has_parent_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div></body>
 </html>

@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Bucket aggregations" property="og:title"/>
 <meta content="Bucket aggregations" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1235,10 +1235,10 @@
 Могут быть “однокорзинными”, использовать заданный набор корзин или создавать их динамически.</p>
 <p>Дальше будут упоминаться только те агрегации, с которыми я имел дело. Остальные см. в доке по ссылке.</p>
 <ul>
-<li><a href="../missing-agg/" title="Missing">Missing</a></li>
-<li><a href="../range-agg/" title="Range">Range</a></li>
-<li><a href="../filter-agg/" title="Filter">Filter</a></li>
-<li><a href="../terms-agg/" title="Terms">Terms</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Missing_tooltip_id" href="../missing-agg/" title="Missing">Missing</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Range_tooltip_id" href="../range-agg/" title="Range">Range</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Filter_tooltip_id" href="../filter-agg/" title="Filter">Filter</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Terms_tooltip_id" href="../terms-agg/" title="Terms">Terms</a></li>
 </ul>
 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket.html">https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket.html</a></p>
@@ -1342,5 +1342,55 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="Missing_tooltip_id"><p>“Однокорзинная” агрегация, создает корзину c документами, в которых отсуствует поле (или имеет <a class="wikilink" href="null-config">сконфигуренное</a> NULL значение).<br/>
+<code>json
+{
+    "aggs": {
+        "no_income": {
+            "missing": {"field": "income"}
+        }
+    }
+}</code></p>
+<p>Хорошо сочетается с <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Aggregations/range-agg/">range</a> агрегацией, когда нужно выделить документы без значений в отдельную колонку:<br/>
+```jso…</p></div></div><div class="tooltip_templates"><div id="Range_tooltip_id"><p>Агрегация на фиксированное число корзин - заданных диапазонов. Запрос примерно такой:</p>
+<p>```json<br/>
+{<br/>
+    “aggs”: {<br/>
+        “income_ranges”: {<br/>
+            “range”: {<br/>
+                “field”: “income”,<br/>
+                “keyed”: true,<br/>
+                “ranges”: [<br/>
+                    { “from”: 0, “to”: 1 },<br/>
+                    { “from”: 1, “to”: 100000 },<br/>
+                    { “from”: 10…</p></div></div><div class="tooltip_templates"><div id="Filter_tooltip_id"><p>“Однокорзинная” агрегация, которая собирает в корзину документы, соответствующие фильтру. Примерно так:<br/>
+```json<br/>
+{<br/>
+    “aggs”: {<br/>
+        “with_filter”: {<br/>
+            “filter”: {<br/>
+                “bool”: {<br/>
+                    “filter”: [<br/>
+                        {<br/>
+                            “terms”: {<br/>
+                                “status-tags”: [<br/>
+                                    “Active”,<br/>
+                                    “Bankruptcy”,<br/>
+                                    “Reorg”,<br/>
+                        …</p></div></div><div class="tooltip_templates"><div id="Terms_tooltip_id"><p>Агрегация с динамическим количеством корзин (по числу уникальных значений)<br/>
+Запрос:<br/>
+<code>json
+{
+    "aggs": {
+        "okveds": {
+            "terms": {
+                "field": "okved-xtr-exact",
+                "size": 10000
+            }
+        }
+    }
+}</code></p>
+<p>Параметры:</p>
+<li><code>field</code> - поле, по значениям которого создаются корзины и ведется подсчет</li>
+<li><code>size</code> - максимальное количество корзин. Сверху ограничено параметром кластера analyze.m…</li></div></div></body>
 </html>

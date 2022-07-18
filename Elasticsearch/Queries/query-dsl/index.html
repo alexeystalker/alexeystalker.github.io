@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Query DSL" property="og:title"/>
 <meta content="Query DSL" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1234,10 +1234,10 @@
 Запрос к Эластику состоит из <em>выражений (clauses}</em> <br/>
 Выражения могут быть двух типов:</p>
 <ul>
-<li><em>Листовые (Leaf)</em> - выражения, касающиеся значений в полях документа, такие как <a href="../../match-query" title="match">match</a>, <a href="../term-query/" title="term">term</a> или <a href="../range-query/" title="range">range</a>.</li>
-<li><em>Составные (Compound)</em> - выражения, оборачивающие другое листовое или составное выражение и предназначенные либо для объединения выражений в логическом смысле (такие как <a href="../../bool-query" title="bool">bool</a> или <a href="../../dis-max-query" title="dis_max">dis_max</a>), либо для того, чтобы изменить поведение этих выражений (как, например, <a href="../../constant-score-query" title="constant_score">constant_score</a>).</li>
+<li><em>Листовые (Leaf)</em> - выражения, касающиеся значений в полях документа, такие как <a class="link-tooltip" data-tooltip-content="#match_tooltip_id" href="../../match-query" title="match">match</a>, <a class="link-tooltip" data-tooltip-content="#term_tooltip_id" href="../term-query/" title="term">term</a> или <a class="link-tooltip" data-tooltip-content="#range_tooltip_id" href="../range-query/" title="range">range</a>.</li>
+<li><em>Составные (Compound)</em> - выражения, оборачивающие другое листовое или составное выражение и предназначенные либо для объединения выражений в логическом смысле (такие как <a class="link-tooltip" data-tooltip-content="#bool_tooltip_id" href="../../bool-query" title="bool">bool</a> или <a class="link-tooltip" data-tooltip-content="#dis_max_tooltip_id" href="../../dis-max-query" title="dis_max">dis_max</a>), либо для того, чтобы изменить поведение этих выражений (как, например, <a class="link-tooltip" data-tooltip-content="#constant_score_tooltip_id" href="../../constant-score-query" title="constant_score">constant_score</a>).</li>
 </ul>
-<p>Поведение выражений может различаться в зависимости от того, используются ли они в <a href="../../query-filter-context" title="контексте запроса (query) или фильтра">контексте запроса (query) или фильтра</a>.</p>
+<p>Поведение выражений может различаться в зависимости от того, используются ли они в <a class="link-tooltip" data-tooltip-content="#контекстезапросаqueryилифильтра_tooltip_id" href="../../query-filter-context" title="контексте запроса (query) или фильтра">контексте запроса (query) или фильтра</a>.</p>
 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl.html">https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl.html</a></p>
 <hr/>
@@ -1340,5 +1340,47 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="match_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="term_tooltip_id"><p>Ищет документы с точным вхождением терма. Как правило, это поля типа <code>keyword</code>.<br/>
+<code>json
+{
+    "query": {
+        "term": {
+            "opf-exact": {
+                "value": "50102"
+            }
+        }
+    }
+}</code></p>
+<p>В отличие от многих других запросов, имя поля указывается не как значение параметра <code>field</code>, а как имя поля объекта.</p>
+<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl-term-query.html</p></div></div><div class="tooltip_templates"><div id="range_tooltip_id"><p>Возвращает документы, которые содержат значения в заданном диапазоне.<br/>
+Пример:<br/>
+<code>json
+GET /_search
+{
+  "query": {
+    "range": {
+      "age": {
+        "gte": 10,
+        "lte": 20,
+        "boost": 2.0
+      }
+    }
+  }
+}</code></p>
+<p><code>field</code> (required) - поле, по которому нужно осуществить поиск. Указывается как имя поля запроса, а не как значение поля <code>field</code>. Является объект…</p></div></div><div class="tooltip_templates"><div id="bool_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="dis_max_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="constant_score_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="контекстезапросаqueryилифильтра_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div></body>
 </html>

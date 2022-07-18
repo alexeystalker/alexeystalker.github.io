@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Term-level queries" property="og:title"/>
 <meta content="Term-level queries" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1205,19 +1205,19 @@
         </a>
 </nav>
 <h1 id="term-level-queries">Term-level queries<a class="headerlink" href="#term-level-queries" title="Permanent link">¶</a></h1>
-<p><em>Запросы уровня терма</em> - запросы к точным значениям полей. Не используют анализ термов (в отличие от <a href="../../full-test-queries" title="полнотекстовых запросов">полнотекстовых запросов</a>).</p>
+<p><em>Запросы уровня терма</em> - запросы к точным значениям полей. Не используют анализ термов (в отличие от <a class="link-tooltip" data-tooltip-content="#полнотекстовыхзапросов_tooltip_id" href="../../full-test-queries" title="полнотекстовых запросов">полнотекстовых запросов</a>).</p>
 <ul>
-<li><a href="../exists-query/" title="exists">exists</a> - возвращает документы, в поле которых есть любое проиндексированное значение</li>
-<li><a href="../../fuzzy-query" title="fuzzy">fuzzy</a></li>
-<li><a href="../../ids-query" title="ids">ids</a></li>
-<li><a href="../../prefix-query" title="prefix">prefix</a></li>
-<li><a href="../range-query/" title="range">range</a></li>
-<li><a href="../../regexp-query" title="regexp">regexp</a></li>
-<li><a href="../term-query/" title="term">term</a> - возвращает документы, у которых в указанном поле есть точный терм</li>
-<li><a href="../../terms-query" title="terms">terms</a></li>
-<li><a href="../../terms-set-query" title="terms_set">terms_set</a></li>
-<li><a href="../../type-query" title="type">type</a></li>
-<li><a href="../../wildcard-query" title="wildcard">wildcard</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#exists_tooltip_id" href="../exists-query/" title="exists">exists</a> - возвращает документы, в поле которых есть любое проиндексированное значение</li>
+<li><a class="link-tooltip" data-tooltip-content="#fuzzy_tooltip_id" href="../../fuzzy-query" title="fuzzy">fuzzy</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#ids_tooltip_id" href="../../ids-query" title="ids">ids</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#prefix_tooltip_id" href="../../prefix-query" title="prefix">prefix</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#range_tooltip_id" href="../range-query/" title="range">range</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#regexp_tooltip_id" href="../../regexp-query" title="regexp">regexp</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#term_tooltip_id" href="../term-query/" title="term">term</a> - возвращает документы, у которых в указанном поле есть точный терм</li>
+<li><a class="link-tooltip" data-tooltip-content="#terms_tooltip_id" href="../../terms-query" title="terms">terms</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#terms_set_tooltip_id" href="../../terms-set-query" title="terms_set">terms_set</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#type_tooltip_id" href="../../type-query" title="type">type</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#wildcard_tooltip_id" href="../../wildcard-query" title="wildcard">wildcard</a></li>
 </ul>
 <hr/>
 <div class="md-source-file">
@@ -1319,5 +1319,72 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="полнотекстовыхзапросов_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="exists_tooltip_id"><p>Возвращает документы, в которых присутствует указанное поле<br/>
+<code>json
+GET /_search 
+{ 
+    "query": { 
+        "exists": { 
+            "field": "user" 
+        } 
+    } 
+}</code></p>
+<p>Считается, что поле “отсутствует” в следующих случаях</p>
+<li>поле равно <code>null</code> или <code>[]</code></li>
+<li>В маппинге для поля указано <code>"index": false</code> <a class="wikilink" href="-map-param">см</a></li>
+<li>длина значения поля больше чем указано в маппинге в параметре `ignore_…</li></div></div><div class="tooltip_templates"><div id="fuzzy_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="ids_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="prefix_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="range_tooltip_id"><p>Возвращает документы, которые содержат значения в заданном диапазоне.<br/>
+Пример:<br/>
+<code>json
+GET /_search
+{
+  "query": {
+    "range": {
+      "age": {
+        "gte": 10,
+        "lte": 20,
+        "boost": 2.0
+      }
+    }
+  }
+}</code></p>
+<p><code>field</code> (required) - поле, по которому нужно осуществить поиск. Указывается как имя поля запроса, а не как значение поля <code>field</code>. Является объект…</p></div></div><div class="tooltip_templates"><div id="regexp_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="term_tooltip_id"><p>Ищет документы с точным вхождением терма. Как правило, это поля типа <code>keyword</code>.<br/>
+<code>json
+{
+    "query": {
+        "term": {
+            "opf-exact": {
+                "value": "50102"
+            }
+        }
+    }
+}</code></p>
+<p>В отличие от многих других запросов, имя поля указывается не как значение параметра <code>field</code>, а как имя поля объекта.</p>
+<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl-term-query.html</p></div></div><div class="tooltip_templates"><div id="terms_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="terms_set_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="type_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="wildcard_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div></body>
 </html>

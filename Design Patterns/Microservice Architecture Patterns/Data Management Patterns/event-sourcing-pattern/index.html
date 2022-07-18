@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Шаблон " property="og:title" порождение="" событий""=""/>
 <meta content="Шаблон " name="twitter:title" порождение="" событий""=""/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1291,7 +1291,7 @@
         </a>
 </nav>
 <h1 id="_1">Шаблон “Порождение событий”<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>Сохраняет <a href="../aggregate-pattern/" title="агрегат">агрегат</a> в виде последовательности <a href="../domain-event-pattern/" title="доменных событий">доменных событий</a>, которые представляют изменение состояния. Приложение воссоздает текущее состояние, воспроизводя записанные события.<br/>
+<p>Сохраняет <a class="link-tooltip" data-tooltip-content="#агрегат_tooltip_id" href="../aggregate-pattern/" title="агрегат">агрегат</a> в виде последовательности <a class="link-tooltip" data-tooltip-content="#доменныхсобытий_tooltip_id" href="../domain-event-pattern/" title="доменных событий">доменных событий</a>, которые представляют изменение состояния. Приложение воссоздает текущее состояние, воспроизводя записанные события.<br/>
 События сохраняются в <em>хранилище событий</em> (event store), у которого есть API для добавления и получения событий сущности. Также хранилище событий выполняет роль брокера сообщений - у него есть API для подписки на события.<br/>
 Если для какой-то сущности событий очень много, можно использовать <em>снэпшоты</em> состояния сущности. Тогда для восстановления текущего состояния нужно воспроизвести события только до последнего снэпшота.</p>
 <h2 id="_2">Создание и обновление<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
@@ -1327,8 +1327,8 @@
 <li>Трудности при обращении к хранилищу событий</li>
 </ul>
 <h2 id="_7">Ссылки<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
-<p><a href="../../../ch-6-event-sourcing-benefits" title="Подробнее о преимуществах">Подробнее о преимуществах</a><br/>
-<a href="../../../ch-6-event-sourcing-drawbacks" title="Подробнее о недостатках">Подробнее о недостатках</a><br/>
+<p><a class="link-tooltip" data-tooltip-content="#Подробнееопреимуществах_tooltip_id" href="../../../ch-6-event-sourcing-benefits" title="Подробнее о преимуществах">Подробнее о преимуществах</a><br/>
+<a class="link-tooltip" data-tooltip-content="#Подробнееонедостатках_tooltip_id" href="../../../ch-6-event-sourcing-drawbacks" title="Подробнее о недостатках">Подробнее о недостатках</a><br/>
 <a href="https://microservices.io/patterns/data/event-sourcing.html">https://microservices.io/patterns/data/event-sourcing.html</a></p>
 <hr/>
 <div class="md-source-file">
@@ -1430,5 +1430,14 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="агрегат_tooltip_id"><p><em>Агрегат</em> - это кластер доменных объектов, с которыми можно обращаться как с единым целым. Он состоит из одной сущности и иногда одной или нескольких сущностей и объектов значений.<br/>
+<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210923205357.png"/><br/>
+Агрегаты разбивают доменную модель на блоки, а также проясняют область применения операций, таких как загрузка, обновление и удаление. Эти операции распрост…</p></div></div><div class="tooltip_templates"><div id="доменныхсобытий_tooltip_id"><p><em>Доменное событие</em> - это класс с именем на основе страдательного причастия прошедшего времени (создан, удалён и т.д.). Он содержит свойства, которые выразительно передают это событие. Например, класс события <code>OrderCreated</code> содержит <code>orderId</code>.<br/>
+Также у доменного события есть метаданные, такие как идентификатор и timestamp. Также может быть id пользователя, сделавше…</p></div></div><div class="tooltip_templates"><div id="Подробнееопреимуществах_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="Подробнееонедостатках_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div></body>
 </html>

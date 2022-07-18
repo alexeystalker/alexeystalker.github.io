@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Шаблон " property="og:title" обмен="" сообщениями""=""/>
 <meta content="Шаблон " name="twitter:title" обмен="" сообщениями""=""/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1239,11 +1239,11 @@
 <p>Сервисы асинхронно коммуницируют путём обмена сообщениями.<br/>
 Существуют следующие стили асинхронной коммуникации:</p>
 <ul>
-<li><a href="../../../request-response-messaging" title="Запрос/ответ">Запрос/ответ</a> - клиент отправляет запрос и ожидает вскоре получить ответ</li>
-<li><a href="../../../notifications-messaging" title="Уведомления">Уведомления</a> - клиент отправляет уведомление (или управляющую команду), при этом не ожидая ответа.</li>
-<li><a href="../../../request-async-response-messaging" title="Запрос/асинхронный ответ">Запрос/асинхронный ответ</a> - клиент отправляет запрос, рассчитывая получить ответ “когда-нибудь”</li>
-<li><a href="../../../publish-subscribe-messaging" title="Публикация/подписка">Публикация/подписка</a> - клиент публикует сообщение для нуля или более подписчиков</li>
-<li><a href="../../../publish-async-response-messaging" title="Публикация/асинхронный ответ">Публикация/асинхронный ответ</a> - клиент публикует запрос к одному или более клиентам, некоторые из них присылают ответ</li>
+<li><a class="link-tooltip" data-tooltip-content="#Запросответ_tooltip_id" href="../../../request-response-messaging" title="Запрос/ответ">Запрос/ответ</a> - клиент отправляет запрос и ожидает вскоре получить ответ</li>
+<li><a class="link-tooltip" data-tooltip-content="#Уведомления_tooltip_id" href="../../../notifications-messaging" title="Уведомления">Уведомления</a> - клиент отправляет уведомление (или управляющую команду), при этом не ожидая ответа.</li>
+<li><a class="link-tooltip" data-tooltip-content="#Запросасинхронныйответ_tooltip_id" href="../../../request-async-response-messaging" title="Запрос/асинхронный ответ">Запрос/асинхронный ответ</a> - клиент отправляет запрос, рассчитывая получить ответ “когда-нибудь”</li>
+<li><a class="link-tooltip" data-tooltip-content="#Публикацияподписка_tooltip_id" href="../../../publish-subscribe-messaging" title="Публикация/подписка">Публикация/подписка</a> - клиент публикует сообщение для нуля или более подписчиков</li>
+<li><a class="link-tooltip" data-tooltip-content="#Публикацияасинхронныйответ_tooltip_id" href="../../../publish-async-response-messaging" title="Публикация/асинхронный ответ">Публикация/асинхронный ответ</a> - клиент публикует запрос к одному или более клиентам, некоторые из них присылают ответ</li>
 </ul>
 <h2 id="_2">Ссылки<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p><a href="https://microservices.io/patterns/communication-style/messaging.html">https://microservices.io/patterns/communication-style/messaging.html</a></p>
@@ -1347,5 +1347,20 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="Запросответ_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="Уведомления_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="Запросасинхронныйответ_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="Публикацияподписка_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="Публикацияасинхронныйответ_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div></body>
 </html>

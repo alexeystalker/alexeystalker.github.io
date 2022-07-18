@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Шаблон " property="og:title" архитектура""="" микросервисная=""/>
 <meta content="Шаблон " name="twitter:title" архитектура""="" микросервисная=""/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1253,10 +1253,10 @@
         </a>
 </nav>
 <h1 id="_1">Шаблон “Микросервисная архитектура”<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><img alt="Pasted image 20210829152253.png" src="../../../../images/Pasted%20image%2020210829152253.png" title="Pasted image 20210829152253.png"><br/>
-Микросервисная архитектура - это архитектурный стиль, при котором <a href="../../../ch-2-4-plus-1-view-model-of-architecture" title="представление реализации">представление реализации</a> структурируется в виде набора компонентов - исполняемых или WAR файлов. Компоненты - это <a href="../../../../Microservices/service-definition/" title="сервисы">сервисы</a>, коннекторы - коммуникационные протоколы. Каждый сервис имеет свою архитектуру <a href="../../../ch-2-4-plus-1-view-model-of-architecture" title="логического представления">логического представления</a> (например, <a href="../../../ch-2-hexagonal-architecture" title="шестигранную архитектуру">шестигранную архитектуру</a>).<br/>
-На рисунке - пример микросервисной архитектуры, где сервисы соответствуют бизнес-функциям, коннекторы - REST API или асинхронный обмен сообщениями.</img></p>
-<p>Важной характеристикой микросервисной архитектуры является <a href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/coupling/" title="слабое зацепление">слабое зацепление</a></p>
+<p><img alt="Pasted image 20210829152253.png" src="../../../../images/Pasted%20image%2020210829152253.png" title="Pasted image 20210829152253.png"/><br/>
+Микросервисная архитектура - это архитектурный стиль, при котором <a class="link-tooltip" data-tooltip-content="#представлениереализации_tooltip_id" href="../../../ch-2-4-plus-1-view-model-of-architecture" title="представление реализации">представление реализации</a> структурируется в виде набора компонентов - исполняемых или WAR файлов. Компоненты - это <a class="link-tooltip" data-tooltip-content="#сервисы_tooltip_id" href="../../../../Microservices/service-definition/" title="сервисы">сервисы</a>, коннекторы - коммуникационные протоколы. Каждый сервис имеет свою архитектуру <a class="link-tooltip" data-tooltip-content="#логическогопредставления_tooltip_id" href="../../../ch-2-4-plus-1-view-model-of-architecture" title="логического представления">логического представления</a> (например, <a class="link-tooltip" data-tooltip-content="#шестиграннуюархитектуру_tooltip_id" href="../../../ch-2-hexagonal-architecture" title="шестигранную архитектуру">шестигранную архитектуру</a>).<br/>
+На рисунке - пример микросервисной архитектуры, где сервисы соответствуют бизнес-функциям, коннекторы - REST API или асинхронный обмен сообщениями.</p>
+<p>Важной характеристикой микросервисной архитектуры является <a class="link-tooltip" data-tooltip-content="#слабоезацепление_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/coupling/" title="слабое зацепление">слабое зацепление</a></p>
 <h2 id="_2">достоинства<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Continuos delivery, Continuos deploy</strong> - возможность непрерывных доставки и развертывания<ul>
@@ -1266,13 +1266,13 @@
 </ul>
 </li>
 <li><strong>Небольшая кодовая база</strong> каждого сервиса</li>
-<li><strong>Независимое масштабирование</strong> по осям X и Z <a href="../../../../Microservices/scale-cube/" title="куба масштабирования">куба масштабирования</a>, кроме того - каждый компонент можно развернуть на оптимальном для компонента оборудовании</li>
+<li><strong>Независимое масштабирование</strong> по осям X и Z <a class="link-tooltip" data-tooltip-content="#кубамасштабирования_tooltip_id" href="../../../../Microservices/scale-cube/" title="куба масштабирования">куба масштабирования</a>, кроме того - каждый компонент можно развернуть на оптимальном для компонента оборудовании</li>
 <li><strong>Лучшая изоляция неполадок</strong></li>
 <li><strong>Возможность экспериментировать и внедрять новые технологии</strong></li>
 </ul>
 <h2 id="_3">недостатки<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Сложно подобрать подходящий набор сервисов</strong> - нет алгоритма разбиения системы на сервисы - каждый раз нужно всё продумывать с нуля. Также, если разделить систему неправильно - можно получить <em>распределенный монолит</em> - систему, компонеты которой необходимо деплоить вместе. Такой системе присущи недостатки как <a href="../monolithic-architecture-pattern/#недостатки" title="монолита">монолита</a>, так и микросервисов</li>
+<li><strong>Сложно подобрать подходящий набор сервисов</strong> - нет алгоритма разбиения системы на сервисы - каждый раз нужно всё продумывать с нуля. Также, если разделить систему неправильно - можно получить <em>распределенный монолит</em> - систему, компонеты которой необходимо деплоить вместе. Такой системе присущи недостатки как <a class="link-tooltip" data-tooltip-content="#монолита_tooltip_id" href="../monolithic-architecture-pattern/#недостатки" title="монолита">монолита</a>, так и микросервисов</li>
 <li><strong>Распределенные системы гораздо сложнее</strong> - сложнее реализация взаимодействия, сложнее реализация согласованности данных, сложнее написать тесты, покрывающие несколько сервисов, сложнее администрирование</li>
 <li><strong>Развертывание фич, охватывающих несколько сервисов, требует тщательной координации нескольких команд</strong></li>
 <li><strong>Нетривиальность решения о переходе</strong> - непонятно, в какой момент надо переходить от монолита к микросервисам</li>
@@ -1379,5 +1379,20 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="представлениереализации_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="сервисы_tooltip_id"><p><em>Сервис</em> - это автономный, независимо развертываемый программный компонент, который реализует определенные полезные функции.<br/>
+<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210829153758.png"/><br/>
+Рассмотрим пример. Сервис обладает API, который инкапсулирует его реализацию. API поределяет операции, вызываемые клиентами. Существуют два типа операций - команды (обновляют данные) и запросы (извлекают данные). При из…</p></div></div><div class="tooltip_templates"><div id="логическогопредставления_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="шестиграннуюархитектуру_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="слабоезацепление_tooltip_id"><p><em>Coupling (зацепление, связанность)</em> - способ и степень взаимозависимости между программными модулями; сила взаимосвязей между модулями; мера того, насколько взаимозависимы разные подпрограммы или модули.</p>
+<p>Сильное зацепление рассматривается как серьёзный недостаток, поскольку затрудняет понимание логики модулей, их модификацию, автономное тестирование, а также переиспользование по отдел…</p></div></div><div class="tooltip_templates"><div id="кубамасштабирования_tooltip_id"><p>Масштабировать (scale) приложение можно тремя способами, по <strong>трём осям куба</strong>.</p>
+<p>Часто применяют в монолитах. Масштабируя по X - просто увеличивают число экземпляров (реплик)</p>
+<p>код разбивается на сервисы по выполняемым функциям / зонам ответственности</p>
+<p>Каждая реплика обрабатывает свою ч…</p></div></div><div class="tooltip_templates"><div id="монолита_tooltip_id"></div></div></body>
 </html>

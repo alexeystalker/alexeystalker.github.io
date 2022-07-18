@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Шаблоны развертывания сервисов" property="og:title"/>
 <meta content="Шаблоны развертывания сервисов" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1206,12 +1206,12 @@
 </nav>
 <h1 id="_1">Шаблоны развертывания сервисов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <ul>
-<li><a href="../service-mesh-pattern/" title="Сеть сервисов">Сеть сервисов</a></li>
-<li><a href="../language-specific-packaging-pattern/" title="Формат пакетов для определенного языка">Формат пакетов для определенного языка</a></li>
-<li><a href="../service-per-vm-pattern/" title="Развертывание сервиса в виде ВМ">Развертывание сервиса в виде ВМ</a></li>
-<li><a href="../service-per-container-pattern/" title="Развертывание сервиса в виде контейнера">Развертывание сервиса в виде контейнера</a></li>
-<li><a href="../serverless-deployment-pattern/" title="Бессерверное развертывание">Бессерверное развертывание</a></li>
-<li><a href="../service-deployment-platform-pattern/" title="Платформа развертывания">Платформа развертывания</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Сетьсервисов_tooltip_id" href="../service-mesh-pattern/" title="Сеть сервисов">Сеть сервисов</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Форматпакетовдляопределенногоязыка_tooltip_id" href="../language-specific-packaging-pattern/" title="Формат пакетов для определенного языка">Формат пакетов для определенного языка</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#РазвертываниесервисаввидеВМ_tooltip_id" href="../service-per-vm-pattern/" title="Развертывание сервиса в виде ВМ">Развертывание сервиса в виде ВМ</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Развертываниесервисаввидеконтейнера_tooltip_id" href="../service-per-container-pattern/" title="Развертывание сервиса в виде контейнера">Развертывание сервиса в виде контейнера</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Бессерверноеразвертывание_tooltip_id" href="../serverless-deployment-pattern/" title="Бессерверное развертывание">Бессерверное развертывание</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Платформаразвертывания_tooltip_id" href="../service-deployment-platform-pattern/" title="Платформа развертывания">Платформа развертывания</a></li>
 </ul>
 <hr/>
 <div class="md-source-file">
@@ -1313,5 +1313,24 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="Сетьсервисов_tooltip_id"><p>Пропускает весь трафик между сервисами через сетевой слой, реализующий такие функции как <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/">предохранители</a>, <a class="wikilink" href="distributed-tracing-pattern">распределенная трассировка</a>, <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/server-side-discovery-pattern/">обнаружение сервисов</a>, балансирование нагрузки и маршрутизация трафика.<br/>
+Некоторые реализации сети сервисов:</p>
+<li><a href="https://istio.io/">Istio</a></li>
+<li>[Linkerd](…</li></div></div><div class="tooltip_templates"><div id="Форматпакетовдляопределенногоязыка_tooltip_id"><p>Развертывает в промышленную среду пакеты, предназначенные для определенного языка.<br/>
+На компьютере разворачивается, если необходимо, среда выполнения для определенного языка, и затем запускается экземпляр, либо несколько экземпляров сервиса. Для определенных языков имеется возможность запустить несколько экземпляров сервиса (или разных сервисов) в од…</p></div></div><div class="tooltip_templates"><div id="РазвертываниесервисаввидеВМ_tooltip_id"><p>Развертывает в промышленной среде сервисы, упакованные в виде образов для виртуальных машин. Каждый экземпляр сервиса является отдельной ВМ.</p>
+<li>Образ ВМ инкапсулирует стек технологий.</li>
+<li>Экземпляры сервиса изолированы.</li>
+<li>Используется зрелая облачная инфраструктрура со всеми ее преимуществами - планированием размещения, возможностью автомасшт…</li></div></div><div class="tooltip_templates"><div id="Развертываниесервисаввидеконтейнера_tooltip_id"><p>Развертывает в среде выполнения сервис, упакованный в виде контейнера. Каждый экземпляр сервиса является отдельным контейнером.</p>
+<li>Инкапсуляция стека технологий</li>
+<li>Изоляция экземпляров</li>
+<li>Ограничение ресурсов, доступных экземпляру.</li>
+<li>Легковесность, и, засчёт этого, быстрота развертывания.</li>
+<li>Необходимо заниматься админист…</li></div></div><div class="tooltip_templates"><div id="Бессерверноеразвертывание_tooltip_id"><p>Развертывает сервисы при помощи бессерверного механизма, предоставляемого публичным облаком.</p>
+<li>Избавление от многих задач системного администрирования. Нет нужды заботиться об обновлении ОС и сред выполнения</li>
+<li>Эластичность. Бессерверная среда запускает экземпляры приложения в количестве, достаточном, чтобы справиться с нагрузкой.</li>
+<li>Тарифы, осно…</li></div></div><div class="tooltip_templates"><div id="Платформаразвертывания_tooltip_id"><p>Использует для развертывания специальное инфраструктурное решение.</p>
+<li>Оркестраторы контейнеров, такие как Kubernetes</li>
+<li>Бессерверные платформы, такие как AWS Lambda</li>
+<li>PaaS, такие как Cloud Foundry или AWS Elastic Beanstalk</li>
+<p>https://microservices.io/patterns/deployment/service-deployment-platform.html</p></div></div></body>
 </html>

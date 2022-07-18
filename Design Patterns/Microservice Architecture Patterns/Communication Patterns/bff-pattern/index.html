@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta (bff)"="" content="Шаблон " property="og:title" бэкенды="" для="" фронтендов"=""/>
 <meta (bff)"="" content="Шаблон " name="twitter:title" бэкенды="" для="" фронтендов"=""/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1237,9 +1237,9 @@
 </nav>
 <h1 id="bff">Шаблон “Бэкенды для фронтендов” (BFF)<a class="headerlink" href="#bff" title="Permanent link">¶</a></h1>
 <p><code>Backends for Frontends</code><br/>
-Разновидность шаблона <a href="../api-gateway-pattern/" title="API-шлюз">API-шлюз</a>, идея которого заключается в том, что каждый API-модуль становится отдельным API-шлюзом<br/>
-<img alt="Pasted image 20211016113601.png" src="../../../../images/Pasted%20image%2020211016113601.png" title="Pasted image 20211016113601.png"><br/>
-Преимущества:</img></p>
+Разновидность шаблона <a class="link-tooltip" data-tooltip-content="#APIшлюз_tooltip_id" href="../api-gateway-pattern/" title="API-шлюз">API-шлюз</a>, идея которого заключается в том, что каждый API-модуль становится отдельным API-шлюзом<br/>
+<img alt="Pasted image 20211016113601.png" src="../../../../images/Pasted%20image%2020211016113601.png" title="Pasted image 20211016113601.png"/><br/>
+Преимущества:</p>
 <ul>
 <li>API-модули изолированы друг от друга</li>
 <li>возможность независимого масштабирования</li>
@@ -1347,5 +1347,20 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="APIшлюз_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211013203814.png"/><br/>
+<em>API_шлюз</em> (API Gateway) - это сервис, который служит точкой входа в приложение из внешнего мира. <br/>
+Задачи API-шлюза: [^1]</p>
+<li>Маршрутизация запросов</li>
+<li>Объединение API</li>
+<li>Преобразование протоколов</li>
+<li>Предоставляет свой API для разных типов клиентов</li>
+<li>Реализует граничные функции, а именно<ul>
+<li>аутентификацию</li>
+<li>авторизацию</li>
+<li>ограничение частоты зап…</li>
+</ul>
+</li>
+<li>аутентификацию</li>
+<li>авторизацию</li>
+<li>ограничение частоты зап…</li></div></div></body>
 </html>

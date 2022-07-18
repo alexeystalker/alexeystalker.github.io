@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Шаблоны согласованности данных" property="og:title"/>
 <meta content="Шаблоны согласованности данных" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1209,12 +1209,12 @@
 </nav>
 <h1 id="_1">Шаблоны согласованности данных<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <ul>
-<li><a href="../database-per-service-pattern/" title="Своя БД для сервиса">Своя БД для сервиса</a></li>
-<li><a href="../shared-database-pattern/" title="Одна БД для всех сервисов">Одна БД для всех сервисов</a></li>
-<li><a href="../saga-pattern/" title="Повествование (сага)">Повествование (сага)</a></li>
-<li><a href="../aggregate-pattern/" title="Агрегат">Агрегат</a></li>
-<li><a href="../domain-event-pattern/" title="Доменное событие">Доменное событие</a></li>
-<li><a href="../event-sourcing-pattern/" title="Порождение событий">Порождение событий</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#СвояБДдлясервиса_tooltip_id" href="../database-per-service-pattern/" title="Своя БД для сервиса">Своя БД для сервиса</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#ОднаБДдлявсехсервисов_tooltip_id" href="../shared-database-pattern/" title="Одна БД для всех сервисов">Одна БД для всех сервисов</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Повествованиесага_tooltip_id" href="../saga-pattern/" title="Повествование (сага)">Повествование (сага)</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Агрегат_tooltip_id" href="../aggregate-pattern/" title="Агрегат">Агрегат</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Доменноесобытие_tooltip_id" href="../domain-event-pattern/" title="Доменное событие">Доменное событие</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Порождениесобытий_tooltip_id" href="../event-sourcing-pattern/" title="Порождение событий">Порождение событий</a></li>
 </ul>
 <hr/>
 <div class="md-source-file">
@@ -1316,5 +1316,13 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="СвояБДдлясервиса_tooltip_id"><p>У каждого сервиса есть своя БД для хранения данных. Извне данные доступны только через API.</p>
+<p>https://microservices.io/patterns/data/database-per-service.html</p></div></div><div class="tooltip_templates"><div id="ОднаБДдлявсехсервисов_tooltip_id"><p>Шаблон, при котором сервисы используют одну БД для хранения данных (и осуществления транзакций). В контексте микросервисной архитектуры может считаться антипаттерном.</p>
+<p>https://microservices.io/patterns/data/shared-database.html</p></div></div><div class="tooltip_templates"><div id="Повествованиесага_tooltip_id"><p>Он же “Сага” (Saga). Следует из шаблона <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/">БД для сервиса</a>.<br/>
+Обеспечивает согласованность данных между сервисами, используя последовательность локальных транзакций, которые координируются с помощью асинхронных сообщений.<br/>
+Системная операция инициирует первый этап повествования. Завершение одной локальной транзакции приводит к выполнению следующей…</p></div></div><div class="tooltip_templates"><div id="Агрегат_tooltip_id"><p><em>Агрегат</em> - это кластер доменных объектов, с которыми можно обращаться как с единым целым. Он состоит из одной сущности и иногда одной или нескольких сущностей и объектов значений.<br/>
+<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210923205357.png"/><br/>
+Агрегаты разбивают доменную модель на блоки, а также проясняют область применения операций, таких как загрузка, обновление и удаление. Эти операции распрост…</p></div></div><div class="tooltip_templates"><div id="Доменноесобытие_tooltip_id"><p><em>Доменное событие</em> - это класс с именем на основе страдательного причастия прошедшего времени (создан, удалён и т.д.). Он содержит свойства, которые выразительно передают это событие. Например, класс события <code>OrderCreated</code> содержит <code>orderId</code>.<br/>
+Также у доменного события есть метаданные, такие как идентификатор и timestamp. Также может быть id пользователя, сделавше…</p></div></div><div class="tooltip_templates"><div id="Порождениесобытий_tooltip_id"><p>Сохраняет <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">агрегат</a> в виде последовательности <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">доменных событий</a>, которые представляют изменение состояния. Приложение воссоздает текущее состояние, воспроизводя записанные события.<br/>
+События сохраняются в <em>хранилище событий</em> (event store), у которого есть API для добавления и получения событий сущности. Также хранилище событий…</p></div></div></body>
 </html>

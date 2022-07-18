@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Query в nested документах" property="og:title"/>
 <meta content="Query в nested документах" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1233,7 +1233,7 @@
         </a>
 </nav>
 <h1 id="query-nested">Query в nested документах<a class="headerlink" href="#query-nested" title="Permanent link">¶</a></h1>
-<p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a href="../exists-query/" title="Exists">Exists</a> запрос для вложенного поля:<br/>
+<p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a class="link-tooltip" data-tooltip-content="#Exists_tooltip_id" href="../exists-query/" title="Exists">Exists</a> запрос для вложенного поля:<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span><span class="w"></span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">"nested"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1350,5 +1350,18 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="Exists_tooltip_id"><p>Возвращает документы, в которых присутствует указанное поле<br/>
+<code>json
+GET /_search 
+{ 
+    "query": { 
+        "exists": { 
+            "field": "user" 
+        } 
+    } 
+}</code></p>
+<p>Считается, что поле “отсутствует” в следующих случаях</p>
+<li>поле равно <code>null</code> или <code>[]</code></li>
+<li>В маппинге для поля указано <code>"index": false</code> <a class="wikilink" href="-map-param">см</a></li>
+<li>длина значения поля больше чем указано в маппинге в параметре `ignore_…</li></div></div></body>
 </html>

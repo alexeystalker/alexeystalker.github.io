@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Шаблон " property="og:title" повествование""=""/>
 <meta content="Шаблон " name="twitter:title" повествование""=""/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1233,11 +1233,11 @@
         </a>
 </nav>
 <h1 id="_1">Шаблон “Повествование”<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>Он же “Сага” (Saga). Следует из шаблона <a href="../database-per-service-pattern/" title="БД для сервиса">БД для сервиса</a>.<br/>
+<p>Он же “Сага” (Saga). Следует из шаблона <a class="link-tooltip" data-tooltip-content="#БДдлясервиса_tooltip_id" href="../database-per-service-pattern/" title="БД для сервиса">БД для сервиса</a>.<br/>
 Обеспечивает согласованность данных между сервисами, используя последовательность локальных транзакций, которые координируются с помощью асинхронных сообщений.<br/>
 Системная операция инициирует первый этап повествования. Завершение одной локальной транзакции приводит к выполнению следующей. <br/>
-<img alt="Pasted image 20210919112731.png" src="../../../../images/Pasted%20image%2020210919112731.png" title="Pasted image 20210919112731.png"><br/>
-Например, вот повествование создания заказа:</img></p>
+<img alt="Pasted image 20210919112731.png" src="../../../../images/Pasted%20image%2020210919112731.png" title="Pasted image 20210919112731.png"/><br/>
+Например, вот повествование создания заказа:</p>
 <ol>
 <li>Сервис <code>Order</code> создает заказ с состоянием <code>APPROVAL_PENDING</code>.</li>
 <li>Сервис <code>Consumer</code> проверяет, может ли заказчик размещать заказы.</li>
@@ -1249,10 +1249,10 @@
 <p>Если транзакция признается неуспешной, происходит серия компенсирующих локальных транзакций, выполняемых в обратном порядке и откатывающих всю серию. Если, примеру, карта заказчика не авторизуется (п.4 примера выше), то должны произойти компенсирующие транзакции на этапе 3, затем 1. Этап 2 выполняет только чтение данных, поэтому ему компенсирующая транзакция не нужна.</p>
 <p>Есть два способа координации повествования:</p>
 <ul>
-<li><a href="../../../ch-4-choreography-saga" title="Хореография">Хореография</a> - каждая локальная транзакция публикует события, стартующие локальные транзакции в других сервисах. </li>
-<li><a href="../../../ch-4-orchestration-saga" title="Оркестрация">Оркестрация</a> - выполнением транзакций управляет специальная сущность - <em>оркестратор</em>.</li>
+<li><a class="link-tooltip" data-tooltip-content="#Хореография_tooltip_id" href="../../../ch-4-choreography-saga" title="Хореография">Хореография</a> - каждая локальная транзакция публикует события, стартующие локальные транзакции в других сервисах. </li>
+<li><a class="link-tooltip" data-tooltip-content="#Оркестрация_tooltip_id" href="../../../ch-4-orchestration-saga" title="Оркестрация">Оркестрация</a> - выполнением транзакций управляет специальная сущность - <em>оркестратор</em>.</li>
 </ul>
-<p>Для борьбы с недостаточной изолированностью нужно иметь в виду следующую <a href="../../../../Microservices/Sagas/saga-structure/" title="классификацию этапов повествования">классификацию этапов повествования</a>.</p>
+<p>Для борьбы с недостаточной изолированностью нужно иметь в виду следующую <a class="link-tooltip" data-tooltip-content="#классификациюэтаповповествования_tooltip_id" href="../../../../Microservices/Sagas/saga-structure/" title="классификацию этапов повествования">классификацию этапов повествования</a>.</p>
 <h2 id="_2">Ссылки<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p><a href="https://microservices.io/patterns/data/saga.html">https://microservices.io/patterns/data/saga.html</a></p>
 <hr/>
@@ -1355,5 +1355,17 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="БДдлясервиса_tooltip_id"><p>У каждого сервиса есть своя БД для хранения данных. Извне данные доступны только через API.</p>
+<p>https://microservices.io/patterns/data/database-per-service.html</p></div></div><div class="tooltip_templates"><div id="Хореография_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="Оркестрация_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="классификациюэтаповповествования_tooltip_id"><p>В контексте обсуждения контрмер полезно иметь следующую модель для повествований.  Повествование состоит из трёх типов транзакций, а именно:</p>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Sagas/saga-compensating/">Компенсируемые транзакции</a></li>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Sagas/saga-turning-point/">Поворотная транзакция</a></li>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Sagas/saga-repeatable/">Повторяемые транзакции</a></li>
+<p>Пример для повествования <code>Create Order</code>.<br/>
+<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210920202844.png"/></p></div></div></body>
 </html>

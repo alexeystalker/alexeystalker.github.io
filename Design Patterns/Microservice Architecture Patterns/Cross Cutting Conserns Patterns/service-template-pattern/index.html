@@ -33,7 +33,7 @@
       $('.link-tooltip').tooltipster();
     });
   </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Шаблон " property="og:title" заготовка="" сервиса""=""/>
 <meta content="Шаблон " name="twitter:title" заготовка="" сервиса""=""/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +55,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</link></head>
+</head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1230,13 +1230,13 @@
         </a>
 </nav>
 <h1 id="_1">Шаблон “Заготовка сервиса”<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>Альтернатива шаблону <a href="../microservice-chassis-pattern/" title="шасси микросервисов">шасси микросервисов</a>. Создается общая заготовка для сервиса со всем необходимым для реализации сервиса кодом. Обычно такой код охватывает следубщие функции:</p>
+<p>Альтернатива шаблону <a class="link-tooltip" data-tooltip-content="#шассимикросервисов_tooltip_id" href="../microservice-chassis-pattern/" title="шасси микросервисов">шасси микросервисов</a>. Создается общая заготовка для сервиса со всем необходимым для реализации сервиса кодом. Обычно такой код охватывает следубщие функции:</p>
 <ul>
-<li><a href="../../Communication%20Patterns/circuit-breaker-pattern/" title="предохранитель">предохранитель</a></li>
-<li><a href="../../../access-token-pattern" title="работу с токенами">работу с токенами</a></li>
-<li><a href="../../Communication%20Patterns/client-side-discovery-pattern/" title="обнаружение сервисов">обнаружение сервисов</a></li>
-<li><a href="../externalized-configuration-pattern/" title="обращение к серверу конфигурации">обращение к серверу конфигурации</a></li>
-<li><a href="../../../observability-patterns" title="наблюдаемость">наблюдаемость</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#предохранитель_tooltip_id" href="../../Communication%20Patterns/circuit-breaker-pattern/" title="предохранитель">предохранитель</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#работустокенами_tooltip_id" href="../../../access-token-pattern" title="работу с токенами">работу с токенами</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#обнаружениесервисов_tooltip_id" href="../../Communication%20Patterns/client-side-discovery-pattern/" title="обнаружение сервисов">обнаружение сервисов</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#обращениексерверуконфигурации_tooltip_id" href="../externalized-configuration-pattern/" title="обращение к серверу конфигурации">обращение к серверу конфигурации</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#наблюдаемость_tooltip_id" href="../../../observability-patterns" title="наблюдаемость">наблюдаемость</a></li>
 </ul>
 <h2 id="_2">Ссылки<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p><a href="https://microservices.io/patterns/service-template.html">https://microservices.io/patterns/service-template.html</a></p>
@@ -1340,5 +1340,20 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="шассимикросервисов_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211103204415.png"/><br/>
+Создание сервисов на основе фреймворка или группы фреймворков, которые реализуют общие, не связанные с бизнес-логикой функции, такие как:</p>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/">предохранитель</a></li>
+<li><a class="wikilink" href="access-token-pattern">работу с токенами</a></li>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/client-side-discovery-pattern/">обнаружение сервисов</a></li>
+<li>[[externalized-configuration-pattern|обращени…</li></div></div><div class="tooltip_templates"><div id="предохранитель_tooltip_id"><p>Данный паттерн рассчитан на ошибки, исправление которых требует много времени. Например, обрыв соединения, отказ оборудования. В данном случае отправка повторных запросов (паттерн <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/retry-pattern/">Retry</a>), скорее всего, будет бессмысленна. А если к тому же представить, что к какому-то сервису обращается много клиентов и этот сервис становится недоступным, каждый клиент на…</p></div></div><div class="tooltip_templates"><div id="работустокенами_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="обнаружениесервисов_tooltip_id"><p>Клиент извлекает из <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">реестра</a> список доступных экземпляров сервиса (для снижения нагрузки может быть применено кэширование) и использует алгоритм балансирования нагрузки, чтобы выбрать конкретный экземпляр и отправить ему запрос.</p>
+<p>https://microservices.io/patterns/client-side-discovery.html</p></div></div><div class="tooltip_templates"><div id="обращениексерверуконфигурации_tooltip_id"><p>Предоставляет запущенному сервису значения конфигурационных свойств, такие как учётные данные для доступа к БД и сетевое размещение.<br/>
+Есть два основных подхода:</p>
+<li><em>Пассивная модель</em> [^1]. Инфраструктура развертывания передает экземпляру сервиса конфигурационные свойства, используя, к примеру, переменные системного окружения или конфигурационный файл.</li>
+<li>*Акт…</li></div></div><div class="tooltip_templates"><div id="наблюдаемость_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div></body>
 </html>
