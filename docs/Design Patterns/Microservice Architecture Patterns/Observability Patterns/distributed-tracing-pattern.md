@@ -1,8 +1,8 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/observability
+share: True
+tags: 
+- microservice/pattern
+- microservice/observability
 ---
 # Шаблон "Распределенная трассировка"
 Назначает каждому внешнему запросу уникальный идентификатор и отправляет данные о его перемещениях по системе от одного сервиса к другому на центральный сервер, который предоставляет визуализацию и возможность анализа.

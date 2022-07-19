@@ -1,8 +1,8 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/observability
+share: True
+tags: 
+- microservice/pattern
+- microservice/observability
 ---
 # Шаблон "Отслеживание исключений"
 Сервис сообщает об исключениях центральному сервису, который их дедуплицирует, отслеживает их исправление и генерирует оповещения.

@@ -1,8 +1,8 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/observability
+share: True
+tags: 
+- microservice/pattern
+- microservice/observability
 ---
 # Шаблон "API проверки работоспособности"
 ![[Pasted image 20211101203918.png]]
