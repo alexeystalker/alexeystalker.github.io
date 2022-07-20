@@ -1,8 +1,8 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/refactoring
+share: True
+tags: 
+- microservice/pattern
+- microservice/refactoring
 ---
 # Шаблон "Удушающее приложение"
 Выполняет моденизацию постепенно возводя новое (удушающее) приложение вокруг старого кода.
