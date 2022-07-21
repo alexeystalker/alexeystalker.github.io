@@ -1,6 +1,7 @@
 ---
-tags: [Elasticsearch/configuration]
-share: true
+share: True
+tags: 
+- Elasticsearch/configuration
 ---
 # Настройка числа реплик Elasticsearch
 ```json
@@ -11,4 +12,3 @@ PUT /my_source_index/_settings
 	}
 }
 ```
-

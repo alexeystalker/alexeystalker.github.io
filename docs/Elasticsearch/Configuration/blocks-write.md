@@ -1,6 +1,7 @@
 ---
-tags: [Elasticsearch/configuration]
-share: true
+share: True
+tags: 
+- Elasticsearch/configuration
 ---
 # Закрыть на запись индекс Elasticsearch
 
@@ -13,6 +14,7 @@ PUT /my_source_index/_settings
 	}
 }
 ```
+
 Нужно, к примеру для [[elastic-clone|клонирования]]
 ## Ссылки
 https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-clone-index.html
