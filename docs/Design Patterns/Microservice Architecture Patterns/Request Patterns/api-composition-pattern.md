@@ -1,8 +1,8 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/request
+share: True
+tags: 
+- microservice/pattern
+- microservice/request
 ---
 # Шаблон "Объединение API"
 Чтобы выполнить запрос, мы обращаемся к разным сервисам и объединяем результаты.
