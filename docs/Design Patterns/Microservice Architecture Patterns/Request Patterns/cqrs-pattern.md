@@ -1,12 +1,12 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/request
+share: True
+tags: 
+- microservice/pattern
+- microservice/request
 ---
 # Шаблон "Разделение ответственности команд и запросов"(CQRS)
-> [!Note]- CQRS
-> **CQRS** - Command Query Responsibility Segregation
+??? note "CQRS"
+	**CQRS** - Command Query Responsibility Segregation
 
 Шаблон предназначен для *разделения обязанностей*. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции *create*, *update* и *delete*. Модуль и модель данных запросов реализуют операцию *request*. Сторона запросов синхронизирует свою модель данных с моделью данных командной стороны, подписываясь на события, котороые та публикует.
 ![[Pasted image 20211005194806.png]]
