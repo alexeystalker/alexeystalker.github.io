@@ -261,6 +261,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#elasticsearchconfiguration">
+    Elasticsearch/configuration
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#elasticsearchjoining">
     Elasticsearch/joining
   </a>
@@ -278,11 +283,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#elasticsearchterm-level">
     Elasticsearch/term-level
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#elasticsearch_1">
-    Elasticsearch/администрирование
   </a>
 </li>
 <li class="md-nav__item">
@@ -1643,6 +1643,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#elasticsearchconfiguration">
+    Elasticsearch/configuration
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#elasticsearchjoining">
     Elasticsearch/joining
   </a>
@@ -1660,11 +1665,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#elasticsearchterm-level">
     Elasticsearch/term-level
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#elasticsearch_1">
-    Elasticsearch/администрирование
   </a>
 </li>
 <li class="md-nav__item">
@@ -1943,6 +1943,7 @@
 <h2 id="elasticsearch"><span class="md-tag">Elasticsearch</span><a class="headerlink" href="#elasticsearch" title="Permanent link">¶</a></h2>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#ClearCacheApi_tooltip_id" href="../Elasticsearch/clear-cache-api/">Clear Cache Api</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#КаксклонироватьиндексElasticsearch_tooltip_id" href="../Elasticsearch/elastic-clone/">Как склонировать индекс Elasticsearch</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#OutOfMemoryвЭластикеприhas_childзапросе_tooltip_id" href="../Elasticsearch/has-child-oom/">OutOfMemory в Эластике при has_child запросе</a></li>
 </ul>
 <h2 id="elasticsearchaggs"><span class="md-tag">Elasticsearch/aggs</span><a class="headerlink" href="#elasticsearchaggs" title="Permanent link">¶</a></h2>
@@ -1959,6 +1960,12 @@
 <h2 id="elasticsearchanalyze"><span class="md-tag">Elasticsearch/analyze</span><a class="headerlink" href="#elasticsearchanalyze" title="Permanent link">¶</a></h2>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#AnalyzeAPI_tooltip_id" href="../Elasticsearch/analyze-api/">Analyze API</a></li>
+</ul>
+<h2 id="elasticsearchconfiguration"><span class="md-tag">Elasticsearch/configuration</span><a class="headerlink" href="#elasticsearchconfiguration" title="Permanent link">¶</a></h2>
+<ul>
+<li><a class="link-tooltip" data-tooltip-content="#ЗакрытьназаписьиндексElasticsearch_tooltip_id" href="../Elasticsearch/Configuration/blocks-write/">Закрыть на запись индекс Elasticsearch</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Elasticheapsize_tooltip_id" href="../Elasticsearch/Configuration/heap-size/">Elastic heap size</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#НастройкачисларепликElasticsearch_tooltip_id" href="../Elasticsearch/Configuration/number-of-replicas/">Настройка числа реплик Elasticsearch</a></li>
 </ul>
 <h2 id="elasticsearchjoining"><span class="md-tag">Elasticsearch/joining</span><a class="headerlink" href="#elasticsearchjoining" title="Permanent link">¶</a></h2>
 <ul>
@@ -1985,13 +1992,6 @@
 <li><a class="link-tooltip" data-tooltip-content="#Rangequery_tooltip_id" href="../Elasticsearch/Queries/range-query/">Range query</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Termlevelqueries_tooltip_id" href="../Elasticsearch/Queries/term-level-queries/">Term-level queries</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#termquery_tooltip_id" href="../Elasticsearch/Queries/term-query/">term query</a></li>
-</ul>
-<h2 id="elasticsearch_1"><span class="md-tag">Elasticsearch/администрирование</span><a class="headerlink" href="#elasticsearch_1" title="Permanent link">¶</a></h2>
-<ul>
-<li><a class="link-tooltip" data-tooltip-content="#КаксклонироватьиндексElasticsearch_tooltip_id" href="../Elasticsearch/elastic-clone/">Как склонировать индекс Elasticsearch</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#ЗакрытьназаписьиндексElasticsearch_tooltip_id" href="../Elasticsearch/Configuration/blocks-write/">Закрыть на запись индекс Elasticsearch</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Elasticheapsize_tooltip_id" href="../Elasticsearch/Configuration/heap-size/">Elastic heap size</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#НастройкачисларепликElasticsearch_tooltip_id" href="../Elasticsearch/Configuration/number-of-replicas/">Настройка числа реплик Elasticsearch</a></li>
 </ul>
 <h2 id="far"><span class="md-tag">FAR</span><a class="headerlink" href="#far" title="Permanent link">¶</a></h2>
 <ul>
@@ -2446,7 +2446,11 @@ curl -X POST "localhost:9200/my-index-000001/_cache/clear?pretty"</code></p>
 <li><code>POST /&lt;index&gt;/_cache/clear</code></li>
 <li><code>POST /_cache/clear</code> </li>
 <p>По умолчанию очищает все три кэша. Однако, можно очищать и по отдельности:</p>
-<li>очищает кэш поле…</li></div></div><div class="tooltip_templates"><div id="OutOfMemoryвЭластикеприhas_childзапросе_tooltip_id"><p>В случае использования джоинов parent-child при фильтре по условию <a class="wikilink" href="has-child-query">has_child</a> может очень сильно вырастать потребление памяти в Lucene, и даже привести к крэшу Эластика от OOM.<br/>
+<li>очищает кэш поле…</li></div></div><div class="tooltip_templates"><div id="КаксклонироватьиндексElasticsearch_tooltip_id"><p>Чтобы склонировать индекс эластика, надо сделать запрос<br/>
+<code>http
+POST /&lt;index&gt;/_clone/&lt;target-index&gt;</code></p>
+<p>Перед клонированием нужно <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Configuration/blocks-write/">закрыть</a> индекс на запись. Также надо <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Configuration/number-of-replicas/">выставить</a> число реплик равным числу исходного индекса (по умолчанию ставится 1).</p>
+<p>https://www.elastic.co/guide/en/elasticsearch/reference/maste…</p></div></div><div class="tooltip_templates"><div id="OutOfMemoryвЭластикеприhas_childзапросе_tooltip_id"><p>В случае использования джоинов parent-child при фильтре по условию <a class="wikilink" href="has-child-query">has_child</a> может очень сильно вырастать потребление памяти в Lucene, и даже привести к крэшу Эластика от OOM.<br/>
 В логах Эластика стектрейс у ООМ начинается примерно так:<br/>
 ```</p>
 <p>“java.lang.OutOfMemoryError: Java heap space”,<br/>
@@ -2535,7 +2539,24 @@ GET /_analyze
 <li><code>GET /&lt;index&gt;/_analyze</code></li>
 <li><code>POST /&lt;index&gt;/_analyze</code></li>
 <p>Если указать <code>index</code> в path, можно использовать анализатор, определенный в этом индексе.</p>
-<li><code>analyzer</code> (оп…</li></div></div><div class="tooltip_templates"><div id="Joiningqueries_tooltip_id"><p>Аналог Join запросов в SQL. Эластиковые join-подобные запросы спроектированы масштабироваться горизонтально.</p>
+<li><code>analyzer</code> (оп…</li></div></div><div class="tooltip_templates"><div id="ЗакрытьназаписьиндексElasticsearch_tooltip_id"><p>Чтобы закрыть индекс Эластика на запись извне (изменение настроек остаётся), нужно сделать запрос<br/>
+<code>json
+PUT /my_source_index/_settings 
+{
+  "settings": { 
+    "index.blocks.write": true
+    }
+}</code></p>
+<p>Нужно, к примеру для <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/elastic-clone/">клонирования</a></p>
+<p>https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-clone-index.html</p></div></div><div class="tooltip_templates"><div id="Elasticheapsize_tooltip_id"><p>При запуске Эластика (особенно на проде) нужно указать размер Java Heap, который выделяется и будет использован Эластиком.<br/>
+При этом память, которую использует Lucene, не входит в Java Heap</p>
+<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/heap-size.html</p></div></div><div class="tooltip_templates"><div id="НастройкачисларепликElasticsearch_tooltip_id"><p><code>json
+PUT /my_source_index/_settings 
+{
+  "settings": { 
+    "index.number_of_replicas": %num%
+    }
+}</code></p></div></div><div class="tooltip_templates"><div id="Joiningqueries_tooltip_id"><p>Аналог Join запросов в SQL. Эластиковые join-подобные запросы спроектированы масштабироваться горизонтально.</p>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/nested-query/">nested</a> - для поиска по <code>nested</code> документам</li>
 <li><a class="wikilink" href="has-child-query">has_child</a> и <a class="wikilink" href="has-parent-query">has_parent</a> - для parent-child документов</li>
 <p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/joining-queries.html</p></div></div><div class="tooltip_templates"><div id="Queryвnestedдокументах_tooltip_id"><p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/exists-query/">Exists</a> запрос для вложенного поля:<br/>
@@ -2660,28 +2681,7 @@ GET /_search
     }
 }</code></p>
 <p>В отличие от многих других запросов, имя поля указывается не как значение параметра <code>field</code>, а как имя поля объекта.</p>
-<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl-term-query.html</p></div></div><div class="tooltip_templates"><div id="КаксклонироватьиндексElasticsearch_tooltip_id"><p>Чтобы склонировать индекс эластика, надо сделать запрос<br/>
-<code>http
-POST /&lt;index&gt;/_clone/&lt;target-index&gt;</code></p>
-<p>Перед клонированием нужно <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Configuration/blocks-write/">закрыть</a> индекс на запись. Также надо <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Configuration/number-of-replicas/">выставить</a> число реплик равным числу исходного индекса (по умолчанию ставится 1).</p>
-<p>https://www.elastic.co/guide/en/elasticsearch/reference/maste…</p></div></div><div class="tooltip_templates"><div id="ЗакрытьназаписьиндексElasticsearch_tooltip_id"><p>Чтобы закрыть индекс Эластика на запись извне (изменение настроек остаётся), нужно сделать запрос<br/>
-<code>json
-PUT /my_source_index/_settings 
-{
-  "settings": { 
-    "index.blocks.write": true
-    }
-}</code></p>
-<p>Нужно, к примеру для <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/elastic-clone/">клонирования</a></p>
-<p>https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-clone-index.html</p></div></div><div class="tooltip_templates"><div id="Elasticheapsize_tooltip_id"><p>При запуске Эластика (особенно на проде) нужно указать размер Java Heap, который выделяется и будет использован Эластиком.<br/>
-При этом память, которую использует Lucene, не входит в Java Heap</p>
-<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/heap-size.html</p></div></div><div class="tooltip_templates"><div id="НастройкачисларепликElasticsearch_tooltip_id"><p><code>json
-PUT /my_source_index/_settings 
-{
-  "settings": { 
-    "index.number_of_replicas": %num%
-    }
-}</code></p></div></div><div class="tooltip_templates"><div id="ШорткатывFARManager_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/cheatography.com_alexzaitzev_cheat-sheets_far-3_.png"/></p></div></div><div class="tooltip_templates"><div id="HTTPHypertextTransferProtocol_tooltip_id"><p><em>Протокол передачи гипертекста</em> или <strong>HTTP</strong> - это протокол прикладного уровня, обеспечивающий работу в сети. Работает по схеме “запрос-ответ” без сохранения состояния. Клиент отправляет запрос на сервер, который передает ответ.<br/>
+<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl-term-query.html</p></div></div><div class="tooltip_templates"><div id="ШорткатывFARManager_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/cheatography.com_alexzaitzev_cheat-sheets_far-3_.png"/></p></div></div><div class="tooltip_templates"><div id="HTTPHypertextTransferProtocol_tooltip_id"><p><em>Протокол передачи гипертекста</em> или <strong>HTTP</strong> - это протокол прикладного уровня, обеспечивающий работу в сети. Работает по схеме “запрос-ответ” без сохранения состояния. Клиент отправляет запрос на сервер, который передает ответ.<br/>
 Каждый HTTP-запрос состоит из метода, указывающего “тип” запроса, и пути, указывающего ресурс, с которым нужно взаимодействовать. Такж…</p></div></div><div class="tooltip_templates"><div id="БыстрыйстартсбиблиотекойCommandLineParser_tooltip_id"><p>```csharp<br/>
 using CommandLine;</p>
 <p>namespace GetStartedSample<br/>
