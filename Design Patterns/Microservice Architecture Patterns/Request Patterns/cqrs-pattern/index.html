@@ -9,7 +9,7 @@
 <link href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/" rel="canonical"/>
 <link href="../../../../assets/logo/logo.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.3.9" name="generator"/>
-<title>Шаблон "Разделение ответственности команд и запросов"(CQRS^[**Command Query Responsibility Segregation**]) - Цифровой сад и огород</title>
+<title>Шаблон "Разделение ответственности команд и запросов"(CQRS) - Цифровой сад и огород</title>
 <link href="../../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -34,8 +34,8 @@
     });
   </script>
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
-<meta content="Шаблон " property="og:title" query="" responsibility="" segregation**])"="" запросов"(cqrs^[**command="" и="" команд="" ответственности="" разделение=""/>
-<meta content="Шаблон " name="twitter:title" query="" responsibility="" segregation**])"="" запросов"(cqrs^[**command="" и="" команд="" ответственности="" разделение=""/>
+<meta content="Шаблон " property="og:title" запросов"(cqrs)"="" и="" команд="" ответственности="" разделение=""/>
+<meta content="Шаблон " name="twitter:title" запросов"(cqrs)"="" и="" команд="" ответственности="" разделение=""/>
 <meta content="Мой цифровой сад." name="og:description"/>
 <meta content="Мой цифровой сад." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -62,7 +62,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#cqrscommand-query-responsibility-segregation">
+<a class="md-skip" href="#cqrs">
           Перейти к содержанию
         </a>
 </div>
@@ -86,7 +86,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Шаблон "Разделение ответственности команд и запросов"(CQRS^[**Command Query Responsibility Segregation**])
+              Шаблон "Разделение ответственности команд и запросов"(CQRS)
             
           </span>
 </div>
@@ -674,11 +674,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Шаблон "Разделение ответственности команд и запросов"(CQRS^[**Command Query Responsibility Segregation**])
+          Шаблон "Разделение ответственности команд и запросов"(CQRS)
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Шаблон "Разделение ответственности команд и запросов"(CQRS^[**Command Query Responsibility Segregation**])
+        Шаблон "Разделение ответственности команд и запросов"(CQRS)
       </a>
 <nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -1372,7 +1372,11 @@
           microservice/request
         </a>
 </nav>
-<h1 id="cqrscommand-query-responsibility-segregation">Шаблон “Разделение ответственности команд и запросов”(CQRS^[<strong>Command Query Responsibility Segregation</strong>])<a class="headerlink" href="#cqrscommand-query-responsibility-segregation" title="Permanent link">¶</a></h1>
+<h1 id="cqrs">Шаблон “Разделение ответственности команд и запросов”(CQRS)<a class="headerlink" href="#cqrs" title="Permanent link">¶</a></h1>
+<details class="note">
+<summary>CQRS</summary>
+<p><strong>CQRS</strong> - Command Query Responsibility Segregation</p>
+</details>
 <p>Шаблон предназначен для <em>разделения обязанностей</em>. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции <em>create</em>, <em>update</em> и <em>delete</em>. Модуль и модель данных запросов реализуют операцию <em>request</em>. Сторона запросов синхронизирует свою модель данных с моделью данных командной стороны, подписываясь на события, котороые та публикует.<br/>
 <img alt="Pasted image 20211005194806.png" src="../../../../images/Pasted%20image%2020211005194806.png" title="Pasted image 20211005194806.png"/><br/>
 Помимо использования внутри одного сервиса, шаблон можно применить для описания сервиса запросов. API такого сервиса не поддерживает команды и состоит только из запросов. Для реализации запросов он обращается к БД, которую поддерживает в актуальном состоянии, подписываясь на события, публикуемые одним или несколькими сервисами.<br/>

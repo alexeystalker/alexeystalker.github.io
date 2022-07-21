@@ -991,7 +991,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/">
-        Шаблон "Разделение ответственности команд и запросов"(CQRS^[**Command Query Responsibility Segregation**])
+        Шаблон "Разделение ответственности команд и запросов"(CQRS)
       </a>
 </li>
 <li class="md-nav__item">
@@ -2244,7 +2244,7 @@
 <li><a class="link-tooltip" data-tooltip-content="#ШаблонПредохранительныйслой_tooltip_id" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/anti-corruption-layer-pattern/">Шаблон “Предохранительный слой”</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#ШаблонУдушающееприложение_tooltip_id" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/strangler-application-pattern/">Шаблон “Удушающее приложение”</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#ШаблонОбъединениеAPI_tooltip_id" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/">Шаблон “Объединение API”</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#ШаблонРазделениеответственностикомандизапросовCQRS_tooltip_id" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/">Шаблон “Разделение ответственности команд и запросов”(CQRS^[<strong>Command Query Responsibility Segregation</strong>])</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#ШаблонРазделениеответственностикомандизапросовCQRS_tooltip_id" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/">Шаблон “Разделение ответственности команд и запросов”(CQRS)</a></li>
 </ul>
 <h2 id="microservicepatterns"><span class="md-tag">microservice/patterns</span><a class="headerlink" href="#microservicepatterns" title="Permanent link">¶</a></h2>
 <ul>
@@ -2269,7 +2269,7 @@
 <h2 id="microservicerequest"><span class="md-tag">microservice/request</span><a class="headerlink" href="#microservicerequest" title="Permanent link">¶</a></h2>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#ШаблонОбъединениеAPI_tooltip_id" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/">Шаблон “Объединение API”</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#ШаблонРазделениеответственностикомандизапросовCQRS_tooltip_id" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/">Шаблон “Разделение ответственности команд и запросов”(CQRS^[<strong>Command Query Responsibility Segregation</strong>])</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#ШаблонРазделениеответственностикомандизапросовCQRS_tooltip_id" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/">Шаблон “Разделение ответственности команд и запросов”(CQRS)</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Шаблонызапросовданных_tooltip_id" href="../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/request-patterns/">Шаблоны запросов данных</a></li>
 </ul>
 <h2 id="microservicetransaction"><span class="md-tag">microservice/transaction</span><a class="headerlink" href="#microservicetransaction" title="Permanent link">¶</a></h2>
@@ -3079,7 +3079,9 @@ https://martinfowler.com/bliki/StranglerFigApplication.html</p></div></div><div 
 Структура шаблона предусмативает два типа участников:</p>
 <li><em>API-композитор</em> - реализует операцию запроса, обращаясь к сервис-провайдерам</li>
 <li><em>сервис-провайдер</em> - сервис, которому принадлежат данные, возвращаемые запросом.</li>
-<p>Преимущество этого шаб…</p></div></div><div class="tooltip_templates"><div id="ШаблонРазделениеответственностикомандизапросовCQRS_tooltip_id"><p>Шаблон предназначен для <em>разделения обязанностей</em>. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции <em>create</em>, <em>update</em> и <em>delete</em>. Модуль и модель данных запросов реализуют операцию <em>request</em>. Сторона запросов синхрониз…</p></div></div><div class="tooltip_templates"><div id="Списокшаблоновмикросервиснойархитектуры_tooltip_id"><p>Перед списком надо упомянуть, что все шаблоны относятся к одному из трёх уровней:</p>
+<p>Преимущество этого шаб…</p></div></div><div class="tooltip_templates"><div id="ШаблонРазделениеответственностикомандизапросовCQRS_tooltip_id"><p>??? note “CQRS”<br/>
+<strong>CQRS</strong> - Command Query Responsibility Segregation</p>
+<p>Шаблон предназначен для <em>разделения обязанностей</em>. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции <em>create</em>, <em>update</em> и <em>delete</em>. Модуль и модель данных запросов реализуют операцию <em>request</em>. Сто…</p></div></div><div class="tooltip_templates"><div id="Списокшаблоновмикросервиснойархитектуры_tooltip_id"><p>Перед списком надо упомянуть, что все шаблоны относятся к одному из трёх уровней:</p>
 <li><em>Инфраструктурные шаблоны</em> - решают проблемы инфраструктуры, не относящиеся к разработке.</li>
 <li><em>Инфраструктура приложения</em> - решают инфраструктурные проблемы, влияющие на разработку</li>
 <li><em>Шаблоны приложения</em> - решают проблемы разработки<br/>
@@ -3139,7 +3141,9 @@ https://martinfowler.com/bliki/StranglerFigApplication.html</p></div></div><div 
 Структура шаблона предусмативает два типа участников:</p>
 <li><em>API-композитор</em> - реализует операцию запроса, обращаясь к сервис-провайдерам</li>
 <li><em>сервис-провайдер</em> - сервис, которому принадлежат данные, возвращаемые запросом.</li>
-<p>Преимущество этого шаб…</p></div></div><div class="tooltip_templates"><div id="ШаблонРазделениеответственностикомандизапросовCQRS_tooltip_id"><p>Шаблон предназначен для <em>разделения обязанностей</em>. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции <em>create</em>, <em>update</em> и <em>delete</em>. Модуль и модель данных запросов реализуют операцию <em>request</em>. Сторона запросов синхрониз…</p></div></div><div class="tooltip_templates"><div id="Шаблонызапросовданных_tooltip_id"><li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/">Объединение API</a></li>
+<p>Преимущество этого шаб…</p></div></div><div class="tooltip_templates"><div id="ШаблонРазделениеответственностикомандизапросовCQRS_tooltip_id"><p>??? note “CQRS”<br/>
+<strong>CQRS</strong> - Command Query Responsibility Segregation</p>
+<p>Шаблон предназначен для <em>разделения обязанностей</em>. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции <em>create</em>, <em>update</em> и <em>delete</em>. Модуль и модель данных запросов реализуют операцию <em>request</em>. Сто…</p></div></div><div class="tooltip_templates"><div id="Шаблонызапросовданных_tooltip_id"><li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/">Объединение API</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/">Разделение ответственности команд и запросов</a></li></div></div><div class="tooltip_templates"><div id="Шаблонысогласованностиданных_tooltip_id"><li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/">Своя БД для сервиса</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/shared-database-pattern/">Одна БД для всех сервисов</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/">Повествование (сага)</a></li>
