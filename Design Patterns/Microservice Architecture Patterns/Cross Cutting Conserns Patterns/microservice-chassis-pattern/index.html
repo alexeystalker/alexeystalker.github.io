@@ -702,6 +702,66 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_11" id="__nav_3_5_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5_11">
+          Security Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Security Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_5_11">
+<span class="md-nav__icon md-icon"></span>
+          Security Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Security%20Patterns/access-token-pattern/">
+        Шаблон "Токен доступа"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Security%20Patterns/security-patterns/">
+        Шаблоны безопасности
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_12" id="__nav_3_5_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5_12">
+          Testing Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Testing Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_5_12">
+<span class="md-nav__icon md-icon"></span>
+          Testing Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Testing%20Patterns/consumer-driven-contract-test-pattern/">
+        Шаблон "тестирование контрактов с расчётом на потребителя"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Testing%20Patterns/consumer-side-contract-test-pattern/">
+        Шаблон "тестирование контрактов на стороне потребителя"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Testing%20Patterns/service-component-test-pattern/">
+        Шаблон "Компонентный тест сервиса"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Testing%20Patterns/testing-patterns/">
+        Шаблоны автоматизированного тестирования
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1347,7 +1407,7 @@
 Создание сервисов на основе фреймворка или группы фреймворков, которые реализуют общие, не связанные с бизнес-логикой функции, такие как:</p>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#предохранитель_tooltip_id" href="../../Communication%20Patterns/circuit-breaker-pattern/" title="предохранитель">предохранитель</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#работустокенами_tooltip_id" href="../../../access-token-pattern" title="работу с токенами">работу с токенами</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#работустокенами_tooltip_id" href="../../Security%20Patterns/access-token-pattern/" title="работу с токенами">работу с токенами</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#обнаружениесервисов_tooltip_id" href="../../Communication%20Patterns/client-side-discovery-pattern/" title="обнаружение сервисов">обнаружение сервисов</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#обращениексерверуконфигурации_tooltip_id" href="../externalized-configuration-pattern/" title="обращение к серверу конфигурации">обращение к серверу конфигурации</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#наблюдаемость_tooltip_id" href="../../Observability%20Patterns/observability-patterns/" title="наблюдаемость">наблюдаемость</a></li>
@@ -1455,10 +1515,9 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="предохранитель_tooltip_id"><p>Данный паттерн рассчитан на ошибки, исправление которых требует много времени. Например, обрыв соединения, отказ оборудования. В данном случае отправка повторных запросов (паттерн <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/retry-pattern/">Retry</a>), скорее всего, будет бессмысленна. А если к тому же представить, что к какому-то сервису обращается много клиентов и этот сервис становится недоступным, каждый клиент на…</p></div></div><div class="tooltip_templates"><div id="работустокенами_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
-Стандарт OAuth 2.0 основан на следующих концепциях.</p>
-<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
-<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="обнаружениесервисов_tooltip_id"><p>Клиент извлекает из <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">реестра</a> список доступных экземпляров сервиса (для снижения нагрузки может быть применено кэширование) и использует алгоритм балансирования нагрузки, чтобы выбрать конкретный экземпляр и отправить ему запрос.</p>
+<div class="tooltip_templates"><div id="предохранитель_tooltip_id"><p>Данный паттерн рассчитан на ошибки, исправление которых требует много времени. Например, обрыв соединения, отказ оборудования. В данном случае отправка повторных запросов (паттерн <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/retry-pattern/">Retry</a>), скорее всего, будет бессмысленна. А если к тому же представить, что к какому-то сервису обращается много клиентов и этот сервис становится недоступным, каждый клиент на…</p></div></div><div class="tooltip_templates"><div id="работустокенами_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/">API-шлюз</a> аутентифицирует клиента и передает токен с информацией о пользователе, включая его идентификатор и роли, сервисам, к которым тот обращается. Если нижележащие сервисы обращаются к третим сервисам, они передают токен в своих запросах.<br/>
+Вариантом такого токена может выступать <a href="https://jwt.io">JSON Web Token</a></p>
+<p>https://microservices.io/p…</p></div></div><div class="tooltip_templates"><div id="обнаружениесервисов_tooltip_id"><p>Клиент извлекает из <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">реестра</a> список доступных экземпляров сервиса (для снижения нагрузки может быть применено кэширование) и использует алгоритм балансирования нагрузки, чтобы выбрать конкретный экземпляр и отправить ему запрос.</p>
 <p>https://microservices.io/patterns/client-side-discovery.html</p></div></div><div class="tooltip_templates"><div id="обращениексерверуконфигурации_tooltip_id"><p>Предоставляет запущенному сервису значения конфигурационных свойств, такие как учётные данные для доступа к БД и сетевое размещение.<br/>
 Есть два основных подхода:</p>
 <li><em>Пассивная модель</em> [^1]. Инфраструктура развертывания передает экземпляру сервиса конфигурационные свойства, используя, к примеру, переменные системного окружения или конфигурационный файл.</li>

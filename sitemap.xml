@@ -306,6 +306,36 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/access-token-pattern/</loc>
+         <lastmod>2022-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/security-patterns/</loc>
+         <lastmod>2022-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-driven-contract-test-pattern/</loc>
+         <lastmod>2022-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-side-contract-test-pattern/</loc>
+         <lastmod>2022-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/service-component-test-pattern/</loc>
+         <lastmod>2022-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/testing-patterns/</loc>
+         <lastmod>2022-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/analyze-api/</loc>
          <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
