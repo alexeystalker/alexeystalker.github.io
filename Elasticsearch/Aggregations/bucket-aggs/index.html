@@ -13,8 +13,8 @@
 <link href="../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Karla:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Karla";--md-code-font:"Ubuntu Mono"}</style>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 <link href="../../../assets/css/template/blog.css" rel="stylesheet"/>
 <link href="../../../assets/css/template/grid.css" rel="stylesheet"/>
@@ -1587,7 +1587,12 @@
     }
 }</code></p>
 <p>Хорошо сочетается с <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Aggregations/range-agg/">range</a> агрегацией, когда нужно выделить документы без значений в отдельную колонку:<br/>
-```jso…</p></div></div><div class="tooltip_templates"><div id="Range_tooltip_id"><p>Агрегация на фиксированное число корзин - заданных диапазонов. Запрос примерно такой:</p>
+```json<br/>
+{<br/>
+    “aggs”: {<br/>
+        “income_ranges”: {<br/>
+            “range”: {<br/>
+                “field”: “income…</p></div></div><div class="tooltip_templates"><div id="Range_tooltip_id"><p>Агрегация на фиксированное число корзин - заданных диапазонов. Запрос примерно такой:</p>
 <p>```json<br/>
 {<br/>
     “aggs”: {<br/>
@@ -1598,7 +1603,9 @@
                 “ranges”: [<br/>
                     { “from”: 0, “to”: 1 },<br/>
                     { “from”: 1, “to”: 100000 },<br/>
-                    { “from”: 10…</p></div></div><div class="tooltip_templates"><div id="Filter_tooltip_id"><p>“Однокорзинная” агрегация, которая собирает в корзину документы, соответствующие фильтру. Примерно так:<br/>
+                    { “from”: 100000, “to”: 250000 },<br/>
+                    { “from”: 250000, “to”: 500000 },<br/>
+                    { “f…</p></div></div><div class="tooltip_templates"><div id="Filter_tooltip_id"><p>“Однокорзинная” агрегация, которая собирает в корзину документы, соответствующие фильтру. Примерно так:<br/>
 ```json<br/>
 {<br/>
     “aggs”: {<br/>
@@ -1612,7 +1619,12 @@
                                     “Active”,<br/>
                                     “Bankruptcy”,<br/>
                                     “Reorg”,<br/>
-                        …</p></div></div><div class="tooltip_templates"><div id="Terms_tooltip_id"><p>Агрегация с динамическим количеством корзин (по числу уникальных значений)<br/>
+                                    “Liquidating”,<br/>
+                                    “Unknown”<br/>
+                                ]<br/>
+                            }<br/>
+                        },<br/>
+                    …</p></div></div><div class="tooltip_templates"><div id="Terms_tooltip_id"><p>Агрегация с динамическим количеством корзин (по числу уникальных значений)<br/>
 Запрос:<br/>
 <code>json
 {
@@ -1627,5 +1639,6 @@
 }</code></p>
 <p>Параметры:</p>
 <li><code>field</code> - поле, по значениям которого создаются корзины и ведется подсчет</li>
-<li><code>size</code> - максимальное количество корзин. Сверху ограничено параметром кластера analyze.m…</li></div></div></body>
+<li><code>size</code> - максимальное количество корзин. Сверху ограничено параметром кластера analyze.max_token_count (вроде бы)</li>
+<li><code>include</code> - список термов, корзины с которыми должны быть в выдаче. Есл…</li></div></div></body>
 </html>

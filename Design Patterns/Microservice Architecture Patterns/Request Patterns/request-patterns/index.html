@@ -13,8 +13,8 @@
 <link href="../../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Karla:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Karla";--md-code-font:"Ubuntu Mono"}</style>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 <link href="../../../../assets/css/template/blog.css" rel="stylesheet"/>
 <link href="../../../../assets/css/template/grid.css" rel="stylesheet"/>
@@ -1549,7 +1549,9 @@
 Структура шаблона предусмативает два типа участников:</p>
 <li><em>API-композитор</em> - реализует операцию запроса, обращаясь к сервис-провайдерам</li>
 <li><em>сервис-провайдер</em> - сервис, которому принадлежат данные, возвращаемые запросом.</li>
-<p>Преимущество этого шаб…</p></div></div><div class="tooltip_templates"><div id="Разделениеответственностикомандизапросов_tooltip_id"><p>??? note “CQRS”<br/>
+<p>Преимущество этого шаблона - в простоте реализации.</p>
+<li>дополнительные накладные расходы</li>
+<li>риск снижения досту…</li></div></div><div class="tooltip_templates"><div id="Разделениеответственностикомандизапросов_tooltip_id"><p>??? note “CQRS”<br/>
 <strong>CQRS</strong> - Command Query Responsibility Segregation</p>
-<p>Шаблон предназначен для <em>разделения обязанностей</em>. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции <em>create</em>, <em>update</em> и <em>delete</em>. Модуль и модель данных запросов реализуют операцию <em>request</em>. Сто…</p></div></div></body>
+<p>Шаблон предназначен для <em>разделения обязанностей</em>. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции <em>create</em>, <em>update</em> и <em>delete</em>. Модуль и модель данных запросов реализуют операцию <em>request</em>. Сторона запросов синхронизирует свою модель данных с моделью данных командной стороны, подписываясь на …</p></div></div></body>
 </html>

@@ -13,8 +13,8 @@
 <link href="../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Karla:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Karla";--md-code-font:"Ubuntu Mono"}</style>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 <link href="../../../assets/css/template/blog.css" rel="stylesheet"/>
 <link href="../../../assets/css/template/grid.css" rel="stylesheet"/>
@@ -1628,9 +1628,15 @@ lock(syncObj)
     /*код критической секции*/
 }</code></p>
 <p>Является синтаксическим сахаром над следующей конструкцией:<br/>
-```csharp<br/>
-Monitor.Enter(syncObj);<br/>
-try<br/>
-{<br/>
-    /*код критиче…</p></div></div></body>
+<code>csharp
+Monitor.Enter(syncObj);
+try
+{
+    /*код критической секции*/
+}
+finally
+{
+    Monitor.Exit(syncObj);
+}</code></p>
+<p>Желательно не использовать внутри такой кри…</p></div></div></body>
 </html>

@@ -13,8 +13,8 @@
 <link href="../../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Karla:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Karla";--md-code-font:"Ubuntu Mono"}</style>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 <link href="../../../../assets/css/template/blog.css" rel="stylesheet"/>
 <link href="../../../../assets/css/template/grid.css" rel="stylesheet"/>
@@ -1546,15 +1546,19 @@
 <div class="tooltip_templates"><div id="Конфигурациявынесеннаявовне_tooltip_id"><p>Предоставляет запущенному сервису значения конфигурационных свойств, такие как учётные данные для доступа к БД и сетевое размещение.<br/>
 Есть два основных подхода:</p>
 <li><em>Пассивная модель</em> [^1]. Инфраструктура развертывания передает экземпляру сервиса конфигурационные свойства, используя, к примеру, переменные системного окружения или конфигурационный файл.</li>
-<li>*Акт…</li></div></div><div class="tooltip_templates"><div id="Шассимикросервисов_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211103204415.png"/><br/>
+<li><em>Активная модель</em>[^2]. Экземпляр сервиса сам берет конфигурационные свойства с сервера конфигурации.</li>
+<p>[^…</p></div></div><div class="tooltip_templates"><div id="Шассимикросервисов_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211103204415.png"/><br/>
 Создание сервисов на основе фреймворка или группы фреймворков, которые реализуют общие, не связанные с бизнес-логикой функции, такие как:</p>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/">предохранитель</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/access-token-pattern/">работу с токенами</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/client-side-discovery-pattern/">обнаружение сервисов</a></li>
-<li>[[externalized-configuration-pattern|обращени…</li></div></div><div class="tooltip_templates"><div id="Заготовкасервиса_tooltip_id"><p>Альтернатива шаблону <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/microservice-chassis-pattern/">шасси микросервисов</a>. Создается общая заготовка для сервиса со всем необходимым для реализации сервиса кодом. Обычно такой код охватывает следубщие функции:</p>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/externalized-configuration-pattern/">обращение к серверу конфигурации</a></li>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/observability-patterns/">наблюдаемость</a></li>
+<p>Недостатком является то, что …</p></div></div><div class="tooltip_templates"><div id="Заготовкасервиса_tooltip_id"><p>Альтернатива шаблону <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/microservice-chassis-pattern/">шасси микросервисов</a>. Создается общая заготовка для сервиса со всем необходимым для реализации сервиса кодом. Обычно такой код охватывает следубщие функции:</p>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/">предохранитель</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/access-token-pattern/">работу с токенами</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/client-side-discovery-pattern/">обнаружение сервисов</a></li>
-<li>[[externaliz…</li></div></div><div class="tooltip_templates"><div id="Sidecar_tooltip_id"><p>Реализует общие функции в отдельном контейнере или подключаемом процессе, находящемся рядом с экземпляром сервиса.</p>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/externalized-configuration-pattern/">обращение к серверу конфигурации</a></li>
+<li>[[observability-patterns|наблюдаемость…</li></div></div><div class="tooltip_templates"><div id="Sidecar_tooltip_id"><p>Реализует общие функции в отдельном контейнере или подключаемом процессе, находящемся рядом с экземпляром сервиса.</p>
 <p>https://microservices.io/patterns/deployment/sidecar.html</p></div></div></body>
 </html>

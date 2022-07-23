@@ -13,8 +13,8 @@
 <link href="../../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Karla:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Karla";--md-code-font:"Ubuntu Mono"}</style>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 <link href="../../../../assets/css/template/blog.css" rel="stylesheet"/>
 <link href="../../../../assets/css/template/grid.css" rel="stylesheet"/>
@@ -1633,12 +1633,17 @@
 Структура шаблона предусмативает два типа участников:</p>
 <li><em>API-композитор</em> - реализует операцию запроса, обращаясь к сервис-провайдерам</li>
 <li><em>сервис-провайдер</em> - сервис, которому принадлежат данные, возвращаемые запросом.</li>
-<p>Преимущество этого шаб…</p></div></div><div class="tooltip_templates"><div id="порождениисобытий_tooltip_id"><p>Сохраняет <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">агрегат</a> в виде последовательности <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">доменных событий</a>, которые представляют изменение состояния. Приложение воссоздает текущее состояние, воспроизводя записанные события.<br/>
-События сохраняются в <em>хранилище событий</em> (event store), у которого есть API для добавления и получения событий сущности. Также хранилище событий…</p></div></div><div class="tooltip_templates"><div id="Подробнееопреимуществах_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+<p>Преимущество этого шаблона - в простоте реализации.</p>
+<li>дополнительные накладные расходы</li>
+<li>риск снижения досту…</li></div></div><div class="tooltip_templates"><div id="порождениисобытий_tooltip_id"><p>Сохраняет <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">агрегат</a> в виде последовательности <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">доменных событий</a>, которые представляют изменение состояния. Приложение воссоздает текущее состояние, воспроизводя записанные события.<br/>
+События сохраняются в <em>хранилище событий</em> (event store), у которого есть API для добавления и получения событий сущности. Также хранилище событий выполняет роль брокера сообщений - у него есть API для подписки на события.<br/>
+Если для какой-то сущно…</p></div></div><div class="tooltip_templates"><div id="Подробнееопреимуществах_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
 Стандарт OAuth 2.0 основан на следующих концепциях.</p>
 <li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
-<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div><div class="tooltip_templates"><div id="Подробнееонедостатках_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
+<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="Подробнееонедостатках_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
 Стандарт OAuth 2.0 основан на следующих концепциях.</p>
 <li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
-<li><em>Токен доступа</em> - токен, дающий доступ к *с…</li></div></div></body>
+<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
+<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div></body>
 </html>

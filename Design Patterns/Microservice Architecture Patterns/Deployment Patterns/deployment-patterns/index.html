@@ -13,8 +13,8 @@
 <link href="../../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Karla:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Karla";--md-code-font:"Ubuntu Mono"}</style>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 <link href="../../../../assets/css/template/blog.css" rel="stylesheet"/>
 <link href="../../../../assets/css/template/grid.css" rel="stylesheet"/>
@@ -1551,19 +1551,24 @@
 <div class="tooltip_templates"><div id="Сетьсервисов_tooltip_id"><p>Пропускает весь трафик между сервисами через сетевой слой, реализующий такие функции как <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/">предохранители</a>, <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/distributed-tracing-pattern/">распределенная трассировка</a>, <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/server-side-discovery-pattern/">обнаружение сервисов</a>, балансирование нагрузки и маршрутизация трафика.<br/>
 Некоторые реализации сети сервисов:</p>
 <li><a href="https://istio.io/">Istio</a></li>
-<li>[Linkerd](…</li></div></div><div class="tooltip_templates"><div id="Форматпакетовдляопределенногоязыка_tooltip_id"><p>Развертывает в промышленную среду пакеты, предназначенные для определенного языка.<br/>
-На компьютере разворачивается, если необходимо, среда выполнения для определенного языка, и затем запускается экземпляр, либо несколько экземпляров сервиса. Для определенных языков имеется возможность запустить несколько экземпляров сервиса (или разных сервисов) в од…</p></div></div><div class="tooltip_templates"><div id="РазвертываниесервисаввидеВМ_tooltip_id"><p>Развертывает в промышленной среде сервисы, упакованные в виде образов для виртуальных машин. Каждый экземпляр сервиса является отдельной ВМ.</p>
+<li><a href="https://linkerd.io/">Linkerd</a></li>
+<p>https://microservices.io/patterns/deployment/service-mesh.html</p></div></div><div class="tooltip_templates"><div id="Форматпакетовдляопределенногоязыка_tooltip_id"><p>Развертывает в промышленную среду пакеты, предназначенные для определенного языка.<br/>
+На компьютере разворачивается, если необходимо, среда выполнения для определенного языка, и затем запускается экземпляр, либо несколько экземпляров сервиса. Для определенных языков имеется возможность запустить несколько экземпляров сервиса (или разных сервисов) в одном процессе ОС.</p>
+<li>Быстрое развертывание</li>
+<li>Эффективное использование ресурсов, особе…</li></div></div><div class="tooltip_templates"><div id="РазвертываниесервисаввидеВМ_tooltip_id"><p>Развертывает в промышленной среде сервисы, упакованные в виде образов для виртуальных машин. Каждый экземпляр сервиса является отдельной ВМ.</p>
 <li>Образ ВМ инкапсулирует стек технологий.</li>
 <li>Экземпляры сервиса изолированы.</li>
-<li>Используется зрелая облачная инфраструктрура со всеми ее преимуществами - планированием размещения, возможностью автомасшт…</li></div></div><div class="tooltip_templates"><div id="Развертываниесервисаввидеконтейнера_tooltip_id"><p>Развертывает в среде выполнения сервис, упакованный в виде контейнера. Каждый экземпляр сервиса является отдельным контейнером.</p>
+<li>Используется зрелая облачная инфраструктрура со всеми ее преимуществами - планированием размещения, возможностью автомасштабирования и балансировкой трафика.</li>
+<li>Менее эффективное использование ресурсов. Каждый…</li></div></div><div class="tooltip_templates"><div id="Развертываниесервисаввидеконтейнера_tooltip_id"><p>Развертывает в среде выполнения сервис, упакованный в виде контейнера. Каждый экземпляр сервиса является отдельным контейнером.</p>
 <li>Инкапсуляция стека технологий</li>
 <li>Изоляция экземпляров</li>
 <li>Ограничение ресурсов, доступных экземпляру.</li>
 <li>Легковесность, и, засчёт этого, быстрота развертывания.</li>
-<li>Необходимо заниматься админист…</li></div></div><div class="tooltip_templates"><div id="Бессерверноеразвертывание_tooltip_id"><p>Развертывает сервисы при помощи бессерверного механизма, предоставляемого публичным облаком.</p>
+<li>Необходимо заниматься администрированием образов контейнеров и обновлением ОС</li>
+<li>Если не используется облачное контейнерное решение…</li></div></div><div class="tooltip_templates"><div id="Бессерверноеразвертывание_tooltip_id"><p>Развертывает сервисы при помощи бессерверного механизма, предоставляемого публичным облаком.</p>
 <li>Избавление от многих задач системного администрирования. Нет нужды заботиться об обновлении ОС и сред выполнения</li>
 <li>Эластичность. Бессерверная среда запускает экземпляры приложения в количестве, достаточном, чтобы справиться с нагрузкой.</li>
-<li>Тарифы, осно…</li></div></div><div class="tooltip_templates"><div id="Платформаразвертывания_tooltip_id"><p>Использует для развертывания специальное инфраструктурное решение.</p>
+<li>Тарифы, основанные на потреблении. Бессерверные механизмы позволяют взимать плату только за ресурсы, потраченные…</li></div></div><div class="tooltip_templates"><div id="Платформаразвертывания_tooltip_id"><p>Использует для развертывания специальное инфраструктурное решение.</p>
 <li>Оркестраторы контейнеров, такие как Kubernetes</li>
 <li>Бессерверные платформы, такие как AWS Lambda</li>
 <li>PaaS, такие как Cloud Foundry или AWS Elastic Beanstalk</li>
