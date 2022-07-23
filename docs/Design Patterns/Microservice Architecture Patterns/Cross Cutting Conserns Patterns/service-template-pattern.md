@@ -1,7 +1,7 @@
 ---
-share: True
-tags: 
-- microservice/pattern
+share: true
+tags:
+ - microservice/pattern
 ---
 # Шаблон "Заготовка сервиса"
 Альтернатива шаблону [[microservice-chassis-pattern|шасси микросервисов]]. Создается общая заготовка для сервиса со всем необходимым для реализации сервиса кодом. Обычно такой код охватывает следубщие функции:
@@ -13,3 +13,4 @@ tags:
 
 ## Ссылки
 https://microservices.io/patterns/service-template.html
+
