@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/pattern
-- microservice/observability
+share: true
+tags:
+ - microservice/pattern
+ - microservice/observability
 ---
 # Шаблон "Метрики приложения"
 Сервис шлет отчеты центральному серверу, который предоставляет агрегацию, визуализацию и оповещения.
