@@ -8,7 +8,7 @@ theme:
     favicon: assets/logo/logo.png
     custom_dir: overrides
     font:
-        text: Karla
+        text: Ubuntu
         code: Ubuntu Mono
     language: ru
     palette:
@@ -71,9 +71,6 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
-        - name: dataview
-          class: dataview
-          format: !!python/name:pymdownx.superfences.fence_div_format
         - name: mermaid
           class: mermaid
           format: !!python/name:mermaid2.fence_mermaid
@@ -86,8 +83,14 @@ plugins:
         wikilinks: true
   - mermaid2
   - awesome-pages
-  - tooltipster-links
-  - embed_file
+  - tooltipster-links:
+      callouts: true
+      custom-attributes: 'assets/css/custom_attributes.css'
+      max-characters: 500
+      truncate-character: '...'
+  - embed_file:
+      callouts: true
+      custom-attributes: 'assets/css/custom_attributes.css'
   - callouts
   - tags:
         tags_file: tags.md
