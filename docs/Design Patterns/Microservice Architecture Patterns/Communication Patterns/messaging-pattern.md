@@ -1,9 +1,9 @@
 ---
-share: true
-tags:
- - microservice/pattern
- - microservice/communication
- - microservice/messaging
+share: True
+tags: 
+- microservice/pattern
+- microservice/communication
+- microservice/messaging
 ---
 # Шаблон "Обмен сообщениями"
 Сервисы асинхронно коммуницируют путём обмена сообщениями.
