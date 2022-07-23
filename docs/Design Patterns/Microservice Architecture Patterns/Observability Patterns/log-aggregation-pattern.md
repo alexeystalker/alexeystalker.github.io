@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/pattern
-- microservice/observability
+share: true
+tags:
+ - microservice/pattern
+ - microservice/observability
 ---
 # Шаблон "Агрегация журналов"
 Агрегирует журналы всех сервисов в центральной базе данных с поддержкой поиска и уведомлений.
