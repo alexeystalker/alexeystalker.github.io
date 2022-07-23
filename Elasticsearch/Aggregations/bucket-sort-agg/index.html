@@ -1496,8 +1496,8 @@
 <a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></p>
-<p>Важно, что <code>bucket_sort</code> работает только внутри другой агрегации - в нашем случае внутри <a class="link-tooltip" data-tooltip-content="#terms_tooltip_id" href="../terms-agg/" title="terms">terms</a>.<br/>
+</code></pre></div><br/>
+Важно, что <code>bucket_sort</code> работает только внутри другой агрегации - в нашем случае внутри <a class="link-tooltip" data-tooltip-content="#terms_tooltip_id" href="../terms-agg/" title="terms">terms</a>.<br/>
 Здесь: <code>sort</code> - поля, по которым производится сортировка (для <code>terms</code> доступны поля <code>_key</code> и <code>_count</code> для ключа и значения), <code>from</code> - смещение, от которого начинать выбор бакетов, <code>size</code> - сколько взять. Замечу, что все поля необязательные, так что <code>bucket_sort</code> можно использовать для, например, получения top40 бакетов.</p>
 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.8/search-aggregations-pipeline-bucket-sort-aggregation.html">https://www.elastic.co/guide/en/elasticsearch/reference/7.8/search-aggregations-pipeline-bucket-sort-aggregation.html</a></p>
@@ -1506,7 +1506,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1613,9 +1613,9 @@
             }
         }
     }
-}</code></p>
-<p>Параметры:</p>
+}</code><br/>
+Параметры:</p>
 <li><code>field</code> - поле, по значениям которого создаются корзины и ведется подсчет</li>
 <li><code>size</code> - максимальное количество корзин. Сверху ограничено параметром кластера analyze.max_token_count (вроде бы)</li>
-<li><code>include</code> - список термов, корзины с которыми должны быть в выдаче. Есл…</li></div></div></body>
+<li><code>include</code> - список термов, корзины с которыми должны быть в выдаче. Если…</li></div></div></body>
 </html>

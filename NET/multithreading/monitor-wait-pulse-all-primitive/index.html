@@ -1507,24 +1507,24 @@
 <p>Пара методов (Pulse / PulseAll считаем за один метод), предназначенных для временного отпускания блокировки с последующим взятием обратно. Все нижеперечисленные методы должны вызываться из <a class="link-tooltip" data-tooltip-content="#синхронизированногокода_tooltip_id" href="../lock-primitive/" title="синхронизированного кода">синхронизированного кода</a>.<br/>
 Заметим, что ссылки на текущий блокирующий поток, <em>очередь готовности</em> и <em>очередь ожидания</em> хранятся в объекте блокировки.</p>
 <h2 id="monitorwait">Monitor.Wait<a class="headerlink" href="#monitorwait" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="na">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="na">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</span><span class="w"></span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">Wait</span><span class="w"> </span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">obj</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">millisecondsTimeout</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">exitContext</span><span class="p">);</span><span class="w"></span>
-</code></pre></div>
-<p>Перегрузки: <code>Wait(object)</code>, <code>Wait(object, int)</code>, <code>Wait(object, TimeSpan)</code>, <code>Wait(object, TimeSpan, bool)</code>.<br/>
+</code></pre></div><br/>
+Перегрузки: <code>Wait(object)</code>, <code>Wait(object, int)</code>, <code>Wait(object, TimeSpan)</code>, <code>Wait(object, TimeSpan, bool)</code>.<br/>
 Параметры: объект блокировки, таймаут в миллисекундах или таймспан, флаг выхода из контекста синхронизации.<br/>
 Возвращаемое значение: <code>true</code>, если блокировка взята до таймаута, <code>false</code>, если после. Метод не завершается до момента повторного взятия блокировки.</p>
 <h2 id="monitorpulse">Monitor.Pulse<a class="headerlink" href="#monitorpulse" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Pulse</span><span class="w"> </span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span><span class="w"></span>
-</code></pre></div>
-<p>Уведомляет следующий метод, ожидающий блокировку. Уведомленный метод перемещается в <em>очередь готовности</em>. После отпускания методом блокировки блокировку получает первый метод из очереди готовности (возможно, не метод, получивший <code>Pulse</code> сигнал!).</p>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Pulse</span><span class="w"> </span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span><span class="w"></span>
+</code></pre></div><br/>
+Уведомляет следующий метод, ожидающий блокировку. Уведомленный метод перемещается в <em>очередь готовности</em>. После отпускания методом блокировки блокировку получает первый метод из очереди готовности (возможно, не метод, получивший <code>Pulse</code> сигнал!).</p>
 <div class="admonition important">
 <p class="admonition-title">Важно!</p>
 <p><code>Monitor</code> не хранит информацию о том, был ли взведен <code>Pulse</code>, поэтому, если <code>Pulse</code> был взведен до вызова <code>Wait</code>, можно получить deadlock.</p>
 </div>
 <h2 id="monitorpulseall">Monitor.PulseAll<a class="headerlink" href="#monitorpulseall" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">PulseAll</span><span class="w"> </span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span><span class="w"></span>
-</code></pre></div>
-<p>Уведомляет ВСЕ методы, ждущие блокировку объекта. После уведомления все методы перемещаются в <em>очередь готовности</em>, и первый из них получает блокировку после отпускания ее текущим методом.</p>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">PulseAll</span><span class="w"> </span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span><span class="w"></span>
+</code></pre></div><br/>
+Уведомляет ВСЕ методы, ждущие блокировку объекта. После уведомления все методы перемещаются в <em>очередь готовности</em>, и первый из них получает блокировку после отпускания ее текущим методом.</p>
 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor.wait?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor.wait?view=net-6.0</a><br/>
 <a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor.pulse?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor.pulse?view=net-6.0</a></p>
@@ -1533,7 +1533,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 10, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

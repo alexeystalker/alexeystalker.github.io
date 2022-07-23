@@ -1476,8 +1476,8 @@
 <h1 id="elasticsearch">Как склонировать индекс Elasticsearch<a class="headerlink" href="#elasticsearch" title="Permanent link">¶</a></h1>
 <p>Чтобы склонировать индекс эластика, надо сделать запрос<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="err">POST /&lt;index&gt;/_clone/&lt;target-index&gt;</span>
-</code></pre></div></p>
-<p>Перед клонированием нужно <a class="link-tooltip" data-tooltip-content="#закрыть_tooltip_id" href="../Configuration/blocks-write/" title="закрыть">закрыть</a> индекс на запись. Также надо <a class="link-tooltip" data-tooltip-content="#выставить_tooltip_id" href="../Configuration/number-of-replicas/" title="выставить">выставить</a> число реплик равным числу исходного индекса (по умолчанию ставится 1).</p>
+</code></pre></div><br/>
+Перед клонированием нужно <a class="link-tooltip" data-tooltip-content="#закрыть_tooltip_id" href="../Configuration/blocks-write/" title="закрыть">закрыть</a> индекс на запись. Также надо <a class="link-tooltip" data-tooltip-content="#выставить_tooltip_id" href="../Configuration/number-of-replicas/" title="выставить">выставить</a> число реплик равным числу исходного индекса (по умолчанию ставится 1).</p>
 <h2 id="_1">ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-clone-index.html">https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-clone-index.html</a></p>
 <hr/>
@@ -1485,7 +1485,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1587,8 +1587,8 @@ PUT /my_source_index/_settings
   "settings": { 
     "index.blocks.write": true
     }
-}</code></p>
-<p>Нужно, к примеру для <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/elastic-clone/">клонирования</a></p>
+}</code><br/>
+Нужно, к примеру для <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/elastic-clone/">клонирования</a></p>
 <p>https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-clone-index.html</p></div></div><div class="tooltip_templates"><div id="выставить_tooltip_id"><p><code>json
 PUT /my_source_index/_settings 
 {

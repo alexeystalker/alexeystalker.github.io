@@ -1475,7 +1475,7 @@
 </nav>
 <h1 id="range-aggregation">Range aggregation<a class="headerlink" href="#range-aggregation" title="Permanent link">¶</a></h1>
 <p>Агрегация на фиксированное число корзин - заданных диапазонов. Запрос примерно такой:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span><span class="w"></span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">"aggs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="nt">"income_ranges"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">            </span><span class="nt">"range"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1501,8 +1501,8 @@
 <a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
 <a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>При этом <code>to</code> ВХОДИТ в диапазон, а <code>from</code> - НЕ ВХОДИТ. Иными словами, <code>{ "from": 0, "to": 1 }</code> =&gt; <code>[0,1)</code><br/>
+</code></pre></div><br/>
+При этом <code>to</code> ВХОДИТ в диапазон, а <code>from</code> - НЕ ВХОДИТ. Иными словами, <code>{ "from": 0, "to": 1 }</code> =&gt; <code>[0,1)</code><br/>
 В корзины попадают только документы с имеющимися значениями, так что если нужно учесть также количество документов БЕЗ значения, <strong>R.A.</strong> удобно использовать в связке с <a class="link-tooltip" data-tooltip-content="#Missing_tooltip_id" href="../missing-agg/" title="Missing"> Missing</a>, примерно так:<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span><span class="w"></span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">"aggs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1541,7 +1541,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1644,12 +1644,12 @@
             "missing": {"field": "income"}
         }
     }
-}</code></p>
-<p>Хорошо сочетается с <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Aggregations/range-agg/">range</a> агрегацией, когда нужно выделить документы без значений в отдельную колонку:<br/>
+}</code><br/>
+Хорошо сочетается с <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Aggregations/range-agg/">range</a> агрегацией, когда нужно выделить документы без значений в отдельную колонку:<br/>
 ```json<br/>
 {<br/>
     “aggs”: {<br/>
         “income_ranges”: {<br/>
             “range”: {<br/>
-                “field”: “income…</p></div></div></body>
+                “field”: “income”…</p></div></div></body>
 </html>

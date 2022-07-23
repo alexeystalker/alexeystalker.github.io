@@ -1485,8 +1485,8 @@
 <h1 id="_1">Шаблон “Опрашивающий издатель”<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Пусть приложение использует реляционную БД, и <a class="link-tooltip" data-tooltip-content="#хранитсообщения_tooltip_id" href="../transactional-outbox-pattern/" title="хранит сообщения">хранит сообщения</a> в таблице <code>OUTBOX</code>. Ретранслятор может вычитывать из этой таблицы неопубликованные записи обычным SQL запросом типа<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">OUTBOX</span><span class="w"> </span><span class="n">ORDERED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="k">ASC</span><span class="w"></span>
-</code></pre></div></p>
-<p>Затем он публикует полученные сообщения в соответствующие каналы брокера. После успешной (!) публикации сообщения можно удалить:<br/>
+</code></pre></div><br/>
+Затем он публикует полученные сообщения в соответствующие каналы брокера. После успешной (!) публикации сообщения можно удалить:<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">OUTBOX</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(...)</span><span class="w"></span>
 </code></pre></div></p>
 <h2 id="_2">Ссылки<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
@@ -1496,7 +1496,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

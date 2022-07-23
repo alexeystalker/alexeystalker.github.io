@@ -1517,8 +1517,8 @@
 <a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
 <a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></p>
-<p>Разберем пример. Сначала идёт ключевое слово <code>"aggs"</code>, определяет собственно начало описания агрегации. Дальше вложено <em>имя</em> агрегации, оно НЕ ключевое, и объект. Внутри - <em>тип агрегации</em> <code>"filter"</code>, далее объект фильтра. В объект фильтра можно сложить  <em>весь</em> объект запроса, который в обычном поиске идет под ключом <code>"query"</code>. После фильтра добавляем вложеную агрегацию:<br/>
+</code></pre></div><br/>
+Разберем пример. Сначала идёт ключевое слово <code>"aggs"</code>, определяет собственно начало описания агрегации. Дальше вложено <em>имя</em> агрегации, оно НЕ ключевое, и объект. Внутри - <em>тип агрегации</em> <code>"filter"</code>, далее объект фильтра. В объект фильтра можно сложить  <em>весь</em> объект запроса, который в обычном поиске идет под ключом <code>"query"</code>. После фильтра добавляем вложеную агрегацию:<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span><span class="w"></span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">"aggs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="nt">"t_shirts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1537,8 +1537,8 @@
 <a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
 <a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div></p>
-<p>По идее, все агрегации над фильтрованными данными будут вложенными к этой, либо, если она вложенная - применяем фильтр к содержимому каждой корзины внешней агрегации.<br/>
+</code></pre></div><br/>
+По идее, все агрегации над фильтрованными данными будут вложенными к этой, либо, если она вложенная - применяем фильтр к содержимому каждой корзины внешней агрегации.<br/>
 Есть альтернатива - добавить агрегации к запросу <code>query</code>, если в нем есть фильтры (<code>filter</code>). Эти же фильтры будут применены к документам, над которыми будет проводиться аггрегация</p>
 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.8/search-aggregations-bucket-filter-aggregation.html">https://www.elastic.co/guide/en/elasticsearch/reference/7.8/search-aggregations-bucket-filter-aggregation.html</a></p>
@@ -1547,7 +1547,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

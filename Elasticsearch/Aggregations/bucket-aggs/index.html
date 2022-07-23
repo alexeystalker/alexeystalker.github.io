@@ -1491,7 +1491,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1594,14 +1594,14 @@
             "missing": {"field": "income"}
         }
     }
-}</code></p>
-<p>Хорошо сочетается с <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Aggregations/range-agg/">range</a> агрегацией, когда нужно выделить документы без значений в отдельную колонку:<br/>
+}</code><br/>
+Хорошо сочетается с <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Aggregations/range-agg/">range</a> агрегацией, когда нужно выделить документы без значений в отдельную колонку:<br/>
 ```json<br/>
 {<br/>
     “aggs”: {<br/>
         “income_ranges”: {<br/>
             “range”: {<br/>
-                “field”: “income…</p></div></div><div class="tooltip_templates"><div id="Range_tooltip_id"><p>Агрегация на фиксированное число корзин - заданных диапазонов. Запрос примерно такой:</p>
+                “field”: “income”…</p></div></div><div class="tooltip_templates"><div id="Range_tooltip_id"><p>Агрегация на фиксированное число корзин - заданных диапазонов. Запрос примерно такой:</p>
 <p>```json<br/>
 {<br/>
     “aggs”: {<br/>
@@ -1645,9 +1645,9 @@
             }
         }
     }
-}</code></p>
-<p>Параметры:</p>
+}</code><br/>
+Параметры:</p>
 <li><code>field</code> - поле, по значениям которого создаются корзины и ведется подсчет</li>
 <li><code>size</code> - максимальное количество корзин. Сверху ограничено параметром кластера analyze.max_token_count (вроде бы)</li>
-<li><code>include</code> - список термов, корзины с которыми должны быть в выдаче. Есл…</li></div></div></body>
+<li><code>include</code> - список термов, корзины с которыми должны быть в выдаче. Если…</li></div></div></body>
 </html>
