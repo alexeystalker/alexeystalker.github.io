@@ -1,7 +1,5 @@
 ---
-share: True
-hide: 
-- navigation
+share: true
 ---
 # Теги
 
