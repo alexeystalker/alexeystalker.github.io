@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/patterns
-- microservice/communication
+share: true
+tags:
+ - microservice/patterns
+ - microservice/communication
 ---
 # Шаблоны взаимодействия
 ![[Pasted image 20210826151226.png]]

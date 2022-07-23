@@ -1,7 +1,6 @@
 ---
-share: True
-tags: 
-- Elasticsearch/analyze
+tags: [Elasticsearch/analyze]
+share: true
 ---
 # Analyze API
 Анализирует текстовую строку и возвращает результирующие токены
@@ -12,7 +11,6 @@ GET /_analyze
 	"text" : "Quick Brown Foxes!" 
 }
 ```
-
 
 ## Варианты запроса
 - `GET /_analyze`

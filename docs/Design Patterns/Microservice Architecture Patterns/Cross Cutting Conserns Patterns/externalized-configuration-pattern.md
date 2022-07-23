@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/pattern
-- microservice/configuration
+share: true
+tags:
+ - microservice/pattern
+ - microservice/configuration
 ---
 # Шаблон "Конфигурация, вынесенная вовне"
 Предоставляет запущенному сервису значения конфигурационных свойств, такие как учётные данные для доступа к БД и сетевое размещение.

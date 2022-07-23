@@ -1,7 +1,6 @@
 ---
-share: True
-tags: 
-- Elasticsearch/aggs
+tags: [Elasticsearch/aggs]
+share: true
 ---
 # Агрегации в Elasticsearch 
 Агрегации - это запросы к Elasticsearch, которые как-либо агрегируют значения в документах. Делятся на три вида

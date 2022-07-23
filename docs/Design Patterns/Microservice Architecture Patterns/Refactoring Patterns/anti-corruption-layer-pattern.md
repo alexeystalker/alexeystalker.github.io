@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/pattern
-- microservice/refactoring
+share: true
+tags:
+ - microservice/pattern
+ - microservice/refactoring
 ---
 # Шаблон "Предохранительный слой"
 Программный слой, выступающий посредником между двумя доменными моделями, не давая им засорить друг друга своими концепциями.

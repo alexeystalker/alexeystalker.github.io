@@ -1,8 +1,6 @@
 ---
-share: True
-tags: 
-- definition
-- security
+tags: [definition, security]
+share: true
 ---
 # Аутентификация
 *Аутентификация* - процедура проверки подлинности. Например:

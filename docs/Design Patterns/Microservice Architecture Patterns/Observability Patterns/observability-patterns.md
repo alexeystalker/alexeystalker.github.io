@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/patterns
-- microservice/observability
+share: true
+tags:
+ - microservice/patterns
+ - microservice/observability
 ---
 # Шаблоны наблюдаемости
 - [[health-check-api-pattern|Шаблон "API проверки работоспособности"]]

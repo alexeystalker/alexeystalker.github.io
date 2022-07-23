@@ -1,7 +1,6 @@
 ---
-share: True
-tags: 
-- microservice/definition
+tags: [microservice/definition]
+share: true
 ---
 # Что такое сервис
 *Сервис* - это автономный, независимо развертываемый программный компонент, который реализует определенные полезные функции.

@@ -1,7 +1,6 @@
 ---
-share: True
-tags: 
-- Elasticsearch/query
+tags: [Elasticsearch/query]
+share: true
 ---
 # Query DSL
 Головная заметка о Elasticsearch query DSL.

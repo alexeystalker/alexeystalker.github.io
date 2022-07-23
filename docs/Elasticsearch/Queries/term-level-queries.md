@@ -1,8 +1,6 @@
 ---
-share: True
-tags: 
-- Elasticsearch/query
-- Elasticsearch/term-level
+tags: [Elasticsearch/query, Elasticsearch/term-level]
+share: true
 ---
 # Term-level queries
 *Запросы уровня терма* - запросы к точным значениям полей. Не используют анализ термов (в отличие от [[full-test-queries|полнотекстовых запросов]]).

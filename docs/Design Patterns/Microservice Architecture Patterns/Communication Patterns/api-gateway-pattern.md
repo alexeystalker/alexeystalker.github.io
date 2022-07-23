@@ -1,9 +1,9 @@
 ---
-share: True
-tags: 
-- microservice/pattern
-- microservice/communication
-- microservice/api
+share: true
+tags:
+ - microservice/pattern
+ - microservice/communication
+ - microservice/api
 ---
 # Шаблон "API-шлюз"
 ![[Pasted image 20211013203814.png]]
@@ -34,3 +34,4 @@ tags:
 [^2]: [[ch-8-api-gateway-architecture|подробнее]]
 ## Ссылки
 https://microservices.io/patterns/apigateway.html
+

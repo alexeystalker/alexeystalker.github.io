@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/pattern
-- microservice/communication
+share: true
+tags:
+ - microservice/pattern
+ - microservice/communication
 ---
 # Шаблон "Удаленный вызов процедур"
 ![[Pasted image 20210906202710.png]]

@@ -1,8 +1,6 @@
 ---
-share: True
-tags: 
-- protocol
-- gRPC
+tags: [protocol,gRPC]
+share: true
 ---
 # gRPC (Remote Procedure Call от Google)
 gRPC - фреймворк для написания многоязычных клиентов и серверов 
