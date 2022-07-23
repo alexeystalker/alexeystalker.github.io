@@ -1,9 +1,9 @@
 ---
-share: True
 tags: 
-- microservice/pattern
-- microservice/anti-pattern
-- architecture
+  - microservice/pattern
+  - microservice/anti-pattern
+  - architecture
+share: true
 ---
 # Шаблон "Монолитная архитектура"
 ### Преимущества
