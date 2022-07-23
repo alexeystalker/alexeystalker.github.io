@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/pattern
-- microservice/observability
+share: true
+tags:
+ - microservice/pattern
+ - microservice/observability
 ---
 # Шаблон "Ведение журнала аудита"
 Записывает действия пользователя в БД, чтобы помочь службе поддержки обеспечить соблюдение правовых норм и обнаружить подозрительную активность.
