@@ -1,9 +1,9 @@
 ---
-share: True
-tags: 
-- microservice/pattern
-- microservice/communication
-- microservice/api
+share: true
+tags:
+ - microservice/pattern
+ - microservice/communication
+ - microservice/api
 ---
 # Шаблон "Бэкенды для фронтендов" (BFF)
 `Backends for Frontends`
