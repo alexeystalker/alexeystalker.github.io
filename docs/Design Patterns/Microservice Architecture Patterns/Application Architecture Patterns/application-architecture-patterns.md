@@ -1,8 +1,6 @@
 ---
-share: True
-tags: 
-- microservice/patterns
-- architecture
+tags: [microservice/patterns,architecture]
+share: true
 ---
 # Шаблоны архитектуры приложения
 + [[monolithic-architecture-pattern|Монолитная архитектура]]
