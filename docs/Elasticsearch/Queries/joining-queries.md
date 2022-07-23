@@ -1,8 +1,6 @@
 ---
-share: True
-tags: 
-- Elasticsearch/query
-- Elasticsearch/joining
+tags: [Elasticsearch/query, Elasticsearch/joining]
+share: true
 ---
 # Joining queries
 Аналог Join запросов в SQL. Эластиковые join-подобные запросы спроектированы масштабироваться горизонтально.
