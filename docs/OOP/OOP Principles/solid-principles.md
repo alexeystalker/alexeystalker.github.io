@@ -8,7 +8,7 @@ tags: [OOP/principles]
 - [[open-closed-principle|Open-Closed Principle]] - принцип открытости/закрытости;
 - [[liskov-substitution-principle|Liskov Substitution Principle]] - принцип подстановки Лисков;
 - [[interface-segregation-principle|Interface Segregation Principle]] - принцип разделения интерфейса;
-- [[dependency-inversion-principle|dependency Inversion Prinicple]] - принцип инверсии зависимостей.
+- [[dependency-inversion-principle|Dependency Inversion Prinicple]] - принцип инверсии зависимостей.
 
 ## Ссылки
 https://en.wikipedia.org/wiki/SOLID
