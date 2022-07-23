@@ -531,6 +531,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/common-closure-principle/</loc>
+         <lastmod>2022-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/packages-principles/</loc>
+         <lastmod>2022-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/single-responsibility-principle/</loc>
+         <lastmod>2022-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/solid-principles/</loc>
+         <lastmod>2022-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/Obsidian/obsidian-publisher/</loc>
          <lastmod>2022-07-23</lastmod>
          <changefreq>daily</changefreq>
@@ -592,6 +612,11 @@
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/</loc>
+         <lastmod>2022-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/sentry-io/</loc>
          <lastmod>2022-07-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
