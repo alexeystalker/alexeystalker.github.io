@@ -1,8 +1,8 @@
 ---
-share: True
-tags: 
-- microservice/patterns
-- microservice/request
+share: true
+tags:
+ - microservice/patterns
+ - microservice/request
 ---
 # Шаблоны запросов данных
 - [[api-composition-pattern|Объединение API]]
