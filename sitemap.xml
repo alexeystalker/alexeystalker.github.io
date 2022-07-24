@@ -2,697 +2,742 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://garden.stalker-home.xyz/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/tags/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/memento-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/microservice-architecture-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/application-architecture-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/bff-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/client-side-discovery-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/communication-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/polling-publisher-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/retry-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/rpi-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/self-registration-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/server-side-discovery-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/third-party-registration-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transaction-log-tailing-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/cross-cutting-concerns-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/externalized-configuration-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/microservice-chassis-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/service-template-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/sidecar-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/data-management-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/shared-database-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-business-capability-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-subdomain-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decomposition-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/deployment-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/language-specific-packaging-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/serverless-deployment-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-deployment-platform-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-mesh-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-per-container-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-per-vm-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/application-metrics-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/audit-logging-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/distributed-tracing-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/exception-tracking-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/health-check-api-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/log-aggregation-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/observability-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/anti-corruption-layer-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/refactoring-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/strangler-application-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/request-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/access-token-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/security-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-driven-contract-test-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-side-contract-test-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/service-component-test-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/testing-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Web%20Application%20Patterns/mvc-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Web%20Application%20Patterns/prg-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Web%20Application%20Patterns/repr-pattern/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/analyze-api/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/clear-cache-api/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/elastic-clone/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/has-child-oom/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/bucket-aggs/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/bucket-sort-agg/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/elastic-aggs/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/filter-agg/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/missing-agg/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/pipeline-aggs/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/range-agg/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/terms-agg/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Configuration/blocks-write/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Configuration/heap-size/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Configuration/mapping-update/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Configuration/number-of-replicas/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/exists-query/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/joining-queries/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/nested-query/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/query-dsl/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/range-query/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/term-level-queries/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/term-query/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/scale-cube/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/service-definition/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Sagas/saga-compensating/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Sagas/saga-repeatable/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Sagas/saga-structure/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Sagas/saga-turning-point/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/await-continuewith/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/commandlineparser-fast-start/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/encoding-net-core/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/AspNetCore/httpcontext/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-commandlineparser/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-fastendpoints/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-polly/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/multithreading/interlocked-primitive/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/multithreading/lock-primitive/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/multithreading/monitor-wait-pulse-all-primitive/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/common-closure-principle/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/packages-principles/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/single-responsibility-principle/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/solid-principles/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Obsidian/obsidian-publisher/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Router/Asuswrt-Merlin/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Windows/far-manager-shortcuts/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Windows/myhomelib/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/note-on-digital-garden/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/note-on-obsidian/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-maturity-model/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-operation-binding-difficulty/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-several-resources-difficulty/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/http/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/sentry-io/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/book-microservices-patterns/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%201/ch-1-microservice-soa-compare/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%201/ch-1-monolith/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%202/ch-2-4-plus-1-view-model-of-architecture/</loc>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%202/ch-2-decomposition-strategies/</loc>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%202/ch-2-hexagonal-architecture/</loc>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%202/ch-2-how-to-define-microservice-architecture/</loc>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%202/ch-2-multilayer-architecture/</loc>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%202/ch-2-services-api-definition/</loc>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%202/ch-2-services-decomposition/</loc>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%202/ch-2-system-operation-definition/</loc>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%202/ch-2-what-is-microservice-architecture/</loc>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authentication/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authorization/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/cohesion/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/coupling/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/linked-list/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/optimistic-lock/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/pessimistic-lock/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/semantic-versioning/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/cap-theorem/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/conways-law/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/law-of-holes/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/tags/</loc>
-         <lastmod>2022-07-23</lastmod>
+         <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
