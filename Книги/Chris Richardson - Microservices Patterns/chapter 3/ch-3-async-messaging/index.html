@@ -1539,6 +1539,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-message-duplicates/">
+        Дублирование сообщений
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../ch-3-messaging-styles-realization/">
         Реализация стилей взаимодействия
       </a>
@@ -1722,7 +1727,7 @@
 <h1 id="_1">Взаимодействие с помощью асинхронного обмена сообщениями<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Сервисы могут взаимодействовать путём асинхронного <a class="link-tooltip" data-tooltip-content="#обменасообщениями_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/" title="обмена сообщениями">обмена сообщениями</a>.</p>
 <h2 id="_2">Обзор механизмов обмена сообщениями<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>Рассмотрим модель обмена сообщениями, описанной в книге <a href="https://www.ozon.ru/product/shablony-integratsii-korporativnyh-prilozheniy-signature-series-151531716/">Шаблоны интеграции корпоративных приложений</a> В этой модели <a class="link-tooltip" data-tooltip-content="#сообщения_tooltip_id" href="../../../../Microservices/Messages/message/" title="сообщения">сообщения</a> передаются по <a class="link-tooltip" data-tooltip-content="#каналам_tooltip_id" href="../../../../Microservices/Messages/message-channel/" title="каналам">каналам</a>. Отправитель пишет сообщение в канал, а получатель считывает его из этого канала.</p>
+<p>Рассмотрим модель обмена сообщениями, описанной в книге <a href="https://www.ozon.ru/product/shablony-integratsii-korporativnyh-prilozheniy-signature-series-151531716/">Шаблоны интеграции корпоративных приложений</a>. В этой модели <a class="link-tooltip" data-tooltip-content="#сообщения_tooltip_id" href="../../../../Microservices/Messages/message/" title="сообщения">сообщения</a> передаются по <a class="link-tooltip" data-tooltip-content="#каналам_tooltip_id" href="../../../../Microservices/Messages/message-channel/" title="каналам">каналам</a>. Отправитель пишет сообщение в канал, а получатель считывает его из этого канала.</p>
 <h2 id="_3"><a class="link-tooltip" data-tooltip-content="#Реализациястилейвзаимодействия_tooltip_id" href="../ch-3-messaging-styles-realization/" title="Реализация стилей взаимодействия">Реализация стилей взаимодействия</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <h2 id="api">Создание спецификации для API сервиса на основе сообщений<a class="headerlink" href="#api" title="Permanent link">¶</a></h2>
 <p>Спецификация такого <a class="link-tooltip" data-tooltip-content="#API_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/" title="API">API</a> должна содержать имена каналов, а также типы и форматы сообщений, допустимые в каждом из них. </p>
@@ -1737,7 +1742,7 @@
 асинхронными сообщениями.</p>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#Конкурирующиеполучатели_tooltip_id" href="../ch-3-concurrent-recievers/" title="Конкурирующие получатели">Конкурирующие получатели</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Дублированиесообщений_tooltip_id" href="../../../ch-3-message-duplicates" title="Дублирование сообщений">Дублирование сообщений</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Дублированиесообщений_tooltip_id" href="../ch-3-message-duplicates/" title="Дублирование сообщений">Дублирование сообщений</a></li>
 </ul>
 <h2 id="_6"><a class="link-tooltip" data-tooltip-content="#Транзакционныйобменсообщениями_tooltip_id" href="../ch-3-transactional-messaging/" title="Транзакционный обмен сообщениями">Транзакционный обмен сообщениями</a><a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
 <hr/>
@@ -1863,11 +1868,8 @@
 Одно из решений - использование <em>сегментированных каналов</em>.<br/>
 <img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210915203724.png"/></p>
 <li>Сегментированный канал включает в себя два и более сегмента, каждый из которых ведет себя как канал.</li>
-<li>Отправитель указывает в заголовке ключ сегмента. Бро…</li></div></div><div class="tooltip_templates"><div id="Дублированиесообщений_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
-Стандарт OAuth 2.0 основан на следующих концепциях.</p>
-<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
-<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
-<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="Транзакционныйобменсообщениями_tooltip_id"><p>Сервисы часто нужно публиковать сообщения в рамках транзакции, обновляющей базу данных. Если не отправить сообщение одновременно с записью в БД, система может остаться в несогласованном состоянии.<br/>
+<li>Отправитель указывает в заголовке ключ сегмента. Бро…</li></div></div><div class="tooltip_templates"><div id="Дублированиесообщений_tooltip_id"><p>В идеале брокер должен доставлять сообщение ровно один раз. Однако обеспечение этого обычно сильно затратно. Вместо этого большинство брокеров обеспечивает  доставку <em>минимум один раз (at least once)</em>.<br/>
+Если логика, обрабатывающая сообщения, является идемпотентной, то это не проблема. В случае, когда логика не является идемпотентной, можно воспользоваться шаблоном <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/">идемпотентный потребитель</a></p></div></div><div class="tooltip_templates"><div id="Транзакционныйобменсообщениями_tooltip_id"><p>Сервисы часто нужно публиковать сообщения в рамках транзакции, обновляющей базу данных. Если не отправить сообщение одновременно с записью в БД, система может остаться в несогласованном состоянии.<br/>
 Предлагается следующий механизм для надёжной отправки сообщений:</p>
 <li>Первый шаг - воспользуемся шаблоном <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">Публикация событий (Outbox)</a> для временного сохранения сообщений.</li>
 <li>Второй шаг - передаем сообщения, сохраненные на первом шаге, бр…</li></div></div></body>
