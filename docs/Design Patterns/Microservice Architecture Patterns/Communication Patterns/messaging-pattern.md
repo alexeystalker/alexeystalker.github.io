@@ -13,5 +13,7 @@ tags:
 + [[request-async-response-messaging|Запрос/асинхронный ответ]]
 + [[publish-subscribe-messaging|Публикация/подписка]]
 + [[publish-async-response-messaging|Публикация/асинхронный ответ]]
+## Реализация
+[[ch-3-messaging-styles-realization|Из книги "Шаблоны проектирования микросервисов"]]
 ## Ссылки
 https://microservices.io/patterns/communication-style/messaging.html
