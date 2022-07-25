@@ -1,0 +1,1827 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Мой цифровой сад." name="description"/>
+<link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%203/ch-3-async-messaging/" rel="canonical"/>
+<link href="../../../../assets/logo/logo.png" rel="icon"/>
+<meta content="mkdocs-1.3.1, mkdocs-material-8.3.9" name="generator"/>
+<title>Взаимодействие с помощью асинхронного обмена сообщениями - Цифровой сад и огород</title>
+<link href="../../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link href="../../../../assets/css/template/blog.css" rel="stylesheet"/>
+<link href="../../../../assets/css/template/grid.css" rel="stylesheet"/>
+<link href="../../../../assets/css/template/img-grids-float.css" rel="stylesheet"/>
+<link href="../../../../assets/css/template/tooltipster.bundle.min.css" rel="stylesheet"/>
+<link href="../../../../assets/css/template/utils.css" rel="stylesheet"/>
+<link href="../../../../assets/css/admonition.css" rel="stylesheet"/>
+<link href="../../../../assets/css/custom_attributes.css" rel="stylesheet"/>
+<link href="../../../../assets/css/customization.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-34CEYP9XGS",{page_path:e.pathname})})})</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+      $('.link-tooltip').tooltipster();
+    });
+  </script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<meta content="Взаимодействие с помощью асинхронного обмена сообщениями" property="og:title"/>
+<meta content="Взаимодействие с помощью асинхронного обмена сообщениями" name="twitter:title"/>
+<meta content="Мой цифровой сад." name="og:description"/>
+<meta content="Мой цифровой сад." name="twitter:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://garden.stalker-home.xyz/" property="og:image"/>
+<meta content="https://garden.stalker-home.xyz/" name="twitter:image"/>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(89583899, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="Цифровой сад и огород" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Цифровой сад и огород">
+<img alt="logo" src="../../../../assets/logo/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Цифровой сад и огород
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Взаимодействие с помощью асинхронного обмена сообщениями
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="light-blue" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="blue" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Цифровой сад и огород" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Цифровой сад и огород">
+<img alt="logo" src="../../../../assets/logo/logo.png"/>
+</a>
+    Цифровой сад и огород
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+        Цифровой сад и огород
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tags/">
+        Теги
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Design Patterns" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/memento-pattern/">
+        Шаблон "Хранитель"
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+          Microservice Architecture Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Microservice Architecture Patterns" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Microservice Architecture Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/microservice-architecture-patterns/">
+        Список шаблонов микросервисной архитектуры
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" id="__nav_3_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_2">
+          Application Architecture Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Application Architecture Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Application Architecture Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/application-architecture-patterns/">
+        Шаблоны архитектуры приложения
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/">
+        Шаблон "Микросервисная архитектура"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/">
+        Шаблон "Монолитная архитектура"
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" id="__nav_3_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_3">
+          Communication Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Communication Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Communication Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/">
+        Шаблон "API-шлюз"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/bff-pattern/">
+        Шаблон "Бэкенды для фронтендов" (BFF)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/">
+        Шаблон "Предохранитель"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/client-side-discovery-pattern/">
+        Шаблон "Обнаружение на клиентской стороне"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/communication-patterns/">
+        Шаблоны взаимодействия
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/">
+        Шаблон "Идемпотентный потребитель"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">
+        Шаблон "Обмен сообщениями"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/polling-publisher-pattern/">
+        Шаблон "Опрашивающий издатель"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/retry-pattern/">
+        Шаблон "Повтор"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/rpi-pattern/">
+        Шаблон "Удаленный вызов процедур"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/self-registration-pattern/">
+        Шаблон "Саморегистрация"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/server-side-discovery-pattern/">
+        Шаблон "Обнаружение на стороне сервера"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">
+        Шаблон "Реестр сервисов"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/third-party-registration-pattern/">
+        Шаблон "Сторонняя регистрация"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transaction-log-tailing-pattern/">
+        Шаблон "Отслеживание транзакционного журнала"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">
+        Шаблон "публикация событий" или Outbox
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4" id="__nav_3_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_4">
+          Cross Cutting Conserns Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Cross Cutting Conserns Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_4">
+<span class="md-nav__icon md-icon"></span>
+          Cross Cutting Conserns Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/cross-cutting-concerns-patterns/">
+        Шаблоны для решения сквозных проблем
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/externalized-configuration-pattern/">
+        Шаблон "Конфигурация, вынесенная вовне"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/microservice-chassis-pattern/">
+        Шаблон "Шасси микросервисов"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/service-template-pattern/">
+        Шаблон "Заготовка сервиса"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/sidecar-pattern/">
+        Шаблон Sidecar
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_5" id="__nav_3_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_5">
+          Data Management Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Data Management Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Data Management Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">
+        Шаблон "Агрегат" из DDD
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/data-management-patterns/">
+        Шаблоны согласованности данных
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/">
+        Шаблон "Своя БД у сервиса"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">
+        Шаблон "Доменное событие" из DDD
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/">
+        Шаблон "Порождение событий"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/">
+        Шаблон "Повествование"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/shared-database-pattern/">
+        Шаблон "Одна БД для сервисов"
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_6" id="__nav_3_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_6">
+          Decomposition Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Decomposition Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_6">
+<span class="md-nav__icon md-icon"></span>
+          Decomposition Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-business-capability-pattern/">
+        Шаблон "Разбиение по бизнес-возможностям"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-subdomain-pattern/">
+        Шаблон "декомпозиция по поддомену"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decomposition-patterns/">
+        Шаблоны для разбиения приложения на микросервисы
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_7" id="__nav_3_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_7">
+          Deployment Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Deployment Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Deployment Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/deployment-patterns/">
+        Шаблоны развертывания сервисов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/language-specific-packaging-pattern/">
+        Шаблон "Формат пакетов для определенного языка"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/serverless-deployment-pattern/">
+        Шаблон "Бессерверное развертывание"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-deployment-platform-pattern/">
+        Шаблон "Платформа развертывания"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-mesh-pattern/">
+        Шаблон "Сеть сервисов"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-per-container-pattern/">
+        Шаблон "Развертывание сервиса в виде контейнера"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-per-vm-pattern/">
+        Шаблон "Развертывание сервиса в виде ВМ"
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_8" id="__nav_3_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_8">
+          Observability Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Observability Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_8">
+<span class="md-nav__icon md-icon"></span>
+          Observability Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/application-metrics-pattern/">
+        Шаблон "Метрики приложения"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/audit-logging-pattern/">
+        Шаблон "Ведение журнала аудита"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/distributed-tracing-pattern/">
+        Шаблон "Распределенная трассировка"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/exception-tracking-pattern/">
+        Шаблон "Отслеживание исключений"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/health-check-api-pattern/">
+        Шаблон "API проверки работоспособности"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/log-aggregation-pattern/">
+        Шаблон "Агрегация журналов"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/observability-patterns/">
+        Шаблоны наблюдаемости
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_9" id="__nav_3_2_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_9">
+          Refactoring Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Refactoring Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_9">
+<span class="md-nav__icon md-icon"></span>
+          Refactoring Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/anti-corruption-layer-pattern/">
+        Шаблон "Предохранительный слой"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/refactoring-patterns/">
+        Шаблоны перехода на микросервисы (рефакторинга)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/strangler-application-pattern/">
+        Шаблон "Удушающее приложение"
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_10" id="__nav_3_2_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_10">
+          Request Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Request Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_10">
+<span class="md-nav__icon md-icon"></span>
+          Request Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/">
+        Шаблон "Объединение API"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/">
+        Шаблон "Разделение ответственности команд и запросов"(CQRS)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/request-patterns/">
+        Шаблоны запросов данных
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_11" id="__nav_3_2_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_11">
+          Security Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Security Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_11">
+<span class="md-nav__icon md-icon"></span>
+          Security Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/access-token-pattern/">
+        Шаблон "Токен доступа"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/security-patterns/">
+        Шаблоны безопасности
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_12" id="__nav_3_2_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_12">
+          Testing Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Testing Patterns" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_12">
+<span class="md-nav__icon md-icon"></span>
+          Testing Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-driven-contract-test-pattern/">
+        Шаблон "тестирование контрактов с расчётом на потребителя"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-side-contract-test-pattern/">
+        Шаблон "тестирование контрактов на стороне потребителя"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/service-component-test-pattern/">
+        Шаблон "Компонентный тест сервиса"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/testing-patterns/">
+        Шаблоны автоматизированного тестирования
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3">
+          Web Application Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Web Application Patterns" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+          Web Application Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Web%20Application%20Patterns/mvc-pattern/">
+        Шаблон "Model-View-Controller"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Web%20Application%20Patterns/prg-pattern/">
+        Шаблон "POST-REDIRECT-GET"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Design%20Patterns/Web%20Application%20Patterns/repr-pattern/">
+        Шаблон "Request-Endpoint-Response"
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Elasticsearch
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Elasticsearch" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Elasticsearch
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/analyze-api/">
+        Analyze API
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/clear-cache-api/">
+        Clear Cache Api
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/elastic-clone/">
+        Как склонировать индекс Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/has-child-oom/">
+        OutOfMemory в Эластике при has_child запросе
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5">
+          Aggregations
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Aggregations" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+          Aggregations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Aggregations/bucket-aggs/">
+        Bucket aggregations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Aggregations/bucket-sort-agg/">
+        bucket_sort agg
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Aggregations/elastic-aggs/">
+        Агрегации в Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Aggregations/filter-agg/">
+        Filter Aggregation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Aggregations/missing-agg/">
+        Missing aggregation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Aggregations/pipeline-aggs/">
+        Конвеерные агрегации (pipeline aggs)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Aggregations/range-agg/">
+        Range aggregation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Aggregations/terms-agg/">
+        Terms Aggregation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" id="__nav_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_6">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Configuration" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_6">
+<span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Configuration/blocks-write/">
+        Закрыть на запись индекс Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Configuration/heap-size/">
+        Elastic heap size
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Configuration/mapping-update/">
+        Меняем mapping в Elastic
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Configuration/number-of-replicas/">
+        Настройка числа реплик Elasticsearch
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" id="__nav_4_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_7">
+          Queries
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Queries" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_7">
+<span class="md-nav__icon md-icon"></span>
+          Queries
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Queries/exists-query/">
+        Запрос exists в Elastic
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Queries/joining-queries/">
+        Joining queries
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Queries/nested-query/">
+        Query в nested документах
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Queries/query-dsl/">
+        Query DSL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Queries/range-query/">
+        Range query
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Queries/term-level-queries/">
+        Term-level queries
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Queries/term-query/">
+        term query
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Microservices
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Microservices" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Microservices
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/scale-cube/">
+        Куб масштабирования
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/service-definition/">
+        Что такое сервис
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3">
+          Sagas
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Sagas" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Sagas
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Sagas/saga-compensating/">
+        Компенсируемые транзакции
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Sagas/saga-repeatable/">
+        Повторяемые транзакции
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Sagas/saga-structure/">
+        Структура повествования
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Sagas/saga-turning-point/">
+        Поворотная транзакция
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          NET
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="NET" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          NET
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/await-continuewith/">
+        await ContinueWith
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/commandlineparser-fast-start/">
+        Быстрый старт с библиотекой CommandLineParser
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/encoding-net-core/">
+        Encoding в NetCore
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4">
+          AspNetCore
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="AspNetCore" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+          AspNetCore
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/AspNetCore/httpcontext/">
+        Объект HttpContext
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5">
+          Libraries
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Libraries" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          Libraries
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/libraries/library-commandlineparser/">
+        CommandLineParser
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/libraries/library-fastendpoints/">
+        FastEndpoints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/libraries/library-polly/">
+        Polly
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" id="__nav_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_6">
+          Multithreading
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Multithreading" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_6">
+<span class="md-nav__icon md-icon"></span>
+          Multithreading
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/multithreading/interlocked-primitive/">
+        Interlocked
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/multithreading/lock-primitive/">
+        lock (Monitor.Enter / Monitor.Exit)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/multithreading/monitor-wait-pulse-all-primitive/">
+        Monitor.Wait / Monitor.Pulse / Monitor.PulseAll
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+          OOP
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="OOP" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          OOP
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" id="__nav_7_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_1">
+          OOP Principles
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="OOP Principles" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_1">
+<span class="md-nav__icon md-icon"></span>
+          OOP Principles
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../OOP/OOP%20Principles/common-closure-principle/">
+        Принцип согласованного изменения (Common Closure Principle, CCP)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../OOP/OOP%20Principles/packages-principles/">
+        Принципы пакетов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../OOP/OOP%20Principles/single-responsibility-principle/">
+        Принцип единой ответственности (Single Responsibility Principle, SRP)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../OOP/OOP%20Principles/solid-principles/">
+        S.O.L.I.D
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+          Obsidian
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Obsidian" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Obsidian
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Obsidian/obsidian-publisher/">
+        Паблишер для Obsidian
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9">
+          Router
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Router" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Router
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Router/Asuswrt-Merlin/">
+        Asuswrt-Merlin
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Windows" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Windows/far-manager-shortcuts/">
+        Шорткаты в FAR Manager
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Windows/myhomelib/">
+        MyHomeLib
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          Заметки
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Заметки" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          Заметки
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/note-on-digital-garden/">
+        Цифровой сад
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/note-on-obsidian/">
+        Заметка про Obsidian
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12">
+          Интернет
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Интернет" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          Интернет
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_1" id="__nav_12_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12_1">
+          REST
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="REST" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_12_1">
+<span class="md-nav__icon md-icon"></span>
+          REST
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-maturity-model/">
+        Модель зрелости REST
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-operation-binding-difficulty/">
+        Трудности с привязкой операций к HTTP-командам
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-several-resources-difficulty/">
+        Трудности извлечения нескольких ресурсов за один запрос
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/">
+        REST (REpresentational State Transfer)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_2" id="__nav_12_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12_2">
+          Протоколы
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Протоколы" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_12_2">
+<span class="md-nav__icon md-icon"></span>
+          Протоколы
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/">
+        gRPC (Remote Procedure Call от Google)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/http/">
+        HTTP - Hypertext Transfer Protocol
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">
+        OAuth 2.0
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_3" id="__nav_12_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12_3">
+          Сервисы
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Сервисы" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_12_3">
+<span class="md-nav__icon md-icon"></span>
+          Сервисы
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/sentry-io/">
+        Sentry
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" id="__nav_13" type="checkbox"/>
+<label class="md-nav__link" for="__nav_13">
+          Книги
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Книги" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+          Книги
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_1" id="__nav_13_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_13_1">
+          Chris Richardson   Microservices Patterns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Chris Richardson   Microservices Patterns" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_13_1">
+<span class="md-nav__icon md-icon"></span>
+          Chris Richardson   Microservices Patterns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../book-microservices-patterns/">
+        Книжка "Микросервисы. Шаблоны разработки и рефакторинга"
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_1_2" id="__nav_13_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_13_1_2">
+          Chapter 1
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Chapter 1" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_13_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Chapter 1
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%201/ch-1-microservice-soa-compare/">
+        Сравнение SOA и микросервисов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%201/ch-1-monolith/">
+        Побег из монолитного ада
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_1_3" id="__nav_13_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_13_1_3">
+          Chapter 2
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Chapter 2" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_13_1_3">
+<span class="md-nav__icon md-icon"></span>
+          Chapter 2
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%202/ch-2-4-plus-1-view-model-of-architecture/">
+        Модель представлений архитектуры вида 4+1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%202/ch-2-decomposition-strategies/">
+        Стратегии декомпозиции
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%202/ch-2-hexagonal-architecture/">
+        Шестигранная архитектура
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%202/ch-2-how-to-define-microservice-architecture/">
+        Определение микросервисной архитектуры приложения
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%202/ch-2-multilayer-architecture/">
+        Многоуровневая архитектура
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%202/ch-2-services-api-definition/">
+        Определение API сервисов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%202/ch-2-services-decomposition/">
+        Разбиение на сервисы
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%202/ch-2-system-operation-definition/">
+        Определение системных операций
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%202/ch-2-what-is-microservice-architecture/">
+        Что представляет собой микросервисная архитектура
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_1_4" id="__nav_13_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_13_1_4">
+          Chapter 3
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Chapter 3" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_13_1_4">
+<span class="md-nav__icon md-icon"></span>
+          Chapter 3
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-async-messaging-improves-availabilty/">
+        Использование асинхронного обмена сообщениями для улучшения доступности
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Взаимодействие с помощью асинхронного обмена сообщениями
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Взаимодействие с помощью асинхронного обмена сообщениями
+      </a>
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    Обзор механизмов обмена сообщениями
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    Реализация стилей взаимодействия
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api">
+    Создание спецификации для API сервиса на основе сообщений
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    Использование брокера сообщений
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    Возможные проблемы
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    Транзакционный обмен сообщениями
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-concurrent-recievers/">
+        Конкурирующие получатели и порядок следования сообщений
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-interprocess-communication/">
+        Межпроцессное взаимодействие в микросервисной архитектуре
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-ipc-overview/">
+        Обзор IPC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-message-broker-usage/">
+        Использование брокера сообщений
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-messaging-styles-realization/">
+        Реализация стилей взаимодействия
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-remote-procedure-invocation/">
+        Взаимодействие на основе удаленного вызова процедур (RPI)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-service-discovery/">
+        Обнаружение сервисов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-transactional-messaging/">
+        Транзакционный обмен сообщениями
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" id="__nav_14" type="checkbox"/>
+<label class="md-nav__link" for="__nav_14">
+          Определения
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Определения" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+          Определения
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/">
+        Application Programming Interface, API
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authentication/">
+        Аутентификация
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authorization/">
+        Авторизация
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/cohesion/">
+        Cohesion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/coupling/">
+        Coupling
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/linked-list/">
+        Связный список
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/optimistic-lock/">
+        Оптимистическая блокировка
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/pessimistic-lock/">
+        Пессимистическая блокировка
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/semantic-versioning/">
+        Семантическая нумерация версий
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15">
+          Цитаты
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Цитаты" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+          Цитаты
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/cap-theorem/">
+        CAP-теорема
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/conways-law/">
+        Закон Конвея
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/law-of-holes/">
+        Закон ямы
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    Обзор механизмов обмена сообщениями
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    Реализация стилей взаимодействия
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api">
+    Создание спецификации для API сервиса на основе сообщений
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    Использование брокера сообщений
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    Возможные проблемы
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    Транзакционный обмен сообщениями
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag" href="../../../../tags/#microservice">
+          microservice
+        </a>
+<a class="md-tag" href="../../../../tags/#">
+          книга
+        </a>
+<a class="md-tag" href="../../../../tags/#">
+          конспект
+        </a>
+</nav>
+<h1 id="_1">Взаимодействие с помощью асинхронного обмена сообщениями<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>Сервисы могут взаимодействовать путём асинхронного <a class="link-tooltip" data-tooltip-content="#обменасообщениями_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/" title="обмена сообщениями">обмена сообщениями</a>.</p>
+<h2 id="_2">Обзор механизмов обмена сообщениями<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>Рассмотрим модель обмена сообщениями, описанной в книге <a href="https://www.ozon.ru/product/shablony-integratsii-korporativnyh-prilozheniy-signature-series-151531716/">Шаблоны интеграции корпоративных приложений</a> В этой модели <a class="link-tooltip" data-tooltip-content="#сообщения_tooltip_id" href="../../../message" title="сообщения">сообщения</a> передаются по <a class="link-tooltip" data-tooltip-content="#каналам_tooltip_id" href="../../../message-channel" title="каналам">каналам</a>. Отправитель пишет сообщение в канал, а получатель считывает его из этого канала.</p>
+<h2 id="_3"><a class="link-tooltip" data-tooltip-content="#Реализациястилейвзаимодействия_tooltip_id" href="../ch-3-messaging-styles-realization/" title="Реализация стилей взаимодействия">Реализация стилей взаимодействия</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h2 id="api">Создание спецификации для API сервиса на основе сообщений<a class="headerlink" href="#api" title="Permanent link">¶</a></h2>
+<p>Спецификация такого <a class="link-tooltip" data-tooltip-content="#API_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/" title="API">API</a> должна содержать имена каналов, а также типы и форматы сообщений, допустимые в каждом из них. </p>
+<ul>
+<li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#запросасихронныйответ_tooltip_id" href="../../../request-async-response-messaging" title="запрос/асихронный ответ">“запрос/асихронный ответ”</a></em> состоит из канала команд сервиса, типов и форматов команд, которые сервис принимает, а также типов и форматов ответных сообщений.</li>
+<li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#однонаправленныхсообщений_tooltip_id" href="../../../notifications-messaging" title="однонаправленных сообщений">однонаправленных сообщений</a></em> состоит из имени канала команд сервиса, а также типов и форматов команд.</li>
+<li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#издательподписчик_tooltip_id" href="../../../publish-subscribe-messaging" title="издатель/подписчик">“издатель/подписчик”</a></em> состоит из канала событий, а также типов и форматов публикуемых сообщений.</li>
+</ul>
+<h2 id="_4"><a class="link-tooltip" data-tooltip-content="#Использованиеброкерасообщений_tooltip_id" href="../ch-3-message-broker-usage/" title="Использование брокера сообщений">Использование брокера сообщений</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h2 id="_5">Возможные проблемы<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<p>Также нужно рассмотреть некоторые архитектурные проблемы, связанные с <br/>
+асинхронными сообщениями.</p>
+<ul>
+<li><a class="link-tooltip" data-tooltip-content="#Конкурирующиеполучатели_tooltip_id" href="../ch-3-concurrent-recievers/" title="Конкурирующие получатели">Конкурирующие получатели</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Дублированиесообщений_tooltip_id" href="../../../ch-3-message-duplicates" title="Дублирование сообщений">Дублирование сообщений</a></li>
+</ul>
+<h2 id="_6"><a class="link-tooltip" data-tooltip-content="#Транзакционныйобменсообщениями_tooltip_id" href="../ch-3-transactional-messaging/" title="Транзакционный обмен сообщениями">Транзакционный обмен сообщениями</a><a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Последнее обновление:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 25, 2022</span>
+</small>
+</div>
+<!-- Giscus -->
+<h2 id="__comments">Комментарии</h2>
+<script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOHmHtlM4CQQAk" data-emit-metadata="0" data-input-position="top" data-lang="ru" data-mapping="url" data-reactions-enabled="1" data-repo="alexeystalker/alexeystalker.github.io" data-repo-id="R_kgDOHmHtlA" data-theme="dark_dimmed" src="https://giscus.app/client.js">
+</script>
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light"
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            К началу
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Использование асинхронного обмена сообщениями для улучшения доступности" class="md-footer__link md-footer__link--prev" href="../ch-3-async-messaging-improves-availabilty/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Назад
+              </span>
+              Использование асинхронного обмена сообщениями для улучшения доступности
+            </div>
+</div>
+</a>
+<a aria-label="Вперед: Конкурирующие получатели и порядок следования сообщений" class="md-footer__link md-footer__link--next" href="../ch-3-concurrent-recievers/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+              Конкурирующие получатели и порядок следования сообщений
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://t.me/AlexStalkerConnectionBot" rel="noopener" target="_blank" title="Бот для связи">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+<script src="../../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+<script src="../../../../assets/js/mathjax.js"></script>
+<script src="../../../../assets/js/utils.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../../../../assets/js/tooltipster.bundle.js"></script>
+<div class="tooltip_templates"><div id="обменасообщениями_tooltip_id"><p>Сервисы асинхронно коммуницируют путём обмена сообщениями.<br/>
+Существуют следующие стили асинхронной коммуникации:</p>
+<li><a class="wikilink" href="request-response-messaging">Запрос/ответ</a></li>
+<li><a class="wikilink" href="notifications-messaging">Уведомления</a></li>
+<li><a class="wikilink" href="request-async-response-messaging">Запрос/асинхронный ответ</a></li>
+<li><a class="wikilink" href="publish-subscribe-messaging">Публикация/подписка</a></li>
+<li><a class="wikilink" href="publish-async-response-messaging">Публикация/асинхронный ответ</a></li>
+<p>[[ch-3-messaging-styles-realization|Из книги “Шаблоны проектирования ми…</p></div></div><div class="tooltip_templates"><div id="сообщения_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
+<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="каналам_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
+<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="Реализациястилейвзаимодействия_tooltip_id"><p>Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">стили взаимодействия</a>. Вот как реализуется каждый.</p>
+<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210911183223.png"/><br/>
+Клиент и сервис могут взаимодействовать, отправляя запросы и принимая ответы. Если это происходит синхронно, клиент ожидает немедленного ответа от сервиса, если асинхронно - не ждёт. Обмен сообщениями по природе асинхронен, но клие…</p></div></div><div class="tooltip_templates"><div id="API_tooltip_id"><p><em>API</em> - описание способов (набор классов, процедур, функций, структур или констант), которыми одна компьютерная программа может взаимодействовать с другой программой. Обычно входит в описание какого-либо интернет-протокола, фреймворка или стандарта вызовов функций операционной системы. Часто реализуется отдельной программной библиотекой или сервисом операционной системы. Используется программистами при написании всевозможных приложений.</p>
+<p>Проще говоря, это…</p></div></div><div class="tooltip_templates"><div id="запросасихронныйответ_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
+<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="однонаправленныхсообщений_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
+<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="издательподписчик_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
+<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="Использованиеброкерасообщений_tooltip_id"><p>Приложения, основанные на сообщениях, обычно применяют <em>брокер сообщений</em> - инфраструктурный компонент, через который сервисы общаются друг с другом. Однако, архитектура обмена сообщений может и не иметь брокера, и сервисы взаимодействуют напрямую.</p>
+<p>В архитектуре без брокера сервисы общаются напрямую. Одна из реализаций такого подхода - проект <a href="https://zeromq.org/">ZeroMQ</a></p>
+<li>Более легковесный сетево…</li></div></div><div class="tooltip_templates"><div id="Конкурирующиеполучатели_tooltip_id"><p>В случае ситуации нескольких одинаковых получателей возможна ситуация, когда несколько последовательных сообщений будут доставлены в некорректном порядке разным экземплярам получателей.<br/>
+Одно из решений - использование <em>сегментированных каналов</em>.<br/>
+<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210915203724.png"/></p>
+<li>Сегментированный канал включает в себя два и более сегмента, каждый из которых ведет себя как канал.</li>
+<li>Отправитель указывает в заголовке ключ сегмента. Бро…</li></div></div><div class="tooltip_templates"><div id="Дублированиесообщений_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
+Стандарт OAuth 2.0 основан на следующих концепциях.</p>
+<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
+<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
+<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="Транзакционныйобменсообщениями_tooltip_id"><p>Сервисы часто нужно публиковать сообщения в рамках транзакции, обновляющей базу данных. Если не отправить сообщение одновременно с записью в БД, система может остаться в несогласованном состоянии.<br/>
+Предлагается следующий механизм для надёжной отправки сообщений:</p>
+<li>Первый шаг - воспользуемся шаблоном <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">Публикация событий (Outbox)</a> для временного сохранения сообщений.</li>
+<li>Второй шаг - передаем сообщения, сохраненные на первом шаге, бр…</li></div></div></body>
+</html>

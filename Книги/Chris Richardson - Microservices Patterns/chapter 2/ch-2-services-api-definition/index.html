@@ -1394,6 +1394,71 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_1_4" id="__nav_13_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_13_1_4">
+          Chapter 3
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Chapter 3" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_13_1_4">
+<span class="md-nav__icon md-icon"></span>
+          Chapter 3
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-async-messaging-improves-availabilty/">
+        Использование асинхронного обмена сообщениями для улучшения доступности
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-async-messaging/">
+        Взаимодействие с помощью асинхронного обмена сообщениями
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-concurrent-recievers/">
+        Конкурирующие получатели и порядок следования сообщений
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-interprocess-communication/">
+        Межпроцессное взаимодействие в микросервисной архитектуре
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-ipc-overview/">
+        Обзор IPC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-message-broker-usage/">
+        Использование брокера сообщений
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-messaging-styles-realization/">
+        Реализация стилей взаимодействия
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-remote-procedure-invocation/">
+        Взаимодействие на основе удаленного вызова процедур (RPI)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-service-discovery/">
+        Обнаружение сервисов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-transactional-messaging/">
+        Транзакционный обмен сообщениями
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -1412,6 +1477,11 @@
           Определения
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/">
+        Application Programming Interface, API
+      </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authentication/">
         Аутентификация
@@ -1516,8 +1586,8 @@
 </nav>
 <h1 id="api">Определение API сервисов<a class="headerlink" href="#api" title="Permanent link">¶</a></h1>
 <div class="admonition important">
-<p class="admonition-title">\</p>
-<p>Можно сказать, что <a class="link-tooltip" data-tooltip-content="#API_tooltip_id" href="../../../api" title="API">API</a> сервиса состоит из операций, которые клиент может вызывать, и событий, публикуемых сервисом.</p>
+<p class="admonition-title">API</p>
+<p>Можно сказать, что <a class="link-tooltip" data-tooltip-content="#API_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/" title="API">API</a> сервиса состоит из операций, которые клиент может вызывать, и событий, публикуемых сервисом.</p>
 </div>
 <p>Операция в API может существовать по одной из двух причин: она либо соответствует <a class="link-tooltip" data-tooltip-content="#системнойоперации_tooltip_id" href="../ch-2-system-operation-definition/" title="системной операции">системной операции</a> и вызывается внешними клиентами (или, возможно, другими сервисами), либо поддерживает взаимодействие между сервисами и вызывается только ими. События публикуются в основном для того, чтобы иметь возможность взаимодействовать с другими сервисами.</p>
 <p>Первым делом нужно определить, какой сервис будет служить начальной входящей точкой для запроса системной операции. В его API добавляем такие функции. Затем нужно решить, какой взаимодействие между сервисами требуется каждой из них. Некоторые системные операции выполняет один сервис. В некоторых случаях для выполнения системной операции может потребоваться несколько запросов, например, когда данные, необходимые для выполнения запроса, распределены по разным сервисам. Таким образом нужно проанализировать все системные операции и зафиксировать, какое взаимодействие для этого потребуется.</p>
@@ -1526,7 +1596,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 25, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -1621,19 +1691,8 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="API_tooltip_id"><p>Анализирует текстовую строку и возвращает результирующие токены<br/>
-<code>json
-GET /_analyze 
-{ 
-    "analyzer" : "standard", 
-    "text" : "Quick Brown Foxes!" 
-}</code></p>
-<li><code>GET /_analyze</code></li>
-<li><code>POST /_analyze</code></li>
-<li><code>GET /&lt;index&gt;/_analyze</code></li>
-<li><code>POST /&lt;index&gt;/_analyze</code></li>
-<p>Если указать <code>index</code> в path, можно использовать анализатор, определенный в этом индексе.</p>
-<li><code>analyzer</code> (опционально, строка) имя анализатора, который нужно применить к тексту. Может быть встроенный анализато…</li></div></div><div class="tooltip_templates"><div id="системнойоперации_tooltip_id"><p>Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования. <br/>
+<div class="tooltip_templates"><div id="API_tooltip_id"><p><em>API</em> - описание способов (набор классов, процедур, функций, структур или констант), которыми одна компьютерная программа может взаимодействовать с другой программой. Обычно входит в описание какого-либо интернет-протокола, фреймворка или стандарта вызовов функций операционной системы. Часто реализуется отдельной программной библиотекой или сервисом операционной системы. Используется программистами при написании всевозможных приложений.</p>
+<p>Проще говоря, это…</p></div></div><div class="tooltip_templates"><div id="системнойоперации_tooltip_id"><p>Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования. <br/>
 <img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210830192414.png"/><br/>
 Процесс состоит из двух шагов.</p>
 <li>Создаем обобщенную (или абстрактную) доменную модель, состоящую из ключевых классов, которые представляют словарь для описания системных операций. Используем, в основном, имена существительные, вз…</li></div></div></body>
