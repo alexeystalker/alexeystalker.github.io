@@ -1,5 +1,5 @@
 ---
-tags: definition
+tags: [definition]
 share: true
 ---
 # Cohesion
