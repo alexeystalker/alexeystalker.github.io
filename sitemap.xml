@@ -461,6 +461,51 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/Microservices/Messages/message-channel/</loc>
+         <lastmod>2022-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Microservices/Messages/message/</loc>
+         <lastmod>2022-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Microservices/Messages/notifications-messaging/</loc>
+         <lastmod>2022-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Microservices/Messages/point-to-point-channel/</loc>
+         <lastmod>2022-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Microservices/Messages/publish-async-response-messaging/</loc>
+         <lastmod>2022-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Microservices/Messages/publish-subscribe-channel/</loc>
+         <lastmod>2022-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Microservices/Messages/publish-subscribe-messaging/</loc>
+         <lastmod>2022-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Microservices/Messages/request-async-response-messaging/</loc>
+         <lastmod>2022-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Microservices/Messages/request-response-messaging/</loc>
+         <lastmod>2022-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Sagas/saga-compensating/</loc>
          <lastmod>2022-07-25</lastmod>
          <changefreq>daily</changefreq>

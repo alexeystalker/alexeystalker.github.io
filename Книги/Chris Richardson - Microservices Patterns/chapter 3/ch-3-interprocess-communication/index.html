@@ -894,11 +894,71 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_5_3">
+          Messages
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Messages" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Messages
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/message-channel/">
+        Канал сообщений
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/message/">
+        Cообщение
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/notifications-messaging/">
+        Стиль "Уведомления"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/point-to-point-channel/">
+        Канал "Точка-точка"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/publish-async-response-messaging/">
+        Стиль "Публикация - асинхронный ответ"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/publish-subscribe-channel/">
+        Канал "издатель-подписчик"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/publish-subscribe-messaging/">
+        Стиль "публикация - подписка"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/request-async-response-messaging/">
+        Стиль "Запрос - асинхронный ответ"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/request-response-messaging/">
+        Стиль "Запрос-ответ"
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4">
           Sagas
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Sagas" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_3">
+<label class="md-nav__title" for="__nav_5_4">
 <span class="md-nav__icon md-icon"></span>
           Sagas
         </label>
@@ -1695,6 +1755,6 @@
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/">REST</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/">gRPC</a></li>
 <p>Оба представляют собой синхронные коммуникационные механизмы и, как следствие, страдают из-за проблем с частичным отказом. Например, сервис может быть недоступен вследствие сбоя, или находиться в процессе обслуживания. Кроме того, сервис может быть перегруженным и отвечать медленно, …</p></div></div><div class="tooltip_templates"><div id="Взаимодействиенаосновеасинхронногообменасообщениями_tooltip_id"><p>Сервисы могут взаимодействовать путём асинхронного <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">обмена сообщениями</a>.</p>
-<p>Рассмотрим модель обмена сообщениями, описанной в книге <a href="https://www.ozon.ru/product/shablony-integratsii-korporativnyh-prilozheniy-signature-series-151531716/">Шаблоны интеграции корпоративных приложений</a> В этой модели <a class="wikilink" href="message">сообщения</a> передаются по <a class="wikilink" href="message-channel">каналам</a>. Отправитель пишет сообще…</p></div></div><div class="tooltip_templates"><div id="Использованиеасинхронногообменасообщениямидляулучшениядоступности_tooltip_id"><p>Каждый раз, когда сервисы общаются между собой по синхронному протоколу, снижается доступность всего приложения. С математической точки зрения доступность системной операции является произведением доступности сервисов, которые в нее вовлечены.<br/>
+<p>Рассмотрим модель обмена сообщениями, описанной в книге <a href="https://www.ozon.ru/product/shablony-integratsii-korporativnyh-prilozheniy-signature-series-151531716/">Шаблоны интеграции корпоративных приложений</a> В этой модели <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/message/">сообщения</a> передаются по <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/message-channel/">каналам</a>. Отправитель пишет сообще…</p></div></div><div class="tooltip_templates"><div id="Использованиеасинхронногообменасообщениямидляулучшениядоступности_tooltip_id"><p>Каждый раз, когда сервисы общаются между собой по синхронному протоколу, снижается доступность всего приложения. С математической точки зрения доступность системной операции является произведением доступности сервисов, которые в нее вовлечены.<br/>
 Пусть у нас есть сервис, который вызывает два других сервиса. Если каждый из них имеет доступность 99.5%, то все вместе они будут имет…</p></div></div></body>
 </html>

@@ -894,11 +894,71 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_5_3">
+          Messages
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Messages" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Messages
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/message-channel/">
+        Канал сообщений
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/message/">
+        Cообщение
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/notifications-messaging/">
+        Стиль "Уведомления"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/point-to-point-channel/">
+        Канал "Точка-точка"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/publish-async-response-messaging/">
+        Стиль "Публикация - асинхронный ответ"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/publish-subscribe-channel/">
+        Канал "издатель-подписчик"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/publish-subscribe-messaging/">
+        Стиль "публикация - подписка"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/request-async-response-messaging/">
+        Стиль "Запрос - асинхронный ответ"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Microservices/Messages/request-response-messaging/">
+        Стиль "Запрос-ответ"
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4">
           Sagas
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Sagas" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_3">
+<label class="md-nav__title" for="__nav_5_4">
 <span class="md-nav__icon md-icon"></span>
           Sagas
         </label>
@@ -1662,14 +1722,14 @@
 <h1 id="_1">Взаимодействие с помощью асинхронного обмена сообщениями<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Сервисы могут взаимодействовать путём асинхронного <a class="link-tooltip" data-tooltip-content="#обменасообщениями_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/" title="обмена сообщениями">обмена сообщениями</a>.</p>
 <h2 id="_2">Обзор механизмов обмена сообщениями<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>Рассмотрим модель обмена сообщениями, описанной в книге <a href="https://www.ozon.ru/product/shablony-integratsii-korporativnyh-prilozheniy-signature-series-151531716/">Шаблоны интеграции корпоративных приложений</a> В этой модели <a class="link-tooltip" data-tooltip-content="#сообщения_tooltip_id" href="../../../message" title="сообщения">сообщения</a> передаются по <a class="link-tooltip" data-tooltip-content="#каналам_tooltip_id" href="../../../message-channel" title="каналам">каналам</a>. Отправитель пишет сообщение в канал, а получатель считывает его из этого канала.</p>
+<p>Рассмотрим модель обмена сообщениями, описанной в книге <a href="https://www.ozon.ru/product/shablony-integratsii-korporativnyh-prilozheniy-signature-series-151531716/">Шаблоны интеграции корпоративных приложений</a> В этой модели <a class="link-tooltip" data-tooltip-content="#сообщения_tooltip_id" href="../../../../Microservices/Messages/message/" title="сообщения">сообщения</a> передаются по <a class="link-tooltip" data-tooltip-content="#каналам_tooltip_id" href="../../../../Microservices/Messages/message-channel/" title="каналам">каналам</a>. Отправитель пишет сообщение в канал, а получатель считывает его из этого канала.</p>
 <h2 id="_3"><a class="link-tooltip" data-tooltip-content="#Реализациястилейвзаимодействия_tooltip_id" href="../ch-3-messaging-styles-realization/" title="Реализация стилей взаимодействия">Реализация стилей взаимодействия</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <h2 id="api">Создание спецификации для API сервиса на основе сообщений<a class="headerlink" href="#api" title="Permanent link">¶</a></h2>
 <p>Спецификация такого <a class="link-tooltip" data-tooltip-content="#API_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/" title="API">API</a> должна содержать имена каналов, а также типы и форматы сообщений, допустимые в каждом из них. </p>
 <ul>
-<li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#запросасихронныйответ_tooltip_id" href="../../../request-async-response-messaging" title="запрос/асихронный ответ">“запрос/асихронный ответ”</a></em> состоит из канала команд сервиса, типов и форматов команд, которые сервис принимает, а также типов и форматов ответных сообщений.</li>
-<li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#однонаправленныхсообщений_tooltip_id" href="../../../notifications-messaging" title="однонаправленных сообщений">однонаправленных сообщений</a></em> состоит из имени канала команд сервиса, а также типов и форматов команд.</li>
-<li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#издательподписчик_tooltip_id" href="../../../publish-subscribe-messaging" title="издатель/подписчик">“издатель/подписчик”</a></em> состоит из канала событий, а также типов и форматов публикуемых сообщений.</li>
+<li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#запросасихронныйответ_tooltip_id" href="../../../../Microservices/Messages/request-async-response-messaging/" title="запрос/асихронный ответ">“запрос/асихронный ответ”</a></em> состоит из канала команд сервиса, типов и форматов команд, которые сервис принимает, а также типов и форматов ответных сообщений.</li>
+<li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#однонаправленныхсообщений_tooltip_id" href="../../../../Microservices/Messages/notifications-messaging/" title="однонаправленных сообщений">однонаправленных сообщений</a></em> состоит из имени канала команд сервиса, а также типов и форматов команд.</li>
+<li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#издательподписчик_tooltip_id" href="../../../../Microservices/Messages/publish-subscribe-messaging/" title="издатель/подписчик">“издатель/подписчик”</a></em> состоит из канала событий, а также типов и форматов публикуемых сообщений.</li>
 </ul>
 <h2 id="_4"><a class="link-tooltip" data-tooltip-content="#Использованиеброкерасообщений_tooltip_id" href="../ch-3-message-broker-usage/" title="Использование брокера сообщений">Использование брокера сообщений</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <h2 id="_5">Возможные проблемы<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
@@ -1782,35 +1842,22 @@
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
 <div class="tooltip_templates"><div id="обменасообщениями_tooltip_id"><p>Сервисы асинхронно коммуницируют путём обмена сообщениями.<br/>
 Существуют следующие стили асинхронной коммуникации:</p>
-<li><a class="wikilink" href="request-response-messaging">Запрос/ответ</a></li>
-<li><a class="wikilink" href="notifications-messaging">Уведомления</a></li>
-<li><a class="wikilink" href="request-async-response-messaging">Запрос/асинхронный ответ</a></li>
-<li><a class="wikilink" href="publish-subscribe-messaging">Публикация/подписка</a></li>
-<li><a class="wikilink" href="publish-async-response-messaging">Публикация/асинхронный ответ</a></li>
-<p>[[ch-3-messaging-styles-realization|Из книги “Шаблоны проектирования ми…</p></div></div><div class="tooltip_templates"><div id="сообщения_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
-Стандарт OAuth 2.0 основан на следующих концепциях.</p>
-<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
-<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
-<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="каналам_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
-Стандарт OAuth 2.0 основан на следующих концепциях.</p>
-<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
-<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
-<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="Реализациястилейвзаимодействия_tooltip_id"><p>Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">стили взаимодействия</a>. Вот как реализуется каждый.</p>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/request-response-messaging/">Запрос/ответ</a></li>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/notifications-messaging/">Уведомления</a></li>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/request-async-response-messaging/">Запрос/асинхронный ответ</a></li>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/publish-subscribe-messaging/">Публикация/подписка</a></li>
+<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/publish-async-response-messaging/">Публикация/асинхронный ответ</a></li>
+<p>[[ch-3-messaging-styles-realization|Из книги “Шаблоны проектирования ми…</p></div></div><div class="tooltip_templates"><div id="сообщения_tooltip_id"><p>Сообщение состоит из заголовка и тела.<br/>
+<em>Заголовок</em> - это набор пар “ключ - значение”, метаданные. Также в заголовке есть <em>идентификатор сообщения</em>, проставляемый либо отправителем, либо инфраструктурой, и необязательный <em>обратный адрес</em> с указанием канала, куда следует записать ответ.<br/>
+<em>Тело</em> сообщения - отправляемые данные.<br/>
+Существует несколько разных видов сообщений</p>
+<li><em>Документ</em> - обобщенное сообщение, содержащее только данные; например - ответ на команду. Получатель сам решает, как…</li></div></div><div class="tooltip_templates"><div id="каналам_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210911181218.png"/><br/>
+Сообщения передаются по каналам. Бизнес-логика отправителя обращается к <em>исходящему порту</em>, реализованному классом <em>отправителя</em>, который отправляет сообщение через канал. <em>Канал сообщений</em> - инфраструктурная абстракция. Для обработки сообщения класс-адаптер <em>обработчика сообщений</em>, который обращается к интерфейсу <em>входящего порта</em>, реализованному бизнес-логикой получателя.<br/>
+Существует два вида каналов:</p>
+<li>[[point-to-point-channel|Точка-точка]…</li></div></div><div class="tooltip_templates"><div id="Реализациястилейвзаимодействия_tooltip_id"><p>Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">стили взаимодействия</a>. Вот как реализуется каждый.</p>
 <p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210911183223.png"/><br/>
 Клиент и сервис могут взаимодействовать, отправляя запросы и принимая ответы. Если это происходит синхронно, клиент ожидает немедленного ответа от сервиса, если асинхронно - не ждёт. Обмен сообщениями по природе асинхронен, но клие…</p></div></div><div class="tooltip_templates"><div id="API_tooltip_id"><p><em>API</em> - описание способов (набор классов, процедур, функций, структур или констант), которыми одна компьютерная программа может взаимодействовать с другой программой. Обычно входит в описание какого-либо интернет-протокола, фреймворка или стандарта вызовов функций операционной системы. Часто реализуется отдельной программной библиотекой или сервисом операционной системы. Используется программистами при написании всевозможных приложений.</p>
-<p>Проще говоря, это…</p></div></div><div class="tooltip_templates"><div id="запросасихронныйответ_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
-Стандарт OAuth 2.0 основан на следующих концепциях.</p>
-<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
-<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
-<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="однонаправленныхсообщений_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
-Стандарт OAuth 2.0 основан на следующих концепциях.</p>
-<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
-<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
-<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="издательподписчик_tooltip_id"><p>OAuth 2.0 - это протокол авторизации, изначально задуманный для авторизации доступа к публичным облачным приложениям, однако его можно использовать и в своих проектах.<br/>
-Стандарт OAuth 2.0 основан на следующих концепциях.</p>
-<li><em>Сервер аутентификации</em> - предоставляет API для аутентификации пользователей и получения токенов доступа и обновления.</li>
-<li><em>Токен доступа</em> - токен, дающий доступ к <em>серверу ресурсов</em>. Можно использовать формат JWT.</li>
-<li><em>Токен обновления</em> - долгоживущий токен с возмож…</li></div></div><div class="tooltip_templates"><div id="Использованиеброкерасообщений_tooltip_id"><p>Приложения, основанные на сообщениях, обычно применяют <em>брокер сообщений</em> - инфраструктурный компонент, через который сервисы общаются друг с другом. Однако, архитектура обмена сообщений может и не иметь брокера, и сервисы взаимодействуют напрямую.</p>
+<p>Проще говоря, это…</p></div></div><div class="tooltip_templates"><div id="запросасихронныйответ_tooltip_id"><p><em>Запрос - асинхронный ответ</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет запрос, рассчитывая получить ответ “когда-нибудь”.</p></div></div><div class="tooltip_templates"><div id="однонаправленныхсообщений_tooltip_id"><p><em>Уведомления</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет сообщение или управляющую команду, не ожидая при этом ответа.</p></div></div><div class="tooltip_templates"><div id="издательподписчик_tooltip_id"><p><em>Публикация - подписка</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент публикует сообщение для нуля или более подписчиков.</p></div></div><div class="tooltip_templates"><div id="Использованиеброкерасообщений_tooltip_id"><p>Приложения, основанные на сообщениях, обычно применяют <em>брокер сообщений</em> - инфраструктурный компонент, через который сервисы общаются друг с другом. Однако, архитектура обмена сообщений может и не иметь брокера, и сервисы взаимодействуют напрямую.</p>
 <p>В архитектуре без брокера сервисы общаются напрямую. Одна из реализаций такого подхода - проект <a href="https://zeromq.org/">ZeroMQ</a></p>
 <li>Более легковесный сетево…</li></div></div><div class="tooltip_templates"><div id="Конкурирующиеполучатели_tooltip_id"><p>В случае ситуации нескольких одинаковых получателей возможна ситуация, когда несколько последовательных сообщений будут доставлены в некорректном порядке разным экземплярам получателей.<br/>
 Одно из решений - использование <em>сегментированных каналов</em>.<br/>
