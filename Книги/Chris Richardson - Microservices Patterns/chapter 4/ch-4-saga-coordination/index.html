@@ -1551,6 +1551,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%203/ch-3-message-broker-options/">
+        Факторы выбора брокера сообщений
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%203/ch-3-message-broker-usage/">
         Использование брокера сообщений
       </a>
@@ -1617,9 +1622,31 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Координация повествований
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Координация повествований
       </a>
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    Повествования, основанные на хореографии
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    Повествования, основанные на оркестрации
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ch-4-saga-transaction-control/">
@@ -1734,6 +1761,22 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    Повествования, основанные на хореографии
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    Повествования, основанные на оркестрации
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -1753,9 +1796,9 @@
 </nav>
 <h1 id="_1">Координация повествований<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Реализация повествования состоит из логики, которая координирует его этапы. Она отвечает за выбор первого участника при инициализации повестования системной командой, затем выполнение им отведенного ему этапа и т.д. до тех пор, пока не будут выполнены все этапы. Если какой-либо этап завершится неудачно, логика выполняет компенсирующие шаги в нужном порядке.<br/>
-Вот возможные способы реализации координирующей логики: <em>Хореография</em> и <em>Оркестрация</em>.<br/>
-<a class="link-tooltip" data-tooltip-content="#Повествованияоснованныенахореографии_tooltip_id" href="../ch-4-choreography-saga/" title="Повествования, основанные на хореографии">Повествования, основанные на хореографии</a><br/>
-<a class="link-tooltip" data-tooltip-content="#Повествованияоснованныенаоркестрации_tooltip_id" href="../ch-4-orchestration-saga/" title="Повествования, основанные на оркестрации">Повествования, основанные на оркестрации</a></p>
+Вот возможные способы реализации координирующей логики: <em>Хореография</em> и <em>Оркестрация</em>.</p>
+<h4 id="_2"><a class="link-tooltip" data-tooltip-content="#Повествованияоснованныенахореографии_tooltip_id" href="../ch-4-choreography-saga/" title="Повествования, основанные на хореографии">Повествования, основанные на хореографии</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<h4 id="_3"><a class="link-tooltip" data-tooltip-content="#Повествованияоснованныенаоркестрации_tooltip_id" href="../ch-4-orchestration-saga/" title="Повествования, основанные на оркестрации">Повествования, основанные на оркестрации</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
 <hr/>
 <div class="md-source-file">
 <small>
