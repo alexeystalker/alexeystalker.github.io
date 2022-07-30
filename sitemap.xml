@@ -451,6 +451,31 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/Linux/docker-no-sudo/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Linux/install-docker-on-ubuntu-20-04/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Linux/pulseaudio-sink-inputs/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Linux/remove-splash/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Linux/ssh-agent-autostart/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/Microservices/scale-cube/</loc>
          <lastmod>2022-07-30</lastmod>
          <changefreq>daily</changefreq>
@@ -586,7 +611,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/NET/net6-dateonly/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/net6-timeonly/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/waitsync/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/NET/AspNetCore/httpcontext/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/dotnet%20console/dotnet-net6-classic-templates/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/dotnet%20console/dotnet-templates-boxed/</loc>
          <lastmod>2022-07-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -596,12 +646,52 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-faker-net/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-fastendpoints/</loc>
          <lastmod>2022-07-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-gui-cs/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-konsole/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-lunr-core/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-polly/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-qrcode-on-net/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-razorlight/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-recyclable-memory-stream/</loc>
+         <lastmod>2022-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-serilog/</loc>
          <lastmod>2022-07-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
