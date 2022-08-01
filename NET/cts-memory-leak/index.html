@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Мой цифровой сад." name="description"/>
-<link href="https://garden.stalker-home.xyz/NET/waitsync/" rel="canonical"/>
+<link href="https://garden.stalker-home.xyz/NET/cts-memory-leak/" rel="canonical"/>
 <link href="../../assets/logo/logo.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.3.9" name="generator"/>
-<title>Ожидание асинхронного кода может привести к Threadpool starvation - Цифровой сад и огород</title>
+<title>CancellationTokenSource и утечка памяти - Цифровой сад и огород</title>
 <link href="../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -34,8 +34,8 @@
     });
   </script>
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
-<meta content="Ожидание асинхронного кода может привести к Threadpool starvation" property="og:title"/>
-<meta content="Ожидание асинхронного кода может привести к Threadpool starvation" name="twitter:title"/>
+<meta content="CancellationTokenSource и утечка памяти" property="og:title"/>
+<meta content="CancellationTokenSource и утечка памяти" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
 <meta content="Мой цифровой сад." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -62,7 +62,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#threadpool-starvation">
+<a class="md-skip" href="#cancellationtokensource">
           Перейти к содержанию
         </a>
 </div>
@@ -86,7 +86,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Ожидание асинхронного кода может привести к Threadpool starvation
+              CancellationTokenSource и утечка памяти
             
           </span>
 </div>
@@ -172,18 +172,23 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../Design%20Patterns/dependency-injection-pattern/">
+        Шаблон "Внедрение зависимостей"
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../Design%20Patterns/memento-pattern/">
         Шаблон "Хранитель"
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3">
           Microservice Architecture Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Microservice Architecture Patterns" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_2">
+<label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
           Microservice Architecture Patterns
         </label>
@@ -194,13 +199,13 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" id="__nav_3_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_2">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" id="__nav_3_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_2">
           Application Architecture Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Application Architecture Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_2">
+<label class="md-nav__title" for="__nav_3_3_2">
 <span class="md-nav__icon md-icon"></span>
           Application Architecture Patterns
         </label>
@@ -224,13 +229,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" id="__nav_3_2_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_3">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_3" id="__nav_3_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_3">
           Communication Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Communication Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_3">
+<label class="md-nav__title" for="__nav_3_3_3">
 <span class="md-nav__icon md-icon"></span>
           Communication Patterns
         </label>
@@ -319,13 +324,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4" id="__nav_3_2_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_4">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_4" id="__nav_3_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_4">
           Cross Cutting Conserns Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Cross Cutting Conserns Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_4">
+<label class="md-nav__title" for="__nav_3_3_4">
 <span class="md-nav__icon md-icon"></span>
           Cross Cutting Conserns Patterns
         </label>
@@ -359,13 +364,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_5" id="__nav_3_2_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_5">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_5" id="__nav_3_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_5">
           Data Management Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Data Management Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_5">
+<label class="md-nav__title" for="__nav_3_3_5">
 <span class="md-nav__icon md-icon"></span>
           Data Management Patterns
         </label>
@@ -409,13 +414,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_6" id="__nav_3_2_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_6">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_6" id="__nav_3_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_6">
           Decomposition Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Decomposition Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_6">
+<label class="md-nav__title" for="__nav_3_3_6">
 <span class="md-nav__icon md-icon"></span>
           Decomposition Patterns
         </label>
@@ -439,13 +444,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_7" id="__nav_3_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_7">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_7" id="__nav_3_3_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_7">
           Deployment Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Deployment Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_7">
+<label class="md-nav__title" for="__nav_3_3_7">
 <span class="md-nav__icon md-icon"></span>
           Deployment Patterns
         </label>
@@ -489,13 +494,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_8" id="__nav_3_2_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_8">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_8" id="__nav_3_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_8">
           Observability Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Observability Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_8">
+<label class="md-nav__title" for="__nav_3_3_8">
 <span class="md-nav__icon md-icon"></span>
           Observability Patterns
         </label>
@@ -539,13 +544,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_9" id="__nav_3_2_9" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_9">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_9" id="__nav_3_3_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_9">
           Refactoring Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Refactoring Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_9">
+<label class="md-nav__title" for="__nav_3_3_9">
 <span class="md-nav__icon md-icon"></span>
           Refactoring Patterns
         </label>
@@ -569,13 +574,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_10" id="__nav_3_2_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_10">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_10" id="__nav_3_3_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_10">
           Request Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Request Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_10">
+<label class="md-nav__title" for="__nav_3_3_10">
 <span class="md-nav__icon md-icon"></span>
           Request Patterns
         </label>
@@ -599,13 +604,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_11" id="__nav_3_2_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_11">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_11" id="__nav_3_3_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_11">
           Security Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Security Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_11">
+<label class="md-nav__title" for="__nav_3_3_11">
 <span class="md-nav__icon md-icon"></span>
           Security Patterns
         </label>
@@ -624,13 +629,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_12" id="__nav_3_2_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_2_12">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_12" id="__nav_3_3_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_12">
           Testing Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Testing Patterns" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_3_2_12">
+<label class="md-nav__title" for="__nav_3_3_12">
 <span class="md-nav__icon md-icon"></span>
           Testing Patterns
         </label>
@@ -662,13 +667,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_3">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4">
           Web Application Patterns
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Web Application Patterns" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_3">
+<label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
           Web Application Patterns
         </label>
@@ -1102,6 +1107,11 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../async-void/">
+        async void
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../await-continuewith/">
         await ContinueWith
       </a>
@@ -1112,13 +1122,86 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../csharp-antipatterns/">
+        Шаблоны кода на CSharp, которых следует избегать
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          CancellationTokenSource и утечка памяти
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        CancellationTokenSource и утечка памяти
+      </a>
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    Ссылки
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cts-register-cancel/">
+        Подписки (subscriptions) в CancellationTokenSource
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../encoding-net-core/">
         Encoding в NetCore
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../enumequalsboxing/">
+        Enum.Equals делает boxing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../equality-structs/">
+        Сравнения структур
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../executing-before-main/">
         Выполнение кода перед Main
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../get-uninitialized-object/">
+        Создание объектов без вызова конструктора
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../idisposable-change-current-culture/">
+        Временно Изменяем CurrentCulture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lambda-vs-method-group/">
+        Lambda функции предпочтительнее MethodGroup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../list-all-routes/">
+        Список Всех Маршрутов в ASP.NET Core
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../many-interfaces-di/">
+        Как зарегистрировать одну реализацию с несколькими интерфейсами
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../model-bind-multiple-source-to-sinigle-class/">
+        Привязка модели из нескольких источников в один класс в ASP.NET Core
       </a>
 </li>
 <li class="md-nav__item">
@@ -1137,41 +1220,48 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../net6-one-file-app/">
+        Однофайловые Приложения в .NET 6
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../net6-timeonly/">
         Тип TimeOnly
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Ожидание асинхронного кода может привести к Threadpool starvation
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../return-await/">
+        Избегаем `return await`
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structs-in-interfaces/">
+        Структуры и интерфейсы
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../task-factory-start-new/">
+        Task.Factory.StartNew
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tcs-runconts/">
+        TaskCompletionSource и продолжения в том же потоке.
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wait-sync/">
         Ожидание асинхронного кода может привести к Threadpool starvation
       </a>
-<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    Ссылки
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_10" id="__nav_7_10" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7_10">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_27" id="__nav_7_27" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_27">
           AspNetCore
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="AspNetCore" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_7_10">
+<label class="md-nav__title" for="__nav_7_27">
 <span class="md-nav__icon md-icon"></span>
           AspNetCore
         </label>
@@ -1185,13 +1275,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_11" id="__nav_7_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7_11">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_28" id="__nav_7_28" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_28">
           Dotnet console
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Dotnet console" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_7_11">
+<label class="md-nav__title" for="__nav_7_28">
 <span class="md-nav__icon md-icon"></span>
           Dotnet console
         </label>
@@ -1210,13 +1300,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_12" id="__nav_7_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7_12">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_29" id="__nav_7_29" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_29">
           Libraries
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Libraries" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_7_12">
+<label class="md-nav__title" for="__nav_7_29">
 <span class="md-nav__icon md-icon"></span>
           Libraries
         </label>
@@ -1280,13 +1370,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_13" id="__nav_7_13" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7_13">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_30" id="__nav_7_30" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_30">
           Multithreading
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Multithreading" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_7_13">
+<label class="md-nav__title" for="__nav_7_30">
 <span class="md-nav__icon md-icon"></span>
           Multithreading
         </label>
@@ -2244,23 +2334,29 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../tags/#netasync">
-          NET/async
+<a class="md-tag" href="../../tags/#netmemory-leak">
+          NET/memory-leak
         </a>
-<a class="md-tag" href="../../tags/#netthreadpool">
-          NET/threadpool
+<a class="md-tag" href="../../tags/#netcancellationtokensource">
+          NET/CancellationTokenSource
+        </a>
+<a class="md-tag" href="../../tags/#netcancellationtoken">
+          NET/CancellationToken
         </a>
 </nav>
-<h1 id="threadpool-starvation">Ожидание асинхронного кода может привести к Threadpool starvation<a class="headerlink" href="#threadpool-starvation" title="Permanent link">¶</a></h1>
-<p>Если злоупотреблять ожиданием асинхронного кода, можно выбрать весь тредпул и получить ситуацию голодания (Threadpool starvation). Это касается всех ожидателей, как-то <code>Task.Wait</code>, <code>Task.Result</code>, <code>Task.GetAwaiter().GetResult()</code>, <code>Task.WaitAny</code>, <code>Task.WaitAll</code> (последние не путать с <code>Task.WhenAny</code> и <code>Task.WhenAll</code>!!)</p>
+<h1 id="cancellationtokensource">CancellationTokenSource и утечка памяти<a class="headerlink" href="#cancellationtokensource" title="Permanent link">¶</a></h1>
+<p>В <code>CancellationTokenSource</code> запоминаются (до вызова <code>Cancel()</code>) все объекты, которые регистрируют собственный метод отмены. Вывод - если нужно регистрировать свой метод для каждого объекта в цикле, нужно создавать свой <code>CancellationTokenSource</code>  через <code>CreateLinkedTokenSource()</code>, то есть<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">linkedCts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">CancellationTokenSource</span><span class="p">.</span><span class="n">CreateLinkedTokenSource</span><span class="p">(</span><span class="n">parentCts</span><span class="p">.</span><span class="n">Token</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></p>
 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p><a href="https://medium.com/criteo-engineering/net-threadpool-starvation-and-how-queuing-makes-it-worse-512c8d570527">https://medium.com/criteo-engineering/net-threadpool-starvation-and-how-queuing-makes-it-worse-512c8d570527</a></p>
+<p><a href="https://habr.com/ru/company/tinkoff/blog/546604/">https://habr.com/ru/company/tinkoff/blog/546604/</a><strong class="hash" id="habracut">habracut</strong><br/>
+<a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource.createlinkedtokensource?view=net-6.0">https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource.createlinkedtokensource?view=net-6.0</a></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 1, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2305,7 +2401,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
-<a aria-label="Назад: Тип TimeOnly" class="md-footer__link md-footer__link--prev" href="../net6-timeonly/" rel="prev">
+<a aria-label="Назад: Шаблоны кода на CSharp, которых следует избегать" class="md-footer__link md-footer__link--prev" href="../csharp-antipatterns/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -2314,17 +2410,17 @@
 <span class="md-footer__direction">
                 Назад
               </span>
-              Тип TimeOnly
+              Шаблоны кода на CSharp, которых следует избегать
             </div>
 </div>
 </a>
-<a aria-label="Вперед: Объект HttpContext" class="md-footer__link md-footer__link--next" href="../AspNetCore/httpcontext/" rel="next">
+<a aria-label="Вперед: Подписки (subscriptions) в CancellationTokenSource" class="md-footer__link md-footer__link--next" href="../cts-register-cancel/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Вперед
               </span>
-              Объект HttpContext
+              Подписки (subscriptions) в CancellationTokenSource
             </div>
 </div>
 <div class="md-footer__button md-icon">

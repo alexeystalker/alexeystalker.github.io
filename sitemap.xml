@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/Design%20Patterns/dependency-injection-pattern/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/memento-pattern/</loc>
          <lastmod>2022-08-01</lastmod>
          <changefreq>daily</changefreq>
@@ -596,6 +601,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/NET/async-void/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/NET/await-continuewith/</loc>
          <lastmod>2022-08-01</lastmod>
          <changefreq>daily</changefreq>
@@ -606,12 +616,67 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/NET/csharp-antipatterns/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/cts-memory-leak/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/cts-register-cancel/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/NET/encoding-net-core/</loc>
          <lastmod>2022-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/NET/enumequalsboxing/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/equality-structs/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/NET/executing-before-main/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/get-uninitialized-object/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/idisposable-change-current-culture/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/lambda-vs-method-group/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/list-all-routes/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/many-interfaces-di/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/model-bind-multiple-source-to-sinigle-class/</loc>
          <lastmod>2022-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -631,12 +696,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/NET/net6-one-file-app/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/NET/net6-timeonly/</loc>
          <lastmod>2022-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://garden.stalker-home.xyz/NET/waitsync/</loc>
+         <loc>https://garden.stalker-home.xyz/NET/return-await/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/structs-in-interfaces/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/task-factory-start-new/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/tcs-runconts/</loc>
+         <lastmod>2022-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/wait-sync/</loc>
          <lastmod>2022-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
