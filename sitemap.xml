@@ -426,7 +426,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/full-text-queries/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/joining-queries/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/match-query/</loc>
          <lastmod>2022-08-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
