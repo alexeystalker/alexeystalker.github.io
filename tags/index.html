@@ -1383,7 +1383,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Elasticsearch/Queries/exists-query/">
-        Запрос exists в Elastic
+        Exists query
       </a>
 </li>
 <li class="md-nav__item">
@@ -1398,12 +1398,12 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Elasticsearch/Queries/match-query/">
-        Запрос match
+        Match query
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Elasticsearch/Queries/nested-query/">
-        Query в nested документах
+        Nested query
       </a>
 </li>
 <li class="md-nav__item">
@@ -1423,7 +1423,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Elasticsearch/Queries/term-query/">
-        term query
+        Term query
       </a>
 </li>
 </ul>
@@ -3598,12 +3598,12 @@
 <h2 id="elasticsearchfull-text"><span class="md-tag">Elasticsearch/full-text</span><a class="headerlink" href="#elasticsearchfull-text" title="Permanent link">¶</a></h2>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#Полнотекстовыезапросы_tooltip_id" href="../Elasticsearch/Queries/full-text-queries/">Полнотекстовые запросы</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Запросmatch_tooltip_id" href="../Elasticsearch/Queries/match-query/">Запрос match</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Matchquery_tooltip_id" href="../Elasticsearch/Queries/match-query/">Match query</a></li>
 </ul>
 <h2 id="elasticsearchjoining"><span class="md-tag">Elasticsearch/joining</span><a class="headerlink" href="#elasticsearchjoining" title="Permanent link">¶</a></h2>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#Joiningqueries_tooltip_id" href="../Elasticsearch/Queries/joining-queries/">Joining queries</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Queryвnestedдокументах_tooltip_id" href="../Elasticsearch/Queries/nested-query/">Query в nested документах</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Nestedquery_tooltip_id" href="../Elasticsearch/Queries/nested-query/">Nested query</a></li>
 </ul>
 <h2 id="elasticsearchmapping"><span class="md-tag">Elasticsearch/mapping</span><a class="headerlink" href="#elasticsearchmapping" title="Permanent link">¶</a></h2>
 <ul>
@@ -3611,22 +3611,22 @@
 </ul>
 <h2 id="elasticsearchquery"><span class="md-tag">Elasticsearch/query</span><a class="headerlink" href="#elasticsearchquery" title="Permanent link">¶</a></h2>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#ЗапросexistsвElastic_tooltip_id" href="../Elasticsearch/Queries/exists-query/">Запрос exists в Elastic</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Existsquery_tooltip_id" href="../Elasticsearch/Queries/exists-query/">Exists query</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Полнотекстовыезапросы_tooltip_id" href="../Elasticsearch/Queries/full-text-queries/">Полнотекстовые запросы</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Joiningqueries_tooltip_id" href="../Elasticsearch/Queries/joining-queries/">Joining queries</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Запросmatch_tooltip_id" href="../Elasticsearch/Queries/match-query/">Запрос match</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Queryвnestedдокументах_tooltip_id" href="../Elasticsearch/Queries/nested-query/">Query в nested документах</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Matchquery_tooltip_id" href="../Elasticsearch/Queries/match-query/">Match query</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Nestedquery_tooltip_id" href="../Elasticsearch/Queries/nested-query/">Nested query</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#QueryDSL_tooltip_id" href="../Elasticsearch/Queries/query-dsl/">Query DSL</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Rangequery_tooltip_id" href="../Elasticsearch/Queries/range-query/">Range query</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Termlevelqueries_tooltip_id" href="../Elasticsearch/Queries/term-level-queries/">Term-level queries</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#termquery_tooltip_id" href="../Elasticsearch/Queries/term-query/">term query</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Termquery_tooltip_id" href="../Elasticsearch/Queries/term-query/">Term query</a></li>
 </ul>
 <h2 id="elasticsearchterm-level"><span class="md-tag">Elasticsearch/term-level</span><a class="headerlink" href="#elasticsearchterm-level" title="Permanent link">¶</a></h2>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#ЗапросexistsвElastic_tooltip_id" href="../Elasticsearch/Queries/exists-query/">Запрос exists в Elastic</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Existsquery_tooltip_id" href="../Elasticsearch/Queries/exists-query/">Exists query</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Rangequery_tooltip_id" href="../Elasticsearch/Queries/range-query/">Range query</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Termlevelqueries_tooltip_id" href="../Elasticsearch/Queries/term-level-queries/">Term-level queries</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#termquery_tooltip_id" href="../Elasticsearch/Queries/term-query/">term query</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Termquery_tooltip_id" href="../Elasticsearch/Queries/term-query/">Term query</a></li>
 </ul>
 <h2 id="far"><span class="md-tag">FAR</span><a class="headerlink" href="#far" title="Permanent link">¶</a></h2>
 <ul>
@@ -4786,7 +4786,7 @@ PUT /my_source_index/_settings
 <li><a class="wikilink" href="multi-match-query">multi_match</a></li>
 <li><a class="wikilink" href="common-query">common</a></li>
 <li><a class="wikilink" href="query-string-query">query_string</a></li>
-<li>[[si…</li></div></div><div class="tooltip_templates"><div id="Запросmatch_tooltip_id"><p>Возвращает документы, содержащие текст, соответствующий (match) запрошенному. Запрошенный текст анализируется перед поиском.</p>
+<li>[[si…</li></div></div><div class="tooltip_templates"><div id="Matchquery_tooltip_id"><p>Возвращает документы, содержащие текст, соответствующий (match) запрошенному. Запрошенный текст анализируется перед поиском.</p>
 <p>Запрос <code>match</code> является стандартным запросом для полнотекстового поиска, включая нечёткий (fuzzy) поиск.<br/>
 Пример:<br/>
 <code>json
@@ -4800,23 +4800,23 @@ GET /_search
     }
   }
 }</code><br/>
-Параметр: <code>field</code> - имя поля, в котором осуществляется поиск (в примере <code>message</code>). Является объектом, содержащим пара…</p></div></div><div class="tooltip_templates"><div id="Joiningqueries_tooltip_id"><p>Аналог Join запросов в SQL. Эластиковые join-подобные запросы спроектированы масштабироваться горизонтально.</p>
+Параметр: <code>field</code> - имя поля, в котором осуществляется поиск (в примере <code>message</code>). Является объектом, содержащим парам…</p></div></div><div class="tooltip_templates"><div id="Joiningqueries_tooltip_id"><p>Аналог Join запросов в SQL. Эластиковые join-подобные запросы спроектированы масштабироваться горизонтально.</p>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/nested-query/">nested</a> - для поиска по <code>nested</code> документам</li>
 <li><a class="wikilink" href="has-child-query">has_child</a> и <a class="wikilink" href="has-parent-query">has_parent</a> - для parent-child документов</li>
-<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/joining-queries.html</p></div></div><div class="tooltip_templates"><div id="Queryвnestedдокументах_tooltip_id"><p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/exists-query/">Exists</a> запрос для вложенного поля:<br/>
-```json<br/>
-{<br/>
-  “query”: {<br/>
-    “nested”: {<br/>
-      “path”: “leasing”,<br/>
-      “query”: {<br/>
-        “exists”: {<br/>
-          “field”: “leasing.leasing-id”<br/>
-        }<br/>
-      }<br/>
-    }<br/>
-  }<br/>
-}…</p></div></div><div class="tooltip_templates"><div id="МеняемmappingвElastic_tooltip_id"><p>Чтобы обновить маппинг в Эластике, нужно отправить PUT запрос с измененными маппингами, примерно так:<br/>
+<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/joining-queries.html</p></div></div><div class="tooltip_templates"><div id="Nestedquery_tooltip_id"><p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/exists-query/">Exists</a> запрос для вложенного поля:<br/>
+<code>json
+{
+  "query": {
+    "nested": {
+      "path": "leasing",
+      "query": {
+        "exists": {
+          "field": "leasing.leasing-id"
+        }
+      }
+    }
+  }
+}</code></p></div></div><div class="tooltip_templates"><div id="МеняемmappingвElastic_tooltip_id"><p>Чтобы обновить маппинг в Эластике, нужно отправить PUT запрос с измененными маппингами, примерно так:<br/>
 <code>json
 PUT /my-index-000001/_mapping 
 { 
@@ -4825,7 +4825,7 @@ PUT /my-index-000001/_mapping
             "type": "keyword" 
         } 
     } 
-}</code></p></div></div><div class="tooltip_templates"><div id="ЗапросexistsвElastic_tooltip_id"><p>Возвращает документы, в которых присутствует указанное поле<br/>
+}</code></p></div></div><div class="tooltip_templates"><div id="Existsquery_tooltip_id"><p>Возвращает документы, в которых присутствует указанное поле<br/>
 <code>json
 GET /_search 
 { 
@@ -4839,7 +4839,7 @@ GET /_search
 <li>поле равно <code>null</code> или <code>[]</code></li>
 <li>В маппинге для поля указано <code>"index": false</code> <a class="wikilink" href="-map-param">см</a></li>
 <li>длина значения поля больше чем указано в маппинге в параметре <code>ignore_above</code> <a class="wikilink" href="ignore-above-map-param">см</a></li>
-<li>Значение сломано (malformed) и в маппинге указан параметр `ign…</li></div></div><div class="tooltip_templates"><div id="Полнотекстовыезапросы_tooltip_id"><p><em>Полнотекстовые запросы</em> - запросы к <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/analyze-api/">проанализированным</a> текстовым полям. Строка запроса анализируется тем же анализатором, что и поле во время индексирования.</p>
+<li>Значение сломано (malformed) и в маппинге указан параметр `ignore_malform…</li></div></div><div class="tooltip_templates"><div id="Полнотекстовыезапросы_tooltip_id"><p><em>Полнотекстовые запросы</em> - запросы к <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/analyze-api/">проанализированным</a> текстовым полям. Строка запроса анализируется тем же анализатором, что и поле во время индексирования.</p>
 <li><a class="wikilink" href="intervals-query">intervals</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/match-query/">match</a></li>
 <li><a class="wikilink" href="match-bool-prefix-query">match_bool_prefix</a></li>
@@ -4851,7 +4851,7 @@ GET /_search
 <li>[[si…</li></div></div><div class="tooltip_templates"><div id="Joiningqueries_tooltip_id"><p>Аналог Join запросов в SQL. Эластиковые join-подобные запросы спроектированы масштабироваться горизонтально.</p>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/nested-query/">nested</a> - для поиска по <code>nested</code> документам</li>
 <li><a class="wikilink" href="has-child-query">has_child</a> и <a class="wikilink" href="has-parent-query">has_parent</a> - для parent-child документов</li>
-<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/joining-queries.html</p></div></div><div class="tooltip_templates"><div id="Запросmatch_tooltip_id"><p>Возвращает документы, содержащие текст, соответствующий (match) запрошенному. Запрошенный текст анализируется перед поиском.</p>
+<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/joining-queries.html</p></div></div><div class="tooltip_templates"><div id="Matchquery_tooltip_id"><p>Возвращает документы, содержащие текст, соответствующий (match) запрошенному. Запрошенный текст анализируется перед поиском.</p>
 <p>Запрос <code>match</code> является стандартным запросом для полнотекстового поиска, включая нечёткий (fuzzy) поиск.<br/>
 Пример:<br/>
 <code>json
@@ -4865,20 +4865,20 @@ GET /_search
     }
   }
 }</code><br/>
-Параметр: <code>field</code> - имя поля, в котором осуществляется поиск (в примере <code>message</code>). Является объектом, содержащим пара…</p></div></div><div class="tooltip_templates"><div id="Queryвnestedдокументах_tooltip_id"><p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/exists-query/">Exists</a> запрос для вложенного поля:<br/>
-```json<br/>
-{<br/>
-  “query”: {<br/>
-    “nested”: {<br/>
-      “path”: “leasing”,<br/>
-      “query”: {<br/>
-        “exists”: {<br/>
-          “field”: “leasing.leasing-id”<br/>
-        }<br/>
-      }<br/>
-    }<br/>
-  }<br/>
-}…</p></div></div><div class="tooltip_templates"><div id="QueryDSL_tooltip_id"><p>Головная заметка о Elasticsearch query DSL.<br/>
+Параметр: <code>field</code> - имя поля, в котором осуществляется поиск (в примере <code>message</code>). Является объектом, содержащим парам…</p></div></div><div class="tooltip_templates"><div id="Nestedquery_tooltip_id"><p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/exists-query/">Exists</a> запрос для вложенного поля:<br/>
+<code>json
+{
+  "query": {
+    "nested": {
+      "path": "leasing",
+      "query": {
+        "exists": {
+          "field": "leasing.leasing-id"
+        }
+      }
+    }
+  }
+}</code></p></div></div><div class="tooltip_templates"><div id="QueryDSL_tooltip_id"><p>Головная заметка о Elasticsearch query DSL.<br/>
 Запрос к Эластику состоит из <em>выражений (clauses}</em> <br/>
 Выражения могут быть двух типов:</p>
 <li><em>Листовые (Leaf)</em> - выражения, касающиеся значений в полях документа, такие как <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/match-query/">match</a>, <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/term-query/">term</a> или <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/range-query/">range</a>.</li>
@@ -4909,7 +4909,7 @@ GET /_search
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/range-query/">range</a></li>
 <li><a class="wikilink" href="regexp-query">regexp</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/term-query/">term</a> - возвращает документы, у которых в указанном поле есть точный терм</li>
-<li>[[terms-query|…</li></div></div><div class="tooltip_templates"><div id="termquery_tooltip_id"><p>Ищет документы с точным вхождением терма. Как правило, это поля типа <code>keyword</code>.<br/>
+<li>[[terms-query|…</li></div></div><div class="tooltip_templates"><div id="Termquery_tooltip_id"><p>Ищет документы с точным вхождением терма. Как правило, это поля типа <code>keyword</code>.<br/>
 <code>json
 {
     "query": {
@@ -4921,7 +4921,7 @@ GET /_search
     }
 }</code><br/>
 В отличие от многих других запросов, имя поля указывается не как значение параметра <code>field</code>, а как имя поля объекта.</p>
-<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl-term-query.html</p></div></div><div class="tooltip_templates"><div id="ЗапросexistsвElastic_tooltip_id"><p>Возвращает документы, в которых присутствует указанное поле<br/>
+<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl-term-query.html</p></div></div><div class="tooltip_templates"><div id="Existsquery_tooltip_id"><p>Возвращает документы, в которых присутствует указанное поле<br/>
 <code>json
 GET /_search 
 { 
@@ -4935,7 +4935,7 @@ GET /_search
 <li>поле равно <code>null</code> или <code>[]</code></li>
 <li>В маппинге для поля указано <code>"index": false</code> <a class="wikilink" href="-map-param">см</a></li>
 <li>длина значения поля больше чем указано в маппинге в параметре <code>ignore_above</code> <a class="wikilink" href="ignore-above-map-param">см</a></li>
-<li>Значение сломано (malformed) и в маппинге указан параметр `ign…</li></div></div><div class="tooltip_templates"><div id="Rangequery_tooltip_id"><p>Возвращает документы, которые содержат значения в заданном диапазоне.<br/>
+<li>Значение сломано (malformed) и в маппинге указан параметр `ignore_malform…</li></div></div><div class="tooltip_templates"><div id="Rangequery_tooltip_id"><p>Возвращает документы, которые содержат значения в заданном диапазоне.<br/>
 Пример:<br/>
 <code>json
 GET /_search
@@ -4962,7 +4962,7 @@ GET /_search
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/range-query/">range</a></li>
 <li><a class="wikilink" href="regexp-query">regexp</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/term-query/">term</a> - возвращает документы, у которых в указанном поле есть точный терм</li>
-<li>[[terms-query|…</li></div></div><div class="tooltip_templates"><div id="termquery_tooltip_id"><p>Ищет документы с точным вхождением терма. Как правило, это поля типа <code>keyword</code>.<br/>
+<li>[[terms-query|…</li></div></div><div class="tooltip_templates"><div id="Termquery_tooltip_id"><p>Ищет документы с точным вхождением терма. Как правило, это поля типа <code>keyword</code>.<br/>
 <code>json
 {
     "query": {

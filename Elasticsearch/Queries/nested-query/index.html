@@ -9,7 +9,7 @@
 <link href="https://garden.stalker-home.xyz/Elasticsearch/Queries/nested-query/" rel="canonical"/>
 <link href="../../../assets/logo/logo.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.3.9" name="generator"/>
-<title>Query в nested документах - Цифровой сад и огород</title>
+<title>Nested query - Цифровой сад и огород</title>
 <link href="../../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -34,8 +34,8 @@
     });
   </script>
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
-<meta content="Query в nested документах" property="og:title"/>
-<meta content="Query в nested документах" name="twitter:title"/>
+<meta content="Nested query" property="og:title"/>
+<meta content="Nested query" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
 <meta content="Мой цифровой сад." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -62,7 +62,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#query-nested">
+<a class="md-skip" href="#nested-query">
           Перейти к содержанию
         </a>
 </div>
@@ -86,7 +86,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Query в nested документах
+              Nested query
             
           </span>
 </div>
@@ -835,7 +835,7 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../exists-query/">
-        Запрос exists в Elastic
+        Exists query
       </a>
 </li>
 <li class="md-nav__item">
@@ -850,17 +850,17 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../match-query/">
-        Запрос match
+        Match query
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Query в nested документах
+          Nested query
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Query в nested документах
+        Nested query
       </a>
 <nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -893,7 +893,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../term-query/">
-        term query
+        Term query
       </a>
 </li>
 </ul>
@@ -2501,7 +2501,7 @@
           Elasticsearch/joining
         </a>
 </nav>
-<h1 id="query-nested">Query в nested документах<a class="headerlink" href="#query-nested" title="Permanent link">¶</a></h1>
+<h1 id="nested-query">Nested query<a class="headerlink" href="#nested-query" title="Permanent link">¶</a></h1>
 <p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a class="link-tooltip" data-tooltip-content="#Exists_tooltip_id" href="../exists-query/" title="Exists">Exists</a> запрос для вложенного поля:<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span><span class="w"></span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -2524,7 +2524,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 7, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2569,7 +2569,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
-<a aria-label="Назад: Запрос match" class="md-footer__link md-footer__link--prev" href="../match-query/" rel="prev">
+<a aria-label="Назад: Match query" class="md-footer__link md-footer__link--prev" href="../match-query/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -2578,7 +2578,7 @@
 <span class="md-footer__direction">
                 Назад
               </span>
-              Запрос match
+              Match query
             </div>
 </div>
 </a>
@@ -2633,5 +2633,5 @@ GET /_search
 <li>поле равно <code>null</code> или <code>[]</code></li>
 <li>В маппинге для поля указано <code>"index": false</code> <a class="wikilink" href="-map-param">см</a></li>
 <li>длина значения поля больше чем указано в маппинге в параметре <code>ignore_above</code> <a class="wikilink" href="ignore-above-map-param">см</a></li>
-<li>Значение сломано (malformed) и в маппинге указан параметр `ign…</li></div></div></body>
+<li>Значение сломано (malformed) и в маппинге указан параметр `ignore_malform…</li></div></div></body>
 </html>
