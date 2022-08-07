@@ -14,3 +14,4 @@ HTTP/2 определен как для HTTP URI (без шифрования), 
 ## Ссылки
 https://ru.wikipedia.org/wiki/HTTP/2
 https://en.wikipedia.org/wiki/HTTP/2
+https://web.dev/performance-http2/
