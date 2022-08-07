@@ -2,7 +2,7 @@
 tags: [Elasticsearch/query, Elasticsearch/joining]
 share: true
 ---
-# Query в nested документах
+# Nested query
 Для построения запроса по nested документам нужно сделать запрос типа `nested`, nested-поле указать в параметре `path`, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде `%path%.%field%`. Например, [[exists-query|Exists]] запрос для вложенного поля:
 ```json
 {
