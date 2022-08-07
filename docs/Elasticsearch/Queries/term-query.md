@@ -2,7 +2,7 @@
 tags: [Elasticsearch/query, Elasticsearch/term-level]
 share: true
 ---
-# term query
+# Term query
 Ищет документы с точным вхождением терма. Как правило, это поля типа `keyword`.
 ```json
 {
