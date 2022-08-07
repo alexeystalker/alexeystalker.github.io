@@ -2,7 +2,7 @@
 tags: [Elasticsearch/query, Elasticsearch/term-level]
 share: true
 ---
-# Запрос exists в Elastic
+# Exists query
 Возвращает документы, в которых присутствует указанное поле
 ```json
 GET /_search 
