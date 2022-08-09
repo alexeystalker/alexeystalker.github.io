@@ -1388,7 +1388,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Elasticsearch/Queries/full-text-queries/">
-        Полнотекстовые запросы
+        Full-text queries
       </a>
 </li>
 <li class="md-nav__item">
@@ -3597,7 +3597,7 @@
 </ul>
 <h2 id="elasticsearchfull-text"><span class="md-tag">Elasticsearch/full-text</span><a class="headerlink" href="#elasticsearchfull-text" title="Permanent link">¶</a></h2>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#Полнотекстовыезапросы_tooltip_id" href="../Elasticsearch/Queries/full-text-queries/">Полнотекстовые запросы</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Fulltextqueries_tooltip_id" href="../Elasticsearch/Queries/full-text-queries/">Full-text queries</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Matchquery_tooltip_id" href="../Elasticsearch/Queries/match-query/">Match query</a></li>
 </ul>
 <h2 id="elasticsearchjoining"><span class="md-tag">Elasticsearch/joining</span><a class="headerlink" href="#elasticsearchjoining" title="Permanent link">¶</a></h2>
@@ -3612,7 +3612,7 @@
 <h2 id="elasticsearchquery"><span class="md-tag">Elasticsearch/query</span><a class="headerlink" href="#elasticsearchquery" title="Permanent link">¶</a></h2>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#Existsquery_tooltip_id" href="../Elasticsearch/Queries/exists-query/">Exists query</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Полнотекстовыезапросы_tooltip_id" href="../Elasticsearch/Queries/full-text-queries/">Полнотекстовые запросы</a></li>
+<li><a class="link-tooltip" data-tooltip-content="#Fulltextqueries_tooltip_id" href="../Elasticsearch/Queries/full-text-queries/">Full-text queries</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Joiningqueries_tooltip_id" href="../Elasticsearch/Queries/joining-queries/">Joining queries</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Matchquery_tooltip_id" href="../Elasticsearch/Queries/match-query/">Match query</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Nestedquery_tooltip_id" href="../Elasticsearch/Queries/nested-query/">Nested query</a></li>
@@ -4777,7 +4777,7 @@ PUT /my_source_index/_settings
   "settings": { 
     "index.number_of_replicas": %num%
     }
-}</code></p></div></div><div class="tooltip_templates"><div id="Полнотекстовыезапросы_tooltip_id"><p><em>Полнотекстовые запросы</em> - запросы к <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/analyze-api/">проанализированным</a> текстовым полям. Строка запроса анализируется тем же анализатором, что и поле во время индексирования.</p>
+}</code></p></div></div><div class="tooltip_templates"><div id="Fulltextqueries_tooltip_id"><p><em>Полнотекстовые запросы</em> - запросы к <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/analyze-api/">проанализированным</a> текстовым полям. Строка запроса анализируется тем же анализатором, что и поле во время индексирования.</p>
 <li><a class="wikilink" href="intervals-query">intervals</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/match-query/">match</a></li>
 <li><a class="wikilink" href="match-bool-prefix-query">match_bool_prefix</a></li>
@@ -4786,7 +4786,7 @@ PUT /my_source_index/_settings
 <li><a class="wikilink" href="multi-match-query">multi_match</a></li>
 <li><a class="wikilink" href="common-query">common</a></li>
 <li><a class="wikilink" href="query-string-query">query_string</a></li>
-<li>[[si…</li></div></div><div class="tooltip_templates"><div id="Matchquery_tooltip_id"><p>Возвращает документы, содержащие текст, соответствующий (match) запрошенному. Запрошенный текст анализируется перед поиском.</p>
+<li>[[simple-…</li></div></div><div class="tooltip_templates"><div id="Matchquery_tooltip_id"><p>Возвращает документы, содержащие текст, соответствующий (match) запрошенному. Запрошенный текст анализируется перед поиском.</p>
 <p>Запрос <code>match</code> является стандартным запросом для полнотекстового поиска, включая нечёткий (fuzzy) поиск.<br/>
 Пример:<br/>
 <code>json
@@ -4839,7 +4839,7 @@ GET /_search
 <li>поле равно <code>null</code> или <code>[]</code></li>
 <li>В маппинге для поля указано <code>"index": false</code> <a class="wikilink" href="-map-param">см</a></li>
 <li>длина значения поля больше чем указано в маппинге в параметре <code>ignore_above</code> <a class="wikilink" href="ignore-above-map-param">см</a></li>
-<li>Значение сломано (malformed) и в маппинге указан параметр `ignore_malform…</li></div></div><div class="tooltip_templates"><div id="Полнотекстовыезапросы_tooltip_id"><p><em>Полнотекстовые запросы</em> - запросы к <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/analyze-api/">проанализированным</a> текстовым полям. Строка запроса анализируется тем же анализатором, что и поле во время индексирования.</p>
+<li>Значение сломано (malformed) и в маппинге указан параметр `ignore_malform…</li></div></div><div class="tooltip_templates"><div id="Fulltextqueries_tooltip_id"><p><em>Полнотекстовые запросы</em> - запросы к <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/analyze-api/">проанализированным</a> текстовым полям. Строка запроса анализируется тем же анализатором, что и поле во время индексирования.</p>
 <li><a class="wikilink" href="intervals-query">intervals</a></li>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/match-query/">match</a></li>
 <li><a class="wikilink" href="match-bool-prefix-query">match_bool_prefix</a></li>
@@ -4848,7 +4848,7 @@ GET /_search
 <li><a class="wikilink" href="multi-match-query">multi_match</a></li>
 <li><a class="wikilink" href="common-query">common</a></li>
 <li><a class="wikilink" href="query-string-query">query_string</a></li>
-<li>[[si…</li></div></div><div class="tooltip_templates"><div id="Joiningqueries_tooltip_id"><p>Аналог Join запросов в SQL. Эластиковые join-подобные запросы спроектированы масштабироваться горизонтально.</p>
+<li>[[simple-…</li></div></div><div class="tooltip_templates"><div id="Joiningqueries_tooltip_id"><p>Аналог Join запросов в SQL. Эластиковые join-подобные запросы спроектированы масштабироваться горизонтально.</p>
 <li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/nested-query/">nested</a> - для поиска по <code>nested</code> документам</li>
 <li><a class="wikilink" href="has-child-query">has_child</a> и <a class="wikilink" href="has-parent-query">has_parent</a> - для parent-child документов</li>
 <p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/joining-queries.html</p></div></div><div class="tooltip_templates"><div id="Matchquery_tooltip_id"><p>Возвращает документы, содержащие текст, соответствующий (match) запрошенному. Запрошенный текст анализируется перед поиском.</p>
