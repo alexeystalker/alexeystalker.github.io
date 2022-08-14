@@ -45,6 +45,7 @@ markdown_extensions:
   - smarty
   - tables
   - mdx_breakless_lists
+  - def_list
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.details
@@ -124,6 +125,9 @@ extra_css:
     - assets/css/customization.css
 extra:
   generator: false
+  hooks:
+    strip_comments: true
+    fix_heading: false
   analytics:
     provider: google
     property: G-34CEYP9XGS
