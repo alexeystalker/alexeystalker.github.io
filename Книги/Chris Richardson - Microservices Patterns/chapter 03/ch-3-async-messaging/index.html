@@ -854,6 +854,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Elasticsearch/Queries/ids-query/">
+        IDs query
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../../Elasticsearch/Queries/inner-hits/">
         inner_hits parameter
       </a>
@@ -2706,8 +2711,19 @@
 Существует два вида каналов:</p>
 <li>[[point-to-point-channel|Точка-точка]…</li></div></div><div class="tooltip_templates"><div id="Реализациястилейвзаимодействия_tooltip_id"><p>Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">стили взаимодействия</a>. Вот как реализуется каждый.</p>
 <p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210911183223.png"/><br/>
-Клиент и сервис могут взаимодействовать, отправляя запросы и принимая ответы. Если это происходит синхронно, клиент ожидает немедленного ответа от сервиса, если асинхронно - не ждёт. Обмен сообщениями по природе асинхронен, но клие…</p></div></div><div class="tooltip_templates"><div id="API_tooltip_id"><p><em>API</em> - описание способов (набор классов, процедур, функций, структур или констант), которыми одна компьютерная программа может взаимодействовать с другой программой. Обычно входит в описание какого-либо интернет-протокола, фреймворка или стандарта вызовов функций операционной системы. Часто реализуется отдельной программной библиотекой или сервисом операционной системы. Используется программистами при написании всевозможных приложений.</p>
-<p>Проще говоря, это…</p></div></div><div class="tooltip_templates"><div id="запросасихронныйответ_tooltip_id"><p><em>Запрос - асинхронный ответ</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет запрос, рассчитывая получить ответ “когда-нибудь”.</p></div></div><div class="tooltip_templates"><div id="однонаправленныхсообщений_tooltip_id"><p><em>Уведомления</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет сообщение или управляющую команду, не ожидая при этом ответа.</p></div></div><div class="tooltip_templates"><div id="издательподписчик_tooltip_id"><p><em>Публикация - подписка</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент публикует сообщение для нуля или более подписчиков.</p></div></div><div class="tooltip_templates"><div id="Использованиеброкерасообщений_tooltip_id"><p>Приложения, основанные на сообщениях, обычно применяют <em>брокер сообщений</em> - инфраструктурный компонент, через который сервисы общаются друг с другом. Однако, архитектура обмена сообщений может и не иметь брокера, и сервисы взаимодействуют напрямую.</p>
+Клиент и сервис могут взаимодействовать, отправляя запросы и принимая ответы. Если это происходит синхронно, клиент ожидает немедленного ответа от сервиса, если асинхронно - не ждёт. Обмен сообщениями по природе асинхронен, но клие…</p></div></div><div class="tooltip_templates"><div id="API_tooltip_id"><p>Анализирует текстовую строку и возвращает результирующие токены<br/>
+<code>json
+GET /_analyze 
+{ 
+    "analyzer" : "standard", 
+    "text" : "Quick Brown Foxes!" 
+}</code></p>
+<li><code>GET /_analyze</code></li>
+<li><code>POST /_analyze</code></li>
+<li><code>GET /&lt;index&gt;/_analyze</code></li>
+<li><code>POST /&lt;index&gt;/_analyze</code></li>
+<p>Если указать <code>index</code> в path, можно использовать анализатор, определенный в этом индексе.</p>
+<li><code>analyzer</code> (опционально, строка) имя анализатора, который нужно применить к тексту. Может быть встроенный анализато…</li></div></div><div class="tooltip_templates"><div id="запросасихронныйответ_tooltip_id"><p><em>Запрос - асинхронный ответ</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет запрос, рассчитывая получить ответ “когда-нибудь”.</p></div></div><div class="tooltip_templates"><div id="однонаправленныхсообщений_tooltip_id"><p><em>Уведомления</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет сообщение или управляющую команду, не ожидая при этом ответа.</p></div></div><div class="tooltip_templates"><div id="издательподписчик_tooltip_id"><p><em>Публикация - подписка</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент публикует сообщение для нуля или более подписчиков.</p></div></div><div class="tooltip_templates"><div id="Использованиеброкерасообщений_tooltip_id"><p>Приложения, основанные на сообщениях, обычно применяют <em>брокер сообщений</em> - инфраструктурный компонент, через который сервисы общаются друг с другом. Однако, архитектура обмена сообщений может и не иметь брокера, и сервисы взаимодействуют напрямую.</p>
 <p>В архитектуре без брокера сервисы общаются напрямую. Одна из реализаций такого подхода - проект <a href="https://zeromq.org/">ZeroMQ</a></p>
 <li>Более легковесный сетево…</li></div></div><div class="tooltip_templates"><div id="Конкурирующиеполучатели_tooltip_id"><p>В случае ситуации нескольких одинаковых получателей возможна ситуация, когда несколько последовательных сообщений будут доставлены в некорректном порядке разным экземплярам получателей.<br/>
 Одно из решений - использование <em>сегментированных каналов</em>.<br/>
