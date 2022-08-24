@@ -59,3 +59,7 @@ Console.WriteLine("Hello AutoMapper!");
 > x.ToUpper()
 "DOTNET SCRIPT"
 ```
+
+## Ссылки
+https://t.me/NetDeveloperDiary/1615
+https://www.hanselman.com/blog/c-and-net-core-scripting-with-the-dotnetscript-global-tool
