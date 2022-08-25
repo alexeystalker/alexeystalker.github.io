@@ -1,6 +1,6 @@
 ---
 share: true
-tags: [NET/library,GUI,console]
+tags: [NET/library,GUI,console-app]
 ---
 # konsole
 Либа для консольного GUI
