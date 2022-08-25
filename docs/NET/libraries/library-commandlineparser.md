@@ -1,5 +1,5 @@
 ---
-tags: [NET/library,console]
+tags: [NET/library,console-app]
 share: true
 ---
 # CommandLineParser
