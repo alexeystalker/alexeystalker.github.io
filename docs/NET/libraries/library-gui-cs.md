@@ -1,6 +1,6 @@
 ---
 share: true
-tags: [NET/library,GUI,console]
+tags: [NET/library,GUI,console-app]
 ---
 # gui.cs
 Либа для консольного GUI от самого Мигеля Де Икасы
