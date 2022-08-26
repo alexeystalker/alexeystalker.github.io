@@ -450,6 +450,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#netwebsocket">
+    NET/websocket
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#ooppattern">
     OOP/pattern
   </a>
@@ -1829,14 +1834,19 @@
         Ожидание асинхронного кода может привести к Threadpool starvation
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../NET/websocket-receive-to-end/">
+        Получение сообщения через websocket до конца
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_28" id="__nav_7_28" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7_28">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_29" id="__nav_7_29" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_29">
           AspNetCore
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="AspNetCore" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_7_28">
+<label class="md-nav__title" for="__nav_7_29">
 <span class="md-nav__icon md-icon"></span>
           AspNetCore
         </label>
@@ -1850,13 +1860,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_29" id="__nav_7_29" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7_29">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_30" id="__nav_7_30" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_30">
           Dotnet console
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Dotnet console" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_7_29">
+<label class="md-nav__title" for="__nav_7_30">
 <span class="md-nav__icon md-icon"></span>
           Dotnet console
         </label>
@@ -1880,13 +1890,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_30" id="__nav_7_30" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7_30">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_31" id="__nav_7_31" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_31">
           Libraries
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Libraries" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_7_30">
+<label class="md-nav__title" for="__nav_7_31">
 <span class="md-nav__icon md-icon"></span>
           Libraries
         </label>
@@ -1955,13 +1965,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_31" id="__nav_7_31" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7_31">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_32" id="__nav_7_32" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32">
           Multithreading
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Multithreading" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_7_31">
+<label class="md-nav__title" for="__nav_7_32">
 <span class="md-nav__icon md-icon"></span>
           Multithreading
         </label>
@@ -3332,6 +3342,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#netwebsocket">
+    NET/websocket
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#ooppattern">
     OOP/pattern
   </a>
@@ -3902,6 +3917,10 @@
 <h2 id="netthreadpool"><span class="md-tag">NET/threadpool</span><a class="headerlink" href="#netthreadpool" title="Permanent link">¶</a></h2>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#ОжиданиеасинхронногокодаможетпривестикThreadpoolstarvation_tooltip_id" href="../NET/wait-sync/">Ожидание асинхронного кода может привести к Threadpool starvation</a></li>
+</ul>
+<h2 id="netwebsocket"><span class="md-tag">NET/websocket</span><a class="headerlink" href="#netwebsocket" title="Permanent link">¶</a></h2>
+<ul>
+<li><a class="link-tooltip" data-tooltip-content="#Получениесообщениячерезwebsocketдоконца_tooltip_id" href="../NET/websocket-receive-to-end/">Получение сообщения через websocket до конца</a></li>
 </ul>
 <h2 id="ooppattern"><span class="md-tag">OOP/pattern</span><a class="headerlink" href="#ooppattern" title="Permanent link">¶</a></h2>
 <ul>
@@ -5532,7 +5551,15 @@ public class IntValue : IValue<br/>
 <p>https://github.com/Dotnet-Boxed/Templates</p></div></div><div class="tooltip_templates"><div id="Генерацияслучайныхданных_tooltip_id"><p>Библиотека для генерации случайных данных для тестирования Faker.Net.</p>
 <p>Пакет .NET изначально был портом библиотеки Ruby от 2009 года, но во многом разошлась с ней. Библиотека Ruby сама по себе была портом библиотеки Perl Data::Faker от 2007 года. .NET библиотека продолжает использоваться и постоянно обновляется. Причина её популярности, вероятно, связана со множеством вариантов использования и очень простой структурой.</p>
 <p>Сначала нужно установить пакет <em>Faker.Net</em>. Мы …</p></div></div><div class="tooltip_templates"><div id="ОжиданиеасинхронногокодаможетпривестикThreadpoolstarvation_tooltip_id"><p>Если злоупотреблять ожиданием асинхронного кода, можно выбрать весь тредпул и получить ситуацию голодания (Threadpool starvation). Это касается всех ожидателей, как-то <code>Task.Wait</code>, <code>Task.Result</code>, <code>Task.GetAwaiter().GetResult()</code>, <code>Task.WaitAny</code>, <code>Task.WaitAll</code> (последние не путать с <code>Task.WhenAny</code> и <code>Task.WhenAll</code>!!)</p>
-<p>https://medium.com/criteo-engineering/net-threadpool-starvation-and-how-queuing-makes-it-worse-512c8d570…</p></div></div><div class="tooltip_templates"><div id="ШаблонВнедрениезависимостей_tooltip_id"><p><strong>Внедрение зависимостей (Dependency Injection, DI)</strong> - шаблон, при котором зависимости (то есть классы, от которых зависит код класса) не создаются кодом класса, а передаются в него извне. Часть реализации <a class="wikilink" href="https://garden.stalker-home.xyz/OOP/OOP%20Principles/single-responsibility-principle/">принципа единой ответственности</a>.<br/>
+<p>https://medium.com/criteo-engineering/net-threadpool-starvation-and-how-queuing-makes-it-worse-512c8d570…</p></div></div><div class="tooltip_templates"><div id="Получениесообщениячерезwebsocketдоконца_tooltip_id"><p>Если мы посмотрим на метод получения сообщения <code>ReceiveAsync()</code> у класса <code>Websocket</code>, то сигнатура у него такая:<br/>
+<code>csharp
+WebSocketReceiveResult ReceiveAsync(ArraySegment&lt;Byte&gt; buffer, CancellationToken token)</code><br/>
+(или перегузка с <code>Memory&lt;byte&gt;</code>)<br/>
+Мы выделяем некий буфер и получаем сообщение, записанное внутри буфера:<br/>
+```csharp<br/>
+var buffer = new ArraySegment<byte>(new byte[1024 * 4]);<br/>
+var receiveResult = await client.ReceiveAsync(buffer, cts.Token);<br/>
+…</byte></p></div></div><div class="tooltip_templates"><div id="ШаблонВнедрениезависимостей_tooltip_id"><p><strong>Внедрение зависимостей (Dependency Injection, DI)</strong> - шаблон, при котором зависимости (то есть классы, от которых зависит код класса) не создаются кодом класса, а передаются в него извне. Часть реализации <a class="wikilink" href="https://garden.stalker-home.xyz/OOP/OOP%20Principles/single-responsibility-principle/">принципа единой ответственности</a>.<br/>
 Также так называют и архитектурный подход, когда приложение проектируется с преимущественным использованием этого шаблона. Обычно для эффективной реализации подхода применяют специальный фре…</p></div></div><div class="tooltip_templates"><div id="ШаблонХранитель_tooltip_id"><p><strong>Хранитель</strong> (Memento) — поведенческий шаблон проектирования, позволяющий, не нарушая инкапсуляцию, зафиксировать и сохранить внутреннее состояние объекта так, чтобы позднее восстановить его в это состояние.</p>
 <p>https://ru.wikipedia.org/wiki/%D0%A5%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C_(%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)<br/>
 https://en.wikipedia.org/wiki/Memento_pattern</p></div></div><div class="tooltip_templates"><div id="ШаблонПредохранитель_tooltip_id"><p>Данный паттерн рассчитан на ошибки, исправление которых требует много времени. Например, обрыв соединения, отказ оборудования. В данном случае отправка повторных запросов (паттерн <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/retry-pattern/">Retry</a>), скорее всего, будет бессмысленна. А если к тому же представить, что к какому-то сервису обращается много клиентов и этот сервис становится недоступным, каждый клиент начинает делать повторные попытки своих запросов к неработающему сервису - существенно увеличивается и…</p></div></div><div class="tooltip_templates"><div id="ШаблонПовтор_tooltip_id"><p><strong>Повтор (Retry)</strong> - это архитектурный паттерн, который позволяет определять стратегию по восстановлению после временных ошибок.<br/>

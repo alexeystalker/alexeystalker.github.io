@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Мой цифровой сад." name="description"/>
-<link href="https://garden.stalker-home.xyz/NET/get-uninitialized-object/" rel="canonical"/>
+<link href="https://garden.stalker-home.xyz/NET/websocket-receive-to-end/" rel="canonical"/>
 <link href="../../assets/logo/logo.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.4.0" name="generator"/>
-<title>Создание объектов без вызова конструктора - Цифровой сад и огород</title>
+<title>Получение сообщения через websocket до конца - Цифровой сад и огород</title>
 <link href="../../assets/stylesheets/main.69437709.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -34,8 +34,8 @@
     });
   </script>
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
-<meta content="Создание объектов без вызова конструктора" property="og:title"/>
-<meta content="Создание объектов без вызова конструктора" name="twitter:title"/>
+<meta content="Получение сообщения через websocket до конца" property="og:title"/>
+<meta content="Получение сообщения через websocket до конца" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
 <meta content="Мой цифровой сад." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -62,7 +62,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#websocket">
           Перейти к содержанию
         </a>
 </div>
@@ -86,7 +86,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Создание объектов без вызова конструктора
+              Получение сообщения через websocket до конца
             
           </span>
 </div>
@@ -1191,33 +1191,10 @@
         Выполнение кода перед Main
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Создание объектов без вызова конструктора
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../get-uninitialized-object/">
         Создание объектов без вызова конструктора
       </a>
-<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    Что это значит?
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    Ссылки
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../idisposable-change-current-culture/">
@@ -1294,10 +1271,28 @@
         Ожидание асинхронного кода может привести к Threadpool starvation
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../websocket-receive-to-end/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Получение сообщения через websocket до конца
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Получение сообщения через websocket до конца
       </a>
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    Ссылки
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_29" id="__nav_7_29" type="checkbox"/>
@@ -2522,12 +2517,7 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    Что это значит?
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#_1">
     Ссылки
   </a>
 </li>
@@ -2539,53 +2529,43 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../tags/#net">
-          NET
+<a class="md-tag" href="../../tags/#netwebsocket">
+          NET/websocket
         </a>
 </nav>
-<h1 id="_1">Создание объектов без вызова конструктора<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>Рассмотрим малоизвестную функцию служб компилятора .NET, которая позволит вам создать «неинициализированный» экземпляр объекта без вызова каких-либо его конструкторов или инициализаторов свойств.</p>
-<p>Во-первых, вам нужно будет сослаться на пространство имён <code>System.Runtime.CompilerServices</code>. Оно содержит класс <code>RuntimeHelpers</code> со статическим методом <code>GetUnitializedObject</code>. Посмотрим, как это работает на практике.<br/>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Runtime.CompilerServices</span><span class="p">;</span><span class="w"></span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kt">var</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">RuntimeHelpers</span><span class="w"></span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="p">.</span><span class="n">GetUninitializedObject</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">Something</span><span class="p">));</span><span class="w"></span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Something</span><span class="w"> </span><span class="n">smth</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">smth</span><span class="p">.</span><span class="n">GetName</span><span class="p">());</span><span class="w"></span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">smth</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="p">??</span><span class="w"> </span><span class="s">"(null)"</span><span class="p">);</span><span class="w"></span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Something</span><span class="w"></span>
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="kt">string?</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">"John"</span><span class="p">;</span><span class="w"></span>
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="nf">Something</span><span class="p">(</span><span class="kt">string?</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
-<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>
-<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetName</span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="p">??</span><span class="w"> </span><span class="s">"Jane"</span><span class="p">;</span><span class="w"></span>
-<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="p">}</span><span class="w"></span>
+<h1 id="websocket">Получение сообщения через websocket до конца<a class="headerlink" href="#websocket" title="Permanent link">¶</a></h1>
+<p>Если мы посмотрим на метод получения сообщения <code>ReceiveAsync()</code> у класса <code>Websocket</code>, то сигнатура у него такая:<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">WebSocketReceiveResult</span><span class="w"> </span><span class="nf">ReceiveAsync</span><span class="p">(</span><span class="n">ArraySegment</span><span class="p">&lt;</span><span class="n">Byte</span><span class="p">&gt;</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">CancellationToken</span><span class="w"> </span><span class="n">token</span><span class="p">)</span><span class="w"></span>
 </code></pre></div><br/>
-Этот код, как и ожидается, выведет:<br/>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>Jane
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>(null)
+(или перегузка с <code>Memory&lt;byte&gt;</code>)<br/>
+Мы выделяем некий буфер и получаем сообщение, записанное внутри буфера:<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArraySegment</span><span class="p">&lt;</span><span class="kt">byte</span><span class="p">&gt;(</span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="m">1024</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="m">4</span><span class="p">]);</span><span class="w"></span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">receiveResult</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">cts</span><span class="p">.</span><span class="n">Token</span><span class="p">);</span><span class="w"></span>
 </code></pre></div><br/>
-В приведённом выше примере создаётся экземпляр Something без вызова конструктора объекта. Инициализатор свойства также не вызывается, поэтому свойство Name по-прежнему имеет значение null. Однако, возможно вызвать как метод GetName, так и обратиться к свойству Name.</p>
-<h2 id="_2">Что это значит?<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>Этот подход открывает возможность для разработчиков фреймворков использовать наследование и реализацию интерфейса для настройки элементов во фреймворке. Например, он используется в <a class="link-tooltip" data-tooltip-content="#FastEndpoints_tooltip_id" href="../libraries/library-fastendpoints/" title="Fast Endpoints">Fast Endpoints</a>, который позволяет создавать конечные точки веб-сайтов или API в виде классов, а не методов контроллеров. Для внедрения зависимостей в класс конечной точки, создаётся неинициализированный экземпляр класса, а затем вызывается общий метод Configure, который обнаруживает необходимые зависимости и внедряет их.</p>
-<p>Тем не менее, этот подход может привести к ошибкам, которые может быть трудно диагностировать. Например, приведённый выше код класса инициализирует свойство <code>Name</code>, но эта инициализация никогда не происходит, что приводит к результату <code>(null)</code> на выходе.</p>
-<h2 id="_3">Ссылки<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p><a href="https://khalidabuhakmeh.com/create-dotnet-objects-without-calling-the-constructor">https://khalidabuhakmeh.com/create-dotnet-objects-without-calling-the-constructor</a></p>
+Но что делать, если сообщение длиннее буфера? Для этого в <code>receiveResult</code> есть поле <code>EndOfMessage</code>, которое показывает, всё ли сообщение попало в буфер. Следовательно, чтобы получить всё сообщение, нужно вызвать метод <code>ReceiveAsync</code> несколько раз, собрать всё в один массив байт и только после этого прочитать:<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">var</span><span class="w"> </span><span class="n">ms</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MemoryStream</span><span class="p">();</span><span class="w"></span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArraySegment</span><span class="p">&lt;</span><span class="kt">byte</span><span class="p">&gt;(</span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="m">1024</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="m">4</span><span class="p">]);</span><span class="w"></span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">WebSocketReceiveResult</span><span class="w"> </span><span class="n">receiveResult</span><span class="p">;</span><span class="w"></span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">do</span><span class="w"></span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="n">receiveResult</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">ReceiveAsync</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">cts</span><span class="p">.</span><span class="n">Token</span><span class="p">);</span><span class="w"></span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="n">ms</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">Array</span><span class="p">,</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="n">Offset</span><span class="p">,</span><span class="w"> </span><span class="n">receiveResult</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span><span class="w"></span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="p">(!</span><span class="n">receiveResult</span><span class="p">.</span><span class="n">EndOfMessage</span><span class="p">);</span><span class="w"></span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">ms</span><span class="p">.</span><span class="n">Seek</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">SeekOrigin</span><span class="p">.</span><span class="n">Begin</span><span class="p">);</span><span class="w"></span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="k">using</span><span class="w"> </span><span class="nn">var</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamReader</span><span class="p">(</span><span class="n">ms</span><span class="p">,</span><span class="w"> </span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">);</span><span class="w"></span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="kt">var</span><span class="w"> </span><span class="n">messageStr</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="n">ReadToEnd</span><span class="p">();</span><span class="w"></span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Message: {messageStr}"</span><span class="p">);</span><span class="w"></span>
+</code></pre></div><br/>
+В примере мы передавали текстовое сообщение, поэтому декодируем байты в кодировке UTF8. Если передаем мы некие бинарные данные, то вместо использования <code>StreamReader</code>нужно обработать поток соответствующим образом.</p>
+<h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.net.websockets.websocket.receiveasync?view=net-6.0">https://docs.microsoft.com/dotnet/api/system.net.websockets.websocket.receiveasync?view=net-6.0</a></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 1, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 26, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2630,7 +2610,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
-<a aria-label="Назад: Выполнение кода перед Main" class="md-footer__link md-footer__link--prev" href="../executing-before-main/" rel="prev">
+<a aria-label="Назад: Ожидание асинхронного кода может привести к Threadpool starvation" class="md-footer__link md-footer__link--prev" href="../wait-sync/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -2639,17 +2619,17 @@
 <span class="md-footer__direction">
                 Назад
               </span>
-              Выполнение кода перед Main
+              Ожидание асинхронного кода может привести к Threadpool starvation
             </div>
 </div>
 </a>
-<a aria-label="Вперед: Временно Изменяем CurrentCulture" class="md-footer__link md-footer__link--next" href="../idisposable-change-current-culture/" rel="next">
+<a aria-label="Вперед: Объект HttpContext" class="md-footer__link md-footer__link--next" href="../AspNetCore/httpcontext/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Вперед
               </span>
-              Временно Изменяем CurrentCulture
+              Объект HttpContext
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -2680,6 +2660,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="FastEndpoints_tooltip_id"><p>Библиотека, реализующая паттерн <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Web%20Application%20Patterns/repr-pattern/">REPR</a> для NET6.</p>
-<p>https://fast-endpoints.com/</p></div></div></body>
+</body>
 </html>
