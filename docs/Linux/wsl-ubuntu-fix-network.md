@@ -18,4 +18,4 @@ ipconfig /flushdns
 
 ## Ссылки
 https://stackoverflow.com/a/63578387
-https://github.com/microsoft/WSL/issues/3438#issuecomment-410518578
+[Коммент к issue на Github](https://github.com/microsoft/WSL/issues/3438#issuecomment-410518578)
