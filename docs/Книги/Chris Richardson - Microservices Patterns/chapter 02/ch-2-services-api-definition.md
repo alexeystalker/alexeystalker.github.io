@@ -1,6 +1,10 @@
 ---
 share: true
-tags: [microservice,книга,конспект,API]
+tags: 
+  - microservice
+  - книга
+  - конспект
+  - API
 ---
 # Определение API сервисов
 > [!important] API
