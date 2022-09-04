@@ -1,6 +1,10 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags: 
+  - microservice
+  - книга
+  - конспект
+  - SOA
 ---
 # Сравнение SOA и микросервисов
 (**SOA** - service-oriented architecture)
