@@ -1,6 +1,10 @@
 ---
 share: true
-tags: [microservice,книга,конспект,architecture]
+tags: 
+  - microservice
+  - книга
+  - конспект
+  - architecture
 ---
 # Определение микросервисной архитектуры приложения
 Как определить микросервисную архитектуру?
