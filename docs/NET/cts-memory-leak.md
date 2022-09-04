@@ -11,5 +11,5 @@ tags:
 var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(parentCts.Token);
 ```
 ## Ссылки
-https://habr.com/ru/company/tinkoff/blog/546604/#habracut
+[Статья на Хабре](https://habr.com/ru/company/tinkoff/blog/546604/#habracut)
 https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource.createlinkedtokensource?view=net-6.0

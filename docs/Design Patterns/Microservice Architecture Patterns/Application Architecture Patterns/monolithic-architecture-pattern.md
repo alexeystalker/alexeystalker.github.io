@@ -3,6 +3,7 @@ tags:
   - microservice/pattern
   - microservice/anti-pattern
   - architecture
+  - monolith
 share: true
 ---
 # Шаблон "Монолитная архитектура"

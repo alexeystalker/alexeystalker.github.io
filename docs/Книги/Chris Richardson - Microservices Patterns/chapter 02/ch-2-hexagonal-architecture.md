@@ -1,6 +1,11 @@
 ---
 share: true
-tags: [microservice,книга,конспект,architecture]
+tags: 
+  - microservice
+  - книга
+  - конспект
+  - architecture
+  - hexagon
 ---
 # Шестигранная архитектура
 ![[Pasted image 20210828185920.png]]
