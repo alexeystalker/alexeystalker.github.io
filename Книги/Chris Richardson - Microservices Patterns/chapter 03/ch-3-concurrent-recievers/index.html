@@ -42,8 +42,8 @@
 <meta content="В случае ситуации нескольких одинаковых получателей возможна ситуация, когда несколько последовательных сообщений будут доставлены в некорректном порядке разным экземплярам получателей.
 Одно из решений - использование сегментированных каналов." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="https://garden.stalker-home.xyz/assets/img/True" property="og:image"/>
-<meta content="https://garden.stalker-home.xyz/assets/img/True" name="twitter:image"/>
+<meta content="https://garden.stalker-home.xyz/" property="og:image"/>
+<meta content="https://garden.stalker-home.xyz/" name="twitter:image"/>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -1845,6 +1845,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-message-broker-options/">
+        Факторы выбора брокера сообщений
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../ch-3-message-broker-usage/">
         Использование брокера сообщений
       </a>
@@ -2513,25 +2518,11 @@
 <a class="md-tag" href="../../../../tags/#">
           конспект
         </a>
-<a class="md-tag" href="../../../../tags/#microservicemessaging">
-          microservice/messaging
-        </a>
-<a class="md-tag" href="../../../../tags/#microserviceconcurrency">
-          microservice/concurrency
-        </a>
-<a class="md-tag" href="../../../../tags/#message-broker">
-          message-broker
-        </a>
-<a class="md-tag" href="../../../../tags/#microservice_messaging">
-          microservice_messaging
-        </a>
-<a class="md-tag" href="../../../../tags/#microservice_concurrency">
-          microservice_concurrency
-        </a>
 </nav>
 <h1 id="_1">Конкурирующие получатели и порядок следования сообщений<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>В случае ситуации нескольких одинаковых получателей возможна ситуация, когда несколько последовательных сообщений будут доставлены в некорректном порядке разным экземплярам получателей.<br/>
-Одно из решений - использование <em>сегментированных каналов</em>.</p>
+Одно из решений - использование <em>сегментированных каналов</em>.<br/>
+<img alt="Pasted image 20210915203724.png" src="../../../../images/Pasted%20image%2020210915203724.png" title="Pasted image 20210915203724.png"/></p>
 <ol>
 <li>Сегментированный канал включает в себя два и более сегмента, каждый из которых ведет себя как канал.</li>
 <li>Отправитель указывает в заголовке ключ сегмента. Брокер по ключу определяет сегмент, в который попадает сообщение.</li>
@@ -2542,7 +2533,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

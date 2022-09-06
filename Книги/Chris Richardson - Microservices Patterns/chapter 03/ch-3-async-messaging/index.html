@@ -1884,6 +1884,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../ch-3-message-broker-options/">
+        Факторы выбора брокера сообщений
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../ch-3-message-broker-usage/">
         Использование брокера сообщений
       </a>
@@ -2588,40 +2593,34 @@
 <a class="md-tag" href="../../../../tags/#">
           конспект
         </a>
-<a class="md-tag" href="../../../../tags/#microservicemessaging">
-          microservice/messaging
-        </a>
-<a class="md-tag" href="../../../../tags/#microservicecommunication">
-          microservice/communication
-        </a>
 </nav>
 <h1 id="_1">Взаимодействие с помощью асинхронного обмена сообщениями<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Сервисы могут взаимодействовать путём асинхронного <a class="link-tooltip" data-tooltip-content="#обменасообщениями_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/" title="обмена сообщениями">обмена сообщениями</a>.</p>
-<h4 id="_2">Обзор механизмов обмена сообщениями<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<h2 id="_2">Обзор механизмов обмена сообщениями<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Рассмотрим модель обмена сообщениями, описанной в книге <a href="https://www.ozon.ru/product/shablony-integratsii-korporativnyh-prilozheniy-signature-series-151531716/">Шаблоны интеграции корпоративных приложений</a>. В этой модели <a class="link-tooltip" data-tooltip-content="#сообщения_tooltip_id" href="../../../../Microservices/Messages/message/" title="сообщения">сообщения</a> передаются по <a class="link-tooltip" data-tooltip-content="#каналам_tooltip_id" href="../../../../Microservices/Messages/message-channel/" title="каналам">каналам</a>. Отправитель пишет сообщение в канал, а получатель считывает его из этого канала.</p>
-<h4 id="_3"><a class="link-tooltip" data-tooltip-content="#Реализациястилейвзаимодействия_tooltip_id" href="../ch-3-messaging-styles-realization/" title="Реализация стилей взаимодействия">Реализация стилей взаимодействия</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
-<h4 id="api">Создание спецификации для API сервиса на основе сообщений<a class="headerlink" href="#api" title="Permanent link">¶</a></h4>
+<h2 id="_3"><a class="link-tooltip" data-tooltip-content="#Реализациястилейвзаимодействия_tooltip_id" href="../ch-3-messaging-styles-realization/" title="Реализация стилей взаимодействия">Реализация стилей взаимодействия</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h2 id="api">Создание спецификации для API сервиса на основе сообщений<a class="headerlink" href="#api" title="Permanent link">¶</a></h2>
 <p>Спецификация такого <a class="link-tooltip" data-tooltip-content="#API_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/" title="API">API</a> должна содержать имена каналов, а также типы и форматы сообщений, допустимые в каждом из них. </p>
 <ul>
 <li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#запросасихронныйответ_tooltip_id" href="../../../../Microservices/Messages/request-async-response-messaging/" title="запрос/асихронный ответ">“запрос/асихронный ответ”</a></em> состоит из канала команд сервиса, типов и форматов команд, которые сервис принимает, а также типов и форматов ответных сообщений.</li>
 <li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#однонаправленныхсообщений_tooltip_id" href="../../../../Microservices/Messages/notifications-messaging/" title="однонаправленных сообщений">однонаправленных сообщений</a></em> состоит из имени канала команд сервиса, а также типов и форматов команд.</li>
 <li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#издательподписчик_tooltip_id" href="../../../../Microservices/Messages/publish-subscribe-messaging/" title="издатель/подписчик">“издатель/подписчик”</a></em> состоит из канала событий, а также типов и форматов публикуемых сообщений.</li>
 </ul>
-<h4 id="_4"><a class="link-tooltip" data-tooltip-content="#Использованиеброкерасообщений_tooltip_id" href="../ch-3-message-broker-usage/" title="Использование брокера сообщений">Использование брокера сообщений</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
-<h4 id="_5">Возможные проблемы<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<h2 id="_4"><a class="link-tooltip" data-tooltip-content="#Использованиеброкерасообщений_tooltip_id" href="../ch-3-message-broker-usage/" title="Использование брокера сообщений">Использование брокера сообщений</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h2 id="_5">Возможные проблемы<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
 <p>Также нужно рассмотреть некоторые архитектурные проблемы, связанные с <br/>
 асинхронными сообщениями.</p>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#Конкурирующиеполучатели_tooltip_id" href="../ch-3-concurrent-recievers/" title="Конкурирующие получатели">Конкурирующие получатели</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Дублированиесообщений_tooltip_id" href="../ch-3-message-duplicates/" title="Дублирование сообщений">Дублирование сообщений</a></li>
 </ul>
-<h4 id="_6"><a class="link-tooltip" data-tooltip-content="#Транзакционныйобменсообщениями_tooltip_id" href="../ch-3-transactional-messaging/" title="Транзакционный обмен сообщениями">Транзакционный обмен сообщениями</a><a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<h2 id="_6"><a class="link-tooltip" data-tooltip-content="#Транзакционныйобменсообщениями_tooltip_id" href="../ch-3-transactional-messaging/" title="Транзакционный обмен сообщениями">Транзакционный обмен сообщениями</a><a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2731,7 +2730,8 @@
 Сообщения передаются по каналам. Бизнес-логика отправителя обращается к <em>исходящему порту</em>, реализованному классом <em>отправителя</em>, который отправляет сообщение через канал. <em>Канал сообщений</em> - инфраструктурная абстракция. Для обработки сообщения класс-адаптер <em>обработчика сообщений</em>, который обращается к интерфейсу <em>входящего порта</em>, реализованному бизнес-логикой получателя.<br/>
 Существует два вида каналов:</p>
 <li>[[point-to-point-channel|Точка-точка]…</li></div></div><div class="tooltip_templates"><div id="Реализациястилейвзаимодействия_tooltip_id"><p>Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">стили взаимодействия</a>. Вот как реализуется каждый.</p>
-<p>Клиент и сервис могут взаимодействовать, отправляя запросы и принимая ответы. Если это происходит синхронно, клиент ожидает немедленного ответа от сервиса, если асинхронно - не ждёт. Обмен сообщениями по природе асинхронен, но клиент может блокироваться, пока не полу…</p></div></div><div class="tooltip_templates"><div id="API_tooltip_id"><p>Анализирует текстовую строку и возвращает результирующие токены<br/>
+<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210911183223.png"/><br/>
+Клиент и сервис могут взаимодействовать, отправляя запросы и принимая ответы. Если это происходит синхронно, клиент ожидает немедленного ответа от сервиса, если асинхронно - не ждёт. Обмен сообщениями по природе асинхронен, но клие…</p></div></div><div class="tooltip_templates"><div id="API_tooltip_id"><p>Анализирует текстовую строку и возвращает результирующие токены<br/>
 <code>json
 GET /_analyze 
 { 
@@ -2746,9 +2746,10 @@ GET /_analyze
 <li><code>analyzer</code> (опционально, строка) имя анализатора, который нужно применить к тексту. Может быть встроенный анализато…</li></div></div><div class="tooltip_templates"><div id="запросасихронныйответ_tooltip_id"><p><em>Запрос - асинхронный ответ</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет запрос, рассчитывая получить ответ “когда-нибудь”.</p></div></div><div class="tooltip_templates"><div id="однонаправленныхсообщений_tooltip_id"><p><em>Уведомления</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет сообщение или управляющую команду, не ожидая при этом ответа.</p></div></div><div class="tooltip_templates"><div id="издательподписчик_tooltip_id"><p><em>Публикация - подписка</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент публикует сообщение для нуля или более подписчиков.</p></div></div><div class="tooltip_templates"><div id="Использованиеброкерасообщений_tooltip_id"><p>Приложения, основанные на сообщениях, обычно применяют <em>брокер сообщений</em> - инфраструктурный компонент, через который сервисы общаются друг с другом. Однако, архитектура обмена сообщений может и не иметь брокера, и сервисы взаимодействуют напрямую.</p>
 <p>В архитектуре без брокера сервисы общаются напрямую. Одна из реализаций такого подхода - проект <a href="https://zeromq.org/">ZeroMQ</a></p>
 <li>Более легковесный сетево…</li></div></div><div class="tooltip_templates"><div id="Конкурирующиеполучатели_tooltip_id"><p>В случае ситуации нескольких одинаковых получателей возможна ситуация, когда несколько последовательных сообщений будут доставлены в некорректном порядке разным экземплярам получателей.<br/>
-Одно из решений - использование <em>сегментированных каналов</em>.</p>
+Одно из решений - использование <em>сегментированных каналов</em>.<br/>
+<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210915203724.png"/></p>
 <li>Сегментированный канал включает в себя два и более сегмента, каждый из которых ведет себя как канал.</li>
-<li>Отправитель указывает в заголовке ключ сегмента. Брокер по ключу определяет сегмент, в к…</li></div></div><div class="tooltip_templates"><div id="Дублированиесообщений_tooltip_id"><p>В идеале брокер должен доставлять сообщение ровно один раз. Однако обеспечение этого обычно сильно затратно. Вместо этого большинство брокеров обеспечивает  доставку <em>минимум один раз (at least once)</em>.<br/>
+<li>Отправитель указывает в заголовке ключ сегмента. Бро…</li></div></div><div class="tooltip_templates"><div id="Дублированиесообщений_tooltip_id"><p>В идеале брокер должен доставлять сообщение ровно один раз. Однако обеспечение этого обычно сильно затратно. Вместо этого большинство брокеров обеспечивает  доставку <em>минимум один раз (at least once)</em>.<br/>
 Если логика, обрабатывающая сообщения, является идемпотентной, то это не проблема. В случае, когда логика не является идемпотентной, можно воспользоваться шаблоном <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/">идемпотентный потребитель</a></p></div></div><div class="tooltip_templates"><div id="Транзакционныйобменсообщениями_tooltip_id"><p>Сервисы часто нужно публиковать сообщения в рамках транзакции, обновляющей базу данных. Если не отправить сообщение одновременно с записью в БД, система может остаться в несогласованном состоянии.<br/>
 Предлагается следующий механизм для надёжной отправки сообщений:</p>
 <li>Первый шаг - воспользуемся шаблоном <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">Публикация событий (Outbox)</a> для временного сохранения сообщений.</li>

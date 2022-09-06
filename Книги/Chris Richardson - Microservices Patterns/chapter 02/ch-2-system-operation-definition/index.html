@@ -5,7 +5,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования." name="description"/>
+<meta content="Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования. 
+
+Процесс состоит из двух шагов." name="description"/>
 <link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-system-operation-definition/" rel="canonical"/>
 <link href="../../../../assets/logo/logo.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.4.2" name="generator"/>
@@ -36,8 +38,12 @@
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <meta content="Определение системных операций" property="og:title"/>
 <meta content="Определение системных операций" name="twitter:title"/>
-<meta content="Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования." name="description"/>
-<meta content="Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования." name="twitter:description"/>
+<meta content="Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования. 
+
+Процесс состоит из двух шагов." name="description"/>
+<meta content="Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования. 
+
+Процесс состоит из двух шагов." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="https://garden.stalker-home.xyz/" property="og:image"/>
 <meta content="https://garden.stalker-home.xyz/" name="twitter:image"/>
@@ -1842,6 +1848,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2003/ch-3-message-broker-options/">
+        Факторы выбора брокера сообщений
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2003/ch-3-message-broker-usage/">
         Использование брокера сообщений
       </a>
@@ -2515,10 +2526,11 @@
         </a>
 </nav>
 <h1 id="_1">Определение системных операций<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования. </p>
-<p>Процесс состоит из двух шагов.</p>
+<p>Это первый шаг в проектировании архитектуры приложения. За отправную точку берутся требования к приложению, включая пользовательские истории (user stories) и связанные с ними сценарии использования. <br/>
+<img alt="Pasted image 20210830192414.png" src="../../../../images/Pasted%20image%2020210830192414.png" title="Pasted image 20210830192414.png"/><br/>
+Процесс состоит из двух шагов.</p>
 <ol>
-<li>Создаем обобщенную (или абстрактную) доменную модель, состоящую из ключевых классов, которые представляют словарь для описания системных операций. Используем, в основном, имена существительные, взятые из пользовательских историй. Также доменную модель можно определить с помощью методики <a class="link-tooltip" data-tooltip-content="#Событийныйштурм_tooltip_id" href="../../chapter%2005/ch-5-domain-events/" title="Событийный штурм">Событийный штурм</a>.</li>
+<li>Создаем обобщенную (или абстрактную) доменную модель, состоящую из ключевых классов, которые представляют словарь для описания системных операций. Используем, в основном, имена существительные, взятые из пользовательских историй. Также доменную модель можно определить с помощью методики <a class="link-tooltip" data-tooltip-content="#Событийныйштурм_tooltip_id" href="../../chapter%2005/ch-5-domain-events/" title="Событийный штурм">Событийный штурм</a>.<img alt="Pasted image 20210830195216.png" src="../../../../images/Pasted%20image%2020210830195216.png" title="Pasted image 20210830195216.png"/></li>
 <li>Описываем системные операции, а также их поведение с точки зрения доменной модели. Используем, в основном, глаголы. Системная операция может создавать, обновлять или удалять доменные объекты, а также устанавливать или разрушать связи между ними.</li>
 </ol>
 <p>Подробнее рассмотрим определение системной операции.<br/>
@@ -2566,7 +2578,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 4, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
