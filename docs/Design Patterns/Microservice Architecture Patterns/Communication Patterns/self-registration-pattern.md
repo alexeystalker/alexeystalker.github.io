@@ -3,6 +3,7 @@ share: true
 tags:
  - microservice/pattern
  - microservice/communication
+ - microservice/discovery
 ---
 # Шаблон "Саморегистрация"
 Экземпляр сервиса регистрирует себя в реестре.

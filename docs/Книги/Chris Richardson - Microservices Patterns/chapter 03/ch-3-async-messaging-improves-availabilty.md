@@ -1,6 +1,12 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice
+ - книга
+ - конспект
+ - microservice/messaging
+ - microservice/availability
+ - microservice/communication
 ---
 # Использование асинхронного обмена сообщениями для улучшения доступности
 ## Снхронное взаимодействие снижает доступность
