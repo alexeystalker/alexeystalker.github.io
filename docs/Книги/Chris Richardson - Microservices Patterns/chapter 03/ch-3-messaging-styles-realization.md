@@ -1,6 +1,11 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags: 
+ - microservice
+ - книга
+ - конспект
+ - microservice/messaging
+ - microservice/communication
 ---
 # Реализация стилей взаимодействия
 Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все [[messaging-pattern|стили взаимодействия]]. Вот как реализуется каждый.
