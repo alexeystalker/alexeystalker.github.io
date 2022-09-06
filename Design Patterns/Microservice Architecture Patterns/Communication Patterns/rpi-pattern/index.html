@@ -1865,11 +1865,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-message-broker-options/">
-        Факторы выбора брокера сообщений
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-message-broker-usage/">
         Использование брокера сообщений
       </a>
@@ -2546,10 +2541,12 @@
 <a class="md-tag" href="../../../../tags/#microservicecommunication">
           microservice/communication
         </a>
+<a class="md-tag" href="../../../../tags/#microservicerpi">
+          microservice/rpi
+        </a>
 </nav>
 <h1 id="_1">Шаблон “Удаленный вызов процедур”<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><img alt="Pasted image 20210906202710.png" src="../../../../images/Pasted%20image%2020210906202710.png" title="Pasted image 20210906202710.png"/><br/>
-Принцип работы.<br/>
+<p>Принцип работы.<br/>
 Клиентская бизнес-логика обращается к <em>прокси-интерфейсу</em>, реализованному классом-адаптером <em>RPI-прокси</em>. RPI-прокси выполняет запрос к сервису. Запрос обрабатывается классом-адаптером <em>RPI-сервер</em>, который вызывает бизнес-логику сервиса через интерфейс. Затем ответ передается обратно в RPI-прокси, который возвращает результат клиентской бизнес-логике.<br/>
 <em>Прокси-интрефейс</em> обычно инкапсулирует исходный коммуникационный протокол.</p>
 <h2 id="_2">Ссылки<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
@@ -2559,7 +2556,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
