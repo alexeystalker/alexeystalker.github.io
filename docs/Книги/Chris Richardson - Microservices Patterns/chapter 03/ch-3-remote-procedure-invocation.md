@@ -1,6 +1,11 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags: 
+ - microservice
+ - книга
+ - конспект
+ - microservice/rpi
+ - microservice/communication
 ---
 # Взаимодействие на основе удаленного вызова процедур (RPI)
 Рассмотрим шаблон [[rpi-pattern|удаленный вызов процедур]]. Существует много протоколов RPI. Рассмотрим REST и gRPC.
