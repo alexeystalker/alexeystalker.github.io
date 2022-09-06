@@ -1842,11 +1842,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2003/ch-3-message-broker-options/">
-        Факторы выбора брокера сообщений
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2003/ch-3-message-broker-usage/">
         Использование брокера сообщений
       </a>
@@ -2523,8 +2518,7 @@
         </a>
 </nav>
 <h1 id="_1">Шестигранная архитектура<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><img alt="Pasted image 20210828185920.png" src="../../../../images/Pasted%20image%2020210828185920.png" title="Pasted image 20210828185920.png"/><br/>
-<strong>Шестигранная архитектура</strong> - альтернатива <a class="link-tooltip" data-tooltip-content="#многоуровневой_tooltip_id" href="../ch-2-multilayer-architecture/" title="многоуровневой">многоуровневой</a>. Организует <a class="link-tooltip" data-tooltip-content="#логическоепредставление_tooltip_id" href="../ch-2-4-plus-1-view-model-of-architecture/" title="логическое представление">логическое представление</a> таким образом, что <a class="link-tooltip" data-tooltip-content="#бизнеслогика_tooltip_id" href="../ch-2-multilayer-architecture/" title="бизнес-логика">бизнес-логика</a> оказывается в центре. Вместо уровня представления есть один или несколько <em>входящих адаптеров</em>, которые обрабатывают внешние запросы путём вызова бизнес-логики. Вместо уровня хранения данных используются один или несколько <em>исходящих адаптеров</em>, которые вызываются бизнес-логикой и обращаются к внешним приложениям. Ключевой характеристикой является то, что бизнес-логика <em>не зависит</em> от адаптеров; они зависят от нее.</p>
+<p><strong>Шестигранная архитектура</strong> - альтернатива <a class="link-tooltip" data-tooltip-content="#многоуровневой_tooltip_id" href="../ch-2-multilayer-architecture/" title="многоуровневой">многоуровневой</a>. Организует <a class="link-tooltip" data-tooltip-content="#логическоепредставление_tooltip_id" href="../ch-2-4-plus-1-view-model-of-architecture/" title="логическое представление">логическое представление</a> таким образом, что <a class="link-tooltip" data-tooltip-content="#бизнеслогика_tooltip_id" href="../ch-2-multilayer-architecture/" title="бизнес-логика">бизнес-логика</a> оказывается в центре. Вместо уровня представления есть один или несколько <em>входящих адаптеров</em>, которые обрабатывают внешние запросы путём вызова бизнес-логики. Вместо уровня хранения данных используются один или несколько <em>исходящих адаптеров</em>, которые вызываются бизнес-логикой и обращаются к внешним приложениям. Ключевой характеристикой является то, что бизнес-логика <em>не зависит</em> от адаптеров; они зависят от нее.</p>
 <p>У бизнес-логики есть <em>входящие и исходящие порты</em>. Порт определяет набор операций и то, как и в чем бизнес-логика взаимодействует с внешним кодом. Например, в Java или .NET порт есть интерфейс.<br/>
 <em>Входящий порт</em> - это <a class="link-tooltip" data-tooltip-content="#API_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/" title="API">API</a>, выставляемое наружу, например, интерфейс, описывающий публичные методы.<br/>
 <em>Исходящий порт</em> - то, как бизнес-логика обращается к внешим системам, например, интерфейс репозитория.</p>
@@ -2537,7 +2531,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 4, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

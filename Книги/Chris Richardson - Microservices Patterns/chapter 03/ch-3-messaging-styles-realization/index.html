@@ -1841,11 +1841,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-3-message-broker-options/">
-        Факторы выбора брокера сообщений
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../ch-3-message-broker-usage/">
         Использование брокера сообщений
       </a>
@@ -2573,12 +2568,17 @@
 <a class="md-tag" href="../../../../tags/#">
           конспект
         </a>
+<a class="md-tag" href="../../../../tags/#microservicemessaging">
+          microservice/messaging
+        </a>
+<a class="md-tag" href="../../../../tags/#microservicecommunication">
+          microservice/communication
+        </a>
 </nav>
 <h1 id="_1">Реализация стилей взаимодействия<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все <a class="link-tooltip" data-tooltip-content="#стиливзаимодействия_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/" title="стили взаимодействия">стили взаимодействия</a>. Вот как реализуется каждый.</p>
 <h2 id="_2">Реализация синхронных и асинхронных запросов/ответов<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p><img alt="Pasted image 20210911183223.png" src="../../../../images/Pasted%20image%2020210911183223.png" title="Pasted image 20210911183223.png"/><br/>
-Клиент и сервис могут взаимодействовать, отправляя запросы и принимая ответы. Если это происходит синхронно, клиент ожидает немедленного ответа от сервиса, если асинхронно - не ждёт. Обмен сообщениями по природе асинхронен, но клиент может блокироваться, пока не получен ответ.<br/>
+<p>Клиент и сервис могут взаимодействовать, отправляя запросы и принимая ответы. Если это происходит синхронно, клиент ожидает немедленного ответа от сервиса, если асинхронно - не ждёт. Обмен сообщениями по природе асинхронен, но клиент может блокироваться, пока не получен ответ.<br/>
 Чтобы реализовать стиль взаимодействия, клиент и сервис обмениваются парными сообщениями через каналы типа <a class="link-tooltip" data-tooltip-content="#точкаточка_tooltip_id" href="../../../../Microservices/Messages/point-to-point-channel/" title="точка-точка">“точка-точка”</a> (см. рисунок). Сначала клиент отправляет в канал сервиса команду с указанием операции и ее параметров, а также <em>идентификатором запроса</em> и <em>каналом ответа</em> в заголовке. Сервис обрабатывает команду  и записывает свой ответ в указанный канал с указанием <em>идентификатора соответствия</em> равного <em>идентификатору запроса</em>. Клиент использует <em>идентификатор соответствия</em>, чтобы сопоставить ответ с запросом.<br/>
 Поскольку клиент и сервис взаимодействуют с помощью сообщений, их общение асинхронно. Теоретически, клиент может заблокироваться в ожидании ответа. Кроме того, легко сделать так, чтобы ответ обрабатывался любым экземпляром клиента.</p>
 <h2 id="_3">Реализация однонаправленных уведомлений<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
@@ -2592,7 +2592,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
