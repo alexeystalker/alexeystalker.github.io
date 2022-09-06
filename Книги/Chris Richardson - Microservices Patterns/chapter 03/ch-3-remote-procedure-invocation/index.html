@@ -2548,6 +2548,12 @@
 <a class="md-tag" href="../../../../tags/#">
           конспект
         </a>
+<a class="md-tag" href="../../../../tags/#microservicerpi">
+          microservice/rpi
+        </a>
+<a class="md-tag" href="../../../../tags/#microservicecommunication">
+          microservice/communication
+        </a>
 </nav>
 <h1 id="rpi">Взаимодействие на основе удаленного вызова процедур (RPI)<a class="headerlink" href="#rpi" title="Permanent link">¶</a></h1>
 <p>Рассмотрим шаблон <a class="link-tooltip" data-tooltip-content="#удаленныйвызовпроцедур_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/rpi-pattern/" title="удаленный вызов процедур">удаленный вызов процедур</a>. Существует много протоколов RPI. Рассмотрим REST и gRPC.</p>
@@ -2577,7 +2583,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2672,10 +2678,10 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="удаленныйвызовпроцедур_tooltip_id"><p>Принцип работы.<br/>
+<div class="tooltip_templates"><div id="удаленныйвызовпроцедур_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210906202710.png"/><br/>
+Принцип работы.<br/>
 Клиентская бизнес-логика обращается к <em>прокси-интерфейсу</em>, реализованному классом-адаптером <em>RPI-прокси</em>. RPI-прокси выполняет запрос к сервису. Запрос обрабатывается классом-адаптером <em>RPI-сервер</em>, который вызывает бизнес-логику сервиса через интерфейс. Затем ответ передается обратно в RPI-прокси, который возвращает результат клиентской бизнес-логике.<br/>
-<em>Прокси-интрефейс</em> обычно инкапсулирует исходный коммуникационный протокол.</p>
-<p>https:…</p></div></div><div class="tooltip_templates"><div id="REST_tooltip_id"><p class="admonition-title">REST</p>
+<em>Прокси-интрефейс</em> обычно инкапсулирует исходный коммуни…</p></div></div><div class="tooltip_templates"><div id="REST_tooltip_id"><p class="admonition-title">REST</p>
 <p>REST предоставляет набор архитектурных ограничений, которые, если их применять как единое целое, делают акцент на масштабируемости взаимодействия между компонентами, обобщенности интерфейсов, независимом развертывании компонентов и промежуточных компонентах, чтобы снизить латентность взаимодействия, обеспечить безопасность и инкапсулировать устаревшие системы. <br/>
 <em>Рой Филдинг (Roy Fielding).</em></p>
 <p>Ключевая концепция REST - <em>ресурс</em>. Ресурс - …</p></div></div><div class="tooltip_templates"><div id="gRPC_tooltip_id"><p>gRPC - фреймворк для написания многоязычных клиентов и серверов <br/>

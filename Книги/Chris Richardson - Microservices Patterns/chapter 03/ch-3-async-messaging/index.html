@@ -2588,34 +2588,40 @@
 <a class="md-tag" href="../../../../tags/#">
           конспект
         </a>
+<a class="md-tag" href="../../../../tags/#microservicemessaging">
+          microservice/messaging
+        </a>
+<a class="md-tag" href="../../../../tags/#microservicecommunication">
+          microservice/communication
+        </a>
 </nav>
 <h1 id="_1">Взаимодействие с помощью асинхронного обмена сообщениями<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Сервисы могут взаимодействовать путём асинхронного <a class="link-tooltip" data-tooltip-content="#обменасообщениями_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/" title="обмена сообщениями">обмена сообщениями</a>.</p>
-<h2 id="_2">Обзор механизмов обмена сообщениями<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h4 id="_2">Обзор механизмов обмена сообщениями<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
 <p>Рассмотрим модель обмена сообщениями, описанной в книге <a href="https://www.ozon.ru/product/shablony-integratsii-korporativnyh-prilozheniy-signature-series-151531716/">Шаблоны интеграции корпоративных приложений</a>. В этой модели <a class="link-tooltip" data-tooltip-content="#сообщения_tooltip_id" href="../../../../Microservices/Messages/message/" title="сообщения">сообщения</a> передаются по <a class="link-tooltip" data-tooltip-content="#каналам_tooltip_id" href="../../../../Microservices/Messages/message-channel/" title="каналам">каналам</a>. Отправитель пишет сообщение в канал, а получатель считывает его из этого канала.</p>
-<h2 id="_3"><a class="link-tooltip" data-tooltip-content="#Реализациястилейвзаимодействия_tooltip_id" href="../ch-3-messaging-styles-realization/" title="Реализация стилей взаимодействия">Реализация стилей взаимодействия</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<h2 id="api">Создание спецификации для API сервиса на основе сообщений<a class="headerlink" href="#api" title="Permanent link">¶</a></h2>
+<h4 id="_3"><a class="link-tooltip" data-tooltip-content="#Реализациястилейвзаимодействия_tooltip_id" href="../ch-3-messaging-styles-realization/" title="Реализация стилей взаимодействия">Реализация стилей взаимодействия</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<h4 id="api">Создание спецификации для API сервиса на основе сообщений<a class="headerlink" href="#api" title="Permanent link">¶</a></h4>
 <p>Спецификация такого <a class="link-tooltip" data-tooltip-content="#API_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/" title="API">API</a> должна содержать имена каналов, а также типы и форматы сообщений, допустимые в каждом из них. </p>
 <ul>
 <li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#запросасихронныйответ_tooltip_id" href="../../../../Microservices/Messages/request-async-response-messaging/" title="запрос/асихронный ответ">“запрос/асихронный ответ”</a></em> состоит из канала команд сервиса, типов и форматов команд, которые сервис принимает, а также типов и форматов ответных сообщений.</li>
 <li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#однонаправленныхсообщений_tooltip_id" href="../../../../Microservices/Messages/notifications-messaging/" title="однонаправленных сообщений">однонаправленных сообщений</a></em> состоит из имени канала команд сервиса, а также типов и форматов команд.</li>
 <li><em>API в стиле <a class="link-tooltip" data-tooltip-content="#издательподписчик_tooltip_id" href="../../../../Microservices/Messages/publish-subscribe-messaging/" title="издатель/подписчик">“издатель/подписчик”</a></em> состоит из канала событий, а также типов и форматов публикуемых сообщений.</li>
 </ul>
-<h2 id="_4"><a class="link-tooltip" data-tooltip-content="#Использованиеброкерасообщений_tooltip_id" href="../ch-3-message-broker-usage/" title="Использование брокера сообщений">Использование брокера сообщений</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
-<h2 id="_5">Возможные проблемы<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<h4 id="_4"><a class="link-tooltip" data-tooltip-content="#Использованиеброкерасообщений_tooltip_id" href="../ch-3-message-broker-usage/" title="Использование брокера сообщений">Использование брокера сообщений</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<h4 id="_5">Возможные проблемы<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
 <p>Также нужно рассмотреть некоторые архитектурные проблемы, связанные с <br/>
 асинхронными сообщениями.</p>
 <ul>
 <li><a class="link-tooltip" data-tooltip-content="#Конкурирующиеполучатели_tooltip_id" href="../ch-3-concurrent-recievers/" title="Конкурирующие получатели">Конкурирующие получатели</a></li>
 <li><a class="link-tooltip" data-tooltip-content="#Дублированиесообщений_tooltip_id" href="../ch-3-message-duplicates/" title="Дублирование сообщений">Дублирование сообщений</a></li>
 </ul>
-<h2 id="_6"><a class="link-tooltip" data-tooltip-content="#Транзакционныйобменсообщениями_tooltip_id" href="../ch-3-transactional-messaging/" title="Транзакционный обмен сообщениями">Транзакционный обмен сообщениями</a><a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<h4 id="_6"><a class="link-tooltip" data-tooltip-content="#Транзакционныйобменсообщениями_tooltip_id" href="../ch-3-transactional-messaging/" title="Транзакционный обмен сообщениями">Транзакционный обмен сообщениями</a><a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
