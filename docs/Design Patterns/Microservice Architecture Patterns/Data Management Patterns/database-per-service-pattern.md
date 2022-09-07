@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - microservice/patterns
+ - microservice/pattern
  - microservice/data-management
 ---
 # Шаблон "Своя БД у сервиса"
