@@ -1,6 +1,5 @@
 ---
 share: true
-image: true
 tags: 
  - microservice
  - книга
