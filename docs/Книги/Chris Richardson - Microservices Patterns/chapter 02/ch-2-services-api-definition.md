@@ -1,10 +1,8 @@
 ---
 share: true
 tags: 
- - microservice
- - книга
- - конспект
  - API
+ - system-operation
 ---
 # Определение API сервисов
 > [!important] API

@@ -1,10 +1,9 @@
 ---
 share: true
 tags: 
- - microservice
- - книга
- - конспект
+ - microservice/decomposition
  - architecture
+ - system-operation
 ---
 # Определение микросервисной архитектуры приложения
 Как определить микросервисную архитектуру?
