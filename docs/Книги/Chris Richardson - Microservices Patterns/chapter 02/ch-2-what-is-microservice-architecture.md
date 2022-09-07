@@ -2,8 +2,6 @@
 share: true
 tags: 
  - microservice
- - книга
- - конспект
  - architecture
 ---
 # Что представляет собой микросервисная архитектура
