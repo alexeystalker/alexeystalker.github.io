@@ -3,6 +3,7 @@ share: true
 tags:
  - microservice/pattern
  - microservice/transaction
+ - microservice/saga
 ---
 # Шаблон "Повествование"
 Он же "Сага" (Saga). Следует из шаблона [[database-per-service-pattern|БД для сервиса]].
