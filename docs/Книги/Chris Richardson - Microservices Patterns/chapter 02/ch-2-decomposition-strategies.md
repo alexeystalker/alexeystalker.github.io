@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags: 
+ - microservice/decomposition
 ---
 # Стратегии декомпозиции
 #### [[ch-2-what-is-microservice-architecture|Что представляет собой микросервисная архитектура]]
