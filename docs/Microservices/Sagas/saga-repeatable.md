@@ -2,6 +2,7 @@
 share: true
 tags:
  - microservice/transaction
+ - microservice/saga
 ---
 # Повторяемые транзакции
 *Повторяемые транзакции* - транзакции, идущие за [[saga-turning-point|поворотной]]. Всегда завершаются успешно.
