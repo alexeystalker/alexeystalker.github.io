@@ -2551,6 +2551,12 @@
 <a class="md-tag" href="../../../../tags/#">
           конспект
         </a>
+<a class="md-tag" href="../../../../tags/#microservicetransaction">
+          microservice/transaction
+        </a>
+<a class="md-tag" href="../../../../tags/#microservicesaga">
+          microservice/saga
+        </a>
 </nav>
 <h1 id="_1">Координация повествований<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Реализация повествования состоит из логики, которая координирует его этапы. Она отвечает за выбор первого участника при инициализации повестования системной командой, затем выполнение им отведенного ему этапа и т.д. до тех пор, пока не будут выполнены все этапы. Если какой-либо этап завершится неудачно, логика выполняет компенсирующие шаги в нужном порядке.<br/>
@@ -2562,7 +2568,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2661,5 +2667,5 @@
 Сперва рассмотрим пример - повествование createOrder().</p>
 <p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210919120040.png"/></p>
 <li>Сервиc <code>Order</code> создает заказ с состоянием <code>APPROVAL_PENDING</code> и публикует событие <code>OrderCreated</code>.</li>
-<li>Сервис <code>Consumer</code> потребляет событие <code>OrderCreated</code>, проверяет, может ли заказчик размещать заказы …</li></div></div><div class="tooltip_templates"><div id="Повествованияоснованныенаоркестрации_tooltip_id"><p>Оркестрация как способ реализации повествований предполагает выделение <em>оркестратора</em>, единственной задачей которого является рассылка инструкций участникам. Оркестратор взаимодействует с участниками в стиле <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/request-async-response-messaging/">“команда/асинхронный ответ”</a>. Чтобы выполнить этап повествования, он шлет участнику командное сообщение, указывая, какую операцию нужно выполнить. После выполнения операции участник возвращает оркестратору сообщение с …</p></div></div></body>
+<li>Сервис <code>Consumer</code> потребляет событие <code>OrderCreated</code>, проверяет…</li></div></div><div class="tooltip_templates"><div id="Повествованияоснованныенаоркестрации_tooltip_id"><p>Оркестрация как способ реализации повествований предполагает выделение <em>оркестратора</em>, единственной задачей которого является рассылка инструкций участникам. Оркестратор взаимодействует с участниками в стиле <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/request-async-response-messaging/">“команда/асинхронный ответ”</a>. Чтобы выполнить этап повествования, он шлет участнику командное сообщение, указывая, какую операцию нужно выполнить. После выполнения операции участник возвращает оркестратору сообщение с …</p></div></div></body>
 </html>
