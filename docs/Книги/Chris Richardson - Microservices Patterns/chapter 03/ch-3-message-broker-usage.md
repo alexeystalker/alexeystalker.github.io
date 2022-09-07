@@ -1,9 +1,6 @@
 ---
 share: true
 tags: 
- - microservice
- - книга
- - конспект
  - microservice/messaging
  - message-broker
 ---
