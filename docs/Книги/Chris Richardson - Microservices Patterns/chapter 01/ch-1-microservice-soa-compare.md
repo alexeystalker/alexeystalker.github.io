@@ -2,8 +2,6 @@
 share: true
 tags: 
  - microservice
- - книга
- - конспект
  - SOA
 ---
 # Сравнение SOA и микросервисов
