@@ -2507,15 +2507,6 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../../../tags/#microservice">
-          microservice
-        </a>
-<a class="md-tag" href="../../../../tags/#">
-          книга
-        </a>
-<a class="md-tag" href="../../../../tags/#">
-          конспект
-        </a>
 <a class="md-tag" href="../../../../tags/#ddd">
           DDD
         </a>
@@ -2531,13 +2522,13 @@
 <li><em>Репозиторий</em> - объект, предоставляющий доступ к постоянным сущностям и инкапсулирующий механизм доступа к БД.</li>
 <li><em>Сервис</em> - объект, реализующий бизнес-логику, которой не место внутри сущности или объекта значений.</li>
 </ul>
-<p>Также есть еще одна концепция, которой редко пользуются. Однако она чрезвычайна полезна при разработке микросервисов. Речь об <em>агрегатах.</em></p>
+<p>Также есть еще одна концепция, которой редко пользуются. Однако она чрезвычайна полезна при разработке микросервисов. Речь об <a class="link-tooltip" data-tooltip-content="#агрегатах_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/" title="агрегатах">агрегатах</a>.</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2632,5 +2623,8 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-</body>
+<div class="tooltip_templates"><div id="агрегатах_tooltip_id"><p><em>Агрегат</em> - это кластер доменных объектов, с которыми можно обращаться как с единым целым. Он состоит из одной сущности и иногда одной или нескольких сущностей и объектов значений.<br/>
+<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210923205357.png"/><br/>
+Агрегаты разбивают доменную модель на блоки, а также проясняют область применения операций, таких как загрузка, обновление и удаление. Эти операции распространяются на весь агрегат.</p>
+<p>Обновление целого агрегата, а не…</p></div></div></body>
 </html>

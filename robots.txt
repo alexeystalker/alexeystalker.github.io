@@ -1,2 +1,3 @@
 User-agent: *
 Sitemap: https://garden.stalker-home.xyz/sitemap.xml
+Sitemap: https://garden.stalker-home.xyz/sitemap.xml.gz

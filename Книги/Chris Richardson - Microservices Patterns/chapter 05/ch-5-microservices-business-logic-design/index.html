@@ -7,10 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Сердцем промышленных приложений является бизнес-логика, которая реализует бизнес-правила. Разработка сложной бизнес-логики сопряжена с определенными трудностями.
 В микросервисной архитектуре разрабатывать сложную бизнес-логику сложнее, чем в монолитной, так как она распределена между разными микросервисами. Ключевыми являются две проблемы. Первая - нужно сократить число ссылок в доменной модели, избавившись от тех, которые будут пересекать границы сервисов. Вторая - бизнес логика должна существовать в рамках ограничений, накладываемых работой с транзакциями1.
-Для преодоления этих трудностей можно воспользоваться шаблоном “Агрегат” из состава DDD.
-Но начнем с рассмотрения шаблонов организации бизнес-логики
-Итак, Проектирование доменной модели с помощью шаблона “Агрегат” из DDD
-Также необходимо рассмотреть еще одну концепцию, тесно связанную с агрегатами - доменные события." name="description"/>
+Для преодоления этих трудностей можно воспользоваться шаблоном “Агрегат” из состава DDD." name="description"/>
 <link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-microservices-business-logic-design/" rel="canonical"/>
 <link href="../../../../assets/logo/logo.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.4.2" name="generator"/>
@@ -43,16 +40,10 @@
 <meta content="Проектирование бизнес-логики в микросервисной архитектуре" name="twitter:title"/>
 <meta content="Сердцем промышленных приложений является бизнес-логика, которая реализует бизнес-правила. Разработка сложной бизнес-логики сопряжена с определенными трудностями.
 В микросервисной архитектуре разрабатывать сложную бизнес-логику сложнее, чем в монолитной, так как она распределена между разными микросервисами. Ключевыми являются две проблемы. Первая - нужно сократить число ссылок в доменной модели, избавившись от тех, которые будут пересекать границы сервисов. Вторая - бизнес логика должна существовать в рамках ограничений, накладываемых работой с транзакциями1.
-Для преодоления этих трудностей можно воспользоваться шаблоном “Агрегат” из состава DDD.
-Но начнем с рассмотрения шаблонов организации бизнес-логики
-Итак, Проектирование доменной модели с помощью шаблона “Агрегат” из DDD
-Также необходимо рассмотреть еще одну концепцию, тесно связанную с агрегатами - доменные события." name="description"/>
+Для преодоления этих трудностей можно воспользоваться шаблоном “Агрегат” из состава DDD." name="description"/>
 <meta content="Сердцем промышленных приложений является бизнес-логика, которая реализует бизнес-правила. Разработка сложной бизнес-логики сопряжена с определенными трудностями.
 В микросервисной архитектуре разрабатывать сложную бизнес-логику сложнее, чем в монолитной, так как она распределена между разными микросервисами. Ключевыми являются две проблемы. Первая - нужно сократить число ссылок в доменной модели, избавившись от тех, которые будут пересекать границы сервисов. Вторая - бизнес логика должна существовать в рамках ограничений, накладываемых работой с транзакциями1.
-Для преодоления этих трудностей можно воспользоваться шаблоном “Агрегат” из состава DDD.
-Но начнем с рассмотрения шаблонов организации бизнес-логики
-Итак, Проектирование доменной модели с помощью шаблона “Агрегат” из DDD
-Также необходимо рассмотреть еще одну концепцию, тесно связанную с агрегатами - доменные события." name="twitter:description"/>
+Для преодоления этих трудностей можно воспользоваться шаблоном “Агрегат” из состава DDD." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="https://garden.stalker-home.xyz/" property="og:image"/>
 <meta content="https://garden.stalker-home.xyz/" name="twitter:image"/>
@@ -1972,9 +1963,36 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Проектирование бизнес-логики в микросервисной архитектуре
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Проектирование бизнес-логики в микросервисной архитектуре
       </a>
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-_1">
+    Шаблоны организации бизнес-логики
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ddd">
+    Проектирование доменной модели с помощью шаблона "Агрегат" из DDD
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    Доменные события.
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ch-5-transaction-script/">
@@ -2509,6 +2527,27 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-_1">
+    Шаблоны организации бизнес-логики
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ddd">
+    Проектирование доменной модели с помощью шаблона "Агрегат" из DDD
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    Доменные события.
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -2516,23 +2555,25 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../../../tags/#microservice">
-          microservice
+<a class="md-tag" href="../../../../tags/#microservicedomain-model">
+          microservice/domain-model
         </a>
-<a class="md-tag" href="../../../../tags/#">
-          книга
-        </a>
-<a class="md-tag" href="../../../../tags/#">
-          конспект
+<a class="md-tag" href="../../../../tags/#business-logic">
+          business-logic
         </a>
 </nav>
 <h1 id="-">Проектирование бизнес-логики в микросервисной архитектуре<a class="headerlink" href="#-" title="Permanent link">¶</a></h1>
 <p>Сердцем промышленных приложений является бизнес-логика, которая реализует бизнес-правила. Разработка сложной бизнес-логики сопряжена с определенными трудностями.<br/>
 В микросервисной архитектуре разрабатывать сложную бизнес-логику сложнее, чем в монолитной, так как она распределена между разными микросервисами. Ключевыми являются две проблемы. Первая - нужно сократить число ссылок в доменной модели, избавившись от тех, которые будут пересекать границы сервисов. Вторая - бизнес логика должна существовать в рамках ограничений, накладываемых работой с транзакциями<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.<br/>
-Для преодоления этих трудностей можно воспользоваться <a class="link-tooltip" data-tooltip-content="#шаблономАгрегат_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/" title='шаблоном "Агрегат"'>шаблоном “Агрегат”</a> из состава DDD.<br/>
-Но начнем с рассмотрения <a class="link-tooltip" data-tooltip-content="#шаблоноворганизациибизнеслогики_tooltip_id" href="../ch-5-business-logic-templates/" title="шаблонов организации бизнес-логики">шаблонов организации бизнес-логики</a><br/>
-Итак, <a class="link-tooltip" data-tooltip-content="#ПроектированиедоменноймоделиспомощьюшаблонаАгрегатизDDD_tooltip_id" href="../ch-5-aggregate-domain-model-design/" title='Проектирование доменной модели с помощью шаблона "Агрегат" из DDD'>Проектирование доменной модели с помощью шаблона “Агрегат” из DDD</a><br/>
-Также необходимо рассмотреть еще одну концепцию, тесно связанную с агрегатами - <a class="link-tooltip" data-tooltip-content="#доменныесобытия_tooltip_id" href="../ch-5-domain-events/" title="доменные события">доменные события</a>.</p>
+Для преодоления этих трудностей можно воспользоваться <a class="link-tooltip" data-tooltip-content="#шаблономАгрегат_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/" title='шаблоном "Агрегат"'>шаблоном “Агрегат”</a> из состава DDD.</p>
+<hr/>
+<p>Начнем с рассмотрения шаблонов организации бизнес-логики.</p>
+<h4 id="-_1"><a class="link-tooltip" data-tooltip-content="#Шаблоныорганизациибизнеслогики_tooltip_id" href="../ch-5-business-logic-templates/" title="Шаблоны организации бизнес-логики">Шаблоны организации бизнес-логики</a><a class="headerlink" href="#-_1" title="Permanent link">¶</a></h4>
+<hr/>
+<h4 id="ddd"><a class="link-tooltip" data-tooltip-content="#ПроектированиедоменноймоделиспомощьюшаблонаАгрегатизDDD_tooltip_id" href="../ch-5-aggregate-domain-model-design/" title='Проектирование доменной модели с помощью шаблона "Агрегат" из DDD'>Проектирование доменной модели с помощью шаблона “Агрегат” из DDD</a><a class="headerlink" href="#ddd" title="Permanent link">¶</a></h4>
+<hr/>
+<p>Также необходимо рассмотреть еще одну концепцию, тесно связанную с агрегатами - доменные события.</p>
+<h4 id="_1"><a class="link-tooltip" data-tooltip-content="#Доменныесобытия_tooltip_id" href="../ch-5-domain-events/" title="Доменные события">Доменные события</a>.<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
 <div class="footnote">
 <hr/>
 <ol>
@@ -2546,7 +2587,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2644,14 +2685,14 @@
 <div class="tooltip_templates"><div id="шаблономАгрегат_tooltip_id"><p><em>Агрегат</em> - это кластер доменных объектов, с которыми можно обращаться как с единым целым. Он состоит из одной сущности и иногда одной или нескольких сущностей и объектов значений.<br/>
 <img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210923205357.png"/><br/>
 Агрегаты разбивают доменную модель на блоки, а также проясняют область применения операций, таких как загрузка, обновление и удаление. Эти операции распространяются на весь агрегат.</p>
-<p>Обновление целого агрегата, а не…</p></div></div><div class="tooltip_templates"><div id="шаблоноворганизациибизнеслогики_tooltip_id"><p>Вот <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-hexagonal-architecture/">шестигранная архитектура</a> типичного сервиса. Ее ядром является <em>бизнес-логика</em>, и чаще всего это самая сложная часть сервиса.<br/>
+<p>Обновление целого агрегата, а не…</p></div></div><div class="tooltip_templates"><div id="Шаблоныорганизациибизнеслогики_tooltip_id"><p>Вот <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-hexagonal-architecture/">шестигранная архитектура</a> типичного сервиса. Ее ядром является <em>бизнес-логика</em>, и чаще всего это самая сложная часть сервиса.<br/>
 Существует два основных шаблона организации бизнес-логики:</p>
 <li>процедурный <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-transaction-script/">“Сценарий транзакции”</a></li>
 <li>объектно-ориентированный <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-domain-model/">“Доменная модель”</a></li>
 <p>У шаблона “доменная модель” есть ряд проблем в контексте микросервисной архитектуры. Чтобы разобраться с ними, н…</p></div></div><div class="tooltip_templates"><div id="ПроектированиедоменноймоделиспомощьюшаблонаАгрегатизDDD_tooltip_id"><p>В традиционном ООП доменная модель описывает набор классов и отношения между ними, например <br/>
 <img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210923193554.png"/><br/>
 Этот пример содержит несколько классов, соотносящихся с бизнес-объектами: <code>Consumer</code>, <code>Order</code>, <code>Restaurant</code> и <code>Courier</code>. Как видно, в модели не хватает чётких границ между разными бизнес-объектами. Например, не видно, какие классы входят в бизнес-объект <code>Order</code>.<br/>
-Расплывчатые границы могут привести к п…</p></div></div><div class="tooltip_templates"><div id="доменныесобытия_tooltip_id"><p>В контексте <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-domain-driven-design/">DDD</a> <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">доменное событие</a> - это нечто, произошедшее с <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">агрегатом</a>. Обычно представляет изменение состояния.</p>
+Расплывчатые границы могут привести к п…</p></div></div><div class="tooltip_templates"><div id="Доменныесобытия_tooltip_id"><p>В контексте <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-domain-driven-design/">DDD</a> <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">доменное событие</a> - это нечто, произошедшее с <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">агрегатом</a>. Обычно представляет изменение состояния.</p>
 <p>Полезность публикации доменных событий в том, что другие стороны взаимодействия (пользователи, внешние приложения или другие компоненты приложения) заинтересованы в информации об изменениях в состоянии агрегата. Например:</p>
 <li>Обеспечение согласованности между серв…</li></div></div><div class="tooltip_templates"><div id="главу4_tooltip_id"><p>Транзакции типа <strong>ACID</strong> (Atomicity, Consistency, Isolation, Durability) значительно упрощают жизнь разработчиков. В микросервисной архитектуре ACID транзакии могут использовать даже запросы, выполняемые в рамках одного сервиса. Однако основная трудность состоит в реализации операций, которые обновляют данные, принадлежащие к разным сервисам.</p>
 <p>…</p></div></div><div class="tooltip_templates"><div id="шаблонповествование_tooltip_id"><p>Он же “Сага” (Saga). Следует из шаблона <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/">БД для сервиса</a>.<br/>
