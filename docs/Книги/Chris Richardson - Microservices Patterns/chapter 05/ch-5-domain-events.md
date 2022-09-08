@@ -1,6 +1,8 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - DDD/aggregate
+ - DDD/domain-event
 ---
 # Доменные события
 В контексте [[ch-5-domain-driven-design|DDD]] [[domain-event-pattern|доменное событие]] - это нечто, произошедшее с [[aggregate-pattern|агрегатом]]. Обычно представляет изменение состояния.
