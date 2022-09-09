@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Шаблон порождение событий сохраняет агрегат в виде событий, из которых заетм восстанавливает текущее состояние. Этот подход можно использовать в качестве механизма надежной публикации событий.
-В главе 3 описаны механизмы для публикации сообщений в рамках транзакции: опрашивание и отслеживание транзакционного жургала. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице EVENTS событий хранятся постоянно, а не временно, как в случае с таблицейOUTBOX." name="description"/>
+В главе 3 описаны механизмы для публикации сообщений в рамках транзакции: опрашивание и отслеживание транзакционного жургала. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице EVENTS событий хранятся постоянно, а не временно, как в случае с таблицей OUTBOX." name="description"/>
 <link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-event-sourcing-and-publishing/" rel="canonical"/>
 <link href="../../../../assets/logo/logo.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.4.2" name="generator"/>
@@ -38,9 +38,9 @@
 <meta content="Порождение и публикация событий" property="og:title"/>
 <meta content="Порождение и публикация событий" name="twitter:title"/>
 <meta content="Шаблон порождение событий сохраняет агрегат в виде событий, из которых заетм восстанавливает текущее состояние. Этот подход можно использовать в качестве механизма надежной публикации событий.
-В главе 3 описаны механизмы для публикации сообщений в рамках транзакции: опрашивание и отслеживание транзакционного жургала. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице EVENTS событий хранятся постоянно, а не временно, как в случае с таблицейOUTBOX." name="description"/>
+В главе 3 описаны механизмы для публикации сообщений в рамках транзакции: опрашивание и отслеживание транзакционного жургала. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице EVENTS событий хранятся постоянно, а не временно, как в случае с таблицей OUTBOX." name="description"/>
 <meta content="Шаблон порождение событий сохраняет агрегат в виде событий, из которых заетм восстанавливает текущее состояние. Этот подход можно использовать в качестве механизма надежной публикации событий.
-В главе 3 описаны механизмы для публикации сообщений в рамках транзакции: опрашивание и отслеживание транзакционного жургала. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице EVENTS событий хранятся постоянно, а не временно, как в случае с таблицейOUTBOX." name="twitter:description"/>
+В главе 3 описаны механизмы для публикации сообщений в рамках транзакции: опрашивание и отслеживание транзакционного жургала. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице EVENTS событий хранятся постоянно, а не временно, как в случае с таблицей OUTBOX." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="https://garden.stalker-home.xyz/" property="og:image"/>
 <meta content="https://garden.stalker-home.xyz/" name="twitter:image"/>
@@ -2542,19 +2542,13 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../../../tags/#microservice">
-          microservice
-        </a>
-<a class="md-tag" href="../../../../tags/#">
-          книга
-        </a>
-<a class="md-tag" href="../../../../tags/#">
-          конспект
+<a class="md-tag" href="../../../../tags/#event-sourcing">
+          event-sourcing
         </a>
 </nav>
 <h1 id="_1">Порождение и публикация событий<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Шаблон <a class="link-tooltip" data-tooltip-content="#порождениесобытий_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/" title="порождение событий">порождение событий</a> сохраняет агрегат в виде событий, из которых заетм восстанавливает текущее состояние. Этот подход можно использовать в качестве механизма надежной публикации событий.<br/>
-В <a class="link-tooltip" data-tooltip-content="#главе3_tooltip_id" href="../../chapter%2003/ch-3-transactional-messaging/" title="главе 3">главе 3</a> описаны механизмы для публикации сообщений в рамках транзакции: <a class="link-tooltip" data-tooltip-content="#опрашивание_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/polling-publisher-pattern/" title="опрашивание">опрашивание</a> и <a class="link-tooltip" data-tooltip-content="#отслеживаниетранзакционногожургала_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transaction-log-tailing-pattern/" title="отслеживание транзакционного жургала">отслеживание транзакционного жургала</a>. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице <code>EVENTS</code> событий хранятся постоянно, а не временно, как в случае с <a class="link-tooltip" data-tooltip-content="#таблицей_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/" title="таблицей">таблицей</a><code>OUTBOX</code>.</p>
+В <a class="link-tooltip" data-tooltip-content="#главе3_tooltip_id" href="../../chapter%2003/ch-3-transactional-messaging/" title="главе 3">главе 3</a> описаны механизмы для публикации сообщений в рамках транзакции: <a class="link-tooltip" data-tooltip-content="#опрашивание_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/polling-publisher-pattern/" title="опрашивание">опрашивание</a> и <a class="link-tooltip" data-tooltip-content="#отслеживаниетранзакционногожургала_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transaction-log-tailing-pattern/" title="отслеживание транзакционного жургала">отслеживание транзакционного жургала</a>. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице <code>EVENTS</code> событий хранятся постоянно, а не временно, как в случае с <a class="link-tooltip" data-tooltip-content="#таблицей_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/" title="таблицей">таблицей</a> <code>OUTBOX</code>.</p>
 <h2 id="_2">Публикация с помощью опрашивания<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Если для хранения используется таблица <code>EVENTS</code>, издатель может ее опрашивать на предмет новых записей. Самое сложное - определить, какие из событий новые. Если <code>eventId</code> возрастает монотонно, то, кажется, можно просто записывать последнее значение <code>eventId</code>. Однако, порядок фиксации транзакций может не совпасть с порядком, в котором они генерируют события. Тогда некоторые события могут быть пропущены издателем.<br/>
 <img alt="Pasted image 20210928205301.png" src="../../../../images/Pasted%20image%2020210928205301.png" title="Pasted image 20210928205301.png"/><br/>
@@ -2566,7 +2560,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

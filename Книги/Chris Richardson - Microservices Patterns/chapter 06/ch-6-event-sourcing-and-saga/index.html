@@ -2559,14 +2559,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../../../tags/#microservice">
-          microservice
+<a class="md-tag" href="../../../../tags/#event-sourcing">
+          event-sourcing
         </a>
-<a class="md-tag" href="../../../../tags/#">
-          книга
-        </a>
-<a class="md-tag" href="../../../../tags/#">
-          конспект
+<a class="md-tag" href="../../../../tags/#microservicesaga">
+          microservice/saga
         </a>
 </nav>
 <h1 id="_1">Совместное использование повествований и порождения событий<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
@@ -2580,7 +2577,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2683,7 +2680,7 @@
 <li>Сервис `Orde…</li></div></div><div class="tooltip_templates"><div id="Реализацияповествованийнаосновехореографииспомощьюпорождениясобытий_tooltip_id"><p>Событийная природа <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/">шаблона “порождение событий”</a> делает реализацию повествований на основе географии довольно прямолинейной. При обновлении агрегат генерирует событие.  У другого агрегата может быть обработчик, который обновляет его в результате получения события. Фреймворк для порождения событий делает все обработчики идемпотентными.<br/>
 Проблема использования событий для хореографии повествовани…</p></div></div><div class="tooltip_templates"><div id="Созданиеоркестратораповествования_tooltip_id"><p>Методы, такие как OrderService.CreateOrder() делают две вещи: создают или обновляют агрегат <em>и</em> создают оркестратор повествований. Сервис должен выполнять эти действия так, чтобы второе гарантированно завершалось в случае успешного выполнения первого. Реализация этого зависит от используемого типа хранилища.</p>
 <p>Если сервис использует хранилище событий на основе реляционн…</p></div></div><div class="tooltip_templates"><div id="Реализацияучастникаповествования_tooltip_id"><p>Нужно решить две проблемы, а именно: обеспечить идемпотентность обработки команд и атомарную отправку ответного сообщения.</p>
-<p>Воспользуемся шаблоном <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/">идемпотентный потребитель</a>. Участник повествования записывает ID сообщения в события, которые генерируются при его обработке. Прежде чем обновлять агрегат, участник сверяет ID сообщения в событиях и убеждается в том, что он его еще не обра…</p></div></div><div class="tooltip_templates"><div id="Реализацияоркестраторовповествованийспомощьюпорождениясобытий_tooltip_id"><p>Порожедние событий можно использовать и для реализации оркестраторов.<br/>
+<p>Воспользуемся шаблоном <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/">идемпотентный потребитель</a>. Участник повествования записывает ID сообщения в события, которые генерируются при его обработке. Прежде чем обновлять агрегат, участник сверяет ID сообщения в событиях и убеждается в том, что он его еще не обра…</p></div></div><div class="tooltip_templates"><div id="Реализацияоркестраторовповествованийспомощьюпорождениясобытий_tooltip_id"><p>Порождение событий можно использовать и для реализации оркестраторов.<br/>
 При разработке оркестратора повествований нужно решить три ключевые проблемы:</p>
 <li>Как будет храниться оркестратор?</li>
 <li>Как атомарно изменять состояние оркестратора и слать командные сообщения?</li>
