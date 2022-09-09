@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - event-sourcing
 ---
 # Недостатки порождения событий
 
