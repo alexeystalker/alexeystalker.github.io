@@ -3,6 +3,8 @@ share: true
 tags:
  - microservice/pattern
  - microservice/data-management
+ - DDD/domain-event
+ - event-sourcing
 ---
 # Шаблон "Порождение событий"
 Сохраняет [[aggregate-pattern|агрегат]] в виде последовательности [[domain-event-pattern|доменных событий]], которые представляют изменение состояния. Приложение воссоздает текущее состояние, воспроизводя записанные события.
