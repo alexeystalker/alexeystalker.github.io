@@ -3,6 +3,7 @@ share: true
 tags:
  - microservice/pattern
  - microservice/request
+ - microservice/api-composition
 ---
 # Шаблон "Объединение API"
 Чтобы выполнить запрос, мы обращаемся к разным сервисам и объединяем результаты.

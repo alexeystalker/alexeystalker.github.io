@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice/cqrs
 ---
 # Проектирование CQRS-представлений
 ![[Pasted image 20211006204123.png]]
