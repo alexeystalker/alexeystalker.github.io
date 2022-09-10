@@ -3,6 +3,7 @@ share: true
 tags:
  - microservice/pattern
  - microservice/request
+ - microservice/cqrs
 ---
 # Шаблон "Разделение ответственности команд и запросов"(CQRS)
 > [!Note]- CQRS
