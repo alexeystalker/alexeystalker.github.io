@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice/cqrs
 ---
 # Недостатки CQRS
 ## Более сложная архитектура
