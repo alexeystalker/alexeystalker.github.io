@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - API
 ---
 # Архитектура API-шлюза
 ![[Pasted image 20211016110810.png]]
