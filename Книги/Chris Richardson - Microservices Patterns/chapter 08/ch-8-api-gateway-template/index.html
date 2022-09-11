@@ -2207,8 +2207,7 @@
 <a class="md-nav__link" href="#_3">
     Реализация граничных функций
   </a>
-<nav aria-label="Реализация граничных функций" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#api-_1">
     Архитектура API-шлюза
@@ -2223,9 +2222,6 @@
 <a class="md-nav__link" href="#api-_3">
     Трудности проектирования API-шлюза
   </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -2582,8 +2578,7 @@
 <a class="md-nav__link" href="#_3">
     Реализация граничных функций
   </a>
-<nav aria-label="Реализация граничных функций" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#api-_1">
     Архитектура API-шлюза
@@ -2601,37 +2596,31 @@
 </li>
 </ul>
 </nav>
-</li>
-</ul>
-</nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../../../tags/#microservice">
-          microservice
+<a class="md-tag" href="../../../../tags/#api">
+          API
         </a>
-<a class="md-tag" href="../../../../tags/#">
-          книга
-        </a>
-<a class="md-tag" href="../../../../tags/#">
-          конспект
+<a class="md-tag" href="../../../../tags/#microserviceapi">
+          microservice/api
         </a>
 </nav>
 <h1 id="api-">Шаблон “API-шлюз”<a class="headerlink" href="#api-" title="Permanent link">¶</a></h1>
 <p>Подход, при котором клиенты выполняют множество запросов к сервисам для отображения информации, имеет <a class="link-tooltip" data-tooltip-content="#определенныенедостатки_tooltip_id" href="../ch-8-external-api-problems/" title="определенные недостатки">определенные недостатки</a>. Поэтому лучше сделать так, чтобы клиент делал один запрос к <a class="link-tooltip" data-tooltip-content="#APIшлюзу_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/" title="API-шлюзу">API-шлюзу</a>, сервису, который служит единой точкой входа для запросов к приложению извне.<br/>
 Исходя из этого шлюзу разумно делегировать выполнение следующих функций.</p>
-<h2 id="_1">Маршрутизация запросов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h4 id="_1">Маршрутизация запросов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
 <p>Некоторые API-вызовы реализуются путем направления запросов подходящим сервисам. В этом случае шлюз выступает в качестве reverse proxy, обращаясь, например, к <a class="link-tooltip" data-tooltip-content="#рееструсервисов_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/" title="реестру сервисов">реестру сервисов</a>.</p>
-<h2 id="api">Объединение API<a class="headerlink" href="#api" title="Permanent link">¶</a></h2>
+<h4 id="api">Объединение API<a class="headerlink" href="#api" title="Permanent link">¶</a></h4>
 <p>Некоторые вызовы разумно реализовывать, используя <a class="link-tooltip" data-tooltip-content="#объединениеAPI_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/" title="объединение API">объединение API</a> на шлюзе.</p>
-<h2 id="_2">Преобразование протоколов<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h4 id="_2">Преобразование протоколов<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
 <p>Внешние клиенты чаще всего обращаются к приложению на основе RESTful API, однако внутри сервисы могут использовать самые различные протоколы. Шлюз преобразовывает внешние REST запросы к внутренним.</p>
-<h2 id="api-api">API-шлюз предоставляет каждому клиенту отдельный API<a class="headerlink" href="#api-api" title="Permanent link">¶</a></h2>
+<h4 id="api-api">API-шлюз предоставляет каждому клиенту отдельный API<a class="headerlink" href="#api-api" title="Permanent link">¶</a></h4>
 <p>Так как у разных клиентов разные требования к API, не очень рационально формировать универсальный API. Лучше сделать так, чтобы шлюз выделял каждому клиенту отдельный API - например, API для мобильного приложения (и даже разные версии для iPhone и Android, если это необходимо), а также отдельный API для сторонних разработчиков. См. также <a class="link-tooltip" data-tooltip-content="#шаблонBBF_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/bff-pattern/" title="шаблон BBF">шаблон BBF</a>.</p>
-<h2 id="_3">Реализация граничных функций<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h4 id="_3">Реализация граничных функций<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
 <p><em>Граничные функции</em> - операции обработки запросов на границе приложения. Например,</p>
 <ul>
 <li><em>аутентификация</em> - проверка подлинности клиента, делающего запрос</li>
@@ -2652,7 +2641,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2022</span>
 </small>
 </div>
 <!-- Giscus -->

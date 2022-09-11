@@ -2549,14 +2549,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../../../tags/#microservice">
-          microservice
+<a class="md-tag" href="../../../../tags/#api">
+          API
         </a>
-<a class="md-tag" href="../../../../tags/#">
-          книга
-        </a>
-<a class="md-tag" href="../../../../tags/#">
-          конспект
+<a class="md-tag" href="../../../../tags/#microserviceapi">
+          microservice/api
         </a>
 </nav>
 <h1 id="api">Шаблоны внешних API<a class="headerlink" href="#api" title="Permanent link">¶</a></h1>
@@ -2569,7 +2566,7 @@
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2672,7 +2669,7 @@
 <p>Один из вариантов проектирования API заключается в том, чтобы дать клиентам обращаться к сервисам напрямую. Однако на практике такое делают редко из-за следующих недостатков.</p>
 <li>Для извлечения нужных данных клиен…</li></div></div><div class="tooltip_templates"><div id="ШаблонAPIшлюз_tooltip_id"><p>Подход, при котором клиенты выполняют множество запросов к сервисам для отображения информации, имеет <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2008/ch-8-external-api-problems/">определенные недостатки</a>. Поэтому лучше сделать так, чтобы клиент делал один запрос к <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/">API-шлюзу</a>, сервису, который служит единой точкой входа для запросов к приложению извне.<br/>
 Исходя из этого шлюзу разумно делегировать выполнение следующих функций.</p>
-<p>Некоторые API-вызовы реализуются путем направления …</p></div></div><div class="tooltip_templates"><div id="РеализацияApiшлюза_tooltip_id"><p>API-шлюз можно реализовать двумя способами.</p>
+<p>Некоторые API-вызовы реализуются путем направлени…</p></div></div><div class="tooltip_templates"><div id="РеализацияApiшлюза_tooltip_id"><p>API-шлюз можно реализовать двумя способами.</p>
 <li>Используя готовый продукт или сервис. Этот вариант практически не требует разработки, но он менее гибок. Так, например, готовые API-шлюзы обычно не поддерживают объединение API.</li>
 <li>Путём разработки собственного API-шлюза.</li>
 <p>Есть масса вариантов, автор упоминает 3:<br/>
