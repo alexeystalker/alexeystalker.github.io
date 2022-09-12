@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice/testing
 ---
 # Обзор методик тестирования
 > [!quote] Определение
