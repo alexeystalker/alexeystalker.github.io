@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice/testing
 ---
 # Разработка компонентных тестов
 [[service-component-test-pattern|Шаблон "компонентный тест сервиса"]]. 
