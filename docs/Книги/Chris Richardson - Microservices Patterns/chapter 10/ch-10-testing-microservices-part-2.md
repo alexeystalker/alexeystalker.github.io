@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice/testing
 ---
 # Тестирование микросервисов, часть 2
 Вспомним *пирамиду тестов*:
