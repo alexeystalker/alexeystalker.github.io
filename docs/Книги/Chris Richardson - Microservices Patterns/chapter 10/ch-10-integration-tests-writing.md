@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice/testing
 ---
 # Написание интеграционных тестов
 ![[Pasted image 20211023125019.png]]
