@@ -3,6 +3,7 @@ share: true
 tags:
  - microservice/pattern
  - microservice/architecture
+ - microservice/chassis
 ---
 # Шаблон "Шасси микросервисов"
 ![[Pasted image 20211103204415.png]]
