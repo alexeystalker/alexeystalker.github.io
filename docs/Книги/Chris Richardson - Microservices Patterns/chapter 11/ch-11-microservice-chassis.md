@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice/chassis
 ---
 # Разработка сервисов с помощью шаблона микросервисного шасси
 Любой сервис приложения должен поддерживать множество функций для обеспечения [[ch-11-secure-services-implementation|безопасности]], [[ch-11-configurable-services-design|конфигурируемости]] и [[ch-11-observable-services-design|наблюдаемости]]. Также сервис отвечает за свое [[ch-3-service-discovery|обнаружение]] и реализацию [[circuit-breaker-pattern|предохранителей]]. Чтобы не разрабатывать всё это отдельно для каждого сервиса, необходимо разрабатывать сервисы поверх [[microservice-chassis-pattern|микросервисных шасси]]. 

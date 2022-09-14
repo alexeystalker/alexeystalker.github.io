@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice/configuration
 ---
 # Проектирование конфигурируемых сервисов
 Нет никакого смысла сохранять значения конфигурационных свойств прямо в коде сервиса, так как в этом случае его пришлось бы повторно собирать для каждой отдельной среды. Кроме того, конфиденциальная информация, такая как учетные данные, должна безопасно храниться в хранилище секретных ключей, таком как [Hashicorp Vault](https://www.vaultproject.io/) или [AWS Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html). Поэтому конфигурация должна [[externalized-configuration-pattern|выноситься вовне]].

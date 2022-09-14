@@ -1,6 +1,9 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - oauth2
+ - security
+ - microservice/security
 ---
 # Использование OAuth 2.0 в микросервисной архитектуре
 [[oauth-20|Oauth 2.0]]
