@@ -1,5 +1,8 @@
 ---
-tags: [security, protocol]
+tags:
+ - security
+ - protocol
+ - oauth2
 share: true
 ---
 # OAuth 2.0
