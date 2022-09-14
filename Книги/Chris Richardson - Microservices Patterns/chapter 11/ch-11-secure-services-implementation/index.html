@@ -2539,14 +2539,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../../../tags/#microservice">
-          microservice
+<a class="md-tag" href="../../../../tags/#microservicesecurity">
+          microservice/security
         </a>
-<a class="md-tag" href="../../../../tags/#">
-          книга
-        </a>
-<a class="md-tag" href="../../../../tags/#">
-          конспект
+<a class="md-tag" href="../../../../tags/#security">
+          security
         </a>
 </nav>
 <h1 id="_1">Разработка безопасных сервисов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
@@ -2557,7 +2554,7 @@
 <li><em>Аудит</em>. Отслеживает операции, выполняемые субъектом, чтобы обнаруживать проблемы безопасности.</li>
 <li><em>Безопасное межпроцессное взаимодействие</em>.</li>
 </ul>
-<h2 id="_2">Обзор безопасности в традиционном монолитном приложении<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h4 id="_2">Обзор безопасности в традиционном монолитном приложении<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
 <p><img alt="Pasted image 20211026202133.png" src="../../../../images/Pasted%20image%2020211026202133.png" title="Pasted image 20211026202133.png"/><br/>
 Вот последовательность событий, изображенных на картинке.</p>
 <ol>
@@ -2569,13 +2566,13 @@
 <li>С помощью контекста безопасности обработчик запросов определяет, разрешено ли пользователю выполнять запрошеннуюю операцию, и получает его идентификатор.</li>
 </ol>
 <p>Здесь сеансы хранятся в оперативной памяти, что требует направлять все запросы одного сеанса к одному экземпляру приложения.</p>
-<h2 id="_3"><a class="link-tooltip" data-tooltip-content="#Обеспечениебезопасностивмикросервиснойархитектуре_tooltip_id" href="../ch-11-security-in-microservices/" title="Обеспечение безопасности в микросервисной архитектуре">Обеспечение безопасности в микросервисной архитектуре</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h4 id="_3"><a class="link-tooltip" data-tooltip-content="#Обеспечениебезопасностивмикросервиснойархитектуре_tooltip_id" href="../ch-11-security-in-microservices/" title="Обеспечение безопасности в микросервисной архитектуре">Обеспечение безопасности в микросервисной архитектуре</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 2, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
 </small>
 </div>
 <!-- Giscus -->
@@ -2705,5 +2702,5 @@
 <div class="tooltip_templates"><div id="Обеспечениебезопасностивмикросервиснойархитектуре_tooltip_id"><p>В микросервисной архитектуре каждый запрос клиента обрабатывается API-шлюзом и минимум одним сервисом. Чтобы обеспечить безопасность в микросервисной архитектуре, нужно определиться с тем, кто отвечает за аутентификацию пользователя, а кто - за авторизацию.</p>
 <p>Лучше всего сделать так, чтобы клиент аутентифицировался API-шлюзом. <br/>
 Это - шаблон <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/access-token-pattern/">токен доступа</a>. <br/>
-Для API-клиентов пос…</p></div></div></body>
+Для API-клиентов п…</p></div></div></body>
 </html>
