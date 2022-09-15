@@ -1,6 +1,7 @@
 ---
 share: true
-tags: [microservice,книга,конспект]
+tags:
+ - microservice/transition
 ---
 # Переход на микросервисы
 ## Зачем переходить с монолита на что-то другое
