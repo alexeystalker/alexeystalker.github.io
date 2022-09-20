@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Стратегии перехода с монолита на микросервисы" property="og:title"/>
 <meta content="Стратегии перехода с монолита на микросервисы" name="twitter:title"/>
 <meta content="Существует три основные стратегии для удушения монолита и постепенной замены его микросервисами." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2696,17 +2694,22 @@
 <h1 id="_1">Стратегии перехода с монолита на микросервисы<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Существует три основные стратегии для удушения монолита и постепенной замены его микросервисами.</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#Новыевозможностиввидесервисов_tooltip_id" href="../ch-13-new-features-as-services/" title="Новые возможности в виде сервисов">Новые возможности в виде сервисов</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Разделениеуровняпредставленияивнутреннихкомпонентов_tooltip_id" href="../ch-13-views-and-sublayers-split/" title="Разделение уровня представления и внутренних компонентов">Разделение уровня представления и внутренних компонентов</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Разбиениемонолитапутёмоформленияфункциональностиввидесервисов_tooltip_id" href="../ch-13-old-features-as-services/" title="Разбиение монолита путём оформления функциональности в виде сервисов">Разбиение монолита путём оформления функциональности в виде сервисов</a></li>
+<li><a href="../ch-13-new-features-as-services/" title="Новые возможности в виде сервисов">Новые возможности в виде сервисов</a></li>
+<li><a href="../ch-13-views-and-sublayers-split/" title="Разделение уровня представления и внутренних компонентов">Разделение уровня представления и внутренних компонентов</a></li>
+<li><a href="../ch-13-old-features-as-services/" title="Разбиение монолита путём оформления функциональности в виде сервисов">Разбиение монолита путём оформления функциональности в виде сервисов</a></li>
 </ul>
 <p>Первая стратегия предотвращает дальнейшее развитие монолита и быстро продемонстрировать выгоду от использования микросервисов. Две другие разбивают монолит на части. Вторая стратегия может пригодиться в процессе рефакторинга, а третья - это именно тот процесс, что переносит функциональность из монолита в удушающее приложение.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2833,19 +2836,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Новыевозможностиввидесервисов_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/law-of-holes/">Закон ямы</a> гласит “если вы оказались в яме, перестаньте копать”. Иными словами, если если монолитный проект уже большой и сложный, пора перестать добавлять в него усложняющие новые функции. Вместо этого новые функции следует реализовывать в виде сервисов.</p>
-<p>Архитектура приложения после реализации новой возможности в виде сервиса.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211106150706.png"/><br/>
-Помимо монолита и нового сер…</p></div></div><div class="tooltip_templates"><div id="Разделениеуровняпредставленияивнутреннихкомпонентов_tooltip_id"><p>Типичное промышленное приложение включает следующие слои:</p>
-<li><em>Логика представления</em> - состоит из модулей, которые обрабатывают HTTP-запросы и генерируют HTML-страницы с пользовательским интерфейсом</li>
-<li><em>Бизнес-логика</em> - состоит из модулей, реализующих бизнес-правила.</li>
-<li><em>Логика доступа к данным</em> - состоит из модулей для доступа к инфраструктурным сервисам, таким как БД и брокеры сообщений.</li>
-<p>Бизнес логика обычно обладает обобщенным API с одн…</p></div></div><div class="tooltip_templates"><div id="Разбиениемонолитапутёмоформленияфункциональностиввидесервисов_tooltip_id"><p>Для извлечения функций в сервисы необходимо брать вертикальный срез монолита, который состоит из:</p>
-<li>входящих адаптеров, реализующих конечные точки API;</li>
-<li>доменной логики;</li>
-<li>исходящих адаптеров, таких как логика доступа к БД;</li>
-<li>схемы базы данных монолита.<br/>
-Вышеуказанный код извлекается из монолита и помещается в отдельный сервис.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211106165113.png"/><br/>
-Для извлечения сервиса может понадобиться разорвать зависимости и, возможно, разделить сущ…</li></div></div></body>
+</body>
 </html>

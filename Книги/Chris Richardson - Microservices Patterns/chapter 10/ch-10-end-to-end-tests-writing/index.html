@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Написание сквозных (end to end) тестов" property="og:title"/>
 <meta content="Написание сквозных (end to end) тестов" name="twitter:title"/>
 <meta content="Сквозные тесты тестируют приложение целиком. Они находятся на вершине пирамиды, так как они меделнные и ненадежные, а на их разработку уходит много времени." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2737,12 +2735,17 @@
 <p>Лучше всего, чтобы сквозные тесты были основаны на <em>пользовательских путешествиях</em>🤔, которые описывают перемещение пользователя по системе. Например, проверку создания, пересмотра и отмены заказа можно объединить в один тест.</p>
 <h2 id="_2">Написание сквозных тестов<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Сквозные тесты, как и приемочное тестирование, основаны на бизнес-аспектах приложения. Их лучше писать на высокоуровневом языке типа Gherkin.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->

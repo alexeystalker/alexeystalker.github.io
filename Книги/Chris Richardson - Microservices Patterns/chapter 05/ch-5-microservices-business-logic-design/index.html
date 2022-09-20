@@ -29,13 +29,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Проектирование бизнес-логики в микросервисной архитектуре" property="og:title"/>
 <meta content="Проектирование бизнес-логики в микросервисной архитектуре" name="twitter:title"/>
 <meta content="Сердцем промышленных приложений является бизнес-логика, которая реализует бизнес-правила. Разработка сложной бизнес-логики сопряжена с определенными трудностями.
@@ -61,7 +59,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2751,29 +2749,34 @@
 <h1 id="-">Проектирование бизнес-логики в микросервисной архитектуре<a class="headerlink" href="#-" title="Permanent link">¶</a></h1>
 <p>Сердцем промышленных приложений является бизнес-логика, которая реализует бизнес-правила. Разработка сложной бизнес-логики сопряжена с определенными трудностями.<br/>
 В микросервисной архитектуре разрабатывать сложную бизнес-логику сложнее, чем в монолитной, так как она распределена между разными микросервисами. Ключевыми являются две проблемы. Первая - нужно сократить число ссылок в доменной модели, избавившись от тех, которые будут пересекать границы сервисов. Вторая - бизнес логика должна существовать в рамках ограничений, накладываемых работой с транзакциями<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.<br/>
-Для преодоления этих трудностей можно воспользоваться <a class="link-tooltip" data-tooltip-content="#шаблономАгрегат_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/" title='шаблоном "Агрегат"'>шаблоном “Агрегат”</a> из состава DDD.</p>
+Для преодоления этих трудностей можно воспользоваться <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/" title='шаблоном "Агрегат"'>шаблоном “Агрегат”</a> из состава DDD.</p>
 <hr/>
 <p>Начнем с рассмотрения шаблонов организации бизнес-логики.</p>
-<h4 id="-_1"><a class="link-tooltip" data-tooltip-content="#Шаблоныорганизациибизнеслогики_tooltip_id" href="../ch-5-business-logic-templates/" title="Шаблоны организации бизнес-логики">Шаблоны организации бизнес-логики</a><a class="headerlink" href="#-_1" title="Permanent link">¶</a></h4>
+<h4 id="-_1"><a href="../ch-5-business-logic-templates/" title="Шаблоны организации бизнес-логики">Шаблоны организации бизнес-логики</a><a class="headerlink" href="#-_1" title="Permanent link">¶</a></h4>
 <hr/>
-<h4 id="ddd"><a class="link-tooltip" data-tooltip-content="#ПроектированиедоменноймоделиспомощьюшаблонаАгрегатизDDD_tooltip_id" href="../ch-5-aggregate-domain-model-design/" title='Проектирование доменной модели с помощью шаблона "Агрегат" из DDD'>Проектирование доменной модели с помощью шаблона “Агрегат” из DDD</a><a class="headerlink" href="#ddd" title="Permanent link">¶</a></h4>
+<h4 id="ddd"><a href="../ch-5-aggregate-domain-model-design/" title='Проектирование доменной модели с помощью шаблона "Агрегат" из DDD'>Проектирование доменной модели с помощью шаблона “Агрегат” из DDD</a><a class="headerlink" href="#ddd" title="Permanent link">¶</a></h4>
 <hr/>
 <p>Также необходимо рассмотреть еще одну концепцию, тесно связанную с агрегатами - доменные события.</p>
-<h4 id="_1"><a class="link-tooltip" data-tooltip-content="#Доменныесобытия_tooltip_id" href="../ch-5-domain-events/" title="Доменные события">Доменные события</a>.<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
+<h4 id="_1"><a href="../ch-5-domain-events/" title="Доменные события">Доменные события</a>.<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
 <div class="footnote">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>смотри <a class="link-tooltip" data-tooltip-content="#главу4_tooltip_id" href="../../chapter%2004/ch-4-saga-transaction-control/" title="главу 4">главу 4</a> и <a class="link-tooltip" data-tooltip-content="#шаблонповествование_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/" title="шаблон повествование">шаблон повествование</a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>смотри <a href="../../chapter%2004/ch-4-saga-transaction-control/" title="главу 4">главу 4</a> и <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/" title="шаблон повествование">шаблон повествование</a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2900,23 +2903,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="шаблономАгрегат_tooltip_id"><p><em>Агрегат</em> - это кластер доменных объектов, с которыми можно обращаться как с единым целым. Он состоит из одной сущности и иногда одной или нескольких сущностей и объектов значений.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210923205357.png"/><br/>
-Агрегаты разбивают доменную модель на блоки, а также проясняют область применения операций, таких как загрузка, обновление и удаление. Эти операции распространяются на весь агрегат.</p>
-<p>Обновление целого агрегата, а не…</p></div></div><div class="tooltip_templates"><div id="Шаблоныорганизациибизнеслогики_tooltip_id"><p>Вот <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-hexagonal-architecture/">шестигранная архитектура</a> типичного сервиса. Ее ядром является <em>бизнес-логика</em>, и чаще всего это самая сложная часть сервиса.<br/>
-Существует два основных шаблона организации бизнес-логики:</p>
-<li>процедурный <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-transaction-script/">“Сценарий транзакции”</a></li>
-<li>объектно-ориентированный <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-domain-model/">“Доменная модель”</a></li>
-<p>У шаблона “доменная модель” есть ряд проблем в контексте микросервисной архитектуры. Чтобы разобраться с ними, н…</p></div></div><div class="tooltip_templates"><div id="ПроектированиедоменноймоделиспомощьюшаблонаАгрегатизDDD_tooltip_id"><p>В традиционном ООП доменная модель описывает набор классов и отношения между ними, например <br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210923193554.png"/><br/>
-Этот пример содержит несколько классов, соотносящихся с бизнес-объектами: <code>Consumer</code>, <code>Order</code>, <code>Restaurant</code> и <code>Courier</code>. Как видно, в модели не хватает чётких границ между разными бизнес-объектами. Например, не видно, какие классы входят в бизнес-объект <code>Order</code>.<br/>
-Расплывчатые границы могут привести к п…</p></div></div><div class="tooltip_templates"><div id="Доменныесобытия_tooltip_id"><p>В контексте <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-domain-driven-design/">DDD</a> <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">доменное событие</a> - это нечто, произошедшее с <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">агрегатом</a>. Обычно представляет изменение состояния.</p>
-<p>Полезность публикации доменных событий в том, что другие стороны взаимодействия (пользователи, внешние приложения или другие компоненты приложения) заинтересованы в информации об изменениях в состоянии агрегата. Например:</p>
-<li>Обеспечение согласованности между серв…</li></div></div><div class="tooltip_templates"><div id="главу4_tooltip_id"><p>Транзакции типа <strong>ACID</strong> (Atomicity, Consistency, Isolation, Durability) значительно упрощают жизнь разработчиков. В микросервисной архитектуре ACID транзакии могут использовать даже запросы, выполняемые в рамках одного сервиса. Однако основная трудность состоит в реализации операций, которые обновляют данные, принадлежащие к разным сервисам.</p>
-<p>…</p></div></div><div class="tooltip_templates"><div id="шаблонповествование_tooltip_id"><p>Он же “Сага” (Saga). Следует из шаблона <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/">БД для сервиса</a>.<br/>
-Обеспечивает согласованность данных между сервисами, используя последовательность локальных транзакций, которые координируются с помощью асинхронных сообщений.<br/>
-Системная операция инициирует первый этап повествования. Завершение одной локальной транзакции приводит к выполнению следующей. <br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210919112731.png"/><br/>
-Например, вот повествование создания заказа:</p>
-<li>Сервис `Orde…</li></div></div></body>
+</body>
 </html>

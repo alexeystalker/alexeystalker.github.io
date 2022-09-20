@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Когда следует отдать предпочтение ASP.NET Core" property="og:title"/>
 <meta content="Когда следует отдать предпочтение ASP.NET Core" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2753,10 +2751,10 @@
 </nav>
 <h1 id="aspnet-core">Когда следует отдать предпочтение ASP.NET Core<a class="headerlink" href="#aspnet-core" title="Permanent link">¶</a></h1>
 <h2 id="_1">Какие типы приложений можно создавать?<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>Традиционные веб-приложения с отрисовкой на стороне сервера, состоящие из отдельных страниц, являются основой разработки на ASP.NET (это справедливо не только для Core но и предыдущих версий). Кроме того, можно создавать одностраничные приложения (SPA) на любом фреймворке (он обычно общается с сервером при помощи <a class="link-tooltip" data-tooltip-content="#REST_tooltip_id" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/" title="REST">REST</a>, используя приложение ASP.NET Core в качестве серверного API.<br/>
-ASP.NET Core не ограничивается созданием RESTful сервисов. В зависимости от требований можно легко создать веб-сервис или RPC-сервис для своего приложения. В простейшем случае приложение может предоставлять только одну конечную точку, сужая область действия до <a class="link-tooltip" data-tooltip-content="#микросервиса_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/microservice-architecture-patterns/" title="микросервиса">микросервиса</a>. ASP.NET Core идеально подходит для создания простых сервисов благодаря тому, что является кросс-платформенным и легковесным.<br/>
-<img alt="Pasted image 20211124204347.png" src="../../../../images/Pasted%20image%2020211124204347.png" title="Pasted image 20211124204347.png"/><br/>
-Одним из нетехнических факторов выбора платформы является уровень поддержки, которую можно ожидать от ее создателей. Microsoft обещает обсепечить полную поддержку LTS версий .NET Core и ASP.NET Core в течение как минимум трёх лет с момента выпуска.</p>
+<p>Традиционные веб-приложения с отрисовкой на стороне сервера, состоящие из отдельных страниц, являются основой разработки на ASP.NET (это справедливо не только для Core но и предыдущих версий). Кроме того, можно создавать одностраничные приложения (SPA) на любом фреймворке (он обычно общается с сервером при помощи <a href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/" title="REST">REST</a>, используя приложение ASP.NET Core в качестве серверного API.<br/>
+ASP.NET Core не ограничивается созданием RESTful сервисов. В зависимости от требований можно легко создать веб-сервис или RPC-сервис для своего приложения. В простейшем случае приложение может предоставлять только одну конечную точку, сужая область действия до <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/microservice-architecture-patterns/" title="микросервиса">микросервиса</a>. ASP.NET Core идеально подходит для создания простых сервисов благодаря тому, что является кросс-платформенным и легковесным.<br/>
+<img alt="Pasted image 20211124204347.png" src="../../../../images/Pasted%20image%2020211124204347.png" title="Pasted image 20211124204347.png"><br/>
+Одним из нетехнических факторов выбора платформы является уровень поддержки, которую можно ожидать от ее создателей. Microsoft обещает обсепечить полную поддержку LTS версий .NET Core и ASP.NET Core в течение как минимум трёх лет с момента выпуска.</img></p>
 <h2 id="net">Если вы новичок в разработке на .NET<a class="headerlink" href="#net" title="Permanent link">¶</a></h2>
 <p>Microsoft продвигает ASP.NET Core как привлекательный вариант для новичков в веб-разработке, а переход на кросс-платформенность означает, что он конкурирует с другими фреймворками на их территории.<br/>
 Вот преимущества ASP.NET Core перед другими фреймворками:</p>
@@ -2795,12 +2793,17 @@ ASP.NET Core не ограничивается созданием RESTful сер
 </li>
 </ol>
 </div>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2927,14 +2930,5 @@ ASP.NET Core не ограничивается созданием RESTful сер
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="REST_tooltip_id"><p class="admonition-title">REST</p>
-<p>REST предоставляет набор архитектурных ограничений, которые, если их применять как единое целое, делают акцент на масштабируемости взаимодействия между компонентами, обобщенности интерфейсов, независимом развертывании компонентов и промежуточных компонентах, чтобы снизить латентность взаимодействия, обеспечить безопасность и инкапсулировать устаревшие системы. <br/>
-<em>Рой Филдинг (Roy Fielding).</em></p>
-<p>Ключевая концепция REST - <em>ресурс</em>. Ресурс - …</p></div></div><div class="tooltip_templates"><div id="микросервиса_tooltip_id"><p>Перед списком надо упомянуть, что все шаблоны относятся к одному из трёх уровней:</p>
-<li><em>Инфраструктурные шаблоны</em> - решают проблемы инфраструктуры, не относящиеся к разработке.</li>
-<li><em>Инфраструктура приложения</em> - решают инфраструктурные проблемы, влияющие на разработку</li>
-<li><em>Шаблоны приложения</em> - решают проблемы разработки<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210826151046.png"/><br/>
-Основные группы шаблонов:</li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decomposition-patterns/">Шаблоны для разбиения</a> приложения на микросервисы…</li></div></div></body>
+</body>
 </html>

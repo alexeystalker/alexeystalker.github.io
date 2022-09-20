@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Шаблоны внешних API" property="og:title"/>
 <meta content="Шаблоны внешних API" name="twitter:title"/>
 <meta content="У монолитного сервиса API для внешних клиентов чаще всего и сам монолитный. Однако в микросервисной архитектуре единого API чаще всего нет. Поэтому необходимо решить, каким образом организовать внешний API с учётом разнообразия клиентов, их задач и скоростей доступа." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2744,15 +2742,20 @@
 </nav>
 <h1 id="api">Шаблоны внешних API<a class="headerlink" href="#api" title="Permanent link">¶</a></h1>
 <p>У монолитного сервиса API для внешних клиентов чаще всего и сам монолитный. Однако в микросервисной архитектуре единого API чаще всего нет. Поэтому необходимо решить, каким образом организовать внешний API с учётом разнообразия клиентов, их задач и скоростей доступа.</p>
-<h4 id="api_1"><a class="link-tooltip" data-tooltip-content="#ПроблемыспроектированиемвнешнихAPI_tooltip_id" href="../ch-8-external-api-problems/" title="Проблемы с проектированием внешних API">Проблемы с проектированием внешних API</a><a class="headerlink" href="#api_1" title="Permanent link">¶</a></h4>
-<h4 id="api-"><a class="link-tooltip" data-tooltip-content="#ШаблонAPIшлюз_tooltip_id" href="../ch-8-api-gateway-template/" title='Шаблон "API-шлюз"'>Шаблон “API-шлюз”</a><a class="headerlink" href="#api-" title="Permanent link">¶</a></h4>
-<h4 id="api-_1"><a class="link-tooltip" data-tooltip-content="#РеализацияApiшлюза_tooltip_id" href="../ch-8-api-gateway-implementation/" title="Реализация Api-шлюза">Реализация Api-шлюза</a><a class="headerlink" href="#api-_1" title="Permanent link">¶</a></h4>
+<h4 id="api_1"><a href="../ch-8-external-api-problems/" title="Проблемы с проектированием внешних API">Проблемы с проектированием внешних API</a><a class="headerlink" href="#api_1" title="Permanent link">¶</a></h4>
+<h4 id="api-"><a href="../ch-8-api-gateway-template/" title='Шаблон "API-шлюз"'>Шаблон “API-шлюз”</a><a class="headerlink" href="#api-" title="Permanent link">¶</a></h4>
+<h4 id="api-_1"><a href="../ch-8-api-gateway-implementation/" title="Реализация Api-шлюза">Реализация Api-шлюза</a><a class="headerlink" href="#api-_1" title="Permanent link">¶</a></h4>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2879,17 +2882,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="ПроблемыспроектированиемвнешнихAPI_tooltip_id"><p>Внешние API приложения могут использовать клиенты 4 типов:</p>
-<li>Веб-приложения с браузерными UI для заказчиков, ресторанов и администраторов</li>
-<li>JavaScript-приложение в браузере</li>
-<li>Мобильные приложения</li>
-<li>Приложения, написанные сторонними разработчиками</li>
-<p>Один из вариантов проектирования API заключается в том, чтобы дать клиентам обращаться к сервисам напрямую. Однако на практике такое делают редко из-за следующих недостатков.</p>
-<li>Для извлечения нужных данных клиен…</li></div></div><div class="tooltip_templates"><div id="ШаблонAPIшлюз_tooltip_id"><p>Подход, при котором клиенты выполняют множество запросов к сервисам для отображения информации, имеет <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2008/ch-8-external-api-problems/">определенные недостатки</a>. Поэтому лучше сделать так, чтобы клиент делал один запрос к <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/">API-шлюзу</a>, сервису, который служит единой точкой входа для запросов к приложению извне.<br/>
-Исходя из этого шлюзу разумно делегировать выполнение следующих функций.</p>
-<p>Некоторые API-вызовы реализуются путем направлени…</p></div></div><div class="tooltip_templates"><div id="РеализацияApiшлюза_tooltip_id"><p>API-шлюз можно реализовать двумя способами.</p>
-<li>Используя готовый продукт или сервис. Этот вариант практически не требует разработки, но он менее гибок. Так, например, готовые API-шлюзы обычно не поддерживают объединение API.</li>
-<li>Путём разработки собственного API-шлюза.</li>
-<p>Есть масса вариантов, автор упоминает 3:<br/>
-- <strong>AWS API Gateway</strong>. Набор ресурсов REST, каждый из которых поддерживает один или несколько методов. В конфигурации нужно указать, …</p></div></div></body>
+</body>
 </html>

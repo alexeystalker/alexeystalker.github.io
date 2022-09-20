@@ -28,13 +28,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Порождение и публикация событий" property="og:title"/>
 <meta content="Порождение и публикация событий" name="twitter:title"/>
 <meta content="Шаблон порождение событий сохраняет агрегат в виде событий, из которых заетм восстанавливает текущее состояние. Этот подход можно использовать в качестве механизма надежной публикации событий.
@@ -58,7 +56,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2735,20 +2733,25 @@
 <a class="md-tag" href="../../../../tags/#event-sourcing">event-sourcing</a>
 </nav>
 <h1 id="_1">Порождение и публикация событий<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>Шаблон <a class="link-tooltip" data-tooltip-content="#порождениесобытий_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/" title="порождение событий">порождение событий</a> сохраняет агрегат в виде событий, из которых заетм восстанавливает текущее состояние. Этот подход можно использовать в качестве механизма надежной публикации событий.<br/>
-В <a class="link-tooltip" data-tooltip-content="#главе3_tooltip_id" href="../../chapter%2003/ch-3-transactional-messaging/" title="главе 3">главе 3</a> описаны механизмы для публикации сообщений в рамках транзакции: <a class="link-tooltip" data-tooltip-content="#опрашивание_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/polling-publisher-pattern/" title="опрашивание">опрашивание</a> и <a class="link-tooltip" data-tooltip-content="#отслеживаниетранзакционногожургала_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transaction-log-tailing-pattern/" title="отслеживание транзакционного жургала">отслеживание транзакционного жургала</a>. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице <code>EVENTS</code> событий хранятся постоянно, а не временно, как в случае с <a class="link-tooltip" data-tooltip-content="#таблицей_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/" title="таблицей">таблицей</a> <code>OUTBOX</code>.</p>
+<p>Шаблон <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/" title="порождение событий">порождение событий</a> сохраняет агрегат в виде событий, из которых заетм восстанавливает текущее состояние. Этот подход можно использовать в качестве механизма надежной публикации событий.<br/>
+В <a href="../../chapter%2003/ch-3-transactional-messaging/" title="главе 3">главе 3</a> описаны механизмы для публикации сообщений в рамках транзакции: <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/polling-publisher-pattern/" title="опрашивание">опрашивание</a> и <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transaction-log-tailing-pattern/" title="отслеживание транзакционного жургала">отслеживание транзакционного жургала</a>. При использовании порождения событий можно воспользоваться одним из этих способов. Основное отличие в том, что в таблице <code>EVENTS</code> событий хранятся постоянно, а не временно, как в случае с <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/" title="таблицей">таблицей</a> <code>OUTBOX</code>.</p>
 <h2 id="_2">Публикация с помощью опрашивания<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Если для хранения используется таблица <code>EVENTS</code>, издатель может ее опрашивать на предмет новых записей. Самое сложное - определить, какие из событий новые. Если <code>eventId</code> возрастает монотонно, то, кажется, можно просто записывать последнее значение <code>eventId</code>. Однако, порядок фиксации транзакций может не совпасть с порядком, в котором они генерируют события. Тогда некоторые события могут быть пропущены издателем.<br/>
-<img alt="Pasted image 20210928205301.png" src="../../../../images/Pasted%20image%2020210928205301.png" title="Pasted image 20210928205301.png"/><br/>
-Одно из решений проблемы состоит в добавлении столбца в таблицу <code>EVENTS</code>, который отслеживает публикацию событий. Тогда издатель мог бы выбирать неопубликованные события, публиковать их и помечать как опубликованные.</p>
+<img alt="Pasted image 20210928205301.png" src="../../../../images/Pasted%20image%2020210928205301.png" title="Pasted image 20210928205301.png"><br/>
+Одно из решений проблемы состоит в добавлении столбца в таблицу <code>EVENTS</code>, который отслеживает публикацию событий. Тогда издатель мог бы выбирать неопубликованные события, публиковать их и помечать как опубликованные.</img></p>
 <h2 id="_3">Публикация с помощью отслеживания транзакционного журнала<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>В силу природы транзакционного журнала издателю достаточно после каждой публикации событий записывать смещение в файле журнала, на котором произошла очередная публикация.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2875,21 +2878,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="порождениесобытий_tooltip_id"><p>Сохраняет <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">агрегат</a> в виде последовательности <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">доменных событий</a>, которые представляют изменение состояния. Приложение воссоздает текущее состояние, воспроизводя записанные события.<br/>
-События сохраняются в <em>хранилище событий</em> (event store), у которого есть API для добавления и получения событий сущности. Также хранилище событий выполняет роль брокера сообщений - у него есть API для подписки на события.<br/>
-Если для какой-то сущно…</p></div></div><div class="tooltip_templates"><div id="главе3_tooltip_id"><p>Сервисы часто нужно публиковать сообщения в рамках транзакции, обновляющей базу данных. Если не отправить сообщение одновременно с записью в БД, система может остаться в несогласованном состоянии.<br/>
-Предлагается следующий механизм для надёжной отправки сообщений:</p>
-<li>Первый шаг - воспользуемся шаблоном <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">Публикация событий (Outbox)</a> для временного сохранения сообщений.</li>
-<li>Второй шаг - передаем сообщения, сохраненные на первом шаге, бр…</li></div></div><div class="tooltip_templates"><div id="опрашивание_tooltip_id"><p>Пусть приложение использует реляционную БД, и <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">хранит сообщения</a> в таблице <code>OUTBOX</code>. Ретранслятор может вычитывать из этой таблицы неопубликованные записи обычным SQL запросом типа<br/>
-<code>sql
-SELECT * FROM OUTBOX ORDERED BY ... ASC</code><br/>
-Затем он публикует полученные сообщения в соответствующие каналы брокера. После успешной (!) публикации сообщения можно удалить:<br/>
-<code>sql
-DELETE FROM OUTBOX WHERE ID IN (...)</code></p>
-<p>https://microserv…</p></div></div><div class="tooltip_templates"><div id="отслеживаниетранзакционногожургала_tooltip_id"><p>Суть в том, что ретранслятор <em>отслеживает</em> транзакционный журнал БД. Каждое обновление БД (в том числе <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">вставка</a> в <code>OUTBOX</code> ) представляется в виде записи в журнале транзакций. Можно прочитать этот журнал и опубликовать каждое изменение в качестве сообщения для брокера.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210916210026.png"/><br/>
-<em>Анализатор журнала транзакций</em> читает записи в журнале и каждую подходящую запись преобразует в событие и публик…</p></div></div><div class="tooltip_templates"><div id="таблицей_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210916203747.png"/><br/>
-Предположим, что у приложения есть реляционная БД. Используем специальную таблицу <code>OUTBOX</code> для вставки сообщений в рамках транзакции бизнес-логики.<br/>
-Далее <em>ретранслятор</em> (это компонент сервиса) вычитывает сообщения из этой таблицы и отдает брокеру.<br/>
-Если у нас NoSQL БД, добавляем поле со списком сообщений, которые нужно отправить, к каждому бизнес-объекту, порождающему сообщения. Это атомарная операция. Трудностью тут бу…</p></div></div></body>
+</body>
 </html>

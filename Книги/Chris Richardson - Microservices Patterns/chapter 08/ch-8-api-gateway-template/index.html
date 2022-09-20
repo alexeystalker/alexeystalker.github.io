@@ -28,13 +28,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta api-шлюз""="" content="Шаблон " property="og:title"/>
 <meta api-шлюз""="" content="Шаблон " name="twitter:title"/>
 <meta content="Подход, при котором клиенты выполняют множество запросов к сервисам для отображения информации, имеет определенные недостатки. Поэтому лучше сделать так, чтобы клиент делал один запрос к API-шлюзу, сервису, который служит единой точкой входа для запросов к приложению извне.
@@ -58,7 +56,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2796,16 +2794,16 @@
 <a class="md-tag" href="../../../../tags/#microserviceapi">microservice/api</a>
 </nav>
 <h1 id="api-">Шаблон “API-шлюз”<a class="headerlink" href="#api-" title="Permanent link">¶</a></h1>
-<p>Подход, при котором клиенты выполняют множество запросов к сервисам для отображения информации, имеет <a class="link-tooltip" data-tooltip-content="#определенныенедостатки_tooltip_id" href="../ch-8-external-api-problems/" title="определенные недостатки">определенные недостатки</a>. Поэтому лучше сделать так, чтобы клиент делал один запрос к <a class="link-tooltip" data-tooltip-content="#APIшлюзу_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/" title="API-шлюзу">API-шлюзу</a>, сервису, который служит единой точкой входа для запросов к приложению извне.<br/>
+<p>Подход, при котором клиенты выполняют множество запросов к сервисам для отображения информации, имеет <a href="../ch-8-external-api-problems/" title="определенные недостатки">определенные недостатки</a>. Поэтому лучше сделать так, чтобы клиент делал один запрос к <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/" title="API-шлюзу">API-шлюзу</a>, сервису, который служит единой точкой входа для запросов к приложению извне.<br/>
 Исходя из этого шлюзу разумно делегировать выполнение следующих функций.</p>
 <h4 id="_1">Маршрутизация запросов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
-<p>Некоторые API-вызовы реализуются путем направления запросов подходящим сервисам. В этом случае шлюз выступает в качестве reverse proxy, обращаясь, например, к <a class="link-tooltip" data-tooltip-content="#рееструсервисов_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/" title="реестру сервисов">реестру сервисов</a>.</p>
+<p>Некоторые API-вызовы реализуются путем направления запросов подходящим сервисам. В этом случае шлюз выступает в качестве reverse proxy, обращаясь, например, к <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/" title="реестру сервисов">реестру сервисов</a>.</p>
 <h4 id="api">Объединение API<a class="headerlink" href="#api" title="Permanent link">¶</a></h4>
-<p>Некоторые вызовы разумно реализовывать, используя <a class="link-tooltip" data-tooltip-content="#объединениеAPI_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/" title="объединение API">объединение API</a> на шлюзе.</p>
+<p>Некоторые вызовы разумно реализовывать, используя <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/" title="объединение API">объединение API</a> на шлюзе.</p>
 <h4 id="_2">Преобразование протоколов<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
 <p>Внешние клиенты чаще всего обращаются к приложению на основе RESTful API, однако внутри сервисы могут использовать самые различные протоколы. Шлюз преобразовывает внешние REST запросы к внутренним.</p>
 <h4 id="api-api">API-шлюз предоставляет каждому клиенту отдельный API<a class="headerlink" href="#api-api" title="Permanent link">¶</a></h4>
-<p>Так как у разных клиентов разные требования к API, не очень рационально формировать универсальный API. Лучше сделать так, чтобы шлюз выделял каждому клиенту отдельный API - например, API для мобильного приложения (и даже разные версии для iPhone и Android, если это необходимо), а также отдельный API для сторонних разработчиков. См. также <a class="link-tooltip" data-tooltip-content="#шаблонBBF_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/bff-pattern/" title="шаблон BBF">шаблон BBF</a>.</p>
+<p>Так как у разных клиентов разные требования к API, не очень рационально формировать универсальный API. Лучше сделать так, чтобы шлюз выделял каждому клиенту отдельный API - например, API для мобильного приложения (и даже разные версии для iPhone и Android, если это необходимо), а также отдельный API для сторонних разработчиков. См. также <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/bff-pattern/" title="шаблон BBF">шаблон BBF</a>.</p>
 <h4 id="_3">Реализация граничных функций<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
 <p><em>Граничные функции</em> - операции обработки запросов на границе приложения. Например,</p>
 <ul>
@@ -2819,15 +2817,20 @@
 <p>В приложении есть три участка, где можно реализовать граничные функции. Прежде всего это внутренние сервисы. Подходит для кэширования, сбора показателей, возможно, авторизации. Однако аутентификацию лучше проводить до сервисов.<br/>
 Второй участок - специализированный граничный сервис (до API-шлюза). Преимущества - разделение ответственности, единая точка реализации аутентификации (и других функций). Недостаток - повышение сложности и сетевой латентности.<br/>
 Третий вариант - реализация граничных функций в API-шлюзе.</p>
-<h4 id="api-_1"><a class="link-tooltip" data-tooltip-content="#АрхитектураAPIшлюза_tooltip_id" href="../ch-8-api-gateway-architecture/" title="Архитектура API-шлюза">Архитектура API-шлюза</a><a class="headerlink" href="#api-_1" title="Permanent link">¶</a></h4>
-<h4 id="api-_2"><a class="link-tooltip" data-tooltip-content="#МодельвладениявAPIшлюзе_tooltip_id" href="../ch-8-api-gateway-ownership/" title="Модель владения в API-шлюзе">Модель владения в API-шлюзе</a><a class="headerlink" href="#api-_2" title="Permanent link">¶</a></h4>
-<h4 id="api-_3"><a class="link-tooltip" data-tooltip-content="#ТрудностипроектированияAPIшлюза_tooltip_id" href="../ch-8-api-gateway-design-difficulties/" title="Трудности проектирования API-шлюза">Трудности проектирования API-шлюза</a><a class="headerlink" href="#api-_3" title="Permanent link">¶</a></h4>
+<h4 id="api-_1"><a href="../ch-8-api-gateway-architecture/" title="Архитектура API-шлюза">Архитектура API-шлюза</a><a class="headerlink" href="#api-_1" title="Permanent link">¶</a></h4>
+<h4 id="api-_2"><a href="../ch-8-api-gateway-ownership/" title="Модель владения в API-шлюзе">Модель владения в API-шлюзе</a><a class="headerlink" href="#api-_2" title="Permanent link">¶</a></h4>
+<h4 id="api-_3"><a href="../ch-8-api-gateway-design-difficulties/" title="Трудности проектирования API-шлюза">Трудности проектирования API-шлюза</a><a class="headerlink" href="#api-_3" title="Permanent link">¶</a></h4>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2954,58 +2957,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="определенныенедостатки_tooltip_id"><p>Внешние API приложения могут использовать клиенты 4 типов:</p>
-<li>Веб-приложения с браузерными UI для заказчиков, ресторанов и администраторов</li>
-<li>JavaScript-приложение в браузере</li>
-<li>Мобильные приложения</li>
-<li>Приложения, написанные сторонними разработчиками</li>
-<p>Один из вариантов проектирования API заключается в том, чтобы дать клиентам обращаться к сервисам напрямую. Однако на практике такое делают редко из-за следующих недостатков.</p>
-<li>Для извлечения нужных данных клиен…</li></div></div><div class="tooltip_templates"><div id="APIшлюзу_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211013203814.png"/><br/>
-<em>API_шлюз</em> (API Gateway) - это сервис, который служит точкой входа в приложение из внешнего мира. <br/>
-Задачи API-шлюза: [^1]</p>
-<li>Маршрутизация запросов</li>
-<li>Объединение API</li>
-<li>Преобразование протоколов</li>
-<li>Предоставляет свой API для разных типов клиентов</li>
-<li>Реализует граничные функции, а именно<ul>
-<li>аутентификацию</li>
-<li>авторизацию</li>
-<li>ограничение частоты запросов</li>
-<li>кэширование</li>
-<li>сбор метрик</li>
-<li>ведение журнала запросов</li>
-</ul>
-</li>
-<li>аутентификацию</li>
-<li>авторизацию</li>
-<li>ограничение частоты запросов</li>
-<li>кэширование</li>
-<li>сбор метрик</li>
-<li>ведение журнала запросов</li>
-<p>Архитектурно[^2] шлюз представляет …</p></div></div><div class="tooltip_templates"><div id="рееструсервисов_tooltip_id"><p>БД, хранящая актуальные адреса сервисов. Сервисы регистрируются (<a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/self-registration-pattern/">сами</a> или не сами) в реестре при старте и удаляются из реестра при выключении. Также реестр может обращаться к Healthcheck API  для проверки доступности экземпляров.</p>
-<p>https://microservices.io/patterns/service-registry.html</p></div></div><div class="tooltip_templates"><div id="объединениеAPI_tooltip_id"><p>Чтобы выполнить запрос, мы обращаемся к разным сервисам и объединяем результаты.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211004193422.png"/><br/>
-Структура шаблона предусмативает два типа участников:</p>
-<li><em>API-композитор</em> - реализует операцию запроса, обращаясь к сервис-провайдерам</li>
-<li><em>сервис-провайдер</em> - сервис, которому принадлежат данные, возвращаемые запросом.</li>
-<p>Преимущество этого шаблона - в простоте реализации.</p>
-<li>дополнительные накладные расходы</li>
-<li>риск снижения досту…</li></div></div><div class="tooltip_templates"><div id="шаблонBBF_tooltip_id"><p><code>Backends for Frontends</code><br/>
-Разновидность шаблона <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/">API-шлюз</a>, идея которого заключается в том, что каждый API-модуль становится отдельным API-шлюзом<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211016113601.png"/><br/>
-Преимущества:</p>
-<li>API-модули изолированы друг от друга</li>
-<li>возможность независимого масштабирования</li>
-<li>уменьшение времени запуска</li>
-<p>https://microservices.io/patterns/apigateway.html</p></div></div><div class="tooltip_templates"><div id="АрхитектураAPIшлюза_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211016110810.png"/><br/>
-API-шлюз имеет двухуровневую модульную ахитектуру.<br/>
-Она состоит из двух частей - общего уровня и API-модулей. Каждый уровень реализует API конкретного клиента. На общем уровне реализованы общие возможности и граничные функции.<br/>
-В примере 3 API-модуля:</p>
-<li><em>Мобильный API</em> - для мобильного клиента</li>
-<li><em>браузерный API</em> - для JavaScript-приложения</li>
-<li><em>публичный API</em> - для сторонних разработчиков</li>
-<p>API-модуль либо прокидывает операцию дальше к серв…</p></div></div><div class="tooltip_templates"><div id="МодельвладениявAPIшлюзе_tooltip_id"><p>Важный вопрос при внедрении API-шлюза - кто несет ответственность за разработку API-шлюза и его операций? Если выделить для этого отдельную команду, это может стать потенциальным узким местом - если, например, разработчику мобильного приложения нужно получить доступ к определенному сервису, он должен обратиться к команде API-шлюза и подождать, пока они реализуют нужный API.<br/>
-Другой подход: API-модуль отдается на откуп клиентским разработчикам, а команда API-шлюза отв…</p></div></div><div class="tooltip_templates"><div id="ТрудностипроектированияAPIшлюза_tooltip_id"><p>При проектировании API-шлюза могут возникнуть некоторые трудности, а именно:</p>
-<p>Так как через шлюз поступают все запросы приложения, большое значение имеют его производительность и возможности масштабирования. Ключевое решение, которое влияет на эти показатели, заключается в выборе между синхронным и асинхронным вводом-выводом.<br/>
-В <em>синхронной</em> модели каждый запрос обрабатывается отдельным потоком. Это простая модель, однак…</p></div></div></body>
+</body>
 </html>

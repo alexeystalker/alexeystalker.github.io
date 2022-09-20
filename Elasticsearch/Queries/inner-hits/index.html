@@ -88,13 +88,11 @@ POST test/_search
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="inner_hits parameter" property="og:title"/>
 <meta content="inner_hits parameter" name="twitter:title"/>
 <meta content='В случае использования parent-child и nested связей может возникнуть необходимость получения связанных документов, удовлетворяющих запросу.
@@ -238,7 +236,7 @@ POST test/_search
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2916,7 +2914,7 @@ POST test/_search
 <a class="md-tag" href="../../../tags/#elasticsearchjoining">Elasticsearch/joining</a>
 </nav>
 <h1 id="inner_hits-parameter">inner_hits parameter<a class="headerlink" href="#inner_hits-parameter" title="Permanent link">¶</a></h1>
-<p>В случае использования <code>parent-child</code> и <a class="link-tooltip" data-tooltip-content="#nested_tooltip_id" href="../nested-query/" title="nested">nested</a> связей может возникнуть необходимость получения связанных документов, удовлетворяющих запросу.<br/>
+<p>В случае использования <code>parent-child</code> и <a href="../nested-query/" title="nested">nested</a> связей может возникнуть необходимость получения связанных документов, удовлетворяющих запросу.<br/>
 Для этого используется параметр <code>inner_hits</code> в запросе или фильтре.<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="err">POST</span><span class="w"> </span><span class="kc">test</span><span class="err">/_search</span><span class="w"></span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span><span class="w"></span>
@@ -2988,21 +2986,26 @@ POST test/_search
 </ul>
 <p>Также поддерживаются документные фичи, такие как</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#Highlighting_tooltip_id" href="../../highlighting" title="Highlighting">Highlighting</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Explain_tooltip_id" href="../../explain" title="Explain">Explain</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Sourcefiltering_tooltip_id" href="../../source-filtering" title="Source filtering">Source filtering</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Docvaluefields_tooltip_id" href="../../doc-value-fields" title="Doc value fields">Doc value fields</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Includeversions_tooltip_id" href="../../versions" title="Include versions">Include versions</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Sequencenumbersandprimaryterms_tooltip_id" href="../../seq-no-primary-term" title="Sequence numbers and primary terms">Sequence numbers and primary terms</a></li>
+<li><a href="../../highlighting" title="Highlighting">Highlighting</a></li>
+<li><a href="../../explain" title="Explain">Explain</a></li>
+<li><a href="../../source-filtering" title="Source filtering">Source filtering</a></li>
+<li><a href="../../doc-value-fields" title="Doc value fields">Doc value fields</a></li>
+<li><a href="../../versions" title="Include versions">Include versions</a></li>
+<li><a href="../../seq-no-primary-term" title="Sequence numbers and primary terms">Sequence numbers and primary terms</a></li>
 </ul>
 <h2 id="_2">Ссылки<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.8/inner-hits.html">https://www.elastic.co/guide/en/elasticsearch/reference/7.8/inner-hits.html</a></p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -3129,48 +3132,5 @@ POST test/_search
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="nested_tooltip_id"><p>Для построения запроса по nested документам нужно сделать запрос типа <code>nested</code>, nested-поле указать в параметре <code>path</code>, следующим параметрам указать query по вложенному документу, причем поля для поиска указываются в виде <code>%path%.%field%</code>. Например, <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/exists-query/">Exists</a> запрос для вложенного поля:<br/>
-<code>json
-{
-  "query": {
-    "nested": {
-      "path": "leasing",
-      "query": {
-        "exists": {
-          "field": "leasing.leasing-id"
-        }
-      }
-    }
-  }
-}</code></p></div></div><div class="tooltip_templates"><div id="Highlighting_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Explain_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Sourcefiltering_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Docvaluefields_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Includeversions_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Sequencenumbersandprimaryterms_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div></body>
+</body>
 </html>

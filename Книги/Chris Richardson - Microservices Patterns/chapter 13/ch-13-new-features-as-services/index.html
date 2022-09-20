@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Реализация новых возможностей в виде сервисов" property="og:title"/>
 <meta content="Реализация новых возможностей в виде сервисов" name="twitter:title"/>
 <meta content="Закон ямы гласит “если вы оказались в яме, перестаньте копать”. Иными словами, если если монолитный проект уже большой и сложный, пора перестать добавлять в него усложняющие новые функции. Вместо этого новые функции следует реализовывать в виде сервисов." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2732,24 +2730,29 @@
 <a class="md-tag" href="../../../../tags/#microservicetransition">microservice/transition</a>
 </nav>
 <h1 id="_1">Реализация новых возможностей в виде сервисов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><a class="link-tooltip" data-tooltip-content="#Законямы_tooltip_id" href="../../../../%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/law-of-holes/" title="Закон ямы">Закон ямы</a> гласит “если вы оказались в яме, перестаньте копать”. Иными словами, если если монолитный проект уже большой и сложный, пора перестать добавлять в него усложняющие новые функции. Вместо этого новые функции следует реализовывать в виде сервисов.</p>
+<p><a href="../../../../%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/law-of-holes/" title="Закон ямы">Закон ямы</a> гласит “если вы оказались в яме, перестаньте копать”. Иными словами, если если монолитный проект уже большой и сложный, пора перестать добавлять в него усложняющие новые функции. Вместо этого новые функции следует реализовывать в виде сервисов.</p>
 <h2 id="_2">Интеграция нового сервиса с монолитом<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Архитектура приложения после реализации новой возможности в виде сервиса.<br/>
-<img alt="Pasted image 20211106150706.png" src="../../../../images/Pasted%20image%2020211106150706.png" title="Pasted image 20211106150706.png"/><br/>
-Помимо монолита и нового сервиса, мы видим два новых компонента:</p>
+<img alt="Pasted image 20211106150706.png" src="../../../../images/Pasted%20image%2020211106150706.png" title="Pasted image 20211106150706.png"><br/>
+Помимо монолита и нового сервиса, мы видим два новых компонента:</img></p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#APIшлюз_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/" title="API-шлюз">API-шлюз</a> направляет запросы новой функциональности к новым сервисам, а старой - к монолиту.</li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/" title="API-шлюз">API-шлюз</a> направляет запросы новой функциональности к новым сервисам, а старой - к монолиту.</li>
 <li><em>Интеграционный связующий код</em> - интегрирует сервисы в монолит. Позволяет сервису обращаться к данным, принадлежащим монолиту.</li>
 </ul>
 <h2 id="_3">Когда новую функцию следует реализовывать в виде сервиса<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>В идеале каждая новая функция должна быть реализована в удушающем приложении, а не в монолите, для чего создается новый или дополняется уже существующий сервис. К сожалению, такое возможно не всегда.<br/>
 Возможность может оказаться слишком мелкой для того, чтобы быть значимым сервисом. Или же новая функциональность слишком тесно связана с кодом монолита, и если реализовать ее в виде сервиса, это выльется в излишнее межпроцессное взаимодействие.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2876,29 +2879,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Законямы_tooltip_id"><p class="admonition-title">Закон ямы</p>
-<p>Если вы оказались в яме, перестаньте копать.</p>
-<p>https://en.wikipedia.org/wiki/Law_of_holes</p></div></div><div class="tooltip_templates"><div id="APIшлюз_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211013203814.png"/><br/>
-<em>API_шлюз</em> (API Gateway) - это сервис, который служит точкой входа в приложение из внешнего мира. <br/>
-Задачи API-шлюза: [^1]</p>
-<li>Маршрутизация запросов</li>
-<li>Объединение API</li>
-<li>Преобразование протоколов</li>
-<li>Предоставляет свой API для разных типов клиентов</li>
-<li>Реализует граничные функции, а именно<ul>
-<li>аутентификацию</li>
-<li>авторизацию</li>
-<li>ограничение частоты запросов</li>
-<li>кэширование</li>
-<li>сбор метрик</li>
-<li>ведение журнала запросов</li>
-</ul>
-</li>
-<li>аутентификацию</li>
-<li>авторизацию</li>
-<li>ограничение частоты запросов</li>
-<li>кэширование</li>
-<li>сбор метрик</li>
-<li>ведение журнала запросов</li>
-<p>Архитектурно[^2] шлюз представляет …</p></div></div></body>
+</body>
 </html>

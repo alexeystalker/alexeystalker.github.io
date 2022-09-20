@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Принципы пакетов" property="og:title"/>
 <meta content="Принципы пакетов" name="twitter:title"/>
 <meta content="6 принципов объектно-ориентированного проектирования, введенных Робертом Мартином, относящиеся к правильной организации пакетов (модулей, сборок etc)" name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2696,29 +2694,34 @@
 <h1 id="_1">Принципы пакетов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>6 принципов объектно-ориентированного проектирования, введенных Робертом Мартином, относящиеся к правильной организации пакетов (модулей, сборок etc)</p>
 <ul>
-<li>принципы связности (<a class="link-tooltip" data-tooltip-content="#cohesion_tooltip_id" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/cohesion/" title="cohesion">cohesion</a>) пакетов, они говорят о содержимом пакетов:<ul>
-<li><a class="link-tooltip" data-tooltip-content="#ReleaseReuseEquivalencyPrinciple_tooltip_id" href="../../release-reuse-equivalency-principle" title="Release Reuse Equivalency Principle">Release Reuse Equivalency Principle</a> - принцип эквивалентности релиза и переиспользования;</li>
-<li><a class="link-tooltip" data-tooltip-content="#CommonClosurePrinciple_tooltip_id" href="../common-closure-principle/" title="Common Closure Principle">Common Closure Principle</a> - принцип согласованного изменения;</li>
-<li><a class="link-tooltip" data-tooltip-content="#CommonReusePrinciple_tooltip_id" href="../../common-reuse-principle" title="Common Reuse Principle">Common Reuse Principle</a> - принцип согласованного переиспользования;</li>
+<li>принципы связности (<a href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/cohesion/" title="cohesion">cohesion</a>) пакетов, они говорят о содержимом пакетов:<ul>
+<li><a href="../../release-reuse-equivalency-principle" title="Release Reuse Equivalency Principle">Release Reuse Equivalency Principle</a> - принцип эквивалентности релиза и переиспользования;</li>
+<li><a href="../common-closure-principle/" title="Common Closure Principle">Common Closure Principle</a> - принцип согласованного изменения;</li>
+<li><a href="../../common-reuse-principle" title="Common Reuse Principle">Common Reuse Principle</a> - принцип согласованного переиспользования;</li>
 </ul>
 </li>
-<li>принципы сопряжения (<a class="link-tooltip" data-tooltip-content="#coupling_tooltip_id" href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/coupling/" title="coupling">coupling</a>) пакетов, они говорят о зависимостях между пакетами:<ul>
-<li><a class="link-tooltip" data-tooltip-content="#AcyclicDependenciesPrinciple_tooltip_id" href="../../acyclic-dependencies-principle" title="Acyclic Dependencies Principle">Acyclic Dependencies Principle</a> - принцип ациклических зависимостей;</li>
-<li><a class="link-tooltip" data-tooltip-content="#StableDependenciesPrinciple_tooltip_id" href="../../stable-dependencies-principle" title="Stable Dependencies Principle">Stable Dependencies Principle</a> - принцип стабильных зависимостей;</li>
-<li><a class="link-tooltip" data-tooltip-content="#StableAbstractionsPrinciple_tooltip_id" href="../../stable-abstractions-priniciple" title="Stable Abstractions Principle">Stable Abstractions Principle</a> - принцип стабильности абстракций</li>
+<li>принципы сопряжения (<a href="../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/coupling/" title="coupling">coupling</a>) пакетов, они говорят о зависимостях между пакетами:<ul>
+<li><a href="../../acyclic-dependencies-principle" title="Acyclic Dependencies Principle">Acyclic Dependencies Principle</a> - принцип ациклических зависимостей;</li>
+<li><a href="../../stable-dependencies-principle" title="Stable Dependencies Principle">Stable Dependencies Principle</a> - принцип стабильных зависимостей;</li>
+<li><a href="../../stable-abstractions-priniciple" title="Stable Abstractions Principle">Stable Abstractions Principle</a> - принцип стабильности абстракций</li>
 </ul>
 </li>
 </ul>
 <h1 id="_2">Ссылки<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Package_principles">https://en.wikipedia.org/wiki/Package_principles</a><br/>
 <a href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod</a><br/>
-<a class="link-tooltip" data-tooltip-content="#UncleBob_PrinciplesOfOodpdf_tooltip_id" href="../../UncleBob_PrinciplesOfOod.pdf" title="UncleBob_PrinciplesOfOod.pdf">UncleBob_PrinciplesOfOod.pdf</a></p>
+<a href="../../UncleBob_PrinciplesOfOod.pdf" title="UncleBob_PrinciplesOfOod.pdf">UncleBob_PrinciplesOfOod.pdf</a></p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2845,39 +2848,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="cohesion_tooltip_id"><p><em>Cohesion (связность)</em> - мера силы взаимосвязанности элементов внутри модуля; способ и степень, в которой задачи, выполняемые некоторым программным модулем, связаны друг с другом.</p>
-<p>Макконнелл объясняет понятие связности на примере класса (как частного случая модуля): «связность характеризует то, насколько хорошо все методы класса или все фрагменты метода соответствуют главной цели, — иначе говоря, насколько сфокусирован класс».</p>
-<p>Связность обычно противопоставляется [[coupling|зацеплен…</p></div></div><div class="tooltip_templates"><div id="ReleaseReuseEquivalencyPrinciple_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="CommonClosurePrinciple_tooltip_id"><p class="admonition-title">Common Closure Principle</p>
-<p>Причины изменения классов, входящих в один пакет, должны быть одинаковыми. Изменение пакета должно затрагивать все его классы</p></div></div><div class="tooltip_templates"><div id="CommonReusePrinciple_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="coupling_tooltip_id"><p><em>Coupling (зацепление, связанность)</em> - способ и степень взаимозависимости между программными модулями; сила взаимосвязей между модулями; мера того, насколько взаимозависимы разные подпрограммы или модули.</p>
-<p>Сильное зацепление рассматривается как серьёзный недостаток, поскольку затрудняет понимание логики модулей, их модификацию, автономное тестирование, а также переиспользование по отдельности. <a href="https://en.wikipedia.org/wiki/Loose_coupling">Слабое зацепление</a>, напротив, является призна…</p></div></div><div class="tooltip_templates"><div id="AcyclicDependenciesPrinciple_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="StableDependenciesPrinciple_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="StableAbstractionsPrinciple_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="UncleBob_PrinciplesOfOodpdf_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div></body>
+</body>
 </html>

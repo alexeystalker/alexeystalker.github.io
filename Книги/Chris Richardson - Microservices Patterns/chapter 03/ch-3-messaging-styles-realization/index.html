@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Реализация стилей взаимодействия" property="og:title"/>
 <meta content="Реализация стилей взаимодействия" name="twitter:title"/>
 <meta content="Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все стили взаимодействия. Вот как реализуется каждый." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2753,24 +2751,29 @@
 <a class="md-tag" href="../../../../tags/#microservicecommunication">microservice/communication</a>
 </nav>
 <h1 id="_1">Реализация стилей взаимодействия<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все <a class="link-tooltip" data-tooltip-content="#стиливзаимодействия_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/" title="стили взаимодействия">стили взаимодействия</a>. Вот как реализуется каждый.</p>
+<p>Механизмы обмена сообщениями достаточно гибки, чтобы реализовать все <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/" title="стили взаимодействия">стили взаимодействия</a>. Вот как реализуется каждый.</p>
 <h2 id="_2">Реализация синхронных и асинхронных запросов/ответов<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p><img alt="Pasted image 20210911183223.png" src="../../../../images/Pasted%20image%2020210911183223.png" title="Pasted image 20210911183223.png"/><br/>
+<p><img alt="Pasted image 20210911183223.png" src="../../../../images/Pasted%20image%2020210911183223.png" title="Pasted image 20210911183223.png"><br/>
 Клиент и сервис могут взаимодействовать, отправляя запросы и принимая ответы. Если это происходит синхронно, клиент ожидает немедленного ответа от сервиса, если асинхронно - не ждёт. Обмен сообщениями по природе асинхронен, но клиент может блокироваться, пока не получен ответ.<br/>
-Чтобы реализовать стиль взаимодействия, клиент и сервис обмениваются парными сообщениями через каналы типа <a class="link-tooltip" data-tooltip-content="#точкаточка_tooltip_id" href="../../../../Microservices/Messages/point-to-point-channel/" title="точка-точка">“точка-точка”</a> (см. рисунок). Сначала клиент отправляет в канал сервиса команду с указанием операции и ее параметров, а также <em>идентификатором запроса</em> и <em>каналом ответа</em> в заголовке. Сервис обрабатывает команду  и записывает свой ответ в указанный канал с указанием <em>идентификатора соответствия</em> равного <em>идентификатору запроса</em>. Клиент использует <em>идентификатор соответствия</em>, чтобы сопоставить ответ с запросом.<br/>
-Поскольку клиент и сервис взаимодействуют с помощью сообщений, их общение асинхронно. Теоретически, клиент может заблокироваться в ожидании ответа. Кроме того, легко сделать так, чтобы ответ обрабатывался любым экземпляром клиента.</p>
+Чтобы реализовать стиль взаимодействия, клиент и сервис обмениваются парными сообщениями через каналы типа <a href="../../../../Microservices/Messages/point-to-point-channel/" title="точка-точка">“точка-точка”</a> (см. рисунок). Сначала клиент отправляет в канал сервиса команду с указанием операции и ее параметров, а также <em>идентификатором запроса</em> и <em>каналом ответа</em> в заголовке. Сервис обрабатывает команду  и записывает свой ответ в указанный канал с указанием <em>идентификатора соответствия</em> равного <em>идентификатору запроса</em>. Клиент использует <em>идентификатор соответствия</em>, чтобы сопоставить ответ с запросом.<br/>
+Поскольку клиент и сервис взаимодействуют с помощью сообщений, их общение асинхронно. Теоретически, клиент может заблокироваться в ожидании ответа. Кроме того, легко сделать так, чтобы ответ обрабатывался любым экземпляром клиента.</img></p>
 <h2 id="_3">Реализация однонаправленных уведомлений<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>Клиент шлет сообщение (обычно командное) в канал типа “точка-точка”, принадлежащий сервису. Сервис подписывается на канал и обрабатывает сообщения, не возвращая ничего в ответ.</p>
 <h2 id="_4">Реализация стиля “издатель/подписчик”<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
-<p>Клиент публикует сообщение в канале типа <a class="link-tooltip" data-tooltip-content="#издательподписчик_tooltip_id" href="../../../../Microservices/Messages/publish-subscribe-channel/" title="издатель-подписчик">“издатель-подписчик”</a> сообщение, которое считывается несколькими потребителями. Сервисы используют этот стиль взаимодействия для публикации доменных событий (изменений в доменных объектах). Обычно одному типу доменных объектов соответствует один канал.</p>
+<p>Клиент публикует сообщение в канале типа <a href="../../../../Microservices/Messages/publish-subscribe-channel/" title="издатель-подписчик">“издатель-подписчик”</a> сообщение, которое считывается несколькими потребителями. Сервисы используют этот стиль взаимодействия для публикации доменных событий (изменений в доменных объектах). Обычно одному типу доменных объектов соответствует один канал.</p>
 <h2 id="_5">Реализация стиля “издатель/асинхронные ответы”<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
 <p>Этот стиль сочетает в себе стили “издатель/подписчик” и “запрос/ответ”. Клиент публикует в канале “издатель-подписчик” сообщение с <em>каналом ответа</em> в заголовке. Потребитель записывает в канал ответа (типа “точка-точка”) ответное сообщение с <em>идентификатором взаимодействия</em>. Клиент принимает ответы и сопоставляет их с запросом при помощи <em>идентфикатора взаимодействия</em>.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2897,14 +2900,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="стиливзаимодействия_tooltip_id"><p>Сервисы асинхронно коммуницируют путём обмена сообщениями.<br/>
-Существуют следующие стили асинхронной коммуникации:</p>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/request-response-messaging/">Запрос/ответ</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/notifications-messaging/">Уведомления</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/request-async-response-messaging/">Запрос/асинхронный ответ</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/publish-subscribe-messaging/">Публикация/подписка</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/publish-async-response-messaging/">Публикация/асинхронный ответ</a></li>
-<p>[[ch-3-messaging-styles-realization|Из книги “Шаблоны проектирования ми…</p></div></div><div class="tooltip_templates"><div id="точкаточка_tooltip_id"><p><em>Канал вида “точка-точка”</em> доставляет сообщения ровно одному потребителю. Сервисы используют такие каналы для взаимодействия вида “один к одному”, например для передачи команд.</p>
-<p>https://www.enterpriseintegrationpatterns.com/PointToPointChannel.html</p></div></div><div class="tooltip_templates"><div id="издательподписчик_tooltip_id"><p><em>Канал вида “издатель-подписчик”</em> доставляет каждое сообщение всем подключенным потребителям. Сервисы применяют такие каналы для взаимодействия вида “один ко многим”, например, для рассылки событий.</p>
-<p>https://www.enterpriseintegrationpatterns.com/PublishSubscribeChannel.html</p></div></div></body>
+</body>
 </html>

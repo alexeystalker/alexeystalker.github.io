@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Совместное использование повествований и порождения событий" property="og:title"/>
 <meta content="Совместное использование повествований и порождения событий" name="twitter:title"/>
 <meta content="Пусть мы реализовали один или несколько сервисов на основе порождения событий. Однако, чтобы корректно работать друг с другам, им необходимо инициировать повествования - последовательности локальных транзакций, которые обеспечивают согласованность данных между сервисами, и участвовать в них. Следовательно, нам нужно интегрировать повествования и бизнес-логику на основе порождения событий." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2753,17 +2751,22 @@
 <a class="md-tag" href="../../../../tags/#microservicesaga">microservice/saga</a>
 </nav>
 <h1 id="_1">Совместное использование повествований и порождения событий<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>Пусть мы реализовали один или несколько сервисов на основе порождения событий. Однако, чтобы корректно работать друг с другам, им необходимо инициировать <a class="link-tooltip" data-tooltip-content="#повествования_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/" title="повествования">повествования</a> - последовательности локальных транзакций, которые обеспечивают согласованность данных между сервисами, и участвовать в них. Следовательно, нам нужно интегрировать повествования и бизнес-логику на основе порождения событий.</p>
-<h4 id="_2"><a class="link-tooltip" data-tooltip-content="#Реализацияповествованийнаосновехореографииспомощьюпорождениясобытий_tooltip_id" href="../ch-6-event-sourcing-and-choreography-saga/" title="Реализация повествований на основе хореографии с помощью порождения событий">Реализация повествований на основе хореографии с помощью порождения событий</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
-<h4 id="_3"><a class="link-tooltip" data-tooltip-content="#Созданиеоркестратораповествования_tooltip_id" href="../ch-6-saga-orchestrator-creation/" title="Создание оркестратора повествования">Создание оркестратора повествования</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
-<h4 id="_4"><a class="link-tooltip" data-tooltip-content="#Реализацияучастникаповествования_tooltip_id" href="../ch-6-saga-participant-implementation/" title="Реализация участника повествования">Реализация участника повествования</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
-<h4 id="_5"><a class="link-tooltip" data-tooltip-content="#Реализацияоркестраторовповествованийспомощьюпорождениясобытий_tooltip_id" href="../ch-6-saga-orchestrator-implementation/" title="Реализация оркестраторов повествований с помощью порождения событий">Реализация оркестраторов повествований с помощью порождения событий</a><a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<p>Пусть мы реализовали один или несколько сервисов на основе порождения событий. Однако, чтобы корректно работать друг с другам, им необходимо инициировать <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/" title="повествования">повествования</a> - последовательности локальных транзакций, которые обеспечивают согласованность данных между сервисами, и участвовать в них. Следовательно, нам нужно интегрировать повествования и бизнес-логику на основе порождения событий.</p>
+<h4 id="_2"><a href="../ch-6-event-sourcing-and-choreography-saga/" title="Реализация повествований на основе хореографии с помощью порождения событий">Реализация повествований на основе хореографии с помощью порождения событий</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<h4 id="_3"><a href="../ch-6-saga-orchestrator-creation/" title="Создание оркестратора повествования">Создание оркестратора повествования</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<h4 id="_4"><a href="../ch-6-saga-participant-implementation/" title="Реализация участника повествования">Реализация участника повествования</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<h4 id="_5"><a href="../ch-6-saga-orchestrator-implementation/" title="Реализация оркестраторов повествований с помощью порождения событий">Реализация оркестраторов повествований с помощью порождения событий</a><a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2890,18 +2893,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="повествования_tooltip_id"><p>Он же “Сага” (Saga). Следует из шаблона <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/">БД для сервиса</a>.<br/>
-Обеспечивает согласованность данных между сервисами, используя последовательность локальных транзакций, которые координируются с помощью асинхронных сообщений.<br/>
-Системная операция инициирует первый этап повествования. Завершение одной локальной транзакции приводит к выполнению следующей. <br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210919112731.png"/><br/>
-Например, вот повествование создания заказа:</p>
-<li>Сервис `Orde…</li></div></div><div class="tooltip_templates"><div id="Реализацияповествованийнаосновехореографииспомощьюпорождениясобытий_tooltip_id"><p>Событийная природа <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/">шаблона “порождение событий”</a> делает реализацию повествований на основе географии довольно прямолинейной. При обновлении агрегат генерирует событие.  У другого агрегата может быть обработчик, который обновляет его в результате получения события. Фреймворк для порождения событий делает все обработчики идемпотентными.<br/>
-Проблема использования событий для хореографии повествовани…</p></div></div><div class="tooltip_templates"><div id="Созданиеоркестратораповествования_tooltip_id"><p>Методы, такие как OrderService.CreateOrder() делают две вещи: создают или обновляют агрегат <em>и</em> создают оркестратор повествований. Сервис должен выполнять эти действия так, чтобы второе гарантированно завершалось в случае успешного выполнения первого. Реализация этого зависит от используемого типа хранилища.</p>
-<p>Если сервис использует хранилище событий на основе реляционн…</p></div></div><div class="tooltip_templates"><div id="Реализацияучастникаповествования_tooltip_id"><p>Нужно решить две проблемы, а именно: обеспечить идемпотентность обработки команд и атомарную отправку ответного сообщения.</p>
-<p>Воспользуемся шаблоном <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/">идемпотентный потребитель</a>. Участник повествования записывает ID сообщения в события, которые генерируются при его обработке. Прежде чем обновлять агрегат, участник сверяет ID сообщения в событиях и убеждается в том, что он его еще не обра…</p></div></div><div class="tooltip_templates"><div id="Реализацияоркестраторовповествованийспомощьюпорождениясобытий_tooltip_id"><p>Порождение событий можно использовать и для реализации оркестраторов.<br/>
-При разработке оркестратора повествований нужно решить три ключевые проблемы:</p>
-<li>Как будет храниться оркестратор?</li>
-<li>Как атомарно изменять состояние оркестратора и слать командные сообщения?</li>
-<li>Как убедиться в том, что оркестратор обрабатывает ответы один раз?</li>
-<p>Жизненный цикл оркестратора: сначала созда…</p></div></div></body>
+</body>
 </html>

@@ -28,13 +28,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Повествования, основанные на хореографии." property="og:title"/>
 <meta content="Повествования, основанные на хореографии." name="twitter:title"/>
 <meta content="Хореография -  способ реализации повествований, когда участники подписываются на события друг друга и реагируют соответствующим образом.
@@ -58,7 +56,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2800,15 +2798,15 @@
 </ol>
 <h3 id="_3">Неудачный путь<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
 <p>Предположим, авторизация банковской карты завершилась неудачей.<br/>
-<img alt="Pasted image 20210919125828.png" src="../../../../images/Pasted%20image%2020210919125828.png" title="Pasted image 20210919125828.png"/><br/>
+<img alt="Pasted image 20210919125828.png" src="../../../../images/Pasted%20image%2020210919125828.png" title="Pasted image 20210919125828.png"><br/>
 1. Сервиc <code>Order</code> создает заказ с состоянием <code>APPROVAL_PENDING</code> и публикует событие <code>OrderCreated</code>.<br/>
 2. Сервис <code>Consumer</code> потребляет событие <code>OrderCreated</code>, проверяет, может ли заказчик размещать заказы и публикует событие <code>ConsumerVerified</code>.<br/>
 3. Сервис <code>Kitchen</code> потребляет событие <code>OrderCreated</code>, проверяет заказ, создает заявку с состоянием <code>CREATE_PENDING</code> и публикует событие <code>TicketCreated</code>.<br/>
 4. Сервис <code>Accounting</code> потребляет событие <code>OrderCreated</code> и создает объект <code>CreditCardAuthorization</code> с состоянием <code>PENDING</code>.<br/>
 5. Сервис <code>Accounting</code> потребляет события <code>TicketCreated</code> и <code>ConsumerVerified</code>, выставляет счет банковской карте заказчика и публикует событие <code>CreditCardAuthorizationFailed</code>.<br/>
 6. Сервис <code>Kitchen</code> потребляет событие <code>CreditCardAuthorizationFailed</code>, меняет состояние заявки на <code>REJECTED</code>.<br/>
-7. Сервис <code>Order</code> потребляет событие <code>CreditCardAuthorizationFailed</code>, меняет состояние заказа на <code>REJECTED</code>.</p>
-<p>Как мы видим, участники взаимодействуют в стиле <a class="link-tooltip" data-tooltip-content="#издательподписчик_tooltip_id" href="../../../../Microservices/Messages/publish-subscribe-messaging/" title="издатель/подписчик">“издатель/подписчик”</a>.</p>
+7. Сервис <code>Order</code> потребляет событие <code>CreditCardAuthorizationFailed</code>, меняет состояние заказа на <code>REJECTED</code>.</img></p>
+<p>Как мы видим, участники взаимодействуют в стиле <a href="../../../../Microservices/Messages/publish-subscribe-messaging/" title="издатель/подписчик">“издатель/подписчик”</a>.</p>
 <h2 id="_4">Надежное взаимодействие на основе событий<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <p>При реализации хореографии необходимо учитывать следующее. Во-первых, следует сделать так, чтобы участники обновляли свои базы и публиковали события в рамках транзакций БД. Во-вторых, участники должны иметь возможность сопоставить каждое событие с собственными данными, поэтому важно публиковать события с <em>идентификаторами соответствия</em>.</p>
 <h2 id="_5">Преимущества<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
@@ -2822,12 +2820,17 @@
 <li><em>Риск возникновения циклических зависимостей</em>.</li>
 <li><em>Риск жёсткого связывания</em>.</li>
 </ul>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2954,5 +2957,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="издательподписчик_tooltip_id"><p><em>Публикация - подписка</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент публикует сообщение для нуля или более подписчиков.</p></div></div></body>
+</body>
 </html>

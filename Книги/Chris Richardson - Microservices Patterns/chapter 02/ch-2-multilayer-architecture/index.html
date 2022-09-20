@@ -29,13 +29,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Многоуровневая архитектура" property="og:title"/>
 <meta content="Многоуровневая архитектура" name="twitter:title"/>
 <meta content="Классический пример архитектурного стиля. Характерна разделением элементов по уровням. Каждый уровень имеет чёткий набор обязанностей. Также ограничиваются зависимости между уровнями. Уровень может зависеть либо от уровня, лежащего непосредственно под ним (чёткое разбиение), либо от любого нижележащего уровня.
@@ -61,7 +59,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2730,7 +2728,7 @@
 </nav>
 <h1 id="_1">Многоуровневая архитектура<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Классический пример архитектурного стиля. Характерна разделением элементов по уровням. Каждый уровень имеет чёткий набор обязанностей. Также ограничиваются зависимости между уровнями. Уровень может зависеть либо от уровня, лежащего непосредственно под ним (чёткое разбиение), либо от любого нижележащего уровня.<br/>
-Многоуровневую архитектуру можно применить к любому из <a class="link-tooltip" data-tooltip-content="#представлений_tooltip_id" href="../ch-2-4-plus-1-view-model-of-architecture/" title="представлений">представлений</a>.<br/>
+Многоуровневую архитектуру можно применить к любому из <a href="../ch-2-4-plus-1-view-model-of-architecture/" title="представлений">представлений</a>.<br/>
 Классический пример - трёхуровневая архитектура - относится к логическому представлению. Состоит из слоёв (или уровней):</p>
 <ul>
 <li><em>Уровень представления</em> - содержит код, реализующий UI или внешние API</li>
@@ -2739,7 +2737,7 @@
 </ul>
 <details class="note">
 <summary>NB</summary>
-<p><a class="link-tooltip" data-tooltip-content="#ModelViewController_tooltip_id" href="../../../../Design%20Patterns/Web%20Application%20Patterns/mvc-pattern/" title="Model-View-Controller">Model-View-Controller</a>, по-видимому, является парафразом трёхуровневой архитектуры</p>
+<p><a href="../../../../Design%20Patterns/Web%20Application%20Patterns/mvc-pattern/" title="Model-View-Controller">Model-View-Controller</a>, по-видимому, является парафразом трёхуровневой архитектуры</p>
 </details>
 <h2 id="_2">Недостатки многоуровнего стиля.<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <ul>
@@ -2748,12 +2746,17 @@
 <li><em>Уровень бизнес-логики зависит от уровня хранения данных</em> - теоретически эта зависимость не позволяет тестировать бизнес-логику отдельно от БД <em>(!NB: А как же моки??)</em> 🤔</li>
 <li><em>Искажаются зависимости в хорошо спроектированном приложении</em>. Бизнес-логика обычно подразумевает интерфейс или репозиторий интерфейсов, которые определяют методы доступа к данным. Уровень хранения данных определяет классы DAO, которые реализуют интерфейсв из репозитория. Иными словами, зависимости являются обратными относительно того, что описывает многослойная архитектура</li>
 </ul>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2880,11 +2883,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="представлений_tooltip_id"><p>Модель 4+1 определяет 4 разных представления архитектуры ПО. Каждое описывает определенный аспект архитектуры и состоит из конкретного набора элементов и связей между ними.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210827202316.png"/></p>
-<li><em>Логическое представление</em> - программные элементы, создаваемые разработчиками. Связи - отношения между классами и пакетами, включая наследование, взаимосвязи и зависимости</li>
-<li><em>Представление реализации</em> - результат работы системы сборки. Связи - …</li></div></div><div class="tooltip_templates"><div id="ModelViewController_tooltip_id"><p><em>MVC</em> - шаблон проектирования, применяемый для проектирования приложений с пользовательским интерфейсом. При реализации данного шаблона данные приложения и его управляющая логика разделяются на три компонента:</p>
-<li><em>модель (Model)</em> представляет данные и реагирует на команды контроллера, изменяя своё состояние;</li>
-<li><em>Представление (View)</em> отвечает за отображение данных модели пользователю, реагируя на изменение модели;</li>
-<li><em>Контроллер (Controller)</em> реагирует на действия п…</li></div></div></body>
+</body>
 </html>

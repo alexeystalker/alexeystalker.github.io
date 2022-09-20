@@ -32,13 +32,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Трудности тестирования микросервисов" property="og:title"/>
 <meta content="Трудности тестирования микросервисов" name="twitter:title"/>
 <meta content="Микросервисное приложение - распределенная система, и межпроцессное взаимодействие играет одну из ключевых ролей.
@@ -70,7 +68,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2739,26 +2737,31 @@
 <h1 id="_1">Трудности тестирования микросервисов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Микросервисное приложение - распределенная система, и межпроцессное взаимодействие играет одну из ключевых ролей.<br/>
 Очень важно, чтобы разработчики писали тесты, которые проверяют, как он взаимодействует со своими зависимостями и клиентами.<br/>
-<a class="link-tooltip" data-tooltip-content="#Какговорилось_tooltip_id" href="../../chapter%2003/ch-3-interprocess-communication/" title="Как говорилось">Как говорилось</a>, сервисы могут общаться между собой, применяя разнообразные стили и механизмы IPC. Вот, к примеру, схема взаимодействия некоторых сервисов.<br/>
-<img alt="Pasted image 20211022193646.png" src="../../../../images/Pasted%20image%2020211022193646.png" title="Pasted image 20211022193646.png"/><br/>
+<a href="../../chapter%2003/ch-3-interprocess-communication/" title="Как говорилось">Как говорилось</a>, сервисы могут общаться между собой, применяя разнообразные стили и механизмы IPC. Вот, к примеру, схема взаимодействия некоторых сервисов.<br/>
+<img alt="Pasted image 20211022193646.png" src="../../../../images/Pasted%20image%2020211022193646.png" title="Pasted image 20211022193646.png"><br/>
 Разработчик сервиса должен быть уверен в стабильности API, которые потребляет сервис. По этой же причине не следует вносить ломающие изменения в API собственного сервиса.<br/>
-Чтобы проверить, способны ли два сервиса взаимодействовать, можно обратиться к API, который инициирует взаимодействие, и убедиться, что он возвращает ожидаемый результат. Но это будет <em>сквозной</em> тест. Скорее всего, будут вызываться промежуточные зависимости, отрабатывать бизнес-логика и т.п., тогда как цель - проверка относительно низкоуровнего механизма IPC. Нужны тесты, которые проверяют работу сервисов изолированно. В качестве решения можно воспользоваться <a class="link-tooltip" data-tooltip-content="#тестированиемконтрактовврасчётенапотребителя_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-driven-contract-test-pattern/" title="тестированием контрактов в расчёте на потребителя">тестированием контрактов в расчёте на потребителя</a>.</p>
+Чтобы проверить, способны ли два сервиса взаимодействовать, можно обратиться к API, который инициирует взаимодействие, и убедиться, что он возвращает ожидаемый результат. Но это будет <em>сквозной</em> тест. Скорее всего, будут вызываться промежуточные зависимости, отрабатывать бизнес-логика и т.п., тогда как цель - проверка относительно низкоуровнего механизма IPC. Нужны тесты, которые проверяют работу сервисов изолированно. В качестве решения можно воспользоваться <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-driven-contract-test-pattern/" title="тестированием контрактов в расчёте на потребителя">тестированием контрактов в расчёте на потребителя</a>.</img></p>
 <h2 id="_2">Тестирование контрактов в расчёте на потребителя<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>Пусть есть команда, пишушая <a class="link-tooltip" data-tooltip-content="#APIшлюз_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/" title="API-шлюз">API-шлюз</a>, который, помимо прочего, обращается к точке REST <code>GET /orders/{orderId}</code>. В этом случае крайне важно иметь тесты, которые проверяют согласованность API между шлюзом и сервисом <code>Order</code>. В терминах тестирования контрактов между этими двумя сервисами имеется связь <em>“потребитель (consumer) - провайдер”</em>.<br/>
+<p>Пусть есть команда, пишушая <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/" title="API-шлюз">API-шлюз</a>, который, помимо прочего, обращается к точке REST <code>GET /orders/{orderId}</code>. В этом случае крайне важно иметь тесты, которые проверяют согласованность API между шлюзом и сервисом <code>Order</code>. В терминах тестирования контрактов между этими двумя сервисами имеется связь <em>“потребитель (consumer) - провайдер”</em>.<br/>
 Команда, пишущая код потребителя, также пишет набор тестов для контракта и добавляет его к остальным тестам провайдера, например, через merge-request. Эти тесты выполняются в процессе развертывания сервиса <code>Order</code>.<br/>
 Взаимодействие между потребителем и провайдером определяется набором примеров сообщений, которые называются <em>контрактами</em>. Скажем, контракт для REST API состоит из примеров HTTP-запроса и ответа.<br/>
-Несмотря на то, что основной задачей является проверка провайдера, контракты также проверяют, соответствует ли им потребитель. Например, потребительский контракт для REST-клиента конфигурирует заглушку сервиса, которая проверяет, совпадает ли HTTP-запрос с запросом контракта, и возвращает обратно его HTTP-ответ. Это <a class="link-tooltip" data-tooltip-content="#Тестированиеконтрактовнасторонепотребителя_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-side-contract-test-pattern/" title="Тестирование контрактов на стороне потребителя">Тестирование контрактов на стороне потребителя</a>.</p>
+Несмотря на то, что основной задачей является проверка провайдера, контракты также проверяют, соответствует ли им потребитель. Например, потребительский контракт для REST-клиента конфигурирует заглушку сервиса, которая проверяет, совпадает ли HTTP-запрос с запросом контракта, и возвращает обратно его HTTP-ответ. Это <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-side-contract-test-pattern/" title="Тестирование контрактов на стороне потребителя">Тестирование контрактов на стороне потребителя</a>.</p>
 <p>Для тестирования контрактов существует два популярных фреймворка:</p>
 <ul>
 <li><a href="https://github.com/pact-foundation">семейство Pact</a> с поддержкой разных языков</li>
 <li><a href="https://spring.io/projects/spring-cloud-contract">Spring Cloud Contract</a></li>
 </ul>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 12, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 12, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2885,31 +2888,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Какговорилось_tooltip_id"><p>Далее - <strong>IPC (interprocess communication)</strong><br/>
-В приложениях микросервисной архитектуры IPC играет более важную роль, чем в монолитных приложениях. Экземпляры сервисов чаще всего являются процессами, запущеными на разных компьютерах, следовательно, должны общаться друг с другом при помощи IPC. Выбор механизма IPC  - важное архитектурное решение, он может повлиять на уровень доступности приложения.</p></div></div><div class="tooltip_templates"><div id="тестированиемконтрактовврасчётенапотребителя_tooltip_id"><p>Идея в том, чтобы потребители писали тесты, проверяющие контракт сервиса (provider) на соответствие нуждам потребителей (consumers). Взаимодействие между потребителем и провайдером определяется набором примеров сообщений, которые называются <em>контрактами</em>.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211022200513.png"/></p>
-<p>https://microservices.io/patterns/testing/service-integration-contract-test.html</p></div></div><div class="tooltip_templates"><div id="APIшлюз_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211013203814.png"/><br/>
-<em>API_шлюз</em> (API Gateway) - это сервис, который служит точкой входа в приложение из внешнего мира. <br/>
-Задачи API-шлюза: [^1]</p>
-<li>Маршрутизация запросов</li>
-<li>Объединение API</li>
-<li>Преобразование протоколов</li>
-<li>Предоставляет свой API для разных типов клиентов</li>
-<li>Реализует граничные функции, а именно<ul>
-<li>аутентификацию</li>
-<li>авторизацию</li>
-<li>ограничение частоты запросов</li>
-<li>кэширование</li>
-<li>сбор метрик</li>
-<li>ведение журнала запросов</li>
-</ul>
-</li>
-<li>аутентификацию</li>
-<li>авторизацию</li>
-<li>ограничение частоты запросов</li>
-<li>кэширование</li>
-<li>сбор метрик</li>
-<li>ведение журнала запросов</li>
-<p>Архитектурно[^2] шлюз представляет …</p></div></div><div class="tooltip_templates"><div id="Тестированиеконтрактовнасторонепотребителя_tooltip_id"><p>Проверяем, может ли клиент взаимодействовать с сервисом.</p>
-<p>https://microservices.io/patterns/testing/consumer-side-contract-test.html</p></div></div></body>
+</body>
 </html>

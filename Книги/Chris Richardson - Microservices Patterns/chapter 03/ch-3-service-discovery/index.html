@@ -28,13 +28,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Обнаружение сервисов" property="og:title"/>
 <meta content="Обнаружение сервисов" name="twitter:title"/>
 <meta content="В микросервисной архитектуре, когда большинство сервисов получает адреса динамически, и набор экземпляров может постоянно изменяться, важно использовать механзм обнаружения сервисов. Ядром такого механизма становится реестр сервисов. Когда экземпляры сервисов запускаются или останавливаются, механизм обнаружения обновляет реестр. Когда клиент хочет обратиться к сервису, он обращается к реестру за списком доступных экземпляров сервиса, и запрашивает один из них.
@@ -58,7 +56,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2736,28 +2734,33 @@
 <a class="md-tag" href="../../../../tags/#microservicediscovery">microservice/discovery</a>
 </nav>
 <h1 id="_1">Обнаружение сервисов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>В микросервисной архитектуре, когда большинство сервисов получает адреса динамически, и набор экземпляров может постоянно изменяться, важно использовать механзм обнаружения сервисов. Ядром такого механизма становится <a class="link-tooltip" data-tooltip-content="#реестрсервисов_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/" title="реестр сервисов">реестр сервисов</a>. Когда экземпляры сервисов запускаются или останавливаются, механизм обнаружения обновляет реестр. Когда клиент хочет обратиться к сервису, он обращается к реестру за списком доступных экземпляров сервиса, и запрашивает один из них.<br/>
+<p>В микросервисной архитектуре, когда большинство сервисов получает адреса динамически, и набор экземпляров может постоянно изменяться, важно использовать механзм обнаружения сервисов. Ядром такого механизма становится <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/" title="реестр сервисов">реестр сервисов</a>. Когда экземпляры сервисов запускаются или останавливаются, механизм обнаружения обновляет реестр. Когда клиент хочет обратиться к сервису, он обращается к реестру за списком доступных экземпляров сервиса, и запрашивает один из них.<br/>
 Есть два основных способа обнаружения сервисов.</p>
 <h2 id="_2">Сервисы и их клиенты напрямую взаимодействуют с реестром.<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Данный подход сочетает в себе два шаблона</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#Саморегистрация_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/self-registration-pattern/" title="Саморегистрация">Саморегистрация</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Обнаружениенаклиентскойстороне_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/client-side-discovery-pattern/" title="Обнаружение на клиентской стороне">Обнаружение на клиентской стороне</a></li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/self-registration-pattern/" title="Саморегистрация">Саморегистрация</a></li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/client-side-discovery-pattern/" title="Обнаружение на клиентской стороне">Обнаружение на клиентской стороне</a></li>
 </ul>
 <p>Одним из преимуществ такого подхода является возможность развертывания сервисов на разных платформах. А недостатками являются как необходимость наличия библиотеки обнаружения сервисов для каждого используемого ЯП, так и то, что обслуживание и поддержка реестра ложится на разработчиков приложения.</p>
 <h2 id="_3">За обнаружение сервисов отвечает инфраструктура развертывания.<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>В этом подходе забота о реестре и обнаружении сервисов ложится на инфраструктурное решение, такое как Kubernetes. В этом подходе, по аналогии с предыдущим, сочетаются следующие шаблоны</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#Сторонняярегистрация_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/third-party-registration-pattern/" title="Сторонняя регистрация">Сторонняя регистрация</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Обнаружениенасторонесервера_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/server-side-discovery-pattern/" title="Обнаружение на стороне сервера">Обнаружение на стороне сервера</a></li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/third-party-registration-pattern/" title="Сторонняя регистрация">Сторонняя регистрация</a></li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/server-side-discovery-pattern/" title="Обнаружение на стороне сервера">Обнаружение на стороне сервера</a></li>
 </ul>
 <p>Ключевое преимущество данного подхода состоит в том, что всеми вопросами обнаружения сервисов занимается платформа. Ни клиенты, ни сервисы не содержат никакого кода для этой цели. Недостаток заключается в том, что он поддерживает обнаружение только тех сервисов, которые развернуты на конкретной платформе.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2884,10 +2887,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="реестрсервисов_tooltip_id"><p>БД, хранящая актуальные адреса сервисов. Сервисы регистрируются (<a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/self-registration-pattern/">сами</a> или не сами) в реестре при старте и удаляются из реестра при выключении. Также реестр может обращаться к Healthcheck API  для проверки доступности экземпляров.</p>
-<p>https://microservices.io/patterns/service-registry.html</p></div></div><div class="tooltip_templates"><div id="Саморегистрация_tooltip_id"><p>Экземпляр сервиса регистрирует себя в реестре.</p>
-<p>https://microservices.io/patterns/self-registration.html</p></div></div><div class="tooltip_templates"><div id="Обнаружениенаклиентскойстороне_tooltip_id"><p>Клиент извлекает из <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">реестра</a> список доступных экземпляров сервиса (для снижения нагрузки может быть применено кэширование) и использует алгоритм балансирования нагрузки, чтобы выбрать конкретный экземпляр и отправить ему запрос.</p>
-<p>https://microservices.io/patterns/client-side-discovery.html</p></div></div><div class="tooltip_templates"><div id="Сторонняярегистрация_tooltip_id"><p>В <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">реестре</a> сервис регистрируется сторонней сущностью - <em>регистратором</em>, который обычно является компонентом платформы развертывания.</p>
-<p>https://microservices.io/patterns/3rd-party-registration.html</p></div></div><div class="tooltip_templates"><div id="Обнаружениенасторонесервера_tooltip_id"><p>Клиент обращается (по известному имени) к маршрутизатору, который идёт в <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">реестр</a> за актуальными адресами и балансирует нагрузку.</p>
-<p>https://microservices.io/patterns/server-side-discovery.html</p></div></div></body>
+</body>
 </html>

@@ -29,13 +29,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Написание интеграционных тестов" property="og:title"/>
 <meta content="Написание интеграционных тестов" name="twitter:title"/>
 <meta content="Интеграционные тесты находятся на пирамиде тестов на один уровень выше юнит-тестов. Они помогают убедиться в том, что сервис правильно взаимодействует с инфраструктурой и другими сервисами. Есть две стратегии, упрощающие код таких тестов.
@@ -61,7 +59,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2728,10 +2726,10 @@
 <a class="md-tag" href="../../../../tags/#microservicetesting">microservice/testing</a>
 </nav>
 <h1 id="_1">Написание интеграционных тестов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><img alt="Pasted image 20211023125019.png" src="../../../../images/Pasted%20image%2020211023125019.png" title="Pasted image 20211023125019.png"/><br/>
-Интеграционные тесты находятся на пирамиде тестов на один уровень выше <a class="link-tooltip" data-tooltip-content="#юниттестов_tooltip_id" href="../../chapter%2009/ch-9-service-unit-tests-implementation/" title="юнит-тестов">юнит-тестов</a>. Они помогают убедиться в том, что сервис правильно взаимодействует с инфраструктурой и другими сервисами. Есть две стратегии, упрощающие код таких тестов.<br/>
+<p><img alt="Pasted image 20211023125019.png" src="../../../../images/Pasted%20image%2020211023125019.png" title="Pasted image 20211023125019.png"><br/>
+Интеграционные тесты находятся на пирамиде тестов на один уровень выше <a href="../../chapter%2009/ch-9-service-unit-tests-implementation/" title="юнит-тестов">юнит-тестов</a>. Они помогают убедиться в том, что сервис правильно взаимодействует с инфраструктурой и другими сервисами. Есть две стратегии, упрощающие код таких тестов.<br/>
 Первая стратегия заключается в тестировании каждого адаптера сервиса, возможно, вместе со вспомогательными классами.<br/>
-Вторая стратегия состоит в использовании <a class="link-tooltip" data-tooltip-content="#контрактов_tooltip_id" href="../../chapter%2009/ch-9-microservice-testing-drawbacks/" title="контрактов">контрактов</a>. В таблице видно, что структура контракта зависит от того, как именно сервисы общаются между собой.</p>
+Вторая стратегия состоит в использовании <a href="../../chapter%2009/ch-9-microservice-testing-drawbacks/" title="контрактов">контрактов</a>. В таблице видно, что структура контракта зависит от того, как именно сервисы общаются между собой.</img></p>
 <table>
 <thead>
 <tr>
@@ -2772,12 +2770,17 @@
 <li><em>Очистка</em> - необязательный этап, отменяющий изменения, например, путём отмены инициированной на этапе подготовки транзакции</li>
 </ul>
 <p><em>Дальше в книге идут примеры тестов на основе контрактов с применением Spring Cloud Contract. В главе 9 указано, что помимо это фреймворка есть фреймворк Pact с поддержкой dotNET. Оставляю примеры без разбора.</em></p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2904,11 +2907,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="юниттестов_tooltip_id"><p>Модульные тесты (unit tests) находятся на самом нижнем уровне пирамиды тестирования. Они ориентированы на технологии и могут использоваться в разработке. Модульный тест позволяет убедиться в правильной работе <em>модуля</em> - обычно под модулем понимают класс, так что тесты проверяют, ведет ли себя класс так, как ожидается.<br/>
-Существует два типа модульных тестов:</p>
-<li><em>изолированный</em> - тестирует отдельно взятый класс, заменяя зависимости объектами-макетами;</li>
-<li>*общит…</li></div></div><div class="tooltip_templates"><div id="контрактов_tooltip_id"><p>Микросервисное приложение - распределенная система, и межпроцессное взаимодействие играет одну из ключевых ролей.<br/>
-Очень важно, чтобы разработчики писали тесты, которые проверяют, как он взаимодействует со своими зависимостями и клиентами.<br/>
-<a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-interprocess-communication/">Как говорилось</a>, сервисы могут общаться между собой, применяя разнообразные стили и механизмы IPC. Вот, к примеру, схема взаимодействия некоторых сервисов.<br/>
-![[Pasted image 20211022193646....</p></div></div></body>
+</body>
 </html>

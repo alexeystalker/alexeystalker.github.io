@@ -29,13 +29,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Шаблон " property="og:title" компонентный="" сервиса""="" тест=""/>
 <meta content="Шаблон " name="twitter:title" компонентный="" сервиса""="" тест=""/>
 <meta content="При этом шаблоне тесты проверяют работу сервиса, подменяя заглушками все его зависимости.
@@ -61,7 +59,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2729,19 +2727,24 @@
 <a class="md-tag" href="../../../../tags/#microservicetesting">microservice/testing</a>
 </nav>
 <h1 id="_1">Шаблон “Компонентный тест сервиса”<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><img alt="Pasted image 20211024124855.png" src="../../../../images/Pasted%20image%2020211024124855.png" title="Pasted image 20211024124855.png"/><br/>
+<p><img alt="Pasted image 20211024124855.png" src="../../../../images/Pasted%20image%2020211024124855.png" title="Pasted image 20211024124855.png"><br/>
 При этом шаблоне тесты проверяют работу сервиса, подменяя заглушками все его зависимости.<br/>
-Различают <a class="link-tooltip" data-tooltip-content="#внутрипроцессные_tooltip_id" href="../../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2010/ch-10-component-tests-writing/#компонентные-тесты-внутри-процесса" title="внутрипроцессные">внутрипроцессные</a> и <a class="link-tooltip" data-tooltip-content="#внепроцессные_tooltip_id" href="../../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2010/ch-10-component-tests-writing/#компонентное-тестирование-за-пределами-процесса" title="внепроцессные">внепроцессные</a> компонентные тесты.<br/>
-Для более простого описания сценариев тестом можно воспользоваться языком Gherkin и фреймворком Specflow для .NET.</p>
+Различают <a href="../../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2010/ch-10-component-tests-writing/#компонентные-тесты-внутри-процесса" title="внутрипроцессные">внутрипроцессные</a> и <a href="../../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2010/ch-10-component-tests-writing/#компонентное-тестирование-за-пределами-процесса" title="внепроцессные">внепроцессные</a> компонентные тесты.<br/>
+Для более простого описания сценариев тестом можно воспользоваться языком Gherkin и фреймворком Specflow для .NET.</img></p>
 <h2 id="_2">Ссылки<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p><a href="https://microservices.io/patterns/testing/service-component-test.html">https://microservices.io/patterns/testing/service-component-test.html</a><br/>
 <a href="https://specflow.org/">Specflow</a>.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 22, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 22, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2868,5 +2871,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="внутрипроцессные_tooltip_id"></div></div><div class="tooltip_templates"><div id="внепроцессные_tooltip_id"></div></div></body>
+</body>
 </html>

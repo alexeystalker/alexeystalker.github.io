@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Проблемы с проектированием внешних API" property="og:title"/>
 <meta content="Проблемы с проектированием внешних API" name="twitter:title"/>
 <meta content="Внешние API приложения могут использовать клиенты 4 типов:" name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2823,13 +2821,13 @@
 <li>Сервисы могут задействовать механизмы IPC, которые нецелесообразно или неудобно использовать на клиентской стороне</li>
 </ul>
 <h2 id="api_1">Проблемы проектирования API для мобильного клиента<a class="headerlink" href="#api_1" title="Permanent link">¶</a></h2>
-<p>Предположим, мобильному клиенту нужно отобразить весь объект <code>Order</code> с состоянием изготовления/доставки на текущий момент (представление <code>View Order</code>). В <a class="link-tooltip" data-tooltip-content="#монолитной_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/" title="монолитной">монолитной</a> архитектуре есть конечная точка для получения такого представления в один запрос. В <a class="link-tooltip" data-tooltip-content="#микросервисной_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/" title="микросервисной">микросервисной</a> архитектуре же детали заказа разбросаны по разным сервисам. Если мобильный клиент будет обращаться к сервисам напрямую, придется делать несколько запросов - выполнять роль <a class="link-tooltip" data-tooltip-content="#APIкомпозитора_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/" title="API-композитора">API-композитора</a>. Это может привести к следующим проблемам.</p>
+<p>Предположим, мобильному клиенту нужно отобразить весь объект <code>Order</code> с состоянием изготовления/доставки на текущий момент (представление <code>View Order</code>). В <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/" title="монолитной">монолитной</a> архитектуре есть конечная точка для получения такого представления в один запрос. В <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/" title="микросервисной">микросервисной</a> архитектуре же детали заказа разбросаны по разным сервисам. Если мобильный клиент будет обращаться к сервисам напрямую, придется делать несколько запросов - выполнять роль <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/" title="API-композитора">API-композитора</a>. Это может привести к следующим проблемам.</p>
 <h3 id="-">Отрицательный опыт взаимодействия из-за того, что клиент выполняет несколько запросов<a class="headerlink" href="#-" title="Permanent link">¶</a></h3>
 <p>При выполнении нескольких запросов модет увеличиваться время отклика (как минимум на время самого долгого из запросов, если они выполняются параллельно, или, если для некоторых запросов нужно использовать результаты предыдущих, на время ожидания цепочки). Также более интенсивное использование сети потребляет больше энергии, что быстрее сажает аккумулятор устройства.</p>
 <h3 id="_1">Недостаточная инкапсуляция требует синхронного обновления кода на серверной и клиентской сторонах.<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
 <p>По мере развития приложения могут изменяться как отдельные методы API сервисов, так и число самих сервисов. Соответственно, при подобных изменениях также необходимо выпускать новую версию мобильного приложения, что может занимать часы и дни (так как Google/Apple должны проверить и одобрить новую версию перед релизом в магазине приложений), и не факт, что все пользователи захотят/смогут обновиться до последней версии.</p>
 <h3 id="ipc">Сервисы могут использовать механизмы IPC, плохо совместимые с клиентами<a class="headerlink" href="#ipc" title="Permanent link">¶</a></h3>
-<p>Иногда сервисы могут использовать протоколы взаимодействия, с которыми клиентам сложно работать. Клиентские приложения обычно применяют такие протоколы как <a class="link-tooltip" data-tooltip-content="#HTTP_tooltip_id" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/http/" title="HTTP">HTTP</a> и WebSockets. Однако, у разработчиков сервисов есть выбор <a class="link-tooltip" data-tooltip-content="#помимо_tooltip_id" href="../../chapter%2003/ch-3-ipc-overview/" title="помимо">помимо</a> этих протоколов, некоторые из которых работоспособны только внутри рабочей локальной сети.</p>
+<p>Иногда сервисы могут использовать протоколы взаимодействия, с которыми клиентам сложно работать. Клиентские приложения обычно применяют такие протоколы как <a href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/http/" title="HTTP">HTTP</a> и WebSockets. Однако, у разработчиков сервисов есть выбор <a href="../../chapter%2003/ch-3-ipc-overview/" title="помимо">помимо</a> этих протоколов, некоторые из которых работоспособны только внутри рабочей локальной сети.</p>
 <h2 id="api_2">Проблемы с проектированием API для клиентов другого рода<a class="headerlink" href="#api_2" title="Permanent link">¶</a></h2>
 <p>Клиенты другого рода - это веб-приложения, JavaScript-приложения и сторонние системы.</p>
 <h3 id="api-">Проблемы проектирования API для веб-приложений<a class="headerlink" href="#api-" title="Permanent link">¶</a></h3>
@@ -2839,12 +2837,17 @@
 <h3 id="api_3">Проектирование API для сторонних приложений<a class="headerlink" href="#api_3" title="Permanent link">¶</a></h3>
 <p>Сторонним разработчикам крайне важна стабильность предоставляемого интерфейса. Более того, очень трудно заставить сторонние организации перейти на новую версию API. Скорее всего, придется долго (или даже всегда) поддерживать старые версии.<br/>
 Возлагать ответственность за долгосрочную поддержку обратной совместимости на разработчиков сервисов неразумно. Вместо этого нужно иметь отдельный публичный API, который разрабатывался бы отдельной командой.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2971,20 +2974,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="монолитной_tooltip_id"><li>Простота разработки - IDe и другие инструменты заточены на единое приложение</li>
-<li>Легкость внесения радикальных изменений - так как солюшен один, IDE помогает консистентно вносить изменения</li>
-<li>Простота тестирования - можно написать сквозные тесты или юнит для любой части, запуск из IDE</li>
-<li>Простота развертывания - тут понятно</li>
-<li>Легкость масштабирования - просто несколько экземпляров за балансировщиком</li>
-<p>Вытекают из масштабов роста кодо…</p></div></div><div class="tooltip_templates"><div id="микросервисной_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210829152253.png"/><br/>
-Микросервисная архитектура - это архитектурный стиль, при котором <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">представление реализации</a> структурируется в виде набора компонентов - исполняемых или WAR файлов. Компоненты - это <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/service-definition/">сервисы</a>, коннекторы - коммуникационные протоколы. Каждый сервис имеет свою архитектуру <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">логического представления</a> (например, [[ch-2-h…</p></div></div><div class="tooltip_templates"><div id="APIкомпозитора_tooltip_id"><p>Чтобы выполнить запрос, мы обращаемся к разным сервисам и объединяем результаты.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211004193422.png"/><br/>
-Структура шаблона предусмативает два типа участников:</p>
-<li><em>API-композитор</em> - реализует операцию запроса, обращаясь к сервис-провайдерам</li>
-<li><em>сервис-провайдер</em> - сервис, которому принадлежат данные, возвращаемые запросом.</li>
-<p>Преимущество этого шаблона - в простоте реализации.</p>
-<li>дополнительные накладные расходы</li>
-<li>риск снижения досту…</li></div></div><div class="tooltip_templates"><div id="HTTP_tooltip_id"><p><em>Протокол передачи гипертекста</em> или <strong>HTTP</strong> - это протокол прикладного уровня, обеспечивающий работу в сети. Работает по схеме “запрос-ответ” без сохранения состояния. Клиент отправляет запрос на сервер, который передает ответ.<br/>
-Каждый HTTP-запрос состоит из метода, указывающего “тип” запроса, и пути, указывающего ресурс, с которым нужно взаимодействовать. Также обычно содержит заголовки - пары “ключ-значение”, а в некоторых случаях - тело, например, содержим…</p></div></div><div class="tooltip_templates"><div id="помимо_tooltip_id"><p>Существует множество разных технологий IPC. Сервисы могут использовать коммуникационные механизмы на основе запросов/ответов, такие как <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/">REST</a> или <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/">gRPC</a>, или механизмы коммуникации на основе сообщений, такие как <a class="wikilink" href="amqp-comm-model">AMQP</a> или <a class="wikilink" href="stomp-comm-model">STOMP</a>. Также существует множество форматов сообщений, как текстовые форматы, понятные человеку (JSON или XML), так более эффективные двоичные - Avro или Protocol Buffers.</p>
-<p>Стили вз…</p></div></div></body>
+</body>
 </html>

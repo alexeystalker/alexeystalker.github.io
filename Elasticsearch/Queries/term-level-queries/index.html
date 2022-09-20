@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Term-level queries" property="og:title"/>
 <meta content="Term-level queries" name="twitter:title"/>
 <meta content="Запросы уровня терма - запросы к точным значениям полей. Не используют анализ термов (в отличие от полнотекстовых запросов)." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2695,26 +2693,31 @@
 <a class="md-tag" href="../../../tags/#elasticsearchterm-level">Elasticsearch/term-level</a>
 </nav>
 <h1 id="term-level-queries">Term-level queries<a class="headerlink" href="#term-level-queries" title="Permanent link">¶</a></h1>
-<p><em>Запросы уровня терма</em> - запросы к точным значениям полей. Не используют анализ термов (в отличие от <a class="link-tooltip" data-tooltip-content="#полнотекстовыхзапросов_tooltip_id" href="../full-text-queries/" title="полнотекстовых запросов">полнотекстовых запросов</a>).</p>
+<p><em>Запросы уровня терма</em> - запросы к точным значениям полей. Не используют анализ термов (в отличие от <a href="../full-text-queries/" title="полнотекстовых запросов">полнотекстовых запросов</a>).</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#exists_tooltip_id" href="../exists-query/" title="exists">exists</a> - возвращает документы, в поле которых есть любое проиндексированное значение</li>
-<li><a class="link-tooltip" data-tooltip-content="#fuzzy_tooltip_id" href="../../fuzzy-query" title="fuzzy">fuzzy</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#ids_tooltip_id" href="../ids-query/" title="ids">ids</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#prefix_tooltip_id" href="../../prefix-query" title="prefix">prefix</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#range_tooltip_id" href="../range-query/" title="range">range</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#regexp_tooltip_id" href="../../regexp-query" title="regexp">regexp</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#term_tooltip_id" href="../term-query/" title="term">term</a> - возвращает документы, у которых в указанном поле есть точный терм</li>
-<li><a class="link-tooltip" data-tooltip-content="#terms_tooltip_id" href="../../terms-query" title="terms">terms</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#terms_set_tooltip_id" href="../../terms-set-query" title="terms_set">terms_set</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#type_tooltip_id" href="../../type-query" title="type">type</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#wildcard_tooltip_id" href="../../wildcard-query" title="wildcard">wildcard</a></li>
+<li><a href="../exists-query/" title="exists">exists</a> - возвращает документы, в поле которых есть любое проиндексированное значение</li>
+<li><a href="../../fuzzy-query" title="fuzzy">fuzzy</a></li>
+<li><a href="../ids-query/" title="ids">ids</a></li>
+<li><a href="../../prefix-query" title="prefix">prefix</a></li>
+<li><a href="../range-query/" title="range">range</a></li>
+<li><a href="../../regexp-query" title="regexp">regexp</a></li>
+<li><a href="../term-query/" title="term">term</a> - возвращает документы, у которых в указанном поле есть точный терм</li>
+<li><a href="../../terms-query" title="terms">terms</a></li>
+<li><a href="../../terms-set-query" title="terms_set">terms_set</a></li>
+<li><a href="../../type-query" title="type">type</a></li>
+<li><a href="../../wildcard-query" title="wildcard">wildcard</a></li>
 </ul>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2841,105 +2844,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="полнотекстовыхзапросов_tooltip_id"><p><em>Полнотекстовые запросы</em> - запросы к <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/analyze-api/">проанализированным</a> текстовым полям. Строка запроса анализируется тем же анализатором, что и поле во время индексирования.</p>
-<li><a class="wikilink" href="intervals-query">intervals</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/match-query/">match</a></li>
-<li><a class="wikilink" href="match-bool-prefix-query">match_bool_prefix</a></li>
-<li><a class="wikilink" href="match-phrase-query">match_phrase</a></li>
-<li><a class="wikilink" href="match-phrase-prefix-query">match_phrase_prefix</a></li>
-<li><a class="wikilink" href="multi-match-query">multi_match</a></li>
-<li><a class="wikilink" href="common-query">common</a></li>
-<li><a class="wikilink" href="query-string-query">query_string</a></li>
-<li>[[simple-…</li></div></div><div class="tooltip_templates"><div id="exists_tooltip_id"><p>Возвращает документы, в которых присутствует указанное поле<br/>
-<code>json
-GET /_search 
-{ 
-    "query": { 
-        "exists": { 
-            "field": "user" 
-        } 
-    } 
-}</code><br/>
-Считается, что поле “отсутствует” в следующих случаях</p>
-<li>поле равно <code>null</code> или <code>[]</code></li>
-<li>В маппинге для поля указано <code>"index": false</code> <a class="wikilink" href="-map-param">см</a></li>
-<li>длина значения поля больше чем указано в маппинге в параметре <code>ignore_above</code> <a class="wikilink" href="ignore-above-map-param">см</a></li>
-<li>Значение сломано (malformed) и в маппинге указан параметр `ignore_malform…</li></div></div><div class="tooltip_templates"><div id="fuzzy_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="ids_tooltip_id"><p>Возвращает документы, соответствующие переданным Id (Id хранится в поле <code>_id</code>).<br/>
-<code>json
-GET /_search
-{
-  "query": {
-    "ids" : {
-      "values" : ["1", "4", "100"]
-    }
-  }
-}</code><br/>
-Я думаю, может быть особенно полезен для запросов к подчинённым документам, например, <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/nested-query/">nested</a> с <a class="wikilink" href="https://garden.stalker-home.xyz/Elasticsearch/Queries/inner-hits/">inner_hits</a>.<br/>
-Пусть есть документы с nested документом в поле <code>nstd</code>, где <code>nstd.text</code> - анализируемое поле, а <code>nstd.id</code> - некий идентификатор. Тогда найдём не более 5 вложенных докум…</p></div></div><div class="tooltip_templates"><div id="prefix_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="range_tooltip_id"><p>Возвращает документы, которые содержат значения в заданном диапазоне.<br/>
-Пример:<br/>
-<code>json
-GET /_search
-{
-  "query": {
-    "range": {
-      "age": {
-        "gte": 10,
-        "lte": 20,
-        "boost": 2.0
-      }
-    }
-  }
-}</code></p>
-<p><code>field</code> (required) - поле, по которому нужно осуществить поиск. Указывается как имя поля запроса, а не как значение поля <code>field</code>. Является объектом.</p>
-<p>Все -  optional</p>
-<li><code>gt</code> - больше чем</li>
-<li><code>gte</code> - больше или равно чем</li>
-<li><code>lt</code> - …</li></div></div><div class="tooltip_templates"><div id="regexp_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="term_tooltip_id"><p>Ищет документы с точным вхождением терма. Как правило, это поля типа <code>keyword</code>.<br/>
-<code>json
-{
-    "query": {
-        "term": {
-            "opf-exact": {
-                "value": "50102"
-            }
-        }
-    }
-}</code><br/>
-В отличие от многих других запросов, имя поля указывается не как значение параметра <code>field</code>, а как имя поля объекта.</p>
-<p>https://www.elastic.co/guide/en/elasticsearch/reference/7.8/query-dsl-term-query.html</p></div></div><div class="tooltip_templates"><div id="terms_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="terms_set_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="type_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="wildcard_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div></body>
+</body>
 </html>

@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Структура модуля доступа к данным" property="og:title"/>
 <meta content="Структура модуля доступа к данным" name="twitter:title"/>
 <meta content="Обработчики событий и модуль API запросов не обращаются к хранилищу данных напрямую. Вместо этого задействуется специальный модуль, который состоит из объекта доступа к данным (Data Access Object, DAO) и его вспомогательных классов." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2747,18 +2745,23 @@
 <img alt="Pasted image 20211006204123.png" src="../../../../images/Pasted%20image%2020211006204123.png" title="Pasted image 20211006204123.png"/></p>
 <h2 id="_2">Поддержка конкурентности<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Если события, на которые подписано представление, публикуются агрегатами одного типа, никаких проблем с конкурентностиью не возникает - события обрабатываются последовательно. Однако, если события публикуются агрегатами разных типов, существует вероятность того, что несколько обработчиков одновременно попытаются обновить запись.<br/>
-И DAO должен корректно обрабатывать подобные ситуации. Если для реализации обновления DAO считывает, и затем записывает обновленную запись, нужно использовать <a class="link-tooltip" data-tooltip-content="#пессимистичное_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/pessimistic-lock/" title="пессимистичное">пессимистичное</a> или <a class="link-tooltip" data-tooltip-content="#оптимистичное_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/optimistic-lock/" title="оптимистичное">оптимистичное</a> блокирование.</p>
+И DAO должен корректно обрабатывать подобные ситуации. Если для реализации обновления DAO считывает, и затем записывает обновленную запись, нужно использовать <a href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/pessimistic-lock/" title="пессимистичное">пессимистичное</a> или <a href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/optimistic-lock/" title="оптимистичное">оптимистичное</a> блокирование.</p>
 <h2 id="_3">Идемпотентные обработчики событий<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>Одно событие может быть доставлено более одного раза. Если обработчик на стороне представления идемпотентный - это не проблема (помимо временной рассинхронизации хранилища данных представления). Если же обработчик неидемпотентный, необходимо отклонять повторяющиеся сообщения (см. <a class="link-tooltip" data-tooltip-content="#шаблонидемпотентныйпотребитель_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/" title='шаблон "идемпотентный потребитель"'>шаблон “идемпотентный потребитель”</a>).</p>
+<p>Одно событие может быть доставлено более одного раза. Если обработчик на стороне представления идемпотентный - это не проблема (помимо временной рассинхронизации хранилища данных представления). Если же обработчик неидемпотентный, необходимо отклонять повторяющиеся сообщения (см. <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/" title='шаблон "идемпотентный потребитель"'>шаблон “идемпотентный потребитель”</a>).</p>
 <h2 id="_4">Клиентские приложения могут использовать представления с отложенной согласованностью<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <p>В случае, когда клиент обновляет командную сторону, и затем немедленно отправляет запрос, он может не увидеть собственное обновление.<br/>
 Можно применить следующий подход. Операция командной стороны возвращает клиенту токен с ID опубликованного события. Клиент указывает этот токен в операции запроса. Если обновление еще не прошло, вернется ошибка. Этот механизм можно реализовать, используя систему повторящихся событий.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 10, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 10, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2885,8 +2888,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="пессимистичное_tooltip_id"><p><strong>Пессимистическая блокировка</strong> накладывается перед предполагаемой модификацией данных на все строки, которые такая модификация предположительно затрагивает. Во время действия такой блокировки исключена модификация данных из сторонних сессий, данные из блокированных строк доступны согласно уровню изолированности транзакции. По завершению предполагаемой модификации гарантируется непротиворечивая запись результатов.</p>
-<p>https://ru.wikipedia.org/wiki/%D0%91%D0%BB…</p></div></div><div class="tooltip_templates"><div id="оптимистичное_tooltip_id"><p>Перед началом предполагаемой модификации запрашивает значение некоторого выделенного атрибута каждой из строк данных (обычно используется наименование <code>VERSION</code> и целочисленный тип с начальным значением 0). Перед записью модификаций в базу данных перепроверяется значение выделенного атрибута, и если оно изменилось, то транзакция откатывается или применяются различные схемы разрешения коллизий. Если значение выделенного атрибута не изменилось — производится фиксация м…</p></div></div><div class="tooltip_templates"><div id="шаблонидемпотентныйпотребитель_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210916201007.png"/><br/>
-Предлагается сохранять идентификатор каждого сообщения, которое уже обрабатывалось. Например, можно записывать идентификаторы в таблицу обработанных сообщений в процессе транзакции бизнес-логики. Или (наиболее полезно для NoSQL БД, если они не поддерживают обновление нескольких таблиц в рамках транзакции) записывать идентификаторы прямо в таблицу приложения.</p>
-<p>https://microservices.io/patterns/communication-style/i…</p></div></div></body>
+</body>
 </html>

@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Что представляет собой микросервисная архитектура" property="og:title"/>
 <meta content="Что представляет собой микросервисная архитектура" name="twitter:title"/>
 <meta content="В главе 1 говорилось, что ключевой идеей микросервисной архитектуры является идея функциональной декомпозиции. Какое отношение этот подход имеет к понятию архитектуры ПО в целом? Что такое сервис и насколько важен его размер?" name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2743,7 +2741,7 @@
 <a class="md-tag" href="../../../../tags/#architecture">architecture</a>
 </nav>
 <h1 id="_1">Что представляет собой микросервисная архитектура<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><a class="link-tooltip" data-tooltip-content="#Вглаве1_tooltip_id" href="../../chapter%2001/ch-1-monolith/" title="В главе 1">В главе 1</a> говорилось, что ключевой идеей <a class="link-tooltip" data-tooltip-content="#микросервиснойархитектуры_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/" title="микросервисной архитектуры">микросервисной архитектуры</a> является идея функциональной декомпозиции. Какое отношение этот подход имеет к понятию архитектуры ПО в целом? Что такое сервис и насколько важен его размер?</p>
+<p><a href="../../chapter%2001/ch-1-monolith/" title="В главе 1">В главе 1</a> говорилось, что ключевой идеей <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/" title="микросервисной архитектуры">микросервисной архитектуры</a> является идея функциональной декомпозиции. Какое отношение этот подход имеет к понятию архитектуры ПО в целом? Что такое сервис и насколько важен его размер?</p>
 <div class="admonition quote">
 <p class="admonition-title">Архитектура ПО</p>
 <p>Программная архитектура вычислительной системы - это набор структур, необходимых для ее обсуждения и состоящих из программных элементов, связей между ними и свойств, присущих этим элементам и связям.<br/>
@@ -2754,7 +2752,7 @@
 <li>Декомпозиция способствует разделению труда и знаний, что позволяет более продуктивно работать над приложением нескольким людям или командам</li>
 <li>Декомпозиция определяет, как взаимодействуют между собой программные элементы</li>
 </ul>
-<h4 id="41"><a class="link-tooltip" data-tooltip-content="#Модельпредставленийархитектурывида41_tooltip_id" href="../ch-2-4-plus-1-view-model-of-architecture/" title='Модель представлений архитектуры вида "4+1"'>Модель представлений архитектуры вида “4+1”</a><a class="headerlink" href="#41" title="Permanent link">¶</a></h4>
+<h4 id="41"><a href="../ch-2-4-plus-1-view-model-of-architecture/" title='Модель представлений архитектуры вида "4+1"'>Модель представлений архитектуры вида “4+1”</a><a class="headerlink" href="#41" title="Permanent link">¶</a></h4>
 <h2 id="_2">Почему архитектура важна?<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Требования к приложению делятся на две категории:</p>
 <ul>
@@ -2770,21 +2768,26 @@
 <p>Конкретный стиль предоставляет ограниченную палитру элементов (компонентов) и связей (коннекторов), на основе котороых можно описать представление архитектуры приложения. На практике используется сочетание стилей.<br/>
 Примеры стилей:</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#многоуровневыйархитектурныйстиль_tooltip_id" href="../ch-2-multilayer-architecture/" title="многоуровневый архитектурный стиль">многоуровневый архитектурный стиль</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#шестигранныйархитектурныйстиль_tooltip_id" href="../ch-2-hexagonal-architecture/" title="шестигранный архитектурный стиль">шестигранный архитектурный стиль</a></li>
+<li><a href="../ch-2-multilayer-architecture/" title="многоуровневый архитектурный стиль">многоуровневый архитектурный стиль</a></li>
+<li><a href="../ch-2-hexagonal-architecture/" title="шестигранный архитектурный стиль">шестигранный архитектурный стиль</a></li>
 </ul>
-<p>Эти два стиля - пример архитектуры, организующей <a class="link-tooltip" data-tooltip-content="#логическоепредставление_tooltip_id" href="../ch-2-4-plus-1-view-model-of-architecture/" title="логическое представление">логическое представление</a>.</p>
-<p>Теперь рассмотрим два примера архитектуры, организующей <a class="link-tooltip" data-tooltip-content="#представлениереализации_tooltip_id" href="../ch-2-4-plus-1-view-model-of-architecture/" title="представление реализации">представление реализации</a>:</p>
+<p>Эти два стиля - пример архитектуры, организующей <a href="../ch-2-4-plus-1-view-model-of-architecture/" title="логическое представление">логическое представление</a>.</p>
+<p>Теперь рассмотрим два примера архитектуры, организующей <a href="../ch-2-4-plus-1-view-model-of-architecture/" title="представление реализации">представление реализации</a>:</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#Монолитаяархитектура_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/" title="Монолитая архитектура">Монолитая архитектура</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Микросервиснаяархитектура_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/" title="Микросервисная архитектура">Микросервисная архитектура</a></li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/" title="Монолитая архитектура">Монолитая архитектура</a></li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/" title="Микросервисная архитектура">Микросервисная архитектура</a></li>
 </ul>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2911,27 +2914,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Вглаве1_tooltip_id"><p>Приложение представляет собой монолит <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-hexagonal-architecture/">гексагональной архитектуры</a>. Состоит из бизнес-логики, окруженной адаптерами, направленными извне (API, веб-интерфейс), так и вовне (БД, внешние сервисы).</p>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/">Преимущества</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/">Недостатки</a></li>
-<p>Недостатки влияют не на <em>функциональные требования</em> (можно реализовать бизнес-требования любым способом). Однако есть *требо…</p></div></div><div class="tooltip_templates"><div id="микросервиснойархитектуры_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210829152253.png"/><br/>
-Микросервисная архитектура - это архитектурный стиль, при котором <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">представление реализации</a> структурируется в виде набора компонентов - исполняемых или WAR файлов. Компоненты - это <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/service-definition/">сервисы</a>, коннекторы - коммуникационные протоколы. Каждый сервис имеет свою архитектуру <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">логического представления</a> (например, [[ch-2-h…</p></div></div><div class="tooltip_templates"><div id="Модельпредставленийархитектурывида41_tooltip_id"><p>Модель 4+1 определяет 4 разных представления архитектуры ПО. Каждое описывает определенный аспект архитектуры и состоит из конкретного набора элементов и связей между ними.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210827202316.png"/></p>
-<li><em>Логическое представление</em> - программные элементы, создаваемые разработчиками. Связи - отношения между классами и пакетами, включая наследование, взаимосвязи и зависимости</li>
-<li><em>Представление реализации</em> - результат работы системы сборки. Связи - …</li></div></div><div class="tooltip_templates"><div id="многоуровневыйархитектурныйстиль_tooltip_id"><p>Классический пример архитектурного стиля. Характерна разделением элементов по уровням. Каждый уровень имеет чёткий набор обязанностей. Также ограничиваются зависимости между уровнями. Уровень может зависеть либо от уровня, лежащего непосредственно под ним (чёткое разбиение), либо от любого нижележащего уровня.<br/>
-Многоуровневую архитектуру можно применить к любому из <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">представлений</a>.<br/>
-Классический пример - трёхуровневая архитект…</p></div></div><div class="tooltip_templates"><div id="шестигранныйархитектурныйстиль_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210828185920.png"/><br/>
-<strong>Шестигранная архитектура</strong> - альтернатива <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-multilayer-architecture/">многоуровневой</a>. Организует <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">логическое представление</a> таким образом, что <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-multilayer-architecture/">бизнес-логика</a> оказывается в центре. Вместо уровня представления есть один или несколько <em>входящих адаптеров</em>, которые обрабатывают внешние запросы путём вызова бизнес-логики. Вместо уровня хранения данных испол…</p></div></div><div class="tooltip_templates"><div id="логическоепредставление_tooltip_id"><p>Модель 4+1 определяет 4 разных представления архитектуры ПО. Каждое описывает определенный аспект архитектуры и состоит из конкретного набора элементов и связей между ними.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210827202316.png"/></p>
-<li><em>Логическое представление</em> - программные элементы, создаваемые разработчиками. Связи - отношения между классами и пакетами, включая наследование, взаимосвязи и зависимости</li>
-<li><em>Представление реализации</em> - результат работы системы сборки. Связи - …</li></div></div><div class="tooltip_templates"><div id="представлениереализации_tooltip_id"><p>Модель 4+1 определяет 4 разных представления архитектуры ПО. Каждое описывает определенный аспект архитектуры и состоит из конкретного набора элементов и связей между ними.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210827202316.png"/></p>
-<li><em>Логическое представление</em> - программные элементы, создаваемые разработчиками. Связи - отношения между классами и пакетами, включая наследование, взаимосвязи и зависимости</li>
-<li><em>Представление реализации</em> - результат работы системы сборки. Связи - …</li></div></div><div class="tooltip_templates"><div id="Монолитаяархитектура_tooltip_id"><li>Простота разработки - IDe и другие инструменты заточены на единое приложение</li>
-<li>Легкость внесения радикальных изменений - так как солюшен один, IDE помогает консистентно вносить изменения</li>
-<li>Простота тестирования - можно написать сквозные тесты или юнит для любой части, запуск из IDE</li>
-<li>Простота развертывания - тут понятно</li>
-<li>Легкость масштабирования - просто несколько экземпляров за балансировщиком</li>
-<p>Вытекают из масштабов роста кодо…</p></div></div><div class="tooltip_templates"><div id="Микросервиснаяархитектура_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210829152253.png"/><br/>
-Микросервисная архитектура - это архитектурный стиль, при котором <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">представление реализации</a> структурируется в виде набора компонентов - исполняемых или WAR файлов. Компоненты - это <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/service-definition/">сервисы</a>, коннекторы - коммуникационные протоколы. Каждый сервис имеет свою архитектуру <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">логического представления</a> (например, [[ch-2-h…</p></div></div></body>
+</body>
 </html>

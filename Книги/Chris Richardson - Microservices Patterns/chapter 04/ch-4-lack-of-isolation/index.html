@@ -29,13 +29,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Недостаточная изолированность" property="og:title"/>
 <meta content="Недостаточная изолированность" name="twitter:title"/>
 <meta content="Изолированность (isolation в аббревиатуре ACID) гарантирует, что результат параллельного выполнения нескольких ACID транзакций будет таким же, как при некоем последовательном выполнении. База Данных дает иллюзию того, что каждая ACID транзакция имеет эксклюзивный доступ к информации.
@@ -61,7 +59,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2745,26 +2743,31 @@
 Нехватка изолированности может вызывать <em>аномалии</em> - ситуации, когда параллельное выполнение транзакций даёт иные результаты, чем последовательное. Для борьбы с аномалиями применяют  стратегии проектирования повествований, называемые <em>контрмерами</em>.</p>
 <h2 id="_2">Аномалии<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#Потеряобновлений_tooltip_id" href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/update-loss-problem/" title="Потеря обновлений">Потеря обновлений</a> - одно повествование перезаписывает изменения, внесенные другим, не читая их при этом.</li>
-<li><a class="link-tooltip" data-tooltip-content="#Грязноечтение_tooltip_id" href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/dirty-reading-problem/" title='"Грязное" чтение'>“Грязное” чтение</a> - транзакция или повествование читают незавершенные обновления другого повествования.</li>
-<li><a class="link-tooltip" data-tooltip-content="#Нечеткоечтение_tooltip_id" href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/fuzzy-reading-problem/" title="Нечеткое чтение">Нечеткое чтение</a> - два разных типа повествования читают одни и те же данные,но получают разные результаты, потому что другое повествование внесло изменения.</li>
+<li><a href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/update-loss-problem/" title="Потеря обновлений">Потеря обновлений</a> - одно повествование перезаписывает изменения, внесенные другим, не читая их при этом.</li>
+<li><a href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/dirty-reading-problem/" title='"Грязное" чтение'>“Грязное” чтение</a> - транзакция или повествование читают незавершенные обновления другого повествования.</li>
+<li><a href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/fuzzy-reading-problem/" title="Нечеткое чтение">Нечеткое чтение</a> - два разных типа повествования читают одни и те же данные,но получают разные результаты, потому что другое повествование внесло изменения.</li>
 </ul>
 <h2 id="_3">Контрмеры<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#Семантическаяблокировка_tooltip_id" href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/semantic-lock-countermeasure/" title="Семантическая блокировка">Семантическая блокировка</a> - блокировка на уровне приложения.</li>
-<li><a class="link-tooltip" data-tooltip-content="#Коммутативныеобновления_tooltip_id" href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/commutative-updates-countermeasure/" title="Коммутативные обновления">Коммутативные обновления</a> - проектирование операций обновления так, чтобы их можно было выполнить в любом порядке.</li>
-<li><a class="link-tooltip" data-tooltip-content="#Пессимистическоепредставление_tooltip_id" href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/pessimistic-view-countermeasure/" title="Пессимистическое представление">Пессимистическое представление</a> - перестановка этапов повествования для минимизации бизнес-рисков.</li>
-<li><a class="link-tooltip" data-tooltip-content="#Повторноечтениезначения_tooltip_id" href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/second-read-countermeasure/" title="Повторное чтение значения">Повторное чтение значения</a> - предотвращение грязного чтения путём повторного чтения данных, чтобы убедиться в их неизменности перед перезаписью.</li>
-<li><a class="link-tooltip" data-tooltip-content="#Файлверсий_tooltip_id" href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/version-file-countermeasure/" title="Файл версий">Файл версий</a> - ведение записей об обновлениях, чтобы их можно было менять местами</li>
-<li><a class="link-tooltip" data-tooltip-content="#Позначению_tooltip_id" href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/by-value-countermeasure/" title="По значению">По значению</a> - использование бизнес-рисков каждого запроса для динамического выбора механизма конкурентности.</li>
+<li><a href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/semantic-lock-countermeasure/" title="Семантическая блокировка">Семантическая блокировка</a> - блокировка на уровне приложения.</li>
+<li><a href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/commutative-updates-countermeasure/" title="Коммутативные обновления">Коммутативные обновления</a> - проектирование операций обновления так, чтобы их можно было выполнить в любом порядке.</li>
+<li><a href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/pessimistic-view-countermeasure/" title="Пессимистическое представление">Пессимистическое представление</a> - перестановка этапов повествования для минимизации бизнес-рисков.</li>
+<li><a href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/second-read-countermeasure/" title="Повторное чтение значения">Повторное чтение значения</a> - предотвращение грязного чтения путём повторного чтения данных, чтобы убедиться в их неизменности перед перезаписью.</li>
+<li><a href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/version-file-countermeasure/" title="Файл версий">Файл версий</a> - ведение записей об обновлениях, чтобы их можно было менять местами</li>
+<li><a href="../../../../Microservices/Isolation%20Problems%20and%20Countermeasures/by-value-countermeasure/" title="По значению">По значению</a> - использование бизнес-рисков каждого запроса для динамического выбора механизма конкурентности.</li>
 </ul>
-<p>Полезно иметь в виду <a class="link-tooltip" data-tooltip-content="#структуруповествования_tooltip_id" href="../../../../Microservices/Sagas/saga-structure/" title="структуру повествования">структуру повествования</a>.</p>
+<p>Полезно иметь в виду <a href="../../../../Microservices/Sagas/saga-structure/" title="структуру повествования">структуру повествования</a>.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2891,29 +2894,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Потеряобновлений_tooltip_id"><p>Эта аномалия возникает, когда повествование перезаписывает обновление, сделанное другим повествованием. Например:</p>
-<li>Первый этап повествования <code>Create Order</code>создает заказ.</li>
-<li>Пока это повествование выполняется, повествование <code>Cancel Order</code> отменяет заказ.</li>
-<li>На завершающем этапе <code>Create Order</code> отменяет заказ.</li>
-<p>В этой ситуации <code>Creat Order</code> Игнорирует и перезаписывает обновление, выполненное повествованием <code>Cancel Order</code>. В итоге может отправиться отмененный заказ.</p></div></div><div class="tooltip_templates"><div id="Грязноечтение_tooltip_id"><p>“Грязным” называют чтение, которое происходит в процессе обновления данных другим повествованием.<br/>
-Пусть есть некий сервис заказов с поддержкой кредитного лимита. Тогда повествование, <em>отменяющее заказ</em>, состоит из следующих транзакций:</p>
-<li>Сервис <code>Consumer</code> увеличивает доступный кредит;</li>
-<li>Сервис <code>Order</code> меняет состояние заказа на <code>CANCELLED</code>;</li>
-<li>Сервис <code>Delivery</code> отменяет доставку.</li>
-<p>Теперь предстваим, что во время выполнения повествований <code>Cancel Order</code> и <code>Create Order</code> первое от…</p></div></div><div class="tooltip_templates"><div id="Нечеткоечтение_tooltip_id"><p>Аномалия, при которой два разных типа повествования читают одни и те же данные,но получают разные результаты, потому что другое повествование внесло изменения. (Аналог race condition в параллельных вычислениях)</p></div></div><div class="tooltip_templates"><div id="Семантическаяблокировка_tooltip_id"><p>При использовании семантической блокировки <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Sagas/saga-compensating/">компенсируемая транзакция</a> устанавливает флаг во всех записях, которые она создает или обновляет. Флаг говорит о том, что запись <em>не зафиксирована</em> и может измениться. Флаг сбрасывается либо повторяемой (повествование успешно завершается), либо компенсирующей транзакцией (повествование откатывается обратно).<br/>
-Также нужно решить, как каждое отдельное повествование будет обращаться с заблокированн…</p></div></div><div class="tooltip_templates"><div id="Коммутативныеобновления_tooltip_id"><p>Операции обновления необходимо по возможности проектировать коммутативными. В этом случае не будет проблем с выполнением <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Sagas/saga-compensating/">компенсирующих</a> транзакций даже, если между компенсируемой и компенсирующей транзакциями были другие.</p></div></div><div class="tooltip_templates"><div id="Пессимистическоепредставление_tooltip_id"><p>Для этого меняем местами этапы повествования, чтобы снизить бизнес-риски, связанные с грязным чтением. <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/dirty-reading-problem/">В примере</a> повествование <code>Create Order</code> выполняет грязное чтение доступных кредитных средств. Чтобы уменьшить вероятность этого, переставим этапы:</p>
-<li>Сервис <code>Order</code> меняет состояние заказа на <code>CANCELLED</code>;</li>
-<li>Сервис <code>Delivery</code> отменяет доставку.</li>
-<li>Сервис <code>Consumer</code> увеличивает доступный кредит;<br/>
-Видно, теперь что этап 2 - [[sa…</li></div></div><div class="tooltip_templates"><div id="Повторноечтениезначения_tooltip_id"><p>Предотвращает потерю обновлений. Повествование, использующее эту контрмеру, повторно считывает запись перед ее обновлением, убеждается в том, что та не изменилась и только потом обновляет. Если запись изменилась, повествование прекращает работу (при этом запускаются компенсирующие транзакции) и, возможно, запускается заново. Это разновидность шаблона “Оптимистическая автономная блокировка”<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<li id="fn:1">
-<p>https://martinfowler.com/eaaCatalog/optimisticOfflineLock… <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-<p>https://martinfowler.com/eaaCatalog/optimisticOfflineLock… <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p></div></div><div class="tooltip_templates"><div id="Файлверсий_tooltip_id"><p><em>Файл версий</em> назван так потому, что в него записываются операции, которые выполняются с записью. Благодаря этому порядок следования операций можно менять. Это способ превращения некоммутативных операций в коммутативные.</p>
-<p>Рассмотрим сценарий, в котором повествования <code>Create Order</code> и <code>Cancel Order</code> выполняются параллельно. Если не применяется <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/semantic-lock-countermeasure/">семантическая блокировка</a>, существует вероятность того, что <code>Cancel Order</code> отменит авторизацию кар…</p></div></div><div class="tooltip_templates"><div id="Позначению_tooltip_id"><p>Это стратегия выбора механизмов конкурентности на основе бизнес-рисков. Приложение использует свойства запросов, чтобы сделать выбор между повествованиями и распределенными транзакциями.</p></div></div><div class="tooltip_templates"><div id="структуруповествования_tooltip_id"><p>В контексте обсуждения контрмер полезно иметь следующую модель для повествований.  Повествование состоит из трёх типов транзакций, а именно:</p>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Sagas/saga-compensating/">Компенсируемые транзакции</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Sagas/saga-turning-point/">Поворотная транзакция</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Sagas/saga-repeatable/">Повторяемые транзакции</a></li>
-<p>Пример для повествования <code>Create Order</code>.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210920202844.png"/></p></div></div></body>
+</body>
 </html>

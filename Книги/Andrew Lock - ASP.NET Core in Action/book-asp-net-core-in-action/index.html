@@ -28,13 +28,11 @@
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta asp.net="" content="Книжка " core="" property="og:title" в="" действии""=""/>
 <meta asp.net="" content="Книжка " core="" name="twitter:title" в="" действии""=""/>
 <meta content="На момент выхода книги актуальным был NET 5, поэтому все примеры написаны для этой версии. В NET 6 произошло некоторое количество существенных изменений, однако, с учётом обратной совместимости, всё описанное может быть использовано в работе в полной мере.
@@ -58,7 +56,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2977,35 +2975,40 @@
 Возможно, когда-нибудь я опишу, как примеры для NET5 изменились в NET6 и последующих версиях.</p>
 </details>
 <h2 id="1-aspnet-core">Часть 1. Начало работы с ASP.NET Core<a class="headerlink" href="#1-aspnet-core" title="Permanent link">¶</a></h2>
-<h4 id="1-aspnet-core_1"><a class="link-tooltip" data-tooltip-content="#Глава1НачалоработысASPNETCore_tooltip_id" href="../chapter%2001/ch-1-getting-started/" title="Глава 1 - Начало работы с ASP.NET Core">Глава 1 - Начало работы с ASP.NET Core</a><a class="headerlink" href="#1-aspnet-core_1" title="Permanent link">¶</a></h4>
-<h4 id="2-"><a class="link-tooltip" data-tooltip-content="#Глава2Вашепервоеприложение_tooltip_id" href="../chapter%2002/ch-2-your-first-app/" title="Глава 2 - Ваше первое приложение">Глава 2 - Ваше первое приложение</a><a class="headerlink" href="#2-" title="Permanent link">¶</a></h4>
-<h4 id="3-"><a class="link-tooltip" data-tooltip-content="#Глава3ОбработказапросовспомощьюконвейерапромежуточногоПО_tooltip_id" href="../chapter%2003/ch-3-middleware-pipeline/" title="Глава 3 - Обработка запросов с помощью конвейера промежуточного ПО">Глава 3 - Обработка запросов с помощью конвейера промежуточного ПО</a><a class="headerlink" href="#3-" title="Permanent link">¶</a></h4>
-<h4 id="4-razor"><a class="link-tooltip" data-tooltip-content="#Глава4СозданиевебсайтаспомощьюстраницRazor_tooltip_id" href="../../ch-4-creating-a-website" title="Глава 4 - Создание веб-сайта с помощью страниц Razor">Глава 4 - Создание веб-сайта с помощью страниц Razor</a><a class="headerlink" href="#4-razor" title="Permanent link">¶</a></h4>
-<h4 id="5-url-razor-pages"><a class="link-tooltip" data-tooltip-content="#Глава5СопоставлениеURLадресовсRazorPagesсиспользованиеммаршрутизации_tooltip_id" href="../../ch-5-mapping-urls-using-routing" title="Глава 5 - Сопоставление URL-адресов с Razor Pages с использованием маршрутизации">Глава 5 - Сопоставление URL-адресов с Razor Pages с использованием маршрутизации</a><a class="headerlink" href="#5-url-razor-pages" title="Permanent link">¶</a></h4>
-<h4 id="6-"><a class="link-tooltip" data-tooltip-content="#Глава6Модельпривязкиполучениеипроверкапользовательскоговвода_tooltip_id" href="../../ch-6-binding-model" title="Глава 6 - Модель привязки: получение и проверка пользовательского ввода">Глава 6 - Модель привязки: получение и проверка пользовательского ввода</a><a class="headerlink" href="#6-" title="Permanent link">¶</a></h4>
-<h4 id="7-html-razor"><a class="link-tooltip" data-tooltip-content="#Глава7ВизуализацияHTMLкодасиспользованиемпредставленийRazor_tooltip_id" href="../../ch-7-rendering-html-using-razor-views" title="Глава 7 - Визуализация HTML-кода с использованием представлений Razor">Глава 7 - Визуализация HTML-кода с использованием представлений Razor</a><a class="headerlink" href="#7-html-razor" title="Permanent link">¶</a></h4>
-<h4 id="8-"><a class="link-tooltip" data-tooltip-content="#Глава8Созданиеформспомощьютегхелперов_tooltip_id" href="../../ch-8-building-forms-with-tag-helpers" title="Глава 8 - Создание форм с помощью тег-хелперов">Глава 8 - Создание форм с помощью тег-хелперов</a><a class="headerlink" href="#8-" title="Permanent link">¶</a></h4>
-<h4 id="9-api-mvc"><a class="link-tooltip" data-tooltip-content="#Глава9СозданиевебAPIдлямобильныхиклиентскихприложенийспомощьюMVC_tooltip_id" href="../../ch-9-creating-a-web-api" title="Глава 9 - Создание веб-API для мобильных и клиентских приложений с помощью MVC">Глава 9 - Создание веб-API для мобильных и клиентских приложений с помощью MVC</a><a class="headerlink" href="#9-api-mvc" title="Permanent link">¶</a></h4>
+<h4 id="1-aspnet-core_1"><a href="../chapter%2001/ch-1-getting-started/" title="Глава 1 - Начало работы с ASP.NET Core">Глава 1 - Начало работы с ASP.NET Core</a><a class="headerlink" href="#1-aspnet-core_1" title="Permanent link">¶</a></h4>
+<h4 id="2-"><a href="../chapter%2002/ch-2-your-first-app/" title="Глава 2 - Ваше первое приложение">Глава 2 - Ваше первое приложение</a><a class="headerlink" href="#2-" title="Permanent link">¶</a></h4>
+<h4 id="3-"><a href="../chapter%2003/ch-3-middleware-pipeline/" title="Глава 3 - Обработка запросов с помощью конвейера промежуточного ПО">Глава 3 - Обработка запросов с помощью конвейера промежуточного ПО</a><a class="headerlink" href="#3-" title="Permanent link">¶</a></h4>
+<h4 id="4-razor"><a href="../../ch-4-creating-a-website" title="Глава 4 - Создание веб-сайта с помощью страниц Razor">Глава 4 - Создание веб-сайта с помощью страниц Razor</a><a class="headerlink" href="#4-razor" title="Permanent link">¶</a></h4>
+<h4 id="5-url-razor-pages"><a href="../../ch-5-mapping-urls-using-routing" title="Глава 5 - Сопоставление URL-адресов с Razor Pages с использованием маршрутизации">Глава 5 - Сопоставление URL-адресов с Razor Pages с использованием маршрутизации</a><a class="headerlink" href="#5-url-razor-pages" title="Permanent link">¶</a></h4>
+<h4 id="6-"><a href="../../ch-6-binding-model" title="Глава 6 - Модель привязки: получение и проверка пользовательского ввода">Глава 6 - Модель привязки: получение и проверка пользовательского ввода</a><a class="headerlink" href="#6-" title="Permanent link">¶</a></h4>
+<h4 id="7-html-razor"><a href="../../ch-7-rendering-html-using-razor-views" title="Глава 7 - Визуализация HTML-кода с использованием представлений Razor">Глава 7 - Визуализация HTML-кода с использованием представлений Razor</a><a class="headerlink" href="#7-html-razor" title="Permanent link">¶</a></h4>
+<h4 id="8-"><a href="../../ch-8-building-forms-with-tag-helpers" title="Глава 8 - Создание форм с помощью тег-хелперов">Глава 8 - Создание форм с помощью тег-хелперов</a><a class="headerlink" href="#8-" title="Permanent link">¶</a></h4>
+<h4 id="9-api-mvc"><a href="../../ch-9-creating-a-web-api" title="Глава 9 - Создание веб-API для мобильных и клиентских приложений с помощью MVC">Глава 9 - Создание веб-API для мобильных и клиентских приложений с помощью MVC</a><a class="headerlink" href="#9-api-mvc" title="Permanent link">¶</a></h4>
 <h2 id="2">Часть 2. Создание полноценных приложений<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
-<h4 id="10-"><a class="link-tooltip" data-tooltip-content="#Глава10Конфигурациясервисовспомощьювнедрениязависимостей_tooltip_id" href="../../ch-10-service-configuration-with-dependency-injection" title="Глава 10 - Конфигурация сервисов с помощью внедрения зависимостей">Глава 10 - Конфигурация сервисов с помощью внедрения зависимостей</a><a class="headerlink" href="#10-" title="Permanent link">¶</a></h4>
-<h4 id="11-aspnet-core"><a class="link-tooltip" data-tooltip-content="#Глава11КонфигурированиеприложенияASPNETCore_tooltip_id" href="../../ch-11-configuring-application" title="Глава 11 - Конфигурирование приложения ASP.NET Core">Глава 11 - Конфигурирование приложения ASP.NET Core</a><a class="headerlink" href="#11-aspnet-core" title="Permanent link">¶</a></h4>
-<h4 id="12-entity-framework-core"><a class="link-tooltip" data-tooltip-content="#Глава12СохраняемданныесEntityFrameworkCore_tooltip_id" href="../../ch-12-saving-data-with-ef-core" title="Глава 12 - Сохраняем данные с Entity Framework Core">Глава 12 - Сохраняем данные с Entity Framework Core</a><a class="headerlink" href="#12-entity-framework-core" title="Permanent link">¶</a></h4>
-<h4 id="13-mvc-razor-pages"><a class="link-tooltip" data-tooltip-content="#Глава13КонвейерфильтровMVCиRazorPages_tooltip_id" href="../../ch-13-mvc-and-razor-pages-filter-pipeline" title="Глава 13 - Конвейер фильтров MVC и Razor Pages">Глава 13 - Конвейер фильтров MVC и Razor Pages</a><a class="headerlink" href="#13-mvc-razor-pages" title="Permanent link">¶</a></h4>
-<h4 id="14-aspnet-core-identity"><a class="link-tooltip" data-tooltip-content="#Глава14АутентификациядобавляемпользователейвприложениеспомощьюASPNETCoreIdentity_tooltip_id" href="../../ch-14-authentication" title="Глава 14 - Аутентификация: добавляем пользователей в приложение с помощью ASP.NET Core Identity">Глава 14 - Аутентификация: добавляем пользователей в приложение с помощью ASP.NET Core Identity</a><a class="headerlink" href="#14-aspnet-core-identity" title="Permanent link">¶</a></h4>
-<h4 id="15-"><a class="link-tooltip" data-tooltip-content="#Глава15Авторизацияобеспечиваемзащитуприложения_tooltip_id" href="../../ch-15-authorization" title="Глава 15 - Авторизация: обеспечиваем защиту приложения">Глава 15 - Авторизация: обеспечиваем защиту приложения</a><a class="headerlink" href="#15-" title="Permanent link">¶</a></h4>
-<h4 id="16-"><a class="link-tooltip" data-tooltip-content="#Глава16Публикацияиразвертываниеприложения_tooltip_id" href="../../ch-16-publishing-and-deploying" title="Глава 16 - Публикация и развертывание приложения">Глава 16 - Публикация и развертывание приложения</a><a class="headerlink" href="#16-" title="Permanent link">¶</a></h4>
+<h4 id="10-"><a href="../../ch-10-service-configuration-with-dependency-injection" title="Глава 10 - Конфигурация сервисов с помощью внедрения зависимостей">Глава 10 - Конфигурация сервисов с помощью внедрения зависимостей</a><a class="headerlink" href="#10-" title="Permanent link">¶</a></h4>
+<h4 id="11-aspnet-core"><a href="../../ch-11-configuring-application" title="Глава 11 - Конфигурирование приложения ASP.NET Core">Глава 11 - Конфигурирование приложения ASP.NET Core</a><a class="headerlink" href="#11-aspnet-core" title="Permanent link">¶</a></h4>
+<h4 id="12-entity-framework-core"><a href="../../ch-12-saving-data-with-ef-core" title="Глава 12 - Сохраняем данные с Entity Framework Core">Глава 12 - Сохраняем данные с Entity Framework Core</a><a class="headerlink" href="#12-entity-framework-core" title="Permanent link">¶</a></h4>
+<h4 id="13-mvc-razor-pages"><a href="../../ch-13-mvc-and-razor-pages-filter-pipeline" title="Глава 13 - Конвейер фильтров MVC и Razor Pages">Глава 13 - Конвейер фильтров MVC и Razor Pages</a><a class="headerlink" href="#13-mvc-razor-pages" title="Permanent link">¶</a></h4>
+<h4 id="14-aspnet-core-identity"><a href="../../ch-14-authentication" title="Глава 14 - Аутентификация: добавляем пользователей в приложение с помощью ASP.NET Core Identity">Глава 14 - Аутентификация: добавляем пользователей в приложение с помощью ASP.NET Core Identity</a><a class="headerlink" href="#14-aspnet-core-identity" title="Permanent link">¶</a></h4>
+<h4 id="15-"><a href="../../ch-15-authorization" title="Глава 15 - Авторизация: обеспечиваем защиту приложения">Глава 15 - Авторизация: обеспечиваем защиту приложения</a><a class="headerlink" href="#15-" title="Permanent link">¶</a></h4>
+<h4 id="16-"><a href="../../ch-16-publishing-and-deploying" title="Глава 16 - Публикация и развертывание приложения">Глава 16 - Публикация и развертывание приложения</a><a class="headerlink" href="#16-" title="Permanent link">¶</a></h4>
 <h2 id="3">Часть 3. Расширение приложений<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
-<h4 id="17-"><a class="link-tooltip" data-tooltip-content="#Глава17Мониторингиустранениеошибокспомощьюжурналирования_tooltip_id" href="../../ch-17-monitoring-and-troubleshooting-errors-with-logging" title="Глава 17 - Мониторинг и устранение ошибок с помощью журналирования">Глава 17 - Мониторинг и устранение ошибок с помощью журналирования</a><a class="headerlink" href="#17-" title="Permanent link">¶</a></h4>
-<h4 id="18-"><a class="link-tooltip" data-tooltip-content="#Глава18Повышаембезопасностьприложения_tooltip_id" href="../../ch-18-improving-app-security" title="Глава 18 - Повышаем безопасность приложения">Глава 18 - Повышаем безопасность приложения</a><a class="headerlink" href="#18-" title="Permanent link">¶</a></h4>
-<h4 id="19-"><a class="link-tooltip" data-tooltip-content="#Глава19Созданиеспециальныхкомпонентов_tooltip_id" href="../../ch-19-building-custom-components" title="Глава 19 - Создание специальных компонентов">Глава 19 - Создание специальных компонентов</a><a class="headerlink" href="#19-" title="Permanent link">¶</a></h4>
+<h4 id="17-"><a href="../../ch-17-monitoring-and-troubleshooting-errors-with-logging" title="Глава 17 - Мониторинг и устранение ошибок с помощью журналирования">Глава 17 - Мониторинг и устранение ошибок с помощью журналирования</a><a class="headerlink" href="#17-" title="Permanent link">¶</a></h4>
+<h4 id="18-"><a href="../../ch-18-improving-app-security" title="Глава 18 - Повышаем безопасность приложения">Глава 18 - Повышаем безопасность приложения</a><a class="headerlink" href="#18-" title="Permanent link">¶</a></h4>
+<h4 id="19-"><a href="../../ch-19-building-custom-components" title="Глава 19 - Создание специальных компонентов">Глава 19 - Создание специальных компонентов</a><a class="headerlink" href="#19-" title="Permanent link">¶</a></h4>
 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://github.com/andrewlock/asp-dot-net-core-in-action-2e">Примеры кода ко всем главам, начиная со второй</a></p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -3132,88 +3135,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Глава1НачалоработысASPNETCore_tooltip_id"></div></div><div class="tooltip_templates"><div id="Глава2Вашепервоеприложение_tooltip_id"><p>Код приложения для этой главы можно найти <a href="https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter02">здесь</a>.</p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211202201810.png"/><br/>
-Приложение ASP.NET Core состоит из: веб-сервера (обычно это Kestrel), <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/pipeline/">конвейера</a> <em>промежуточного ПО (middleware)</em> и <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/endpoint/">компонента конечной точки (endpoint)</a>.<br/>
-Сперва запрос извне попадает к веб-серверу, который использует его для создан…</p></div></div><div class="tooltip_templates"><div id="Глава3ОбработказапросовспомощьюконвейерапромежуточногоПО_tooltip_id"><p>Рассмотрим один небольшой подраздел типичного ASP.NET Core приложения - <em>конвейер промежуточного программного обеспечения (middleware pipeline)</em>.</p></div></div><div class="tooltip_templates"><div id="Глава4СозданиевебсайтаспомощьюстраницRazor_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава5СопоставлениеURLадресовсRazorPagesсиспользованиеммаршрутизации_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава6Модельпривязкиполучениеипроверкапользовательскоговвода_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава7ВизуализацияHTMLкодасиспользованиемпредставленийRazor_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава8Созданиеформспомощьютегхелперов_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава9СозданиевебAPIдлямобильныхиклиентскихприложенийспомощьюMVC_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава10Конфигурациясервисовспомощьювнедрениязависимостей_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава11КонфигурированиеприложенияASPNETCore_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава12СохраняемданныесEntityFrameworkCore_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава13КонвейерфильтровMVCиRazorPages_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава14АутентификациядобавляемпользователейвприложениеспомощьюASPNETCoreIdentity_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава15Авторизацияобеспечиваемзащитуприложения_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава16Публикацияиразвертываниеприложения_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава17Мониторингиустранениеошибокспомощьюжурналирования_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава18Повышаембезопасностьприложения_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Глава19Созданиеспециальныхкомпонентов_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div></body>
+</body>
 </html>

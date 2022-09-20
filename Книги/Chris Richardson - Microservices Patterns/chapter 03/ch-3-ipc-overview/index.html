@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Обзор IPC" property="og:title"/>
 <meta content="Обзор IPC" name="twitter:title"/>
 <meta content="Существует множество разных технологий IPC. Сервисы могут использовать коммуникационные механизмы на основе запросов/ответов, такие как REST или gRPC, или механизмы коммуникации на основе сообщений, такие как AMQP или STOMP. Также существует множество форматов сообщений, как текстовые форматы, понятные человеку (JSON или XML), так более эффективные двоичные - Avro или Protocol Buffers." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2752,7 +2750,7 @@
 <a class="md-tag" href="../../../../tags/#microservicecommunication">microservice/communication</a>
 </nav>
 <h1 id="ipc">Обзор IPC<a class="headerlink" href="#ipc" title="Permanent link">¶</a></h1>
-<p>Существует множество разных технологий IPC. Сервисы могут использовать коммуникационные механизмы на основе запросов/ответов, такие как <a class="link-tooltip" data-tooltip-content="#REST_tooltip_id" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/" title="REST">REST</a> или <a class="link-tooltip" data-tooltip-content="#gRPC_tooltip_id" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/" title="gRPC">gRPC</a>, или механизмы коммуникации на основе сообщений, такие как <a class="link-tooltip" data-tooltip-content="#AMQP_tooltip_id" href="../../../amqp-comm-model" title="AMQP">AMQP</a> или <a class="link-tooltip" data-tooltip-content="#STOMP_tooltip_id" href="../../../stomp-comm-model" title="STOMP">STOMP</a>. Также существует множество форматов сообщений, как текстовые форматы, понятные человеку (JSON или XML), так более эффективные двоичные - Avro или Protocol Buffers.</p>
+<p>Существует множество разных технологий IPC. Сервисы могут использовать коммуникационные механизмы на основе запросов/ответов, такие как <a href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/" title="REST">REST</a> или <a href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/" title="gRPC">gRPC</a>, или механизмы коммуникации на основе сообщений, такие как <a href="../../../amqp-comm-model" title="AMQP">AMQP</a> или <a href="../../../stomp-comm-model" title="STOMP">STOMP</a>. Также существует множество форматов сообщений, как текстовые форматы, понятные человеку (JSON или XML), так более эффективные двоичные - Avro или Protocol Buffers.</p>
 <h2 id="_1">Стили взаимодействия<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>Стили взаимодействия между сервисами можно разложить в таблицу</p>
 <table>
@@ -2766,32 +2764,37 @@
 <tbody>
 <tr>
 <td>Синхронное</td>
-<td><a class="link-tooltip" data-tooltip-content="#Запросответ_tooltip_id" href="../../../../Microservices/Messages/request-response-messaging/">Запрос/ответ</a></td>
+<td><a href="../../../../Microservices/Messages/request-response-messaging/">Запрос/ответ</a></td>
 <td>–</td>
 </tr>
 <tr>
 <td>Асинхронное</td>
-<td><a class="link-tooltip" data-tooltip-content="#Асинхронныйзапросответ_tooltip_id" href="../../../../Microservices/Messages/request-async-response-messaging/">Асинхронный запрос/ответ</a>, <a class="link-tooltip" data-tooltip-content="#однонаправленныеуведомления_tooltip_id" href="../../../../Microservices/Messages/notifications-messaging/">однонаправленные уведомления</a></td>
-<td><a class="link-tooltip" data-tooltip-content="#Издательподписчик_tooltip_id" href="../../../../Microservices/Messages/publish-subscribe-messaging/">Издатель/подписчик</a>, <a class="link-tooltip" data-tooltip-content="#издательасинхронныеответы_tooltip_id" href="../../../../Microservices/Messages/publish-async-response-messaging/">издатель/асинхронные ответы</a></td>
+<td><a href="../../../../Microservices/Messages/request-async-response-messaging/">Асинхронный запрос/ответ</a>, <a href="../../../../Microservices/Messages/notifications-messaging/">однонаправленные уведомления</a></td>
+<td><a href="../../../../Microservices/Messages/publish-subscribe-messaging/">Издатель/подписчик</a>, <a href="../../../../Microservices/Messages/publish-async-response-messaging/">издатель/асинхронные ответы</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="api">Описание API<a class="headerlink" href="#api" title="Permanent link">¶</a></h2>
-<p>API сервиса является контрактом между ним и его клиентами. <a class="link-tooltip" data-tooltip-content="#Какговорилосьвглаве2_tooltip_id" href="../../chapter%2002/ch-2-services-api-definition/" title="Как говорилось в главе 2">Как говорилось в главе 2</a>, API состоит из операций, которыек клиент может вызывать и событий, публикуемых сервисом.<br/>
+<p>API сервиса является контрактом между ним и его клиентами. <a href="../../chapter%2002/ch-2-services-api-definition/" title="Как говорилось в главе 2">Как говорилось в главе 2</a>, API состоит из операций, которыек клиент может вызывать и событий, публикуемых сервисом.<br/>
 Трудность заключается в том, что определение API сервиса не основано (в отличие от модулей в монолите) на конструкциях языка программирования. Следовательно, если будет развернута версия с несовместимым API - ошибка проявится только на этапе выполнения.<br/>
 Независимо от того, какой механизм IPC выбран, важно создать чёткое определение API, используя некий <em>язык описания интерфейсов</em>.</p>
 <h2 id="api_1">Развивающиеся API<a class="headerlink" href="#api_1" title="Permanent link">¶</a></h2>
 <p>API непрерывно меняются по мере внесения новых, изменения существующих и удаления старых возможностей. Обычно обновление клиентов одновременно с сервисами не представляется возможным. Кроме того, для сокращения возможного времени простоя на обслуживание обновление будет плавающим, то есть необходимо, чтобы старая и новая версия сервиса работали параллельно. Чтобы справиться с этими трудностями, необходимо иметь стратегию.<br/>
-Для контроля за изменениями можно применять <a class="link-tooltip" data-tooltip-content="#системусемантическоговерсионирования_tooltip_id" href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/semantic-versioning/" title="систему семантического версионирования">систему семантического версионирования</a>. Номера версий можно использовать в нескольких местах. В REST API мажорную версию можно указать в качестве первого элемента URL-пути. Если сервис задействует обмен сообщениями, можно включать номер версии в публикуемые сообщения.</p>
+Для контроля за изменениями можно применять <a href="../../../../%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/semantic-versioning/" title="систему семантического версионирования">систему семантического версионирования</a>. Номера версий можно использовать в нескольких местах. В REST API мажорную версию можно указать в качестве первого элемента URL-пути. Если сервис задействует обмен сообщениями, можно включать номер версии в публикуемые сообщения.</p>
 <h2 id="_2">Форматы сообщений<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>Суть IPC состоит в обмене сообщениями. <em>Сообщения</em> обычно содержат данные, выбор формата для которых является важным архитектурным решением. Иногда выбор формата не зависит от выбранного механизма (например, протокол <a class="link-tooltip" data-tooltip-content="#HTTP_tooltip_id" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/http/" title="HTTP">HTTP</a>), а иногда, наоборот, механизм (такой, как <a class="link-tooltip" data-tooltip-content="#gRPC_tooltip_id" href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/" title="gRPC">gRPC</a>) диктует свой формат. В любом случае важно не привязываться к конкретному языку.<br/>
+<p>Суть IPC состоит в обмене сообщениями. <em>Сообщения</em> обычно содержат данные, выбор формата для которых является важным архитектурным решением. Иногда выбор формата не зависит от выбранного механизма (например, протокол <a href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/http/" title="HTTP">HTTP</a>), а иногда, наоборот, механизм (такой, как <a href="../../../../%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/" title="gRPC">gRPC</a>) диктует свой формат. В любом случае важно не привязываться к конкретному языку.<br/>
 Форматы сообщений бывают текстовые и бинарные. Текстовые - такие как XML и JSON. Бинарные - это, например, <a href="https://developers.google.com/protocol-buffers/docs/overview">Protocol Buffers</a> или <a href="http://avro.apache.org/">Avro</a></p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2918,31 +2921,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="REST_tooltip_id"><p class="admonition-title">REST</p>
-<p>REST предоставляет набор архитектурных ограничений, которые, если их применять как единое целое, делают акцент на масштабируемости взаимодействия между компонентами, обобщенности интерфейсов, независимом развертывании компонентов и промежуточных компонентах, чтобы снизить латентность взаимодействия, обеспечить безопасность и инкапсулировать устаревшие системы. <br/>
-<em>Рой Филдинг (Roy Fielding).</em></p>
-<p>Ключевая концепция REST - <em>ресурс</em>. Ресурс - …</p></div></div><div class="tooltip_templates"><div id="gRPC_tooltip_id"><p>gRPC - фреймворк для написания многоязычных клиентов и серверов <br/>
-Представляет собой двоичный протокол на основе сообщений.<br/>
-В gRPC API описывается с помощью IDL на основе Protocol Buffers - многоязычного механизма сериализации структурированных данных от Google. Компилятор Protocol Buffer генерирует клиентские заглушки и серверные каркасы. Клиент и сервер обмениваются сообщениями в формате Protocol Buffers, используя HTTP/2.<br/>
-gRPC API состоит из одного или …</p></div></div><div class="tooltip_templates"><div id="AMQP_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="STOMP_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Запросответ_tooltip_id"><p><em>Запрос-ответ</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет запрос, и ожидает вскоре получить ответ.</p></div></div><div class="tooltip_templates"><div id="Асинхронныйзапросответ_tooltip_id"><p><em>Запрос - асинхронный ответ</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет запрос, рассчитывая получить ответ “когда-нибудь”.</p></div></div><div class="tooltip_templates"><div id="однонаправленныеуведомления_tooltip_id"><p><em>Уведомления</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент отправляет сообщение или управляющую команду, не ожидая при этом ответа.</p></div></div><div class="tooltip_templates"><div id="Издательподписчик_tooltip_id"><p><em>Публикация - подписка</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент публикует сообщение для нуля или более подписчиков.</p></div></div><div class="tooltip_templates"><div id="издательасинхронныеответы_tooltip_id"><p><em>Публикация - асинхронный ответ</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент публикует запрос к одному или более абонентам, некоторые из которых присылают ответ.</p></div></div><div class="tooltip_templates"><div id="Какговорилосьвглаве2_tooltip_id"><p class="admonition-title">API</p>
-<p>Можно сказать, что <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/">API</a> сервиса состоит из операций, которые клиент может вызывать, и событий, публикуемых сервисом.</p>
-<p>Операция в API может существовать по одной из двух причин: она либо соответствует <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-system-operation-definition/">системной операции</a> и вызывается внешними клиентами (или, возможно, другими сервисами), либо поддерживает взаимодействие между сервисами и вызывается только ими. События публикуются в основном для того, чтобы …</p></div></div><div class="tooltip_templates"><div id="системусемантическоговерсионирования_tooltip_id"><p>Согласно спецификации семантического версионирования, номер версии всегда должен состоять из следующих частей <code>MAJOR.MINOR.PATCH</code>, где каждая из частей инкрементируется в следующих случаях:</p>
-<li><code>MAJOR</code> - при внесении в API/пакет несовместимого изменения</li>
-<li><code>MINOR</code> - при внесении в API/пакет изменения с сохранением обратной совместимости</li>
-<li><code>PATCH</code> - при исправлении ошибки с сохранением обратной совместимости</li>
-<p>Иногда добавляется 4 часть с номером билда. Сейчас обычно …</p></div></div><div class="tooltip_templates"><div id="HTTP_tooltip_id"><p><em>Протокол передачи гипертекста</em> или <strong>HTTP</strong> - это протокол прикладного уровня, обеспечивающий работу в сети. Работает по схеме “запрос-ответ” без сохранения состояния. Клиент отправляет запрос на сервер, который передает ответ.<br/>
-Каждый HTTP-запрос состоит из метода, указывающего “тип” запроса, и пути, указывающего ресурс, с которым нужно взаимодействовать. Также обычно содержит заголовки - пары “ключ-значение”, а в некоторых случаях - тело, например, содержим…</p></div></div><div class="tooltip_templates"><div id="gRPC_tooltip_id"><p>gRPC - фреймворк для написания многоязычных клиентов и серверов <br/>
-Представляет собой двоичный протокол на основе сообщений.<br/>
-В gRPC API описывается с помощью IDL на основе Protocol Buffers - многоязычного механизма сериализации структурированных данных от Google. Компилятор Protocol Buffer генерирует клиентские заглушки и серверные каркасы. Клиент и сервер обмениваются сообщениями в формате Protocol Buffers, используя HTTP/2.<br/>
-gRPC API состоит из одного или …</p></div></div></body>
+</body>
 </html>

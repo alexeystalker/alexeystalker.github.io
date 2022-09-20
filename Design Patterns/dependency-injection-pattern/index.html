@@ -28,13 +28,11 @@
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Шаблон " property="og:title" внедрение="" зависимостей""=""/>
 <meta content="Шаблон " name="twitter:title" внедрение="" зависимостей""=""/>
 <meta content="Внедрение зависимостей (Dependency Injection, DI) - шаблон, при котором зависимости (то есть классы, от которых зависит код класса) не создаются кодом класса, а передаются в него извне. Часть реализации принципа единой ответственности.
@@ -58,7 +56,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2745,8 +2743,8 @@
 <a class="md-tag" href="../../tags/#ooppattern">OOP/pattern</a>
 </nav>
 <h1 id="_1">Шаблон “Внедрение зависимостей”<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><strong>Внедрение зависимостей (Dependency Injection, DI)</strong> - шаблон, при котором зависимости (то есть классы, от которых зависит код класса) не создаются кодом класса, а передаются в него извне. Часть реализации <a class="link-tooltip" data-tooltip-content="#принципаединойответственности_tooltip_id" href="../../OOP/OOP%20Principles/single-responsibility-principle/" title="принципа единой ответственности">принципа единой ответственности</a>.<br/>
-Также так называют и архитектурный подход, когда приложение проектируется с преимущественным использованием этого шаблона. Обычно для эффективной реализации подхода применяют специальный фреймворк, называемый <a class="link-tooltip" data-tooltip-content="#контейнеромзависимостей_tooltip_id" href="../di-container" title="контейнером зависимостей">контейнером зависимостей</a>. Задачей контейнера является контроль за жизненным циклом классов, использующих данный шаблон (создание, предоставление по требованию,  уничтожение). Классы, контролируемые контейнером, обычно называются <em>сервисами</em>.</p>
+<p><strong>Внедрение зависимостей (Dependency Injection, DI)</strong> - шаблон, при котором зависимости (то есть классы, от которых зависит код класса) не создаются кодом класса, а передаются в него извне. Часть реализации <a href="../../OOP/OOP%20Principles/single-responsibility-principle/" title="принципа единой ответственности">принципа единой ответственности</a>.<br/>
+Также так называют и архитектурный подход, когда приложение проектируется с преимущественным использованием этого шаблона. Обычно для эффективной реализации подхода применяют специальный фреймворк, называемый <a href="../di-container" title="контейнером зависимостей">контейнером зависимостей</a>. Задачей контейнера является контроль за жизненным циклом классов, использующих данный шаблон (создание, предоставление по требованию,  уничтожение). Классы, контролируемые контейнером, обычно называются <em>сервисами</em>.</p>
 <h2 id="_2">Основные способы внедрения зависимостей<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <ol>
 <li><em>Через конструктор</em> - зависимости передаются как параметры конструктора.</li>
@@ -2758,7 +2756,7 @@
 <p><em>Жизненный цикл</em> сервиса - это продолжительность существования экземпляра сервиса в контейнере, прежде чем будет создан новый экземпляр.<br/>
 Основные типы жизненных циклов:</p>
 <ul>
-<li>Объект создается один раз на всё время жизни приложения. Способ реализации шаблона <a class="link-tooltip" data-tooltip-content="#Одиночка_tooltip_id" href="../singleton-pattern" title="Одиночка">Одиночка</a> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>;</li>
+<li>Объект создается один раз на всё время жизни приложения. Способ реализации шаблона <a href="../singleton-pattern" title="Одиночка">Одиночка</a> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>;</li>
 <li>Новый объект создается при каждом новом запросе <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>;</li>
 <li>Объект создается один раз в рамках существования специального объекта, называемого <em>скоуп (scope)</em> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>. Обычно на основе scope реализуются более сложные случаи - per request, per thread и т.п. Зависит от контейнера.</li>
 </ul>
@@ -2769,22 +2767,27 @@
 <hr/>
 <ol>
 <li id="fn:1">
-<p>Пример из книги Э.Лока <a class="link-tooltip" data-tooltip-content="#ASPNETCoreinAction_tooltip_id" href="../ch-10-di-lifecycle#singleton" title="ASP.NET Core in Action">ASP.NET Core in Action</a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>Пример из книги Э.Лока <a href="../ch-10-di-lifecycle#singleton" title="ASP.NET Core in Action">ASP.NET Core in Action</a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
-<p>Пример из книги Э.Лока <a class="link-tooltip" data-tooltip-content="#ASPNETCoreinAction_tooltip_id" href="../ch-10-di-lifecycle#transient" title="ASP.NET Core in Action">ASP.NET Core in Action</a> <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+<p>Пример из книги Э.Лока <a href="../ch-10-di-lifecycle#transient" title="ASP.NET Core in Action">ASP.NET Core in Action</a> <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:3">
-<p>Пример из книги Э.Лока <a class="link-tooltip" data-tooltip-content="#ASPNETCoreinAction_tooltip_id" href="../ch-10-di-lifecycle#scoped" title="ASP.NET Core in Action">ASP.NET Core in Action</a> <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+<p>Пример из книги Э.Лока <a href="../ch-10-di-lifecycle#scoped" title="ASP.NET Core in Action">ASP.NET Core in Action</a> <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 </ol>
 </div>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 1, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 1, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2911,18 +2914,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="принципаединойответственности_tooltip_id"><p class="admonition-title">Single Responsibility Prinicple</p>
-<p>У класса должна быть только одна причина для изменения.</p>
-<p>https://en.wikipedia.org/wiki/Single-responsibility_principle<br/>
-https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF_%D0%B5%D0%B4%D0%B8%D0%BD%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9_%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8</p></div></div><div class="tooltip_templates"><div id="контейнеромзависимостей_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="Одиночка_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="ASPNETCoreinAction_tooltip_id"></div></div><div class="tooltip_templates"><div id="ASPNETCoreinAction_tooltip_id"></div></div><div class="tooltip_templates"><div id="ASPNETCoreinAction_tooltip_id"></div></div></body>
+</body>
 </html>

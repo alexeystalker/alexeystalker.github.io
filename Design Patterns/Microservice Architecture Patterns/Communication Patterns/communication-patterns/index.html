@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Шаблоны взаимодействия" property="og:title"/>
 <meta content="Шаблоны взаимодействия" name="twitter:title"/>
 <meta content="Шаблоны взаимодействия делятся на пять групп" name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2695,46 +2693,51 @@
 <a class="md-tag" href="../../../../tags/#microservicecommunication">microservice/communication</a>
 </nav>
 <h1 id="_1">Шаблоны взаимодействия<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p><img alt="Pasted image 20210826151226.png" src="../../../../images/Pasted%20image%2020210826151226.png" title="Pasted image 20210826151226.png"/><br/>
-Шаблоны взаимодействия делятся на пять групп</p>
+<p><img alt="Pasted image 20210826151226.png" src="../../../../images/Pasted%20image%2020210826151226.png" title="Pasted image 20210826151226.png"><br/>
+Шаблоны взаимодействия делятся на пять групп</img></p>
 <ul>
 <li><em>Стиль взаимодействия</em> между сервисами<ul>
-<li><a class="link-tooltip" data-tooltip-content="#Удаленныйвызовпроцедур_tooltip_id" href="../rpi-pattern/" title="Удаленный вызов процедур">Удаленный вызов процедур</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Обменсообщениями_tooltip_id" href="../messaging-pattern/" title="Обмен сообщениями">Обмен сообщениями</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Идемпотентныйпотребитель_tooltip_id" href="../idempotent-consumer-pattern/" title="Идемпотентный потребитель">Идемпотентный потребитель</a></li>
+<li><a href="../rpi-pattern/" title="Удаленный вызов процедур">Удаленный вызов процедур</a></li>
+<li><a href="../messaging-pattern/" title="Обмен сообщениями">Обмен сообщениями</a></li>
+<li><a href="../idempotent-consumer-pattern/" title="Идемпотентный потребитель">Идемпотентный потребитель</a></li>
 </ul>
 </li>
 <li><em>Обнаружение</em> - Каким образом клиент сервиса узнает, куда отправить запрос?<ul>
-<li><a class="link-tooltip" data-tooltip-content="#Реестр_tooltip_id" href="../service-registry-pattern/" title="Реестр">Реестр</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Саморегистрация_tooltip_id" href="../self-registration-pattern/" title="Саморегистрация">Саморегистрация</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Сторонняярегистрация_tooltip_id" href="../third-party-registration-pattern/" title="Сторонняя регистрация">Сторонняя регистрация</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Обнаружениенасторонеклиента_tooltip_id" href="../client-side-discovery-pattern/" title="Обнаружение на стороне клиента">Обнаружение на стороне клиента</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Обнаружениенасторонесервера_tooltip_id" href="../server-side-discovery-pattern/" title="Обнаружение на стороне сервера">Обнаружение на стороне сервера</a></li>
+<li><a href="../service-registry-pattern/" title="Реестр">Реестр</a></li>
+<li><a href="../self-registration-pattern/" title="Саморегистрация">Саморегистрация</a></li>
+<li><a href="../third-party-registration-pattern/" title="Сторонняя регистрация">Сторонняя регистрация</a></li>
+<li><a href="../client-side-discovery-pattern/" title="Обнаружение на стороне клиента">Обнаружение на стороне клиента</a></li>
+<li><a href="../server-side-discovery-pattern/" title="Обнаружение на стороне сервера">Обнаружение на стороне сервера</a></li>
 </ul>
 </li>
 <li><em>Надежность</em> - Как обеспечить надежное взаимодействие с учетом того, что некоторые сервисы могут быть недоступны?<ul>
-<li><a class="link-tooltip" data-tooltip-content="#Предохранитель_tooltip_id" href="../circuit-breaker-pattern/" title="Предохранитель">Предохранитель</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Повтор_tooltip_id" href="../retry-pattern/" title="Повтор">Повтор</a></li>
+<li><a href="../circuit-breaker-pattern/" title="Предохранитель">Предохранитель</a></li>
+<li><a href="../retry-pattern/" title="Повтор">Повтор</a></li>
 </ul>
 </li>
 <li><em>Транзакционный обмен сообщениями</em> - как интегрировать отправку сообщений и публикацию событий с транзакциями БД?<ul>
-<li><a class="link-tooltip" data-tooltip-content="#Outboxпубликациясобытий_tooltip_id" href="../transactional-outbox-pattern/" title="Outbox - публикация событий">Outbox - публикация событий</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Опрашивающийиздатель_tooltip_id" href="../polling-publisher-pattern/" title="Опрашивающий издатель">Опрашивающий издатель</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Отслеживаниетранзакционногожурнала_tooltip_id" href="../transaction-log-tailing-pattern/" title="Отслеживание транзакционного журнала">Отслеживание транзакционного журнала</a></li>
+<li><a href="../transactional-outbox-pattern/" title="Outbox - публикация событий">Outbox - публикация событий</a></li>
+<li><a href="../polling-publisher-pattern/" title="Опрашивающий издатель">Опрашивающий издатель</a></li>
+<li><a href="../transaction-log-tailing-pattern/" title="Отслеживание транзакционного журнала">Отслеживание транзакционного журнала</a></li>
 </ul>
 </li>
 <li><em>Внешний API</em> - Каким образом внешние клиенты приложения взаимодействуют с сервисами?<ul>
-<li><a class="link-tooltip" data-tooltip-content="#APIшлюз_tooltip_id" href="../api-gateway-pattern/" title="API-шлюз">API-шлюз</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#БэкендыдляфронтендовBBF_tooltip_id" href="../bff-pattern/" title="Бэкенды для фронтендов(BBF)">Бэкенды для фронтендов(BBF)</a></li>
+<li><a href="../api-gateway-pattern/" title="API-шлюз">API-шлюз</a></li>
+<li><a href="../bff-pattern/" title="Бэкенды для фронтендов(BBF)">Бэкенды для фронтендов(BBF)</a></li>
 </ul>
 </li>
 </ul>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2861,66 +2864,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Удаленныйвызовпроцедур_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210906202710.png"/><br/>
-Принцип работы.<br/>
-Клиентская бизнес-логика обращается к <em>прокси-интерфейсу</em>, реализованному классом-адаптером <em>RPI-прокси</em>. RPI-прокси выполняет запрос к сервису. Запрос обрабатывается классом-адаптером <em>RPI-сервер</em>, который вызывает бизнес-логику сервиса через интерфейс. Затем ответ передается обратно в RPI-прокси, который возвращает результат клиентской бизнес-логике.<br/>
-<em>Прокси-интрефейс</em> обычно инкапсулирует исходный коммуни…</p></div></div><div class="tooltip_templates"><div id="Обменсообщениями_tooltip_id"><p>Сервисы асинхронно коммуницируют путём обмена сообщениями.<br/>
-Существуют следующие стили асинхронной коммуникации:</p>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/request-response-messaging/">Запрос/ответ</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/notifications-messaging/">Уведомления</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/request-async-response-messaging/">Запрос/асинхронный ответ</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/publish-subscribe-messaging/">Публикация/подписка</a></li>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/Messages/publish-async-response-messaging/">Публикация/асинхронный ответ</a></li>
-<p>[[ch-3-messaging-styles-realization|Из книги “Шаблоны проектирования ми…</p></div></div><div class="tooltip_templates"><div id="Идемпотентныйпотребитель_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210916201007.png"/><br/>
-Предлагается сохранять идентификатор каждого сообщения, которое уже обрабатывалось. Например, можно записывать идентификаторы в таблицу обработанных сообщений в процессе транзакции бизнес-логики. Или (наиболее полезно для NoSQL БД, если они не поддерживают обновление нескольких таблиц в рамках транзакции) записывать идентификаторы прямо в таблицу приложения.</p>
-<p>https://microservices.io/patterns/communication-style/i…</p></div></div><div class="tooltip_templates"><div id="Реестр_tooltip_id"><p>БД, хранящая актуальные адреса сервисов. Сервисы регистрируются (<a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/self-registration-pattern/">сами</a> или не сами) в реестре при старте и удаляются из реестра при выключении. Также реестр может обращаться к Healthcheck API  для проверки доступности экземпляров.</p>
-<p>https://microservices.io/patterns/service-registry.html</p></div></div><div class="tooltip_templates"><div id="Саморегистрация_tooltip_id"><p>Экземпляр сервиса регистрирует себя в реестре.</p>
-<p>https://microservices.io/patterns/self-registration.html</p></div></div><div class="tooltip_templates"><div id="Сторонняярегистрация_tooltip_id"><p>В <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">реестре</a> сервис регистрируется сторонней сущностью - <em>регистратором</em>, который обычно является компонентом платформы развертывания.</p>
-<p>https://microservices.io/patterns/3rd-party-registration.html</p></div></div><div class="tooltip_templates"><div id="Обнаружениенасторонеклиента_tooltip_id"><p>Клиент извлекает из <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">реестра</a> список доступных экземпляров сервиса (для снижения нагрузки может быть применено кэширование) и использует алгоритм балансирования нагрузки, чтобы выбрать конкретный экземпляр и отправить ему запрос.</p>
-<p>https://microservices.io/patterns/client-side-discovery.html</p></div></div><div class="tooltip_templates"><div id="Обнаружениенасторонесервера_tooltip_id"><p>Клиент обращается (по известному имени) к маршрутизатору, который идёт в <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/">реестр</a> за актуальными адресами и балансирует нагрузку.</p>
-<p>https://microservices.io/patterns/server-side-discovery.html</p></div></div><div class="tooltip_templates"><div id="Предохранитель_tooltip_id"><p>Данный паттерн рассчитан на ошибки, исправление которых требует много времени. Например, обрыв соединения, отказ оборудования. В данном случае отправка повторных запросов (паттерн <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/retry-pattern/">Retry</a>), скорее всего, будет бессмысленна. А если к тому же представить, что к какому-то сервису обращается много клиентов и этот сервис становится недоступным, каждый клиент начинает делать повторные попытки своих запросов к неработающему сервису - существенно увеличивается и…</p></div></div><div class="tooltip_templates"><div id="Повтор_tooltip_id"><p><strong>Повтор (Retry)</strong> - это архитектурный паттерн, который позволяет определять стратегию по восстановлению после временных ошибок.<br/>
-Вот несколько примеров таких ошибок:<br/>
-⦁ проблемы с интернет соединением;<br/>
-⦁ повышенная нагрузка на внешний компонент/систему.</p>
-<p>Как видно, все эти ошибки являются восстанавливаемыми. И в случае их возникновения есть смысл повторить запрос немедленно или через некоторую задержку вместо логирования ошибки и возвращения ошибочного результата.</p></div></div><div class="tooltip_templates"><div id="Outboxпубликациясобытий_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210916203747.png"/><br/>
-Предположим, что у приложения есть реляционная БД. Используем специальную таблицу <code>OUTBOX</code> для вставки сообщений в рамках транзакции бизнес-логики.<br/>
-Далее <em>ретранслятор</em> (это компонент сервиса) вычитывает сообщения из этой таблицы и отдает брокеру.<br/>
-Если у нас NoSQL БД, добавляем поле со списком сообщений, которые нужно отправить, к каждому бизнес-объекту, порождающему сообщения. Это атомарная операция. Трудностью тут бу…</p></div></div><div class="tooltip_templates"><div id="Опрашивающийиздатель_tooltip_id"><p>Пусть приложение использует реляционную БД, и <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">хранит сообщения</a> в таблице <code>OUTBOX</code>. Ретранслятор может вычитывать из этой таблицы неопубликованные записи обычным SQL запросом типа<br/>
-<code>sql
-SELECT * FROM OUTBOX ORDERED BY ... ASC</code><br/>
-Затем он публикует полученные сообщения в соответствующие каналы брокера. После успешной (!) публикации сообщения можно удалить:<br/>
-<code>sql
-DELETE FROM OUTBOX WHERE ID IN (...)</code></p>
-<p>https://microserv…</p></div></div><div class="tooltip_templates"><div id="Отслеживаниетранзакционногожурнала_tooltip_id"><p>Суть в том, что ретранслятор <em>отслеживает</em> транзакционный журнал БД. Каждое обновление БД (в том числе <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/">вставка</a> в <code>OUTBOX</code> ) представляется в виде записи в журнале транзакций. Можно прочитать этот журнал и опубликовать каждое изменение в качестве сообщения для брокера.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210916210026.png"/><br/>
-<em>Анализатор журнала транзакций</em> читает записи в журнале и каждую подходящую запись преобразует в событие и публик…</p></div></div><div class="tooltip_templates"><div id="APIшлюз_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211013203814.png"/><br/>
-<em>API_шлюз</em> (API Gateway) - это сервис, который служит точкой входа в приложение из внешнего мира. <br/>
-Задачи API-шлюза: [^1]</p>
-<li>Маршрутизация запросов</li>
-<li>Объединение API</li>
-<li>Преобразование протоколов</li>
-<li>Предоставляет свой API для разных типов клиентов</li>
-<li>Реализует граничные функции, а именно<ul>
-<li>аутентификацию</li>
-<li>авторизацию</li>
-<li>ограничение частоты запросов</li>
-<li>кэширование</li>
-<li>сбор метрик</li>
-<li>ведение журнала запросов</li>
-</ul>
-</li>
-<li>аутентификацию</li>
-<li>авторизацию</li>
-<li>ограничение частоты запросов</li>
-<li>кэширование</li>
-<li>сбор метрик</li>
-<li>ведение журнала запросов</li>
-<p>Архитектурно[^2] шлюз представляет …</p></div></div><div class="tooltip_templates"><div id="БэкендыдляфронтендовBBF_tooltip_id"><p><code>Backends for Frontends</code><br/>
-Разновидность шаблона <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/">API-шлюз</a>, идея которого заключается в том, что каждый API-модуль становится отдельным API-шлюзом<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211016113601.png"/><br/>
-Преимущества:</p>
-<li>API-модули изолированы друг от друга</li>
-<li>возможность независимого масштабирования</li>
-<li>уменьшение времени запуска</li>
-<p>https://microservices.io/patterns/apigateway.html</p></div></div></body>
+</body>
 </html>

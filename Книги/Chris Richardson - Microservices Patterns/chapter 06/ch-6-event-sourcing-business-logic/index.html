@@ -28,13 +28,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Разработка бизнес-логики с порождением событий" property="og:title"/>
 <meta content="Разработка бизнес-логики с порождением событий" name="twitter:title"/>
 <meta content="Порождение событий - еще один способ структурирования бизнес-логики и сохранения агрегатов.
@@ -58,7 +56,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2755,18 +2753,23 @@
 <a class="md-tag" href="../../../../tags/#event-sourcing">event-sourcing</a>
 </nav>
 <h1 id="-">Разработка бизнес-логики с порождением событий<a class="headerlink" href="#-" title="Permanent link">¶</a></h1>
-<p><a class="link-tooltip" data-tooltip-content="#Порождениесобытий_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/" title="Порождение событий">Порождение событий</a> - еще один способ структурирования бизнес-логики и сохранения агрегатов.<br/>
-Имеет несколько важных преимуществ, например сохраняет историю агрегатов. Также обеспечивается надёжность публикации доменных событий. Есть и недостатки, например, сложность в изучении. Также обращение к хранилищу событий требует использования <a class="link-tooltip" data-tooltip-content="#шаблонаCQRS_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/" title="шаблона CQRS">шаблона CQRS</a>.</p>
-<h4 id="_1"><a class="link-tooltip" data-tooltip-content="#Проблемытрадиционногосохраненияданных_tooltip_id" href="../ch-6-usual-data-storing-problems/" title="Проблемы традиционного сохранения данных">Проблемы традиционного сохранения данных</a><a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
-<h4 id="_2"><a class="link-tooltip" data-tooltip-content="#Обзорпорождениясобытий_tooltip_id" href="../ch-6-event-sourcing-review/" title="Обзор порождения событий">Обзор порождения событий</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
-<h4 id="_3"><a class="link-tooltip" data-tooltip-content="#Реализацияхранилищасобытий_tooltip_id" href="../ch-6-event-store-implementation/" title="Реализация хранилища событий">Реализация хранилища событий</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
-<h4 id="_4"><a class="link-tooltip" data-tooltip-content="#Совместноеиспользованиеповествованийипорождениясобытий_tooltip_id" href="../ch-6-event-sourcing-and-saga/" title="Совместное использование повествований и порождения событий">Совместное использование повествований и порождения событий</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<p><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/" title="Порождение событий">Порождение событий</a> - еще один способ структурирования бизнес-логики и сохранения агрегатов.<br/>
+Имеет несколько важных преимуществ, например сохраняет историю агрегатов. Также обеспечивается надёжность публикации доменных событий. Есть и недостатки, например, сложность в изучении. Также обращение к хранилищу событий требует использования <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/" title="шаблона CQRS">шаблона CQRS</a>.</p>
+<h4 id="_1"><a href="../ch-6-usual-data-storing-problems/" title="Проблемы традиционного сохранения данных">Проблемы традиционного сохранения данных</a><a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
+<h4 id="_2"><a href="../ch-6-event-sourcing-review/" title="Обзор порождения событий">Обзор порождения событий</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<h4 id="_3"><a href="../ch-6-event-store-implementation/" title="Реализация хранилища событий">Реализация хранилища событий</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<h4 id="_4"><a href="../ch-6-event-sourcing-and-saga/" title="Совместное использование повествований и порождения событий">Совместное использование повествований и порождения событий</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2893,12 +2896,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Порождениесобытий_tooltip_id"><p>Сохраняет <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/">агрегат</a> в виде последовательности <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/">доменных событий</a>, которые представляют изменение состояния. Приложение воссоздает текущее состояние, воспроизводя записанные события.<br/>
-События сохраняются в <em>хранилище событий</em> (event store), у которого есть API для добавления и получения событий сущности. Также хранилище событий выполняет роль брокера сообщений - у него есть API для подписки на события.<br/>
-Если для какой-то сущно…</p></div></div><div class="tooltip_templates"><div id="шаблонаCQRS_tooltip_id"><p>??? note “CQRS”<br/>
-<strong>CQRS</strong> - Command Query Responsibility Segregation</p>
-<p>Шаблон предназначен для <em>разделения обязанностей</em>. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции <em>create</em>, <em>update</em> и <em>delete</em>. Модуль и модель данных запросов реализуют операцию <em>request</em>. Сторона запросов синхронизирует свою модель данных с моделью данных командной стороны, подписываясь на …</p></div></div><div class="tooltip_templates"><div id="Проблемытрадиционногосохраненияданных_tooltip_id"><p>Традиционный подход к сохранению данных подразумевает привязывание классов к таблицам БД, полей этих классов - к столбцам, а экземпляров - к строкам. Так хранят данные большинство промышленных приложений. Однако у него есть несколько недостатков.</p>
-<p>Эта проблема заключается в концептуальном несоответствии между табличной реляционной схемой и графовой структурой развитой доменной модели.</p>
-<p>В традиц…</p></div></div><div class="tooltip_templates"><div id="Обзорпорождениясобытий_tooltip_id"><p>Порождение событий - это событийный подход к реализации бизнес-логики и сохранению агрегатов. Агрегат хранится в БД в виде цепочки событий. Каждое событие предстваляет изменение его состояния. Бизнес-логика агрегата структурирована вокруг требования о генерации и потреблении этих событий.</p></div></div><div class="tooltip_templates"><div id="Реализацияхранилищасобытий_tooltip_id"><p><em>Хранилище событий</em> - это гибрид базы данных и брокера сообщений. БД - потому что у него еcть API для вставки и извлечения событий агрегата по первичному ключу. Брокер сообщений - потому что у него есть API для подписки на события.</p>
-<p>Существует несколько способов реализации хранилища событий. Можно написать всё с нуля. Хранить записи в реляционной БД. Подписчики могут опрашивать таблицу <code>EVENTS</code> на предмет новый событий, однако необходимо гарантировать, что подписчи…</p></div></div><div class="tooltip_templates"><div id="Совместноеиспользованиеповествованийипорождениясобытий_tooltip_id"><p>Пусть мы реализовали один или несколько сервисов на основе порождения событий. Однако, чтобы корректно работать друг с другам, им необходимо инициировать <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/">повествования</a> - последовательности локальных транзакций, которые обеспечивают согласованность данных между сервисами, и участвовать в них. Следовательно, нам нужно интегрировать повествования и бизнес-логику на основе порождения событий.</p></div></div></body>
+</body>
 </html>

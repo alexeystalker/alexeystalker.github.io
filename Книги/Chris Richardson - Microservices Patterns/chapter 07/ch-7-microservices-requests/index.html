@@ -28,13 +28,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Реализация запросов в микросервисной архитектуре" property="og:title"/>
 <meta content="Реализация запросов в микросервисной архитектуре" name="twitter:title"/>
 <meta content="В монолитной архитектуре реализация запросов довольно прямолинейна, так как монолитное приложение использует единую БД. Однако, для микросервисной архитектуры написание запросов сопряжено с трудностями, так как теперь данные разбросаны по разным сервисам и разным БД.
@@ -58,7 +56,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2745,21 +2743,26 @@
 <a class="md-tag" href="../../../../tags/#microservicerequest">microservice/request</a>
 </nav>
 <h1 id="_1">Реализация запросов в микросервисной архитектуре<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>В <a class="link-tooltip" data-tooltip-content="#монолитной_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/" title="монолитной">монолитной</a> архитектуре реализация запросов довольно прямолинейна, так как монолитное приложение использует единую БД. Однако, для <a class="link-tooltip" data-tooltip-content="#микросервисной_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/" title="микросервисной">микросервисной</a> архитектуры написание запросов сопряжено с трудностями, так как теперь данные разбросаны по разным сервисам и разным БД.<br/>
+<p>В <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/" title="монолитной">монолитной</a> архитектуре реализация запросов довольно прямолинейна, так как монолитное приложение использует единую БД. Однако, для <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/" title="микросервисной">микросервисной</a> архитектуры написание запросов сопряжено с трудностями, так как теперь данные разбросаны по разным сервисам и разным БД.<br/>
 Существует два шаблона для написания запросов в микросервисной архитектуре.</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#ОбъединениеAPI_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/" title="Объединение API"> Объединение API</a>. Самый простой подход, следует использовать, где только можно. За обращение к сервисам и объединение результатов отвечают клиенты.</li>
-<li><a class="link-tooltip" data-tooltip-content="#Разделениеответственностикомандныхзапросов_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/" title="Разделение ответственности командных запросов">Разделение ответственности командных запросов</a>. Требует наличия одной или нескольких БД, единственным назначением которых бужет поддержка запросов.</li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/" title="Объединение API"> Объединение API</a>. Самый простой подход, следует использовать, где только можно. За обращение к сервисам и объединение результатов отвечают клиенты.</li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/" title="Разделение ответственности командных запросов">Разделение ответственности командных запросов</a>. Требует наличия одной или нескольких БД, единственным назначением которых бужет поддержка запросов.</li>
 </ul>
-<h4 id="api"><a class="link-tooltip" data-tooltip-content="#ВыполнениезапросовспомощьюобъединенияAPI_tooltip_id" href="../ch-7-api-composition/" title="Выполнение запросов с помощью объединения API">Выполнение запросов с помощью объединения API</a><a class="headerlink" href="#api" title="Permanent link">¶</a></h4>
-<h4 id="cqrs"><a class="link-tooltip" data-tooltip-content="#ПрименениешаблонаCQRS_tooltip_id" href="../ch-7-cqrs-pattern-usage/" title="Применение шаблона CQRS">Применение шаблона CQRS</a><a class="headerlink" href="#cqrs" title="Permanent link">¶</a></h4>
-<h4 id="cqrs-"><a class="link-tooltip" data-tooltip-content="#ПроектированиеCQRSпредставлений_tooltip_id" href="../ch-7-cqrs-views-design/" title="Проектирование CQRS-представлений">Проектирование CQRS-представлений</a><a class="headerlink" href="#cqrs-" title="Permanent link">¶</a></h4>
+<h4 id="api"><a href="../ch-7-api-composition/" title="Выполнение запросов с помощью объединения API">Выполнение запросов с помощью объединения API</a><a class="headerlink" href="#api" title="Permanent link">¶</a></h4>
+<h4 id="cqrs"><a href="../ch-7-cqrs-pattern-usage/" title="Применение шаблона CQRS">Применение шаблона CQRS</a><a class="headerlink" href="#cqrs" title="Permanent link">¶</a></h4>
+<h4 id="cqrs-"><a href="../ch-7-cqrs-views-design/" title="Проектирование CQRS-представлений">Проектирование CQRS-представлений</a><a class="headerlink" href="#cqrs-" title="Permanent link">¶</a></h4>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 10, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 10, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2886,23 +2889,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="монолитной_tooltip_id"><li>Простота разработки - IDe и другие инструменты заточены на единое приложение</li>
-<li>Легкость внесения радикальных изменений - так как солюшен один, IDE помогает консистентно вносить изменения</li>
-<li>Простота тестирования - можно написать сквозные тесты или юнит для любой части, запуск из IDE</li>
-<li>Простота развертывания - тут понятно</li>
-<li>Легкость масштабирования - просто несколько экземпляров за балансировщиком</li>
-<p>Вытекают из масштабов роста кодо…</p></div></div><div class="tooltip_templates"><div id="микросервисной_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210829152253.png"/><br/>
-Микросервисная архитектура - это архитектурный стиль, при котором <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">представление реализации</a> структурируется в виде набора компонентов - исполняемых или WAR файлов. Компоненты - это <a class="wikilink" href="https://garden.stalker-home.xyz/Microservices/service-definition/">сервисы</a>, коннекторы - коммуникационные протоколы. Каждый сервис имеет свою архитектуру <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/">логического представления</a> (например, [[ch-2-h…</p></div></div><div class="tooltip_templates"><div id="ОбъединениеAPI_tooltip_id"><p>Чтобы выполнить запрос, мы обращаемся к разным сервисам и объединяем результаты.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211004193422.png"/><br/>
-Структура шаблона предусмативает два типа участников:</p>
-<li><em>API-композитор</em> - реализует операцию запроса, обращаясь к сервис-провайдерам</li>
-<li><em>сервис-провайдер</em> - сервис, которому принадлежат данные, возвращаемые запросом.</li>
-<p>Преимущество этого шаблона - в простоте реализации.</p>
-<li>дополнительные накладные расходы</li>
-<li>риск снижения досту…</li></div></div><div class="tooltip_templates"><div id="Разделениеответственностикомандныхзапросов_tooltip_id"><p>??? note “CQRS”<br/>
-<strong>CQRS</strong> - Command Query Responsibility Segregation</p>
-<p>Шаблон предназначен для <em>разделения обязанностей</em>. Хранимая модель данных разделяется на две части - команды и запросы. Командные модули и модель данных реализуют операции <em>create</em>, <em>update</em> и <em>delete</em>. Модуль и модель данных запросов реализуют операцию <em>request</em>. Сторона запросов синхронизирует свою модель данных с моделью данных командной стороны, подписываясь на …</p></div></div><div class="tooltip_templates"><div id="ВыполнениезапросовспомощьюобъединенияAPI_tooltip_id"><p>Рассмотрим в качестве примера запрос <code>findOrder()</code>. Он принимает <code>orderId</code> в качестве параметра и возвращает объект <code>orderDetails</code> с информацией о заказе. К примеру, операция вызывается неким клиентским модулем для представления <code>Order Status</code> - это основная информация о состоянии заказа, включая статус платежа, статус выполнения заявки с т.з. ресторана, а также местоположении и предполагаемым временем доставки, если заказ уже в пути.<br/>
-![[Pasted ima…</p></div></div><div class="tooltip_templates"><div id="ПрименениешаблонаCQRS_tooltip_id"><p>Многие промышленные приложения используют СУРБД в качестве транзакционной системы записей, оставляя полнотекстовые запросы таким системам как Elasticsearch или Solr, либо одновременно записывая данные в обе БД, либо периодически копируя данные из СУРБД в поисковую систему. Такая архитектура использует и транзакционные свойства СУРБД, и возможности полнотекстового поиска.<br/>
-Обобщенной версией этой архитектуры является <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/">CQRS</a>. Идея в том, чтобы запросы выполн…</p></div></div><div class="tooltip_templates"><div id="ПроектированиеCQRSпредставлений_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211006204123.png"/><br/>
-Модуль CQRS-представления обладает API, состоящим из одного или нескольких запросов. Для реализации запросов используется БД, которая обновляется засчет подписки на события от одного или нескольких сервисов.</p></div></div></body>
+</body>
 </html>

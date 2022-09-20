@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Шаблоны кода на CSharp, которых следует избегать" property="og:title"/>
 <meta content="Шаблоны кода на CSharp, которых следует избегать" name="twitter:title"/>
 <meta content="Мой цифровой сад." name="og:description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2724,27 +2722,32 @@
 </nav>
 <h1 id="csharp">Шаблоны кода на CSharp, которых следует избегать<a class="headerlink" href="#csharp" title="Permanent link">¶</a></h1>
 <ol>
-<li><a class="link-tooltip" data-tooltip-content="#Синхроннождатьасинхронныйкод_tooltip_id" href="../wait-sync/" title="Синхронно ждать асинхронный код">Синхронно ждать асинхронный код</a>;</li>
-<li><a class="link-tooltip" data-tooltip-content="#asyncvoid_tooltip_id" href="../async-void/" title="async void">async void</a>;</li>
-<li><a class="link-tooltip" data-tooltip-content="#Ненужныйreturnawait_tooltip_id" href="../return-await/" title="Ненужный return await">Ненужный return await</a>;</li>
+<li><a href="../wait-sync/" title="Синхронно ждать асинхронный код">Синхронно ждать асинхронный код</a>;</li>
+<li><a href="../async-void/" title="async void">async void</a>;</li>
+<li><a href="../return-await/" title="Ненужный return await">Ненужный return await</a>;</li>
 <li>Использование <code>ConcurrentBag&lt;T&gt;</code> - тормозит; стараемся использовать <code>ConcurrentQueue&lt;T&gt;</code>;</li>
 <li>Использование <code>ReaderWriterLock&lt;T&gt;</code> или <code>ReaderWriterLockSlim&lt;T&gt;</code> - тормозит. Лучше использовать <code>Monitor</code> под lock-ом;</li>
-<li><a class="link-tooltip" data-tooltip-content="#ИзбегатьMethodGroupдлястатическихметодов_tooltip_id" href="../lambda-vs-method-group/" title="Избегать MethodGroup для статических методов">Избегать MethodGroup для статических методов</a>;</li>
-<li><a class="link-tooltip" data-tooltip-content="#ДелатьEnumEquals_tooltip_id" href="../enumequalsboxing/" title="Делать Enum.Equals">Делать Enum.Equals</a>;</li>
-<li><a class="link-tooltip" data-tooltip-content="#Использоватьдефолтные_tooltip_id" href="../equality-structs/" title="Использовать дефолтные">Использовать дефолтные</a> методы сравнения в структурах;</li>
-<li><a class="link-tooltip" data-tooltip-content="#Использоватьструктурывинтерфейсах_tooltip_id" href="../structs-in-interfaces/" title="Использовать структуры в интерфейсах">Использовать структуры в интерфейсах</a>;</li>
-<li><a class="link-tooltip" data-tooltip-content="#Регистрироватьдолгие_tooltip_id" href="../cts-register-cancel/" title="Регистрировать долгие">Регистрировать долгие</a> таски в CancelTokenSource;</li>
-<li><a class="link-tooltip" data-tooltip-content="#Неиспользовать_tooltip_id" href="../tcs-runconts/" title="Не использовать">Не использовать</a> параметр <code>TaskCreationsOptions.RunContinuationsAsynchronously</code> при использовании <code>TaskCompletionSource</code>;</li>
-<li><a class="link-tooltip" data-tooltip-content="#Использовать_tooltip_id" href="../task-factory-start-new/" title="Использовать">Использовать</a> <code>Task.Factory.StartNew</code> без причины;</li>
+<li><a href="../lambda-vs-method-group/" title="Избегать MethodGroup для статических методов">Избегать MethodGroup для статических методов</a>;</li>
+<li><a href="../enumequalsboxing/" title="Делать Enum.Equals">Делать Enum.Equals</a>;</li>
+<li><a href="../equality-structs/" title="Использовать дефолтные">Использовать дефолтные</a> методы сравнения в структурах;</li>
+<li><a href="../structs-in-interfaces/" title="Использовать структуры в интерфейсах">Использовать структуры в интерфейсах</a>;</li>
+<li><a href="../cts-register-cancel/" title="Регистрировать долгие">Регистрировать долгие</a> таски в CancelTokenSource;</li>
+<li><a href="../tcs-runconts/" title="Не использовать">Не использовать</a> параметр <code>TaskCreationsOptions.RunContinuationsAsynchronously</code> при использовании <code>TaskCompletionSource</code>;</li>
+<li><a href="../task-factory-start-new/" title="Использовать">Использовать</a> <code>Task.Factory.StartNew</code> без причины;</li>
 </ol>
 <h2 id="_1">Ссылки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://kevingosse.medium.com/performance-best-practices-in-c-b85a47bdd93a">https://kevingosse.medium.com/performance-best-practices-in-c-b85a47bdd93a</a></p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 1, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 1, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2871,82 +2874,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Синхроннождатьасинхронныйкод_tooltip_id"><p>Если злоупотреблять ожиданием асинхронного кода, можно выбрать весь тредпул и получить ситуацию голодания (Threadpool starvation). Это касается всех ожидателей, как-то <code>Task.Wait</code>, <code>Task.Result</code>, <code>Task.GetAwaiter().GetResult()</code>, <code>Task.WaitAny</code>, <code>Task.WaitAll</code> (последние не путать с <code>Task.WhenAny</code> и <code>Task.WhenAll</code>!!)</p>
-<p>https://medium.com/criteo-engineering/net-threadpool-starvation-and-how-queuing-makes-it-worse-512c8d570…</p></div></div><div class="tooltip_templates"><div id="asyncvoid_tooltip_id"><p>Не должен использоваться где-либо, кроме (если очень нужно) обработчика события (event).<br/>
-Основная причина - неловленное в этом методе исключение распространится на весь контекст синхронизации, что обычно приводит к падению всего приложения (если обернуть вызов метода в try/catch, исключение НЕ ПОЙМАЕТСЯ).<br/>
-Если в методе нельзя возвратить Task (например, при реализации чужого интерфейса), необходимо перенести асинхронный код в другой метод и вызвать его оттуда, например<br/>
-```csharp<br/>
-inte…</p></div></div><div class="tooltip_templates"><div id="Ненужныйreturnawait_tooltip_id"><p>Рассмотрим код<br/>
-<code>csharp
-public async Task CallAsync()
-{
-    var client = new Client();
-    return await client.GetAsync();
-}</code><br/>
-Код семантически корректен, однако нет необходимости делать <code>return await</code> - это приведет к ненужному оверхеду при компиляции.</p>
-<p>Если в методе только один вызов асинхронного метода, и нет необходимости в дополнительных действиях после вызова метода - лучше убрать <code>async/await</code> и ограничиться следующим:<br/>
-```csharp<br/>
-public Task CallAsync()<br/>
-{<br/>
-    var client…</p></div></div><div class="tooltip_templates"><div id="ИзбегатьMethodGroupдлястатическихметодов_tooltip_id"><p>Рассмотрим вот такой код:<br/>
-```csharp<br/>
-public IEnumerable<int> GetItems()<br/>
-{<br/>
-    return _list.Where(i =&gt; Filter(i));<br/>
-}</int></p>
-<p>private static bool Filter(int element)<br/>
-{<br/>
-    return i % 2 == 0;<br/>
-}<br/>
-<code>Resharper обычно предлагает заменить лямбду на MethodGroup (то есть на `return _list.Where(Filter);`). Однако, MethodGroup - это синтаксический сахар, за которым скрывается следующее:</code>csharp<br/>
-public IEnumerable<int> GetItems()<br/>
-{<br/>
-    return _list.Where(new Predicate<int>(…</int></int></p></div></div><div class="tooltip_templates"><div id="ДелатьEnumEquals_tooltip_id"><p><code>Enum.Equals</code> следует избегать, так как он делает boxing переменных. Оператор <code>==</code> - не делает.<br/>
-Что делать, когда нельзя использовать <code>==</code>, например в дженериках?<br/>
-Использовать <br/>
-<code>csharp
-EqualityComparer&lt;T&gt;.Default.Equals(enum1, enum2);</code></p>
-<p>https://habr.com/ru/company/pvs-studio/blog/568928/</p></div></div><div class="tooltip_templates"><div id="Использоватьдефолтные_tooltip_id"><p>Если структура используется в сравнениях на равенство, нужно обязательно переопределять ее методы <code>Equals</code> и <code>GetHashCode</code>, потому что дефолтная реализация для структур использует рефлексию. Resharper напоминает нам это сделать, и сгенерированный им код достаточно хорош.<br/>
-Для информации см. вторую ссылку</p>
-<p>https://kevingosse.medium.com/performance-best-practices-in-c-b85a47bdd93a<br/>
-https://devblogs.microsoft.com/premier-developer/performance-implications-of-default-stru…</p></div></div><div class="tooltip_templates"><div id="Использоватьструктурывинтерфейсах_tooltip_id"><p>Рассмотрим код:<br/>
-```csharp<br/>
-public class IntValue : IValue<br/>
-{<br/>
-}</p>
-<p>public void DoStuff()<br/>
-{<br/>
-    var value = new IntValue();</p>
-<p>}</p>
-<p>public void SendValue(IValue value)<br/>
-{<br/>
-    // …<br/>
-}</p>
-<p>public void LogValue(IValue value)<br/>
-{<br/>
-    // …<br/>
-}<br/>
-<code>``
-Кажется, что было бы разумным сделать IntValue структурой, чтобы избежать ненужных выделений кучи. Однако, так как методы</code>SendValue<code>и</code>LogValue` ожидают реализацию интерфейса (!), при каждой передаче в …</p></div></div><div class="tooltip_templates"><div id="Регистрироватьдолгие_tooltip_id"><p>Когда мы отменяем таск через CancellationTokenSource, все подписки выполняются в текущем потоке. Это может приводить к дедлокам или неожиданным задержкам.<br/>
-<code>csharp
-var cts = new CancellationTokenSource();
-cts.Token.Register(() =&gt; Thread.Sleep(5000));
-cts.Cancel(); // This call will block during 5 seconds</code><br/>
-Поэтому, если мы не можем ожидать выполнения ВСЕХ подписок в текущем потоке, нужно обернуть вызов <code>cts.Cancel()</code> в <code>Task.Run</code></p>
-<p>…</p></div></div><div class="tooltip_templates"><div id="Неиспользовать_tooltip_id"><p>Рассмотрим код<br/>
-```csharp<br/>
-class Program<br/>
-{<br/>
-    private static ManualResetEventSlim _mutex = new ManualResetEventSlim();</p></div></div><div class="tooltip_templates"><div id="Использовать_tooltip_id"><p>Рассмотрим код<br/>
-```csharp<br/>
-class Program<br/>
-{<br/>
-    public static async Task ProcessAsync()<br/>
-    {<br/>
-        await Task.Delay(2000);<br/>
-        Console.WriteLine(“Processing done”);<br/>
-    }</p>
-<p>}<br/>
-<code>``
-В этом коде</code>End of program<code>будет напечатано раньше, чем</code>Processing done<code>, потому что</code>Task.Factory.StartNew` …</p></div></div></body>
+</body>
 </html>

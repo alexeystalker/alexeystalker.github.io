@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Разработка сервисов, готовых к промышленному использованию" property="og:title"/>
 <meta content="Разработка сервисов, готовых к промышленному использованию" name="twitter:title"/>
 <meta content="Сервис можно считать готовым к развертыванию только в том случае, когда ему присущи три критически важные качественные характеристики:" name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2758,16 +2756,21 @@
 <li>Конфигурируемость</li>
 <li>Наблюдаемость</li>
 </ul>
-<h4 id="_2"><a class="link-tooltip" data-tooltip-content="#Разработкабезопасныхсервисов_tooltip_id" href="../ch-11-secure-services-implementation/" title="Разработка безопасных сервисов">Разработка безопасных сервисов</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
-<h4 id="_3"><a class="link-tooltip" data-tooltip-content="#Проектированиеконфигурируемыхсервисов_tooltip_id" href="../ch-11-configurable-services-design/" title="Проектирование конфигурируемых сервисов">Проектирование конфигурируемых сервисов</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
-<h4 id="_4"><a class="link-tooltip" data-tooltip-content="#Проектированиенаблюдаемыхсервисов_tooltip_id" href="../ch-11-observable-services-design/" title="Проектирование наблюдаемых сервисов">Проектирование наблюдаемых сервисов</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
-<h4 id="_5"><a class="link-tooltip" data-tooltip-content="#Разработкасервисовспомощьюшаблонамикросервисногошасси_tooltip_id" href="../ch-11-microservice-chassis/" title="Разработка сервисов с помощью шаблона микросервисного шасси">Разработка сервисов с помощью шаблона микросервисного шасси</a><a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<h4 id="_2"><a href="../ch-11-secure-services-implementation/" title="Разработка безопасных сервисов">Разработка безопасных сервисов</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<h4 id="_3"><a href="../ch-11-configurable-services-design/" title="Проектирование конфигурируемых сервисов">Проектирование конфигурируемых сервисов</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<h4 id="_4"><a href="../ch-11-observable-services-design/" title="Проектирование наблюдаемых сервисов">Проектирование наблюдаемых сервисов</a><a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<h4 id="_5"><a href="../ch-11-microservice-chassis/" title="Разработка сервисов с помощью шаблона микросервисного шасси">Разработка сервисов с помощью шаблона микросервисного шасси</a><a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2894,12 +2897,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Разработкабезопасныхсервисов_tooltip_id"><p>Разработчик в первую очередь несет ответственность за то, как реализованы четыре аспекта безопасности.</p>
-<li><em>Аутентификация</em>. Проверяет подлинность программы или человека, запрашивающего доступ.</li>
-<li><em>Авторизация</em>. Проверяет, позволено ли субъекту выполнять запрошенную операцию.</li>
-<li><em>Аудит</em>. Отслеживает операции, выполняемые субъектом, чтобы обнаруживать проблемы безопасности.</li>
-<li><em>Безопасное межпроцессное взаимодействие</em>.</li></div></div><div class="tooltip_templates"><div id="Проектированиеконфигурируемыхсервисов_tooltip_id"><p>Нет никакого смысла сохранять значения конфигурационных свойств прямо в коде сервиса, так как в этом случае его пришлось бы повторно собирать для каждой отдельной среды. Кроме того, конфиденциальная информация, такая как учетные данные, должна безопасно храниться в хранилище секретных ключей, таком как <a href="https://www.vaultproject.io/">Hashicorp Vault</a> или [AWS Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-par…</p></div></div><div class="tooltip_templates"><div id="Проектированиенаблюдаемыхсервисов_tooltip_id"><p>Чтобы сделать сервисы более простыми для управления и диагностики, разработчик обязан использовать определенные шаблоны проектирования.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211101195345.png"/><br/>
- Эти шаблоны предоставляют информацию о поведении и работоспособности сервиса, позволяют системе мониторинга отслеживать и визуализировать состояние сервиса и генерировать оповещение при возникновении проблемы.</p>
-<li><a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/health-check-api-pattern/">API проверки работоспособности</a> - предоставляет…</li></div></div><div class="tooltip_templates"><div id="Разработкасервисовспомощьюшаблонамикросервисногошасси_tooltip_id"><p>Любой сервис приложения должен поддерживать множество функций для обеспечения <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-secure-services-implementation/">безопасности</a>, <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-configurable-services-design/">конфигурируемости</a> и <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-observable-services-design/">наблюдаемости</a>. Также сервис отвечает за свое <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-service-discovery/">обнаружение</a> и реализацию <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/">предохранителей</a>. Чтобы не разрабатывать всё это отдельно для каждого сервиса, необхо…</p></div></div></body>
+</body>
 </html>

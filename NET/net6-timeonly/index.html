@@ -40,13 +40,11 @@ TimeOnly t3 = t2.AddMinutes(5000, out int wrappedDays);
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Тип TimeOnly" property="og:title"/>
 <meta content="Тип TimeOnly" name="twitter:title"/>
 <meta content="Тип TimeOnly - это структура, которая хранит только время.
@@ -94,7 +92,7 @@ TimeOnly t3 = t2.AddMinutes(5000, out int wrappedDays);
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2740,19 +2738,24 @@ TimeOnly t3 = t2.AddMinutes(5000, out int wrappedDays);
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="n">Minute</span><span class="p">);</span><span class="w">    </span><span class="c1">// 30</span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="n">Second</span><span class="p">);</span><span class="w">    </span><span class="c1">// 0</span>
 </code></pre></div><br/>
-Можно прибавлять часы, минуты или <a class="link-tooltip" data-tooltip-content="#TimeSpan_tooltip_id" href="../timespan" title="TimeSpan">TimeSpan</a> (с отрицательным знаком для вычитания).<br/>
+Можно прибавлять часы, минуты или <a href="../timespan" title="TimeSpan">TimeSpan</a> (с отрицательным знаком для вычитания).<br/>
 Часы циклические, то есть при переходе через сутки час станет <em>меньше</em>. Однако, есть способ узнать, сколько суток прошло при сложении:<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">TimeOnly</span><span class="w"> </span><span class="n">t3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">AddMinutes</span><span class="p">(</span><span class="m">5000</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">wrappedDays</span><span class="p">);</span><span class="w"></span>
 </code></pre></div><br/>
 Можно преобразовывать в TimeSpan (будет отрезок от начала суток до данного).<br/>
-Можно скомбинировать с <a class="link-tooltip" data-tooltip-content="#DateOnly_tooltip_id" href="../net6-dateonly/" title="DateOnly">DateOnly</a> для получения <a class="link-tooltip" data-tooltip-content="#DateTime_tooltip_id" href="../datetime" title="DateTime">DateTime</a><br/>
+Можно скомбинировать с <a href="../net6-dateonly/" title="DateOnly">DateOnly</a> для получения <a href="../datetime" title="DateTime">DateTime</a><br/>
 Есть метод <code>IsBetween</code>, можно узнать, лежит ли данное время между другими двумя.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2879,23 +2882,5 @@ TimeOnly t3 = t2.AddMinutes(5000, out int wrappedDays);
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="TimeSpan_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div><div class="tooltip_templates"><div id="DateOnly_tooltip_id"><p><code>DateOnly</code> - это новая структура в .NET6, представляющая собой <em>только</em> дату: год, месяц и день. <br/>
-Конструктор:  <code>new DateOnly(2021, 5, 31)</code><br/>
-Также есть свойства <br/>
-<code>DayOfWeek</code> - день недели.<br/>
-<code>DateNumber</code> - по-видимому, день от начала эпохи, используется для вычисления разницы между двумя датами</p>
-<p>Можно сочетать с <a class="wikilink" href="https://garden.stalker-home.xyz/NET/net6-timeonly/">TimeOnly</a> для получения <code>DateTime</code>: <code>dt.ToDateTime(new TimeOnly(0,0)</code></p>
-<p>Можно получить из <a class="wikilink" href="datetime">DateTime</a>:<br/>
-<code>DateOnly.FromDateTime(DateTime.Today)</code></p>
-<p>Не у…</p></div></div><div class="tooltip_templates"><div id="DateTime_tooltip_id"><p><a class="wikilink" href="https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/">Oauth 2.0</a></p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211028200026.png"/><br/>
-Последовательность событий для API-клиента выглядит так.</p>
-<li>Клиент делает запрос, предоставляя свои учетные данные в процессе HTTP-аутентификации.</li>
-<li>API-шлюз делает запрос типа <a href="https://www.oauth.com/oauth2-servers/access-tokens/password-grant/">OAuth 2.0 Password Grant</a> к серверу аутентификации.</li>
-<li>Сервер аутентификации проверяет учетные данные API-клиента и возвращает токены дос…</li></div></div></body>
+</body>
 </html>

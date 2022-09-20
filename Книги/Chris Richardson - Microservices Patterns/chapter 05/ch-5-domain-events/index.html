@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Доменные события" property="og:title"/>
 <meta content="Доменные события" name="twitter:title"/>
 <meta content="В контексте DDD доменное событие - это нечто, произошедшее с агрегатом. Обычно представляет изменение состояния." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2791,11 +2789,11 @@
 <a class="md-tag" href="../../../../tags/#ddddomain-event">DDD/domain-event</a>
 </nav>
 <h1 id="_1">Доменные события<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<p>В контексте <a class="link-tooltip" data-tooltip-content="#DDD_tooltip_id" href="../ch-5-domain-driven-design/" title="DDD">DDD</a> <a class="link-tooltip" data-tooltip-content="#доменноесобытие_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/" title="доменное событие">доменное событие</a> - это нечто, произошедшее с <a class="link-tooltip" data-tooltip-content="#агрегатом_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/" title="агрегатом">агрегатом</a>. Обычно представляет изменение состояния.</p>
+<p>В контексте <a href="../ch-5-domain-driven-design/" title="DDD">DDD</a> <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/" title="доменное событие">доменное событие</a> - это нечто, произошедшее с <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/" title="агрегатом">агрегатом</a>. Обычно представляет изменение состояния.</p>
 <h2 id="_2">Зачем публиковать события<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Полезность публикации доменных событий в том, что другие стороны взаимодействия (пользователи, внешние приложения или другие компоненты приложения) заинтересованы в информации об изменениях в состоянии агрегата. Например:</p>
 <ul>
-<li>Обеспечение согласованности между сервисами с помощью <a class="link-tooltip" data-tooltip-content="#повествованийнаосновехореографии_tooltip_id" href="../../chapter%2004/ch-4-choreography-saga/" title="повествований на основе хореографии">повествований на основе хореографии</a></li>
+<li>Обеспечение согласованности между сервисами с помощью <a href="../../chapter%2004/ch-4-choreography-saga/" title="повествований на основе хореографии">повествований на основе хореографии</a></li>
 <li>Уведомление сервиса, который хранит реплику, об изменении в источнике данных</li>
 <li>Уведомление другого приложения через вебхук или брокер сообщений</li>
 <li>Уведомление другого компонента приложения, чтобы послать сообщение пользователю или обновить БД</li>
@@ -2822,15 +2820,20 @@
 Более подходящим подходом будет разделение ответственности между агрегатом и сервисом. Например, агрегат генерирует события при изменении своего состояния и возвращает их сервису. Сервис вызывает метод корня агрегата и затем публикует полученные в результате сообщения.<br/>
 Другой вариант - агрегат накапливает события в своём корне, затем сервис их извлекает и публикует.</p>
 <h2 id="_7">Публикация доменных событий<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
-<p>Публикация событий не отличается от публикации асинхронных сообщений. Чтобы события публиковались как часть транзакции, обновляющей агрегат в БД, применяем <a class="link-tooltip" data-tooltip-content="#шаблонOUTBOX_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/" title="шаблон OUTBOX">шаблон OUTBOX</a></p>
+<p>Публикация событий не отличается от публикации асинхронных сообщений. Чтобы события публиковались как часть транзакции, обновляющей агрегат в БД, применяем <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/" title="шаблон OUTBOX">шаблон OUTBOX</a></p>
 <h2 id="_8">Потребление доменных событий<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
-<p>Доменные события в виде сообщений попадают в брокер, где на них <a class="link-tooltip" data-tooltip-content="#подписываютсяжелающие_tooltip_id" href="../../../../Microservices/Messages/publish-subscribe-messaging/" title="подписываются желающие">подписываются желающие</a>.</p>
+<p>Доменные события в виде сообщений попадают в брокер, где на них <a href="../../../../Microservices/Messages/publish-subscribe-messaging/" title="подписываются желающие">подписываются желающие</a>.</p>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2957,18 +2960,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="DDD_tooltip_id"><p>DDD, описанное в <a href="https://www.ozon.ru/product/predmetno-orientirovannoe-proektirovanie-ddd-strukturizatsiya-slozhnyh-programmnyh-sistem-147107976/">книге Эрика Эванса Domain-Driven Design</a> - Это более узкая разновидность ООП, предназначенная для разаботки сложной бизнес-логики.<br/>
-В DDD есть <em>стратегические шаблоны</em>, например поддомены и концепция изолированного контекста.<br/>
-Также в DDD есть <em>тактические шаблоны</em>, которые служат стро…</p></div></div><div class="tooltip_templates"><div id="доменноесобытие_tooltip_id"><p><em>Доменное событие</em> - это класс с именем на основе страдательного причастия прошедшего времени (создан, удалён и т.д.). Он содержит свойства, которые выразительно передают это событие. Например, класс события <code>OrderCreated</code> содержит <code>orderId</code>.<br/>
-Также у доменного события есть метаданные, такие как идентификатор и timestamp. Также может быть id пользователя, сделавшего изменение и id агрегата, сгенерировавшего событие. Метаданные могут быть как в самом классе, так …</p></div></div><div class="tooltip_templates"><div id="агрегатом_tooltip_id"><p><em>Агрегат</em> - это кластер доменных объектов, с которыми можно обращаться как с единым целым. Он состоит из одной сущности и иногда одной или нескольких сущностей и объектов значений.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210923205357.png"/><br/>
-Агрегаты разбивают доменную модель на блоки, а также проясняют область применения операций, таких как загрузка, обновление и удаление. Эти операции распространяются на весь агрегат.</p>
-<p>Обновление целого агрегата, а не…</p></div></div><div class="tooltip_templates"><div id="повествованийнаосновехореографии_tooltip_id"><p>Хореография -  способ реализации повествований, когда участники подписываются на события друг друга и реагируют соответствующим образом.<br/>
-Сперва рассмотрим пример - повествование createOrder().</p>
-<p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210919120040.png"/></p>
-<li>Сервиc <code>Order</code> создает заказ с состоянием <code>APPROVAL_PENDING</code> и публикует событие <code>OrderCreated</code>.</li>
-<li>Сервис <code>Consumer</code> потребляет событие <code>OrderCreated</code>, проверяет…</li></div></div><div class="tooltip_templates"><div id="шаблонOUTBOX_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210916203747.png"/><br/>
-Предположим, что у приложения есть реляционная БД. Используем специальную таблицу <code>OUTBOX</code> для вставки сообщений в рамках транзакции бизнес-логики.<br/>
-Далее <em>ретранслятор</em> (это компонент сервиса) вычитывает сообщения из этой таблицы и отдает брокеру.<br/>
-Если у нас NoSQL БД, добавляем поле со списком сообщений, которые нужно отправить, к каждому бизнес-объекту, порождающему сообщения. Это атомарная операция. Трудностью тут бу…</p></div></div><div class="tooltip_templates"><div id="подписываютсяжелающие_tooltip_id"><p><em>Публикация - подписка</em> - стиль <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/">асинхронной коммуникации</a>, при котором клиент публикует сообщение для нуля или более подписчиков.</p></div></div></body>
+</body>
 </html>

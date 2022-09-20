@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Разбиение на сервисы" property="og:title"/>
 <meta content="Разбиение на сервисы" name="twitter:title"/>
 <meta content="Важно понимать: не существует чётких инструкций, как разбивать приложение на сервисы. Однако, существует несколько стратегий декомпозиции, каждая из которых подходит к проблеме с определенной стороны и использует собственную терминологию. Однако, результатом во всех случаях будет архитектура, состоящая из сервисов, которые в основном организованы вокруг бизнес-процессов, а не технических концепций." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2734,31 +2732,36 @@
 <h1 id="_1">Разбиение на сервисы<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>Важно понимать: не существует чётких инструкций, как разбивать приложение на сервисы. Однако, существует несколько стратегий декомпозиции, каждая из которых подходит к проблеме с определенной стороны и использует собственную терминологию. Однако, результатом во всех случаях будет архитектура, состоящая из сервисов, которые в основном организованы вокруг бизнес-процессов, а не технических концепций.</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#Разбиениепобизнесвозможностям_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-business-capability-pattern/" title="Разбиение по бизнес-возможностям">Разбиение по бизнес-возможностям</a></li>
-<li><a class="link-tooltip" data-tooltip-content="#Разбиениепоподдоменам_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-subdomain-pattern/" title="Разбиение по поддоменам">Разбиение по поддоменам</a></li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-business-capability-pattern/" title="Разбиение по бизнес-возможностям">Разбиение по бизнес-возможностям</a></li>
+<li><a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-subdomain-pattern/" title="Разбиение по поддоменам">Разбиение по поддоменам</a></li>
 </ul>
 <h2 id="_2">Методические рекомедации по декомпозиции.<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>При работе с микросервисами важно помнить также о двух приципах из объектно-ориентированного проектирования.</p>
 <ul>
-<li><a class="link-tooltip" data-tooltip-content="#принципединственнойответственности_tooltip_id" href="../../../../OOP/OOP%20Principles/single-responsibility-principle/" title="принцип единственной ответственности">принцип единственной ответственности</a><br/>
+<li><a href="../../../../OOP/OOP%20Principles/single-responsibility-principle/" title="принцип единственной ответственности">принцип единственной ответственности</a><br/>
 Если применить SRP к микросервисной архитектуре, каждый сервис получится небольшим, согласованным и с одной обязанностью (и, как следствие, с одной причиной для изменения)</li>
-<li><a class="link-tooltip" data-tooltip-content="#принципсогласованногоизменения_tooltip_id" href="../../../../OOP/OOP%20Principles/common-closure-principle/" title="принцип согласованного изменения">принцип согласованного изменения</a><br/>
+<li><a href="../../../../OOP/OOP%20Principles/common-closure-principle/" title="принцип согласованного изменения">принцип согласованного изменения</a><br/>
 CCP можно применить при разработке микросервисной архитектуры, объединяя компоненты, изменяющиеся по одной причине, в единый сервис. Это позволит минимизировать количество сервисов, которые нужно изменить при изменении какого-нибудь требования. В идеале такое изменение должно затронуть только одну команду и один сервис. CCP - противоядие от антишаблона распределенного монолита.</li>
 </ul>
 <h2 id="_3">Трудности и проблемы при разбиении на сервисы<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <ul>
 <li><em>Латентность сети</em>. Иногда при разбиении обнаруживается, что некоторые сервисы вынуждены часто обмениваться данными, что снижает общую производительность. Иногда может помочь реализация пакетного API, позволяющего получать несколько объектов за один запрос. В тяжёлом случае придётся объединять разные сервисы.</li>
 <li><em>Синхронное взаимодействие ухудшает доступность</em>. Если один из сервисов в цепочке запросов окажется недоступным, это приведет к отказу всей цепочки. В зависимости от ситуации можно либо смириться с этим, либо использовать асинхронный обмен сообщениями.</li>
-<li><em>Обеспечение согласованности данных между сервисами</em>. Так как в микросервисной архитектуре мы не можем использовать традиционную транзакционную модель, лучше применять <a class="link-tooltip" data-tooltip-content="#шаблонповествование_tooltip_id" href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/" title='шаблон "повествование"'>шаблон “повествование”</a>. </li>
+<li><em>Обеспечение согласованности данных между сервисами</em>. Так как в микросервисной архитектуре мы не можем использовать традиционную транзакционную модель, лучше применять <a href="../../../../Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/" title='шаблон "повествование"'>шаблон “повествование”</a>. </li>
 <li><em>Получение согласованного представления данных</em>. Микросервисная архитектура не позволяет получить согласованное представление данных, несмотря на то, что БД каждого отдельного сервиса согласована.</li>
 <li><em>Божественные классы препятствуют декомпозиции</em>. У большинства приложений есть по крайней мере один такой класс, представляющий центральную концепцию той или иной проблемной области. Можно упаковать такой класс в библиотеку и собирать сервисы с использованием этой библиотеки. Однако, это приведет к жесткому связыванию. Другой подход связан с инкапсуляцией класса в отдельный сервис, однако в таком случае может возникнуть ситуация, когда такой сервис имел бы слабую доменную модель с минимальным количеством логики или без нее.  Куда более удачным решением будет применение принципов DDD, когда божественный класс разбивается на части в зависимости от поддомена.</li>
 </ul>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2885,17 +2888,5 @@ CCP можно применить при разработке микросерв
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="Разбиениепобизнесвозможностям_tooltip_id"><p>Концепция “бизнес-возможности” применяется в моделировании бизнес-структур и обозначает то, из чего бизнес генерирует прибыль. Бизнес-возможности организации описывают то, <em>чем</em> она является. Обычно бизнес-возможности стабильны, в отличие от того, <em>как</em> организация ведет свой бизнес.<br/>
-Бизнес-возможности организации определяются путём анализа ее целей, структуры и бизнес-процессов.<br/>
-Бизнес-возможность часто сосредоточена на определенном бизнес-объекте. Во…</p></div></div><div class="tooltip_templates"><div id="Разбиениепоподдоменам_tooltip_id"><p>Ключевой является доменная модель. <em>Доменная модель</em> организует информацию о проблемной области в формате, который можно применять для решения проблем в этой области. Она определяет  терминологию, используемую внутри команды - <em>язык описания</em>. Лежит в основе предметно-ориентированного проектирования (<a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-domain-driven-design/">domain-driven design, DDD</a>).<br/>
-Единая доменная модель для всей организации может быть довольно запутанной. DDD предлагает решать эту п…</p></div></div><div class="tooltip_templates"><div id="принципединственнойответственности_tooltip_id"><p class="admonition-title">Single Responsibility Prinicple</p>
-<p>У класса должна быть только одна причина для изменения.</p>
-<p>https://en.wikipedia.org/wiki/Single-responsibility_principle<br/>
-https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF_%D0%B5%D0%B4%D0%B8%D0%BD%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9_%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8</p></div></div><div class="tooltip_templates"><div id="принципсогласованногоизменения_tooltip_id"><p class="admonition-title">Common Closure Principle</p>
-<p>Причины изменения классов, входящих в один пакет, должны быть одинаковыми. Изменение пакета должно затрагивать все его классы</p></div></div><div class="tooltip_templates"><div id="шаблонповествование_tooltip_id"><p>Он же “Сага” (Saga). Следует из шаблона <a class="wikilink" href="https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/">БД для сервиса</a>.<br/>
-Обеспечивает согласованность данных между сервисами, используя последовательность локальных транзакций, которые координируются с помощью асинхронных сообщений.<br/>
-Системная операция инициирует первый этап повествования. Завершение одной локальной транзакции приводит к выполнению следующей. <br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020210919112731.png"/><br/>
-Например, вот повествование создания заказа:</p>
-<li>Сервис `Orde…</li></div></div></body>
+</body>
 </html>

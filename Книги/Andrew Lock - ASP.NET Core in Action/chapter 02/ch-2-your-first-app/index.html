@@ -27,13 +27,11 @@
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-34CEYP9XGS"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-34CEYP9XGS",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-34CEYP9XGS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-      $('.link-tooltip').tooltipster();
-    });
-  </script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
+<link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Ваше первое приложение" property="og:title"/>
 <meta content="Ваше первое приложение" name="twitter:title"/>
 <meta content="Код приложения для этой главы можно найти здесь." name="description"/>
@@ -55,7 +53,7 @@
 </script>
 <noscript><div><img alt="" src="https://mc.yandex.ru/watch/89583899" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-</head>
+</link></link></link></head>
 <body data-md-color-accent="light-blue" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -2795,23 +2793,28 @@
 <p>Код приложения для этой главы можно найти <a href="https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter02">здесь</a>.</p>
 <hr/>
 <h4 id="aspnet-core">Краткий обзор приложения ASP.NET Core<a class="headerlink" href="#aspnet-core" title="Permanent link">¶</a></h4>
-<p><img alt="Pasted image 20211202201810.png" src="../../../../images/Pasted%20image%2020211202201810.png" title="Pasted image 20211202201810.png"/><br/>
-Приложение ASP.NET Core состоит из: веб-сервера (обычно это Kestrel), <a class="link-tooltip" data-tooltip-content="#конвейера_tooltip_id" href="../../definitions/pipeline/" title="конвейера">конвейера</a> <em>промежуточного ПО (middleware)</em> и <a class="link-tooltip" data-tooltip-content="#компонентаконечнойточкиendpoint_tooltip_id" href="../../definitions/endpoint/" title="компонента конечной точки (endpoint)">компонента конечной точки (endpoint)</a>.<br/>
-Сперва запрос извне попадает к веб-серверу, который использует его для создания объекта <a class="link-tooltip" data-tooltip-content="#HttpContext_tooltip_id" href="../../../../NET/AspNetCore/httpcontext/" title="HttpContext">HttpContext</a>. Далее веб-сервер передает объект <code>HttpContext</code> конвееру промежуточного ПО. Это серия компонентов, предназначенных для выполнения распространенных операций, таких как логирование, обработка исключений или обслуживание статических файлов.<br/>
-В конце конвейера находится компонент конечной точки. Он отвечает за вызов кода, генерирующего окончательный ответ. В большинстве случаев это будет MVC или Razor Pages.</p>
-<h4 id="aspnet-core_1"><a class="link-tooltip" data-tooltip-content="#СозданиевашегопервогоприложенияASPNETCore_tooltip_id" href="../ch-2-creating-your-first-app/" title="Создание вашего первого приложения ASP.NET Core">Создание вашего первого приложения ASP.NET Core</a><a class="headerlink" href="#aspnet-core_1" title="Permanent link">¶</a></h4>
-<h4 id="-"><a class="link-tooltip" data-tooltip-content="#Запусквебприложения_tooltip_id" href="../ch-2-running-web-app/" title="Запуск веб-приложения">Запуск веб-приложения</a><a class="headerlink" href="#-" title="Permanent link">¶</a></h4>
-<h4 id="_2"><a class="link-tooltip" data-tooltip-content="#Разбираемсясмакетомпроекта_tooltip_id" href="../ch-2-project-layout/" title="Разбираемся с макетом проекта">Разбираемся с макетом проекта</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
-<h4 id="csproj"><a class="link-tooltip" data-tooltip-content="#Файлпроектаcsprojопределениезависимостей_tooltip_id" href="../ch-2-csproj-file-and-dependencies/" title="Файл проекта .csproj: определение зависимостей">Файл проекта .csproj: определение зависимостей</a><a class="headerlink" href="#csproj" title="Permanent link">¶</a></h4>
-<h4 id="program-"><a class="link-tooltip" data-tooltip-content="#КлассProgramсборкавебхоста_tooltip_id" href="../ch-2-program-cs/" title="Класс Program: сборка веб-хоста">Класс Program: сборка веб-хоста</a><a class="headerlink" href="#program-" title="Permanent link">¶</a></h4>
-<h4 id="startup"><a class="link-tooltip" data-tooltip-content="#КлассStartupнастройкавашегоприложения_tooltip_id" href="../ch-2-startup-cs/" title="Класс Startup: настройка вашего приложения">Класс Startup: настройка вашего приложения</a><a class="headerlink" href="#startup" title="Permanent link">¶</a></h4>
-<h4 id="razor-pages"><a class="link-tooltip" data-tooltip-content="#СозданиеответовприпомощиRazorPages_tooltip_id" href="../ch-2-razor-pages-response/" title="Создание ответов при помощи Razor Pages">Создание ответов при помощи Razor Pages</a><a class="headerlink" href="#razor-pages" title="Permanent link">¶</a></h4>
+<p><img alt="Pasted image 20211202201810.png" src="../../../../images/Pasted%20image%2020211202201810.png" title="Pasted image 20211202201810.png"><br/>
+Приложение ASP.NET Core состоит из: веб-сервера (обычно это Kestrel), <a href="../../definitions/pipeline/" title="конвейера">конвейера</a> <em>промежуточного ПО (middleware)</em> и <a href="../../definitions/endpoint/" title="компонента конечной точки (endpoint)">компонента конечной точки (endpoint)</a>.<br/>
+Сперва запрос извне попадает к веб-серверу, который использует его для создания объекта <a href="../../../../NET/AspNetCore/httpcontext/" title="HttpContext">HttpContext</a>. Далее веб-сервер передает объект <code>HttpContext</code> конвееру промежуточного ПО. Это серия компонентов, предназначенных для выполнения распространенных операций, таких как логирование, обработка исключений или обслуживание статических файлов.<br/>
+В конце конвейера находится компонент конечной точки. Он отвечает за вызов кода, генерирующего окончательный ответ. В большинстве случаев это будет MVC или Razor Pages.</img></p>
+<h4 id="aspnet-core_1"><a href="../ch-2-creating-your-first-app/" title="Создание вашего первого приложения ASP.NET Core">Создание вашего первого приложения ASP.NET Core</a><a class="headerlink" href="#aspnet-core_1" title="Permanent link">¶</a></h4>
+<h4 id="-"><a href="../ch-2-running-web-app/" title="Запуск веб-приложения">Запуск веб-приложения</a><a class="headerlink" href="#-" title="Permanent link">¶</a></h4>
+<h4 id="_2"><a href="../ch-2-project-layout/" title="Разбираемся с макетом проекта">Разбираемся с макетом проекта</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<h4 id="csproj"><a href="../ch-2-csproj-file-and-dependencies/" title="Файл проекта .csproj: определение зависимостей">Файл проекта .csproj: определение зависимостей</a><a class="headerlink" href="#csproj" title="Permanent link">¶</a></h4>
+<h4 id="program-"><a href="../ch-2-program-cs/" title="Класс Program: сборка веб-хоста">Класс Program: сборка веб-хоста</a><a class="headerlink" href="#program-" title="Permanent link">¶</a></h4>
+<h4 id="startup"><a href="../ch-2-startup-cs/" title="Класс Startup: настройка вашего приложения">Класс Startup: настройка вашего приложения</a><a class="headerlink" href="#startup" title="Permanent link">¶</a></h4>
+<h4 id="razor-pages"><a href="../ch-2-razor-pages-response/" title="Создание ответов при помощи Razor Pages">Создание ответов при помощи Razor Pages</a><a class="headerlink" href="#razor-pages" title="Permanent link">¶</a></h4>
+<!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
 <div class="md-source-file">
 <small>
-    
-      Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2022</span>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        
+            Последнее обновление:
+            <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2022</span>
+<!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
 <!-- Giscus -->
@@ -2938,32 +2941,5 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../../../assets/js/tooltipster.bundle.js"></script>
-<div class="tooltip_templates"><div id="конвейера_tooltip_id"><p>Схема, при которой один компонент может вызывать другой, который, в свою очередь, может вызывать следующий и так далее, называется <em>конвейером</em>.</p></div></div><div class="tooltip_templates"><div id="компонентаконечнойточкиendpoint_tooltip_id"><p><em>Конечная точка (endpoint)</em> в ASP.NET Core - некий обработчик, возвращающий ответ. Каждая конечная точка связана с шаблоном адреса. Это могут быть <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/page-handler/">обработчики страниц Razor</a> или <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/action-method/">методы действий MVC</a>, а также простое промежуточное ПО или конечная точка проверки работоспособности.</p></div></div><div class="tooltip_templates"><div id="HttpContext_tooltip_id"><p>Объект HttpContext, создаваемый веб-сервером ASP.NET Core, используется приложением как “ящик” для хранения данных запроса. Всё, что относится к этому конкретному запросу и последующему ответу, может быть сохранено в нем, как то: свойства запроса, сервисы, связанные с запросом, загруженные данные и возникшие ошибки. Веб-сервер заполняет начальный объект <code>HttpContext</code> данными исходного запроса и другими деталями конфигурации и передает его остальной части приложения.</p>
-<p>Это абс…</p></div></div><div class="tooltip_templates"><div id="СозданиевашегопервогоприложенияASPNETCore_tooltip_id"><p>Подготовка и запуск приложения обычно включают в себя четыре основных шага:</p>
-<li><em>создание (new)</em> - создаем базовое приложение на основе <a class="wikilink" href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/project-template/">шаблона</a>;</li>
-<li><em>восстановление (restore)</em> - восстанавливаем все пакеты и зависимости NuGet;</li>
-<li><em>сборка (build)</em> - компилируем приложение и генерируем необходимые ресурсы</li>
-<li><em>запуск (run)</em> - запускаем скомпилированное приложение</li>
-<p>Существует множество шаблонов ASP.NET Core для создания различных ти…</p></div></div><div class="tooltip_templates"><div id="Запусквебприложения_tooltip_id"><p>Чтобы запустить приложение, в VS нажмем на зеленую стрелку на панели управления, либо нажмите <strong>F5</strong>. VS автоматически откроет окно веб-браузера с соответствующим URL-адресом. Также можно запустить приложение из командной строки, выполнив команду <code>dotnet run</code>.<br/>
-<img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211206200722.png"/><br/>
-Если запускать приложение из VS, IIS Express по умолчанию выберет случайный порт. Если запускать приложение из командной строки, адресами будут <code>http://localhost:5000</code> и `https:/…</p></div></div><div class="tooltip_templates"><div id="Разбираемсясмакетомпроекта_tooltip_id"><p><img class="wikilink" src="https://garden.stalker-home.xyz/images/Pasted%20image%2020211212153354.png"/><br/>
-Рассмотрим папку проекта. Основной проект, <code>WebApplication1</code> вложен в корневую папку, и само решение носит то же имя. Внутри папки проекта есть три папки: <code>Pages</code>, <code>Properties</code> и <code>wwwroot</code>. </p>
-<li>В папке <code>Pages</code> находятся файлы Razor Pages.</li>
-<li>В папке Properties - файл <code>launchSettings.json</code>, управляющий запуском и отладкой приложения в VS.</li>
-<li>В папке <code>wwwroot</code> лежат статические файлы вашего приложения - скрипты, CSS, картинки, стати…</li></div></div><div class="tooltip_templates"><div id="Файлпроектаcsprojопределениезависимостей_tooltip_id"><p>Файл <code>.csproj</code> - файл проекта .NET приложения и содержит данные, необходимые инструментам .NET для сборки. Он определяет тип проекта (веб-приложение, консольное приложение или библиотека), целевую платформу (.NET Core 3.1, .NET 5) а также зависимости от NuGet пакетов.<br/>
-Вот какие изменения претерпел файл <code>.csproj</code> в ASP.NET Core:</p>
-<li><em>отсутствие GUID-ов</em></li>
-<li><em>Неявное включение файла</em> - прежде каждый файл должен был быть указан в файле <code>.csproj</code>, чтобы б…</li></div></div><div class="tooltip_templates"><div id="КлассProgramсборкавебхоста_tooltip_id"><p>Приложения ASP.NET Core по сути являются консольными приложениями, поэтому запускаются также: с помощью файла Program.cs со стандартной точкой входа для консольных приложений <code>static void Main</code>.<br/>
-В приложениях ASP.NET Core метод <code>Main</code> используется для создания и запуска экземпляра <code>IHost</code> - ядра приложения ASP.NET Core, содержащего конфигурацию приложения и сервер Kestrel.<br/>
-Рассмотрим полный листинг класса Program.cs:<br/>
-```csharp<br/>
-public class Program<br/>
-{<br/>
-    public stat…</p></div></div><div class="tooltip_templates"><div id="КлассStartupнастройкавашегоприложения_tooltip_id"><p>Класс <code>Startup</code> отвечает за настройку двух основных аспектов приложения:</p>
-<li><em>регистрация сервисов</em> - <a class="wikilink" href="service">любые классы</a>, от которых зависит ваше приложение, должны быть зарегистрированы - настраивается в методе <code>ConfigureServices</code>;</li>
-<li><em>промежуточное ПО и конечные точки</em> - как ваше приложение обрабатывает запросы и отвечает на них - настраивается в методе <code>Configure</code>.</li>
-<p>Вот как выглядит примерная сигнатура класса <code>Startup</code>:<br/>
-```csharp<br/>
-public class St…</p></div></div><div class="tooltip_templates"><div id="СозданиеответовприпомощиRazorPages_tooltip_id"><p>Когда приложение ASP.NET Core получает запрос, он проходит через конвейер промежуточного ПО до тех пор, пока компонент не может его обработать. Обычно последняя часть конвейера - это компонент конечной точки.<br/>
-Сначала компонент маршрутизации определяет, исходя из пути URL-запроса, какую страницу Razor вызывать, отмечает выбранную страницу в <code>HttpContext</code> и передает дальше по конвейеру. В конце концов запрос достигает компонента конечной точки, который вып…</p></div></div></body>
+</body>
 </html>
