@@ -1,7 +1,6 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore
  - NET/Razor
 ---
 # Создание ответов при помощи Razor Pages
