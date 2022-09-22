@@ -1942,8 +1942,7 @@
 <a class="md-nav__link" href="#_1">
     Что такое маршрутизация?
   </a>
-<nav aria-label="Что такое маршрутизация?" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#aspnet-core">
     Маршрутизация в ASP.NET Core
@@ -1973,9 +1972,6 @@
 <a class="md-nav__link" href="#razor-pages">
     Настройка соглашений с помощью Razor Pages
   </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
@@ -2922,8 +2918,7 @@
 <a class="md-nav__link" href="#_1">
     Что такое маршрутизация?
   </a>
-<nav aria-label="Что такое маршрутизация?" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#aspnet-core">
     Маршрутизация в ASP.NET Core
@@ -2954,9 +2949,6 @@
     Настройка соглашений с помощью Razor Pages
   </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
     Советы автора о маршрутизации и ее настройке
@@ -2974,7 +2966,7 @@
 <a class="md-tag" href="../../../../tags/#netrazor">NET/Razor</a>
 </nav>
 <h1 id="url-razor-pages">Сопоставление URL-адресов с Razor Pages с использованием маршрутизации<a class="headerlink" href="#url-razor-pages" title="Permanent link">¶</a></h1>
-<h2 id="_1">Что такое маршрутизация?<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h4 id="_1">Что такое маршрутизация?<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
 <p>Как мы видели в <a href="../../chapter%2003/ch-3-middleware-pipeline/" title="главе 3">главе 3</a>, приложение ASP.NET Core содержит конвейер промежуточного ПО, определяющий поведение приложения. Финальную обработку запроса выполняет компонент <code>EndpointMiddleware</code> в <a href="../../chapter%2004/ch-4-creating-a-website/" title="конце конвейера">конце конвейера</a>, вызывая <a href="../../definitions/page-handler/" title="обработчик страницы в Razor">обработчик страницы в Razor</a> или <a href="../../definitions/action-method/" title="метод действия">метод действия</a> в контроллере MVC.<br/>
 Однако, за сопоставление запроса и конкретного обработчика или метода отвечает процесс, называемый <a href="../../definitions/routing/" title="маршрутизацией">маршрутизацией</a>.<br/>
 К примеру, в случае простого пути адреса, например, <code>/Index</code>, именно компонент маршрутизации определяет, что этому пути соответствует обработчик страницы в файле <code>Index.cshtml</code>.<br/>
@@ -2990,7 +2982,7 @@
 <h4 id="url-"><a href="../ch-5-generating-urls-from-route-parameters/" title="Генерация URL-адресов из параметров маршрута">Генерация URL-адресов из параметров маршрута</a><a class="headerlink" href="#url-" title="Permanent link">¶</a></h4>
 <h4 id="_3"><a href="../ch-5-selecting-page-handler/" title="Выбор обработчика страницы для вызова">Выбор обработчика страницы для вызова</a><a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
 <h4 id="razor-pages"><a href="../ch-5-customizing-conventions-with-razor-pages/" title="Настройка соглашений с помощью Razor Pages">Настройка соглашений с помощью Razor Pages</a><a class="headerlink" href="#razor-pages" title="Permanent link">¶</a></h4>
-<h2 id="_4">Советы автора о маршрутизации и ее настройке<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h4 id="_4">Советы автора о маршрутизации и ее настройке<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
 <ul>
 <li><em>Избегайте</em> замены шаблона маршрута на абослютный путь в директиве <code>@page</code>;</li>
 <li><em>избегайте</em> добавления литеральных сегментов в директиву <code>@page</code>, используйте файловую иерархию;</li>
@@ -2998,7 +2990,10 @@
 <li><em>добавьте</em> параметры маршрута в директиву <code>@page</code>, чтобы сделать маршруты динамическими;</li>
 <li><em>рассмотрите</em> возможность использования глобальных соглашений для изменения шаблонов маршрутов всех страниц.</li>
 </ul>
-<p>Помните! Если случайно создать две страницы Razor с шаблонами маршрутов, перекрывающими друг друга - это приведет к ошибке времени выполнения.</p>
+<div class="admonition attention">
+<p class="admonition-title">Внимание!</p>
+<p>Если случайно создать две страницы Razor с шаблонами маршрутов, перекрывающими друг друга - это приведет к ошибке времени выполнения.</p>
+</div>
 <!-- taken from 
 https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
