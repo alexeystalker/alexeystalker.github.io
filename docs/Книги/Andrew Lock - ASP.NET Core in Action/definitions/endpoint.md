@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore
+ - NET/ASPNETCore/endpoint
  - definition
 ---
 # Конечная точка
