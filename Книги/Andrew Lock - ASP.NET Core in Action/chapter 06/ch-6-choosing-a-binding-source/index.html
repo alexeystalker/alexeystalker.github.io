@@ -5,11 +5,25 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Мой цифровой сад." name="description"/>
+<meta content="По умолчанию связыватель модели ASP.NET Core использует три источника: данные формы, данные маршрута и строку запроса.
+Иногда требуется специально указать, к какому источнику нужно выполнить привязку. Иногда требуется указать дополнительный источник, например, заголовок запроса.
+В этом случае используются специальные атрибуты:
+public class PhotosModel : PageModel
+{
+    public void OnPost(
+        [FromHeader] string userId,
+        [FromBody] List&lt;Photo&gt; photos)
+    {
+        ...
+    }
+}
+
+Здесь мы указываем, что параметр userId нужно заполнить из HTTP-заголовка userId, а из тела запроса (по умолчанию в формате JSON) нужно заполнить список объектов Photo.
+Вот возможные варианты источников привязки:" name="description"/>
 <link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-choosing-a-binding-source/" rel="canonical"/>
 <link href="../../../../assets/logo/logo.png" rel="icon"/>
 <meta content="mkdocs-1.3.1, mkdocs-material-8.5.3" name="generator"/>
-<title>Ch 6 choosing a binding source - Цифровой сад и огород</title>
+<title>Выбор источника привязки - Цифровой сад и огород</title>
 <link href="../../../../assets/stylesheets/main.7a952b86.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -32,10 +46,38 @@
 <link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
 <link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
-<meta content="Ch 6 choosing a binding source" property="og:title"/>
-<meta content="Ch 6 choosing a binding source" name="twitter:title"/>
-<meta content="Мой цифровой сад." name="og:description"/>
-<meta content="Мой цифровой сад." name="twitter:description"/>
+<meta content="Выбор источника привязки" property="og:title"/>
+<meta content="Выбор источника привязки" name="twitter:title"/>
+<meta content="По умолчанию связыватель модели ASP.NET Core использует три источника: данные формы, данные маршрута и строку запроса.
+Иногда требуется специально указать, к какому источнику нужно выполнить привязку. Иногда требуется указать дополнительный источник, например, заголовок запроса.
+В этом случае используются специальные атрибуты:
+public class PhotosModel : PageModel
+{
+    public void OnPost(
+        [FromHeader] string userId,
+        [FromBody] List&lt;Photo&gt; photos)
+    {
+        ...
+    }
+}
+
+Здесь мы указываем, что параметр userId нужно заполнить из HTTP-заголовка userId, а из тела запроса (по умолчанию в формате JSON) нужно заполнить список объектов Photo.
+Вот возможные варианты источников привязки:" name="description"/>
+<meta content="По умолчанию связыватель модели ASP.NET Core использует три источника: данные формы, данные маршрута и строку запроса.
+Иногда требуется специально указать, к какому источнику нужно выполнить привязку. Иногда требуется указать дополнительный источник, например, заголовок запроса.
+В этом случае используются специальные атрибуты:
+public class PhotosModel : PageModel
+{
+    public void OnPost(
+        [FromHeader] string userId,
+        [FromBody] List&lt;Photo&gt; photos)
+    {
+        ...
+    }
+}
+
+Здесь мы указываем, что параметр userId нужно заполнить из HTTP-заголовка userId, а из тела запроса (по умолчанию в формате JSON) нужно заполнить список объектов Photo.
+Вот возможные варианты источников привязки:" name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="https://garden.stalker-home.xyz/" property="og:image"/>
 <meta content="https://garden.stalker-home.xyz/" name="twitter:image"/>
@@ -84,7 +126,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Ch 6 choosing a binding source
+              Выбор источника привязки
             
           </span>
 </div>
@@ -1990,26 +2032,9 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Ch 6 choosing a binding source
-          <span class="md-nav__icon md-icon"></span>
-</label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Ch 6 choosing a binding source
+        Выбор источника привязки
       </a>
-<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    Выбор источника привязки
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ch-6-from-request-to-model/">
@@ -2949,17 +2974,6 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    Выбор источника привязки
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
@@ -2969,8 +2983,7 @@
 <nav class="md-tags">
 <a class="md-tag" href="../../../../tags/#netaspnetcorebinding-model">NET/ASPNETCore/binding-model</a>
 </nav>
-<h1>Ch 6 choosing a binding source</h1>
-<h2 id="_1">Выбор источника привязки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h1 id="_1">Выбор источника привязки<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p>По умолчанию связыватель модели ASP.NET Core использует три источника: данные формы, данные маршрута и строку запроса.<br/>
 Иногда требуется специально указать, к какому источнику нужно выполнить привязку. Иногда требуется указать дополнительный источник, например, заголовок запроса.<br/>
 В этом случае используются специальные атрибуты:<br/>
