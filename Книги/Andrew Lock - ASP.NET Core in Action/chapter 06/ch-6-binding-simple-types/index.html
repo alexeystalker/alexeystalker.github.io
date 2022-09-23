@@ -3032,12 +3032,37 @@ public class ConvertModel : PageModel
 <a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div><br/>
 Как будут заполнены параметры в зависимости от того, где они переданы</p>
-<p>|URL (значения маршрута)|Тело HTTP (значения формы)|Привязанные значения параметров|<br/>
-|—|—|—|—|<br/>
-|<code>/GBP/USD</code>|n/a |<code>currencyIn=GBP</code> <br/> <code>currencyOut=USD</code> <br/> <code>qty=0</code>|<br>
-|<code>/GBP/USD?currencyIn=CAD</code>|<code>QTY=50</code>|<code>currencyIn=GBP</code> <br/> <code>currencyOut=USD</code> <br/> <code>qty=50</code>|<br>
-|<code>/GBP/USD?qty=100</code>|<code>qty=50</code>|<code>currencyIn=GBP</code> <br/> <code>currencyOut=USD</code> <br/> <code>qty=50</code>|<br>
-|<code>/GBP/USD?qty=100</code>|<code>currencyIn=CAD&amp;currencyOUT=EUR&amp;qty=50</code>|<code>currencyIn=CAD</code> <br/> <code>currencyOut=EUR</code> <br/> <code>qty=50</code>|</br></br></br></p>
+<table>
+<thead>
+<tr>
+<th>URL (значения маршрута)</th>
+<th>Тело HTTP (значения формы)</th>
+<th>Привязанные значения параметров</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/GBP/USD</code></td>
+<td></td>
+<td><code>currencyIn=GBP</code> <br/> <code>currencyOut=USD</code> <br/> <code>qty=0</code></td>
+</tr>
+<tr>
+<td><code>/GBP/USD?currencyIn=CAD</code></td>
+<td><code>QTY=50</code></td>
+<td><code>currencyIn=GBP</code> <br/> <code>currencyOut=USD</code> <br/> <code>qty=50</code></td>
+</tr>
+<tr>
+<td><code>/GBP/USD?qty=100</code></td>
+<td><code>qty=50</code></td>
+<td><code>currencyIn=GBP</code> <br/> <code>currencyOut=USD</code> <br/> <code>qty=50</code></td>
+</tr>
+<tr>
+<td><code>/GBP/USD?qty=100</code></td>
+<td><code>currencyIn=CAD&amp;currencyOUT=EUR&amp;qty=50</code></td>
+<td><code>currencyIn=CAD</code> <br/> <code>currencyOut=EUR</code> <br/> <code>qty=50</code></td>
+</tr>
+</tbody>
+</table>
 <p>Как мы видим, значения формы, если они есть, имеют приоритет даже над значениями маршрута.<br>
 Если требуется, связыватель модели автоматически преобразует строку в практически любой примитивный тип, а также всё, что имеет преобразователь типов <code>TypeConverter</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> .</br></p>
 <div class="footnote">
