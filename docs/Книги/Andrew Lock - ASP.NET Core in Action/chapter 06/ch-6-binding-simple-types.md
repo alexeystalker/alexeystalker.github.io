@@ -33,7 +33,7 @@ public class ConvertModel : PageModel
 
 |URL (значения маршрута)|Тело HTTP (значения формы)|Привязанные значения параметров|
 |---|---|---|---|
-|`/GBP/USD`||`currencyIn=GBP` <br> `currencyOut=USD` <br> `qty=0`|
+|`/GBP/USD`|n/a |`currencyIn=GBP` <br> `currencyOut=USD` <br> `qty=0`|
 |`/GBP/USD?currencyIn=CAD`|`QTY=50`|`currencyIn=GBP` <br> `currencyOut=USD` <br> `qty=50`|
 |`/GBP/USD?qty=100`|`qty=50`|`currencyIn=GBP` <br> `currencyOut=USD` <br> `qty=50`|
 |`/GBP/USD?qty=100`|`currencyIn=CAD&currencyOUT=EUR&qty=50`|`currencyIn=CAD` <br> `currencyOut=EUR` <br> `qty=50`|
