@@ -2,6 +2,7 @@
 share: true
 tags:
  - NET/ASPNETCore/routing
+ - NET/ASPNETCore/binding-model
  - definition
 ---
 # Значение маршрута
