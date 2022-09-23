@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore
+ - NET/ASPNETCore/binding-model
  - definition
 ---
 # Привязка модели
