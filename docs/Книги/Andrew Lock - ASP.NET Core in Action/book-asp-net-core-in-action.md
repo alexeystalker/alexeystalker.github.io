@@ -31,5 +31,6 @@ tags:
 #### [[ch-17-monitoring-and-troubleshooting-errors-with-logging|Глава 17 - Мониторинг и устранение ошибок с помощью журналирования]]
 #### [[ch-18-improving-app-security|Глава 18 - Повышаем безопасность приложения]]
 #### [[ch-19-building-custom-components|Глава 19 - Создание специальных компонентов]]
+#### [[ch-20-building-custom-mvc-and-razor-pages-components|Глава 20 - Создание специальных компонентов MVC и Razor Pages]]
 ## Ссылки
 [Примеры кода ко всем главам, начиная со второй](https://github.com/andrewlock/asp-dot-net-core-in-action-2e)
