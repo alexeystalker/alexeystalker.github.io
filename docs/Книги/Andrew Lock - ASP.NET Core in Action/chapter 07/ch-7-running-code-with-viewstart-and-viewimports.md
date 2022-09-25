@@ -1,5 +1,6 @@
 ---
 share: true
+title: Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports
 tags:
  - NET/Razor
 ---
