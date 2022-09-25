@@ -1,5 +1,6 @@
 ---
 share: true
+title: Макеты, частичные представления и _ViewStart
 tags:
  - NET/Razor
 ---
