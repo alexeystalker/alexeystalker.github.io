@@ -776,6 +776,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/NET/AspNetCore/access-routing-values-from-httpcontext/</loc>
+         <lastmod>2022-09-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/NET/AspNetCore/httpcontext/</loc>
          <lastmod>2022-09-28</lastmod>
          <changefreq>daily</changefreq>
