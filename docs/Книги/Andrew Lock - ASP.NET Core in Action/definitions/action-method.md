@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore
+ - NET/MVC
  - definition
 ---
 # Метод действия
