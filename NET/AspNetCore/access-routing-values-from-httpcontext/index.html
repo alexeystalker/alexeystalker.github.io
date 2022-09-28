@@ -5,12 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content='Обычно получение значений маршрута происходит через привязку модели. Однако иногда необходимо получить эти значения напрямую из контекста.
-Есть два способа: через context.GetRouteData().Values или context.GetRouteValue("min"), а именно:
-var routeValues = context.GetRouteData().Values;
-var valueStr = routeValues["paramName"] as string;
-//--- или ---
-var valueStr2 = context.GetRouteValue("paramName") as string;' name="description"/>
+<meta content="Обычно получение значений маршрута происходит через привязку модели. Однако иногда необходимо получить эти значения напрямую из контекста." name="description"/>
 <link href="https://garden.stalker-home.xyz/NET/AspNetCore/access-routing-values-from-httpcontext/" rel="canonical"/>
 <link href="../../../assets/logo/logo.png" rel="icon"/>
 <meta content="mkdocs-1.4.0, mkdocs-material-8.5.3" name="generator"/>
@@ -39,18 +34,8 @@ var valueStr2 = context.GetRouteValue("paramName") as string;' name="description
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
 <meta content="Получение значений маршрута из HttpContext" property="og:title"/>
 <meta content="Получение значений маршрута из HttpContext" name="twitter:title"/>
-<meta content='Обычно получение значений маршрута происходит через привязку модели. Однако иногда необходимо получить эти значения напрямую из контекста.
-Есть два способа: через context.GetRouteData().Values или context.GetRouteValue("min"), а именно:
-var routeValues = context.GetRouteData().Values;
-var valueStr = routeValues["paramName"] as string;
-//--- или ---
-var valueStr2 = context.GetRouteValue("paramName") as string;' name="description"/>
-<meta content='Обычно получение значений маршрута происходит через привязку модели. Однако иногда необходимо получить эти значения напрямую из контекста.
-Есть два способа: через context.GetRouteData().Values или context.GetRouteValue("min"), а именно:
-var routeValues = context.GetRouteData().Values;
-var valueStr = routeValues["paramName"] as string;
-//--- или ---
-var valueStr2 = context.GetRouteValue("paramName") as string;' name="twitter:description"/>
+<meta content="Обычно получение значений маршрута происходит через привязку модели. Однако иногда необходимо получить эти значения напрямую из контекста." name="description"/>
+<meta content="Обычно получение значений маршрута происходит через привязку модели. Однако иногда необходимо получить эти значения напрямую из контекста." name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="https://garden.stalker-home.xyz/" property="og:image"/>
 <meta content="https://garden.stalker-home.xyz/" name="twitter:image"/>
@@ -3195,8 +3180,12 @@ var valueStr2 = context.GetRouteValue("paramName") as string;' name="twitter:des
 <a class="md-tag" href="../../../tags/#netaspnetcorerouting">NET/ASPNETCore/routing</a>
 </nav>
 <h1 id="httpcontext">Получение значений маршрута из HttpContext<a class="headerlink" href="#httpcontext" title="Permanent link">¶</a></h1>
-<p>Обычно получение <a href="../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/route-value/" title="значений маршрута">значений маршрута</a> происходит через <a href="../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/model-binding/" title="привязку модели">привязку модели</a>. Однако иногда необходимо получить эти значения напрямую из <a href="../httpcontext/" title="контекста">контекста</a>.<br/>
-Есть два способа: через <code>context.GetRouteData().Values</code> или <code>context.GetRouteValue("min")</code>, а именно:<br/>
+<p>Обычно получение <a href="../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/route-value/" title="значений маршрута">значений маршрута</a> происходит через <a href="../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/model-binding/" title="привязку модели">привязку модели</a>. Однако иногда необходимо получить эти значения напрямую из <a href="../httpcontext/" title="контекста">контекста</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Например</p>
+<p>В SignalR Core можно указать для хаба <a href="../../../%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/route-template/" title="шаблон маршрута">шаблон маршрута</a>, но стандартные механизмы типа атрибута <code>[BindProperty]</code> при этом не работают.</p>
+</div>
+<p>Есть два способа: через <code>context.GetRouteData().Values</code> или <code>context.GetRouteValue("min")</code>, а именно:<br/>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">routeValues</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="n">GetRouteData</span><span class="p">().</span><span class="n">Values</span><span class="p">;</span><span class="w"></span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">valueStr</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">routeValues</span><span class="p">[</span><span class="s">"paramName"</span><span class="p">]</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"></span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">//--- или ---</span>
