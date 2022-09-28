@@ -6,6 +6,9 @@ tags:
 
 # Получение значений маршрута из HttpContext
 Обычно получение [[route-value|значений маршрута]] происходит через [[model-binding|привязку модели]]. Однако иногда необходимо получить эти значения напрямую из [[httpcontext|контекста]].
+> [!Note] Например
+> В SignalR Core можно указать для хаба [[route-template|шаблон маршрута]], но стандартные механизмы типа атрибута `[BindProperty]` при этом не работают.
+
 Есть два способа: через `context.GetRouteData().Values` или `context.GetRouteValue("min")`, а именно:
 ```csharp
 var routeValues = context.GetRouteData().Values;
