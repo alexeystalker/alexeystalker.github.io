@@ -2244,11 +2244,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-10-captured-dependencies/">
-        Следите за захваченными зависимостями
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../ch-10-creating-loosely-coupling-code/">
         Создание слабосвязанного кода
       </a>
@@ -2287,15 +2282,11 @@
 <a class="md-nav__link" href="#singleton">
     Singleton
   </a>
-<nav aria-label="Singleton" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
     Следите за захваченными зависимостями
   </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -3287,15 +3278,11 @@
 <a class="md-nav__link" href="#singleton">
     Singleton
   </a>
-<nav aria-label="Singleton" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
     Следите за захваченными зависимостями
   </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -3393,7 +3380,36 @@
 </code></pre></div><br/>
 Вызовем <code>RowCountModel</code> дважды:<br/>
 <img alt="Pasted image 20220322210042.png" src="../../../../images/Pasted%20image%2020220322210042.png" title="Pasted image 20220322210042.png"/></p>
-<h4 id="_2"><a href="../ch-10-captured-dependencies/" title="Следите за захваченными зависимостями">Следите за захваченными зависимостями</a><a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<h2 id="_2">Следите за захваченными зависимостями<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>Предположим, мы настраиваем ЖЦ для <code>DataContext</code> и <code>Repository</code>:</p>
+<ul>
+<li><code>DataContext</code> - scoped, так как он должен использоваться для одного запроса</li>
+<li><code>Repository</code> - singleton, так как он потокобезопасный и не имеет собственного состояния.</li>
+</ul>
+<p>Если мы поступим таким образом, мы получим <em>захваченную зависимость</em>. <code>DataContext</code>, использованный в <code>Repository</code> всегда будет одним и тем же, так как он будет сохраняться всё время жизни <code>Repository</code>.<br/>
+Поэтому сервис должен использовать только те зависимости, жизненный цикл которых превышает или эквивалентен ЖЦ сервиса. Singleton сервис может использовать только singleton зависимости. Scoped сервис - только scoped и singleton. Transient - все три вида.</p>
+<p>По умолчанию ASP.NET Core проверяет захватываемые зависимости на соответствие этому правилу только в окружении разработки, так как она влияет на производительность. Чтобы включить или отключить проверку независимо от окружения, нужно задать параметр <code>ValidateScopes</code> при создании <code>HostBuilder</code>:<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="n">CreateHostBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">).</span><span class="n">Build</span><span class="p">().</span><span class="n">Run</span><span class="p">();</span><span class="w"></span>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">IHostBuilder</span><span class="w"> </span><span class="nf">CreateHostBuilder</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"></span>
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="n">Host</span><span class="p">.</span><span class="n">CreateDefaultBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">        </span><span class="p">.</span><span class="n">ConfigureWebHostDefaults</span><span class="p">(</span><span class="n">webBuilder</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"></span>
+<a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">            </span><span class="n">webBuilder</span><span class="p">.</span><span class="n">UseStartup</span><span class="p">&lt;</span><span class="n">Startup</span><span class="p">&gt;();</span><span class="w"></span>
+<a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">        </span><span class="p">})</span><span class="w"></span>
+<a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">        </span><span class="p">.</span><span class="n">UseDeafultServiceProvider</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"></span>
+<a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-6-16" id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">            </span><span class="n">options</span><span class="p">.</span><span class="n">ValidateScopes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+<a href="#__codelineno-6-17" id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">            </span><span class="n">options</span><span class="p">.</span><span class="n">ValidateOnBuild</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+<a href="#__codelineno-6-18" id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">        </span><span class="p">})</span><span class="w"></span>
+<a href="#__codelineno-6-19" id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div><br/>
+В примере также включен параметр <code>ValidateOnBuild</code>, который отвечает за проверку всего <a href="../../definitions/dependency-graph/" title="графа зависимостей">графа зависимостей</a> на наличие регистрации всех требуемых зависимостей.</p>
 <!-- taken from 
 https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
