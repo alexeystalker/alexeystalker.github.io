@@ -1,5 +1,6 @@
 ---
 share: true
+title: Аутентификация для API и распределенных приложений
 tags:
  - NET/ASPNETCore/authentication
  - security
