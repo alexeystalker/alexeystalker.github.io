@@ -2631,7 +2631,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ch-14-authentication-for-apis-and-distributed-applications/">
-        Аутентификация для API и распределенных приложений[^1]
+        Аутентификация для API и распределенных приложений
       </a>
 </li>
 <li class="md-nav__item">
@@ -2728,6 +2728,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../definitions/binding-model/">
         Модель привязки
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../definitions/claim/">
+        Утверждение (claim)
       </a>
 </li>
 <li class="md-nav__item">
@@ -3686,7 +3691,7 @@
 <h1 id="aspnet-core">Пользователи и утверждения в ASP.NET Core<a class="headerlink" href="#aspnet-core" title="Permanent link">¶</a></h1>
 <p>Концепция пользователя встроена в ASP.NET Core. Ранее мы <a href="../../chapter%2003/ch-3-what-is-middleware/" title="узнали">узнали</a>, что HTTP-сервер Kestrel создает объект <a href="../../../../NET/AspNetCore/httpcontext/" title="HttpContext">HttpContext</a> для каждого полученного запроса. Помимо прочего <code>HttpContext</code> предоставляет текущего <a href="../../definitions/principal/" title="принципала">принципала</a> запроса в качестве свойства <code>User</code>. <br/>
 <img alt="Pasted image 20220601192248.png" src="../../../../images/Pasted%20image%2020220601192248.png" title="Pasted image 20220601192248.png"><br/>
-Принципалы раеализованы в виде объектов <code>ClaimsPrincipal</code>, у которых есть коллекция <a href="../../../claim" title="утверждений">утверждений</a>.</img></p>
+Принципалы раеализованы в виде объектов <code>ClaimsPrincipal</code>, у которых есть коллекция <a href="../../definitions/claim/" title="утверждений">утверждений</a>.</img></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Ранее в ASP.NET использовался ролевой подход к безопасности. <code>ClaimsPrincipal</code> совместим с этим подходом, однако для новых приложений следует использовать утверждения.</p>
