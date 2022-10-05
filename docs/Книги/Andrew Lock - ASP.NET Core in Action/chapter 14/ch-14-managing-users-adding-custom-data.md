@@ -11,7 +11,7 @@ tags:
 - *вручную, после того, как пользователь зарегистрировался*.
 
 > [!Note] Совет
-> Еще одним распространенным подходом является настройка сущности `IdentityUser`. Он описан в [статье](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/add-user-data?view=aspnetcore-6.0&tabs=visual-studio)
+> Еще одним распространенным подходом является настройка сущности `IdentityUser`. Этот подход описан в [статье](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/add-user-data?view=aspnetcore-6.0&tabs=visual-studio).
 
 Предположим, мы хотим добавить новое утверждение `FullName`. Типичный подход будет выглядеть так:
 1. [[ch-14-customizing-a-page-in-identity-default-ui|Добавляем]] заготовки для Register.cshtml;
