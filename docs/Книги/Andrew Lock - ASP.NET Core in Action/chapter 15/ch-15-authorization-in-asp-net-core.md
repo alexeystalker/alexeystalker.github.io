@@ -16,7 +16,7 @@ tags:
 
 > [!Info] Изменения в авторизации для ASP.NET Core 3.0
 > До ASP.NET Core 3.0 компонента `AuthorizationMiddleware` не существовало - логика авторизации выполнялась атрибутом `[Authorize]` как часть конвейера фильтров MVC.
-> Новый дизайн, использующий `AuthorizationMiddleware` в сочетании с маршрутизацией конечных точек позволяет применять дополнительные сценарии, упрощаа применение авторизации к [[ch-19-creating-custom-endpoints-with-endpoint-routing|конечным точкам]], не относящимся к MVC или страницам Razor.
+> Новый дизайн, использующий `AuthorizationMiddleware` в сочетании с маршрутизацией конечных точек позволяет применять дополнительные сценарии, упрощая применение авторизации к [[ch-19-creating-custom-endpoints-with-endpoint-routing|конечным точкам]], не относящимся к MVC или страницам Razor.
 
 #### [[ch-15-preventing-anonymous-users-from-accessing-your-application|Предотвращение доступа анонимных пользователей к вашему приложению]]
 #### [[ch-15-handling-unauthorized-requests|Обработка запросов, не прошедших аутентификацию]]
