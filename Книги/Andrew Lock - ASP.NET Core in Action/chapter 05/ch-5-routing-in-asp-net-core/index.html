@@ -2736,11 +2736,91 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_1_16" id="__nav_14_1_16" type="checkbox"/>
 <label class="md-nav__link" for="__nav_14_1_16">
+          Chapter 15
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Chapter 15" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_14_1_16">
+<span class="md-nav__icon md-icon"></span>
+          Chapter 15
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-authorization-in-asp-net-core/">
+        Авторизация в ASP.NET Core
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-authorization/">
+        Авторизация: обеспечиваем защиту приложения
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-creating-a-policy-with-custom-requirement-and-handler/">
+        Создание политики со специальным требованием и обработчиком
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-creating-custom-policies/">
+        Создание специальных политик авторизации
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-creating-resource-based-authorization-handler/">
+        Создание обработчика AuthorizationHandler на основе ресурсов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-handling-unauthorized-requests/">
+        Обработка запросов, не прошедших аутентификацию
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-hiding-elements-in-razor-templates-from-unauthorized-users/">
+        Скрытие элементов в шаблонах Razor от незарегистрированных пользователей
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-introducing-authorization/">
+        Знакомство с авторизацией
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-manually-authorizing-requests-with-iauthorizationservice/">
+        Ручная авторизация запросов с помощью интерфейса IAuthorizationService
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-preventing-anonymous-users-from-accessing-your-application/">
+        Предотвращение доступа анонимных пользователей к вашему приложению
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-resource-based-authorization/">
+        Управление доступом с авторизацией на основе ресурсов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-the-building-blocks-of-policy/">
+        Требования и обработчики: строительные блоки политики
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2015/ch-15-using-policies-for-claims-based-authorization/">
+        Использование политик для авторизации на основе утверждений
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_1_17" id="__nav_14_1_17" type="checkbox"/>
+<label class="md-nav__link" for="__nav_14_1_17">
           Definitions
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="Definitions" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_14_1_16">
+<label class="md-nav__title" for="__nav_14_1_17">
 <span class="md-nav__icon md-icon"></span>
           Definitions
         </label>
@@ -3773,7 +3853,7 @@
 <p><code>EndpointMiddleware</code> хранит зарегистрированные маршруты в словаре, который используется <code>RoutingMiddleware</code> для поиска подходящих конечных точек. Если такая точка находится, указание на нее прикрепляется к объекту <code>HttpContext</code>. Когда запрос доходит до <code>EndpointMiddleware</code>, компонент выполняет выбранную точку.<br/>
 Если <code>RoutingMiddleware</code> не находит подходящий запросу шаблон, конечная точка не выбирается, запрос передается дальше по конвейеру. <code>EndpointMiddleware</code> игнорирует такой запрос, и, если компонентов после <code>EndpointMiddleware</code> нет, выполняется фиктивный компонент и возвращается ответ 404 Not Found.<br/>
 <img alt="Pasted image 20220127182804.png" src="../../../../images/Pasted%20image%2020220127182804.png" title="Pasted image 20220127182804.png"><br/>
-Видно преимущество разделения <code>RoutingMiddleware</code> и <code>EndpointMiddleware</code>: все компоненты, размещенные после <code>RoutingMiddleware</code>, могут видеть, какая конечная точка будет выполнена. Это полезно, например, при использовании компонента <code>AuthorizationMiddleware</code>, которому необходимо знать выбранную конечную точку для <a href="../../../ch-15-authorization" title="проверки прав доступа">проверки прав доступа</a>.</img></p>
+Видно преимущество разделения <code>RoutingMiddleware</code> и <code>EndpointMiddleware</code>: все компоненты, размещенные после <code>RoutingMiddleware</code>, могут видеть, какая конечная точка будет выполнена. Это полезно, например, при использовании компонента <code>AuthorizationMiddleware</code>, которому необходимо знать выбранную конечную точку для <a href="../../chapter%2015/ch-15-authorization/" title="проверки прав доступа">проверки прав доступа</a>.</img></p>
 <h4 id="_1"><a href="../ch-5-convention-based-vs-attribute/" title="Маршрутизация на основе соглашений и маршрутизация на основе атрибутов">Маршрутизация на основе соглашений и маршрутизация на основе атрибутов</a><a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
 <h4 id="razor"><a href="../ch-5-routing-to-razor-pages/" title="Маршрутизация и страницы Razor">Маршрутизация и страницы Razor</a><a class="headerlink" href="#razor" title="Permanent link">¶</a></h4>
 <!-- taken from 
