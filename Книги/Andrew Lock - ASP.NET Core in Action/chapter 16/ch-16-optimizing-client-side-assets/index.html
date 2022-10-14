@@ -1761,6 +1761,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2001/ch-1-how-does-it-work/">
+        Как работает ASP.NET Core?
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2001/ch-1-introduction/">
         Введение в ASP.NET Core
       </a>
@@ -2919,6 +2924,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../definitions/bundling/">
+        Упаковка
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../definitions/claim/">
         Утверждение (claim)
       </a>
@@ -2976,6 +2986,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../definitions/layout/">
         Макет
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../definitions/minification/">
+        Минификация
       </a>
 </li>
 <li class="md-nav__item">
@@ -3921,7 +3936,7 @@
 <li><em>общий размер ответов</em></li>
 <li><em>количество запросов</em>. В HTTP/1.0 и HTTP/1.1 можно сделать не больше 6 одновременных запросов к серверу - остальные должны дождаться загрузки предыдущих. В HTTP/2.0, который поддерживается Kestrel, такого ограничения нет, но нельзя быть уверенным, что он используется клиентами.</li>
 </ul>
-<p>Есть много возможностей для ускорения загрузки страниц. Два самых простых из них - использовать <a href="../../../bundling" title="упаковку">упаковку</a> и <a href="../../../minification" title="минификацию">минификацию</a> кода, чтобы уменьшить количество и размер запросов.</p>
+<p>Есть много возможностей для ускорения загрузки страниц. Два самых простых из них - использовать <a href="../../definitions/bundling/" title="упаковку">упаковку</a> и <a href="../../definitions/minification/" title="минификацию">минификацию</a> кода, чтобы уменьшить количество и размер запросов.</p>
 <h2 id="_1">Ускорение работы приложения с помощью упаковки и минификации кода<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>К примеру, для <a href="../../chapter%2012/ch-12-sample-application/" title="приложения с рецептами">приложения с рецептами</a> запрос страницы Login приведет к 10 запросам к серверу:</p>
 <ul>

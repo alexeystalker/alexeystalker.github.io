@@ -1758,6 +1758,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2001/ch-1-how-does-it-work/">
+        Как работает ASP.NET Core?
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2001/ch-1-introduction/">
         Введение в ASP.NET Core
       </a>
@@ -2901,6 +2906,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../definitions/bundling/">
+        Упаковка
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../definitions/claim/">
         Утверждение (claim)
       </a>
@@ -2958,6 +2968,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../definitions/layout/">
         Макет
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../definitions/minification/">
+        Минификация
       </a>
 </li>
 <li class="md-nav__item">
@@ -3879,7 +3894,7 @@
 <a class="md-tag" href="../../../../tags/#netaspnetcorepublish">NET/ASPNETCore/publish</a>
 </nav>
 <h1 id="aspnet-core">Модель хостинга ASP.NET Core<a class="headerlink" href="#aspnet-core" title="Permanent link">¶</a></h1>
-<p>Как мы <a href="../../../ch-1-how-does-it-work" title="обсуждали в первой главе">обсуждали в первой главе</a>, приложения ASP.NET Core, по сути, консольные. Есть функция <code>static void main</code>, служащая точкой входа, как стандартное консольное приложение .NET.<br/>
+<p>Как мы <a href="../../chapter%2001/ch-1-how-does-it-work/" title="обсуждали в первой главе">обсуждали в первой главе</a>, приложения ASP.NET Core, по сути, консольные. Есть функция <code>static void main</code>, служащая точкой входа, как стандартное консольное приложение .NET.<br/>
 Внутри процесса приложения работает web-сервер Kestrel, который предоставляет функциональность HTTP, чтобы получать запросы  и возвращать ответы клиентам. Kestrel передает все запросы в код приложения.<br/>
 <img alt="Pasted image 20220701202012.png" src="../../../../images/Pasted%20image%2020220701202012.png" title="Pasted image 20220701202012.png"><br/>
 Такая модель хостинга отделяет сервер и <a href="../../definitions/reverse-proxy/" title="обратный прокси">обратный прокси</a> от самого приложения, чтобы одно и то же приложение могло без изменений в коде работать в нескольких окружениях.</img></p>

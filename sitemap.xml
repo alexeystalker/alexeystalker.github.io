@@ -996,6 +996,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2001/ch-1-how-does-it-work/</loc>
+         <lastmod>2022-10-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2001/ch-1-introduction/</loc>
          <lastmod>2022-10-14</lastmod>
          <changefreq>daily</changefreq>
@@ -1881,6 +1886,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/bundling/</loc>
+         <lastmod>2022-10-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/claim/</loc>
          <lastmod>2022-10-14</lastmod>
          <changefreq>daily</changefreq>
@@ -1937,6 +1947,11 @@
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/layout/</loc>
+         <lastmod>2022-10-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/minification/</loc>
          <lastmod>2022-10-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
