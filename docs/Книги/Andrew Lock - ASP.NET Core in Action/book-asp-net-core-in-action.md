@@ -32,5 +32,6 @@ tags:
 #### [[ch-18-improving-app-security|Глава 18 - Повышаем безопасность приложения]]
 #### [[ch-19-building-custom-components|Глава 19 - Создание специальных компонентов]]
 #### [[ch-20-building-custom-mvc-and-razor-pages-components|Глава 20 - Создание специальных компонентов MVC и Razor Pages]]
+#### [[ch-21-calling-remote-apis-with-ihttpclientfactory|Глава 21 - Вызов удаленных API с помощью IHttpClientLibrary]]
 ## Ссылки
 [Примеры кода ко всем главам, начиная со второй](https://github.com/andrewlock/asp-dot-net-core-in-action-2e)

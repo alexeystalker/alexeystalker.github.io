@@ -41,4 +41,4 @@ public class UserBindingModel
 - `[Required]` - указывает, что свойство не должно иметь значение `null`;
 - `[Compare]` - позволяет подтвердить, что два свойства имеют одинаковое значение.
 
-В пространстве имён `System.ComponentModel.DataAnnotations` есть и другие полезные атрибуты. Также можно написать свой атрибут, унаследовав его от `ValidationAttribute`. %% добавить ссылку на главу 20 %%
+В пространстве имён `System.ComponentModel.DataAnnotations` есть и другие полезные атрибуты. Также можно написать свой атрибут, [[ch-20-building-custom-validation-attribute|унаследовав]] его от `ValidationAttribute`.
