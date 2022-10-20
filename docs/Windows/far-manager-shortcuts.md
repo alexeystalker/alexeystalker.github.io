@@ -1,5 +1,5 @@
 ---
-tags: [FAR]
+tags: [FAR, cheatsheet]
 share: true
 ---
 # Шорткаты в FAR Manager
