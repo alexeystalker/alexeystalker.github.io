@@ -2,7 +2,7 @@
 share: true
 tags: [NET/library, NET/logging]
 ---
-# Библиотека Serilog
+# Serilog
 Serilog - библиотека для логирования с открытым исходным кодом.
 Может записывать (помимо обычных файла, консоли и т.п.) в Elasticsearch или БД. 
 ## Ссылки
