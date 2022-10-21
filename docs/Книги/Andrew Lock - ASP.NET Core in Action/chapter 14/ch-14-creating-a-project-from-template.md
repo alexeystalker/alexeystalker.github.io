@@ -4,7 +4,7 @@ tags:
  - NET/ASPNETCore/Identity
 ---
 # Создание проекта из шаблона
-> [!note] Совет
+> [!tip] Совет
 > Можно воспользоваться командной строкой:
 >  ```bash
 >  dotnet new webapp -au Individual -uld
