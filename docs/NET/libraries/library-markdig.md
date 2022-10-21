@@ -2,8 +2,8 @@
 share: true
 tags: [разобрать,NET/library,markdown]
 ---
-# Библиотека для парсинга Markdown
-И генерации HTML.
+# Markdig
+Библиотека для парсинга Markdown и генерации HTML.
 ## Ссылки
 https://github.com/xoofx/markdig
 

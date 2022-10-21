@@ -5,7 +5,9 @@ tags:
  - GUI
  - console-app
 ---
-# konsole
+# Spectre.Console
+
 Библиотека для консольного GUI
+
 ## Ссылки
-https://github.com/goblinfactory/konsole/
+https://github.com/spectreconsole/spectre.console

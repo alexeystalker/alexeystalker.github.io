@@ -2,8 +2,8 @@
 share: true
 tags: [NET/library, QRcode]
 ---
-# Библиотека для генерации QR кодов
-`Net.Codecrete.QrCodeGenerator`
+# QrCodeGenerator
+Библиотека для генерации QR кодов `Net.Codecrete.QrCodeGenerator`
 ### Основные особенности
 - Поддерживает кодирование всех 40 версий (размеров) и всех 4 уровней коррекции ошибок в соответствии со стандартом QR Code Model 2.
 - Форматы вывода: чистые пиксели QR символа, строка SVG XML, растровое изображение.
