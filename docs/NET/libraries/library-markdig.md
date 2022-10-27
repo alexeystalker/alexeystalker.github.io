@@ -1,6 +1,6 @@
 ---
 share: true
-tags: [разобрать,NET/library,markdown]
+tags: [NET/library,markdown]
 ---
 # Markdig
 Библиотека для парсинга Markdown и генерации HTML.
