@@ -27,7 +27,7 @@ finally
 Желательно не использовать внутри такой критической секции асинхронные методы (с await), так как Monitor.Exit() должен выполняться на том же потоке, что и Monitor.Enter(), иначе будет выброшено исключение SynchronizationLockException. Исключение из этого правила составляет случай, когда существует контекст синхронизации, и управление вернется в тот же поток (например, UI-поток WinForms или WPF)." name="description"/>
 <link href="https://garden.stalker-home.xyz/NET/multithreading/lock-primitive/" rel="canonical"/>
 <link href="../../../assets/logo/logo.png" rel="icon"/>
-<meta content="mkdocs-1.4.1, mkdocs-material-8.5.7" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.7" name="generator"/>
 <title>lock (Monitor.Enter / Monitor.Exit) - Цифровой сад и огород</title>
 <link href="../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
@@ -1411,6 +1411,11 @@ finally
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../libraries/library-commandlineparser/">
         CommandLineParser
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../libraries/library-consoleappframework/">
+        ConsoleAppFramework
       </a>
 </li>
 <li class="md-nav__item">

@@ -13,7 +13,7 @@ ASP.NET Core включает ForwardedHeadersMiddleware для поиска э�
 Когда обратный прокси пересылает запрос, ForwardedHeadersMiddleware будет искать заголовок X-Forwarded-Proto и при необходимости обновит детали запроса. После этого для всех последующих компонентов конвейера запрос считается безопасным. При добавлении ForwardedHeadersMiddleware вручную его важно разместить перед вызовом методов UseHsts() и UseHttpsRedirection(), чтобы перенаправленные заголовки были прочитаны." name="description"/>
 <link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-ssl-offloading-and-related/" rel="canonical"/>
 <link href="../../../../assets/logo/logo.png" rel="icon"/>
-<meta content="mkdocs-1.4.1, mkdocs-material-8.5.7" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.7" name="generator"/>
 <title>Терминирование SSL/TLS, пересылка заголовков и обнаружение защищённых запросов - Цифровой сад и огород</title>
 <link href="../../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
@@ -1369,6 +1369,11 @@ ASP.NET Core включает ForwardedHeadersMiddleware для поиска э�
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../NET/libraries/library-commandlineparser/">
         CommandLineParser
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/libraries/library-consoleappframework/">
+        ConsoleAppFramework
       </a>
 </li>
 <li class="md-nav__item">
