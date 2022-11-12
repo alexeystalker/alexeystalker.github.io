@@ -46,5 +46,5 @@ public class ExchangeRatesHostedService: BackgroundService
 ```
 Создание таких областей - общее решение, когда нужен доступ к сервисам с жизненным циклом Scoped вне контекста запроса. Например [[ch-19-using-services-to-configure-ioptions-with-iconfigureoptions|реализация]] интерфейса `IConfigureOptions`.
 > [!tip] Совет
-> Чтобы сделать использование локатора сервисов менее запутанным, рекомендуется выделять тело задачу в отдельный класс и использовать локацию сервисов только для этого класса, как показано в разделе "## Использование службы с заданной областью в фоновой задаче" [этого документа](https://learn.microsoft.com/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-6.0&tabs=visual-studio#consuming-a-scoped-service-in-a-background-task)
+> Чтобы сделать использование локатора сервисов менее запутанным, рекомендуется выделять тело задачу в отдельный класс и использовать локацию сервисов только для этого класса, как показано в разделе "Использование службы с заданной областью в фоновой задаче" [этого документа](https://learn.microsoft.com/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-6.0&tabs=visual-studio#consuming-a-scoped-service-in-a-background-task)
 
