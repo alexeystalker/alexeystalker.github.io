@@ -34,5 +34,6 @@ tags:
 #### [[ch-20-building-custom-mvc-and-razor-pages-components|Глава 20 - Создание специальных компонентов MVC и Razor Pages]]
 #### [[ch-21-calling-remote-apis-with-ihttpclientfactory|Глава 21 - Вызов удаленных API с помощью IHttpClientLibrary]]
 #### [[ch-22-building-background-task-and-services|Глава 22 - Создание фоновых задач и сервисов]]
+#### [[ch-23-testing-your-application|Глава 23 - Тестирование приложения]]
 ## Ссылки
 [Примеры кода ко всем главам, начиная со второй](https://github.com/andrewlock/asp-dot-net-core-in-action-2e)
