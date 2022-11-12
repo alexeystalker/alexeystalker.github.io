@@ -2,2922 +2,2982 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://garden.stalker-home.xyz/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/tags/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/dependency-injection-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/memento-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/microservice-architecture-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/application-architecture-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/microservice-architecture-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Application%20Architecture%20Patterns/monolithic-architecture-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/api-gateway-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/bff-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/circuit-breaker-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/client-side-discovery-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/communication-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/idempotent-consumer-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/messaging-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/polling-publisher-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/retry-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/rpi-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/self-registration-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/server-side-discovery-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/service-registry-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/third-party-registration-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transaction-log-tailing-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Communication%20Patterns/transactional-outbox-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/cross-cutting-concerns-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/externalized-configuration-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/microservice-chassis-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/service-template-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Cross%20Cutting%20Conserns%20Patterns/sidecar-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/aggregate-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/data-management-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/database-per-service-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/domain-event-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/event-sourcing-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/saga-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Data%20Management%20Patterns/shared-database-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-business-capability-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decompose-by-subdomain-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Decomposition%20Patterns/decomposition-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/deployment-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/language-specific-packaging-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/serverless-deployment-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-deployment-platform-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-mesh-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-per-container-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Deployment%20Patterns/service-per-vm-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/application-metrics-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/audit-logging-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/distributed-tracing-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/exception-tracking-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/health-check-api-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/log-aggregation-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Observability%20Patterns/observability-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/anti-corruption-layer-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/refactoring-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Refactoring%20Patterns/strangler-application-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/api-composition-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/cqrs-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Request%20Patterns/request-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/access-token-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Security%20Patterns/security-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-driven-contract-test-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/consumer-side-contract-test-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/service-component-test-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Microservice%20Architecture%20Patterns/Testing%20Patterns/testing-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Web%20Application%20Patterns/mvc-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Web%20Application%20Patterns/prg-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Design%20Patterns/Web%20Application%20Patterns/repr-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/analyze-api/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/clear-cache-api/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/elastic-clone/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/has-child-oom/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/bucket-aggs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/bucket-sort-agg/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/elastic-aggs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/filter-agg/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/missing-agg/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/pipeline-aggs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/range-agg/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Aggregations/terms-agg/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Configuration/blocks-write/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Configuration/heap-size/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Configuration/mapping-update/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Configuration/number-of-replicas/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/bool-query/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/compound-queries/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/exists-query/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/full-text-queries/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/ids-query/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/inner-hits/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/joining-queries/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/match-query/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/nested-query/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/query-dsl/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/range-query/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/term-level-queries/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Elasticsearch/Queries/term-query/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Linux/docker-no-sudo/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Linux/install-docker-on-ubuntu-20-04/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Linux/pulseaudio-sink-inputs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Linux/remove-splash/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Linux/ssh-agent-autostart/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Linux/wsl-ubuntu-fix-network/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/scale-cube/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/service-definition/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/by-value-countermeasure/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/commutative-updates-countermeasure/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/dirty-reading-problem/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/fuzzy-reading-problem/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/pessimistic-view-countermeasure/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/second-read-countermeasure/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/semantic-lock-countermeasure/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/update-loss-problem/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Isolation%20Problems%20and%20Countermeasures/version-file-countermeasure/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Messages/message-channel/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Messages/message/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Messages/notifications-messaging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Messages/point-to-point-channel/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Messages/publish-async-response-messaging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Messages/publish-subscribe-channel/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Messages/publish-subscribe-messaging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Messages/request-async-response-messaging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Messages/request-response-messaging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Sagas/saga-compensating/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Sagas/saga-repeatable/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Sagas/saga-structure/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Microservices/Sagas/saga-turning-point/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/async-void/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/await-continuewith/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/commandlineparser-fast-start/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/console-app-graceful-shutdown/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/csharp-antipatterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/cts-memory-leak/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/cts-register-cancel/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/encoding-net-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/enumequalsboxing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/equality-structs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/executing-before-main/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/get-uninitialized-object/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/idisposable-change-current-culture/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/lambda-vs-method-group/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/list-all-routes/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/many-interfaces-di/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/model-bind-multiple-source-to-sinigle-class/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/net6-date-time-types/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/net6-dateonly/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/net6-json-serialization/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/net6-one-file-app/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/net6-timeonly/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/return-await/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/structs-in-interfaces/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/task-factory-start-new/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/tcs-runconts/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/wait-sync/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/websocket-receive-to-end/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/AspNetCore/access-routing-values-from-httpcontext/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/AspNetCore/httpcontext/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/AspNetCore/middleware-as-filters/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/AspNetCore/signalr-newtonsoft-json/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/dotnet%20console/dotnet-net6-classic-templates/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/dotnet%20console/dotnet-script/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/dotnet%20console/dotnet-templates-boxed/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-commandlineparser/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-consoleappframework/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://garden.stalker-home.xyz/NET/libraries/library-dnsclient/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-dnsclient-net/</loc>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-faker-net/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-fastendpoints/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-fluentvalidation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-gui-cs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-konsole/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-lunr-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-markdig/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-polly/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-qrcode-on-net/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/NET/libraries/library-quartz-net/</loc>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-razorlight/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-recyclable-memory-stream/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-serilog/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/libraries/library-spectreconsole/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/multithreading/interlocked-primitive/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/multithreading/lock-primitive/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/NET/multithreading/monitor-wait-pulse-all-primitive/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/common-closure-principle/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/open-closed-principle/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/packages-principles/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/single-responsibility-principle/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/OOP/OOP%20Principles/solid-principles/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Obsidian/obsidian-publisher/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Router/Asuswrt-Merlin/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Windows/far-manager-shortcuts/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/Windows/myhomelib/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/note-on-digital-garden/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/note-on-obsidian/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-maturity-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-operation-binding-difficulty/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST-several-resources-difficulty/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/REST/REST/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/grpc-comm-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/http-2/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/http/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B/oauth-20/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/datalust-seq/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/sentry-io/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/book-asp-net-core-in-action/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2001/ch-1-getting-started/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2001/ch-1-how-does-it-work/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2001/ch-1-introduction/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2001/ch-1-when-to-choose/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2002/ch-2-creating-your-first-app/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2002/ch-2-csproj-file-and-dependencies/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2002/ch-2-program-cs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2002/ch-2-project-layout/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2002/ch-2-razor-pages-response/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2002/ch-2-running-web-app/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2002/ch-2-startup-cs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2002/ch-2-your-first-app/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2003/ch-3-combining-middleware-in-a-pipeline/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2003/ch-3-handling-errors-with-middleware/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2003/ch-3-middleware-pipeline/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2003/ch-3-what-is-middleware/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-actionresults-responses/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-applying-mvc-to-razor-pages/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-comparing-razor-pages-and-mvc/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-creating-a-website/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-include-razor-pages/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-intro-to-razor-pages/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-mvc-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-page-handler-params/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-razor-pages-handlers/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2004/ch-4-typical-razor-page/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-convention-based-vs-attribute/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-customizing-conventions-with-razor-pages/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-customizing-route-templates/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-generating-urls-from-route-parameters/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-mapping-urls-using-routing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-route-template-syntax/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-routing-in-asp-net-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-routing-to-razor-pages/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-selecting-page-handler/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-binding-complex-types/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-binding-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-binding-simple-types/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-choosing-a-binding-source/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-from-request-to-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-handling-user-input-with-model-validation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-models-in-razor-pages-and-mvc/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-organizing-your-binding-models/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-using-data-annotations/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2006/ch-6-validating-on-server-for-safety/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-creating-dynamic-web-pages/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-creating-razor-views/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-layouts-partial-views-viewstart/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-overriding-parent-layouts-using-sections/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-rendering-html-using-razor-views/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-running-code-with-viewstart-and-viewimports/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-selecting-a-view-from-mvc-controller/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-using-layouts-for-shared-markup/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-using-partial-views-to-encapsulate-markups/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/ch-7-views-rendering-user-interface/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-anchor-tag-helper/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-append-version-tag-helper/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-building-forms-with-tag-helpers/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-catering-to-editors-with-tag-helpers/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-creating-forms-using-tag-helpers/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-environment-tag-helper/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-form-tag-helper/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-input-and-textarea-tag-helpers/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-label-tag-helper/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-select-tag-helper/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2008/ch-8-validation-message-and-validation-summary-tag-helpers/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-applying-mvc-design-pattern-to-webapi/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-attribute-routing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-combining-route-attributes/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-common-conventions-apicontroller-attribute/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-creating-a-web-api/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-creating-your-first-webapi-project/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-generating-response-from-a-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-handling-http-verbs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-token-replacement/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-adding-asp-net-core-services/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-creating-loosely-coupling-code/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-di-in-asp-net-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-di-lifecycle/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-injecting-services-into-am-ph-views/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-introduction-to-di/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-registering-objects-and-lambdas/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-registering-own-services/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-registering-service-multiple-times/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-service-configuration-with-dependency-injection/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-understanding-benefits-of-di/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2010/ch-10-using-di-container/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-adding-configuration-provider-in-program-cs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-binding-without-ioptions/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-building-a-configuration-object/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-configuring-application/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-configuring-for-multiple-environments/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-configuring-with-createdefaultbuilder/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-designing-options-classes/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-identifying-hosting-environment/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-introducing-ioptions-interface/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-loading-environment-specific-config-files/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-reloading-configuration-values/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-reloading-with-ioptionssnapshot/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-setting-the-hosting-environment/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-storing-config-secrets-safely/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-using-multiple-providers/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2011/ch-11-using-options-pattern/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-adding-a-second-migration/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-adding-ef-core-to-an-application/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-building-data-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-choosing-db-provider-and-installing-ef-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-creating-a-record/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-creating-your-first-migration/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-introducing-ef-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-loading-a-list-of-records/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-loading-a-single-record/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-managing-changes-with-migrations/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-quering-data-from-and-saving-data-to-db/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-registering-data-context/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-sample-application/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-saving-data-with-ef-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-updating-a-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2012/ch-12-using-ef-core-in-production-applications/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-action-filters/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-adding-filters/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-authorization-filters/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-creating-a-simple-filter/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-creating-custom-filters-for-your-application/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-dependency-injection-with-filter-attributes/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-exception-filters/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-filters-or-middleware/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-mvc-and-razor-pages-filter-pipeline/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-mvc-filter-pipeline/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-page-filters/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-pipeline-short-cutting/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-razor-pages-filter-pipeline/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-resource-filters/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-result-filters/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-understanding-filters-and-when-to-use-them/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2013/ch-13-understanding-the-order-of-filter-execution/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-adding-asp-net-core-identity-to-existing-project/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-asp-net-core-identity-data-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-authentication-for-apis-and-distributed-applications/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-authentication-services-middleware/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-authentication/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-configuring-asp-net-identity-services-and-middleware/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-creating-a-project-from-template/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-creating-a-project-with-asp-net-core-identity/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-customizing-a-page-in-identity-default-ui/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-exploring-the-template/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-interacting-with-asp-net-core-identity/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-introducing-authentication/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-managing-users-adding-custom-data/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-updating-ef-core-data-model-to-support-identity/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-updating-razor-views-to-link-to-identity-ui/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-users-and-claims-in-asp-net-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-what-is-asp-net-core-identity/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-authorization-in-asp-net-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-authorization/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-creating-a-policy-with-custom-requirement-and-handler/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-creating-custom-policies/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-creating-resource-based-authorization-handler/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-handling-unauthorized-requests/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-hiding-elements-in-razor-templates-from-unauthorized-users/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-introducing-authorization/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-manually-authorizing-requests-with-iauthorizationservice/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-preventing-anonymous-users-from-accessing-your-application/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-resource-based-authorization/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-the-building-blocks-of-policy/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2015/ch-15-using-policies-for-claims-based-authorization/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-asp-net-core-hosting-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-configuring-iis-for-asp-net-core/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-configuring-urls-for-an-app/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-hosting-an-app-on-linux/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-optimizing-client-side-assets/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-preparing-and-publishing-your-app-to-iis/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-preparing-app-for-deployment-to-linux/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-publishing-and-deploying/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-publishing-to-iis/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-running-asp-net-core-app-behind-reverse-proxy-on-linux/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2016/ch-16-running-vs-publishing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-adding-a-new-logging-provider/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-adding-a-structured-logging-provider/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-adding-log-messages-to-app/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-category/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-changing-log-verbosity-with-filtering/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-controlling-where-logs-are-written/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-formatting-messages-and-capturing-parameter-values/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-log-level/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-monitoring-and-troubleshooting-errors-with-logging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-replacing-default-iloggerfactory-with-serilog/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-structure-logging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-using-logging-effectively-in-production/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2017/ch-17-using-scopes-to-add-additional-properties-to-logs/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-adding-https-to-app/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-calling-web-apis-from-other-domains-using-cors/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-configuring-kestrel-with-a-production-https-certificate/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-defending-against-xss-attacks/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-enforcing-https-for-your-whole-app/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-exploring-other-attack-vectors/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-improving-app-security/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-insecure-direct-object-references/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-open-redirect-attacks/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-protecting-from-csrf-attacks/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-protecting-users-passwords-and-data/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-sql-injection-attacks/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-ssl-offloading-and-related/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2018/ch-18-using-https-development-certificates/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-adding-to-pipeline-with-use-extension/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-applying-authorization-to-endpoints/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-branching-middleware-pipelines-with-map-extension/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-building-custom-components/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-building-custom-middleware-component/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-creating-custom-endpoint-routing-component/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-creating-custom-endpoints-with-endpoint-routing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-creating-simple-endpoints-with-mapget-and-writejsonasync/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-customizing-middleware-pipeline/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-handling-complex-configuration-requirements/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-partially-building-configuration/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-simple-endpoints-with-run-extension/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2019/ch-19-using-services-to-configure-ioptions-with-iconfigureoptions/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-adding-fluentvalidation-to-your-application/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-building-custom-mvc-and-razor-pages-components/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-building-custom-validation-attribute/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-comparing-fluentvalidation-to-dataannotations-attributes/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-creating-custom-razor-tag-helper/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-creating-custom-tag-helper-to-conditionally-hide-elements/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-creating-tag-helper-to-convert-markdown-to-html/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-printing-environment-info-with-custom-tag-helper/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-replacing-validation-framework-with-fluentvalidation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2020/ch-20-view-components-adding-logic-to-partial-views/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2021/ch-21-calling-http-apis-problem-with-httpclient/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2021/ch-21-calling-remote-apis-with-ihttpclientfactory/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2021/ch-21-configuring-named-clients-at-registration-time/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2021/ch-21-creating-custom-httpmessagehandler/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2021/ch-21-creating-httpclients-with-ihttpclientfactory/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2021/ch-21-handling-transient-http-errors-with-polly/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2021/ch-21-using-ihttpclientfactory-to-manage-httpclienthandler-lifetime/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2021/ch-21-using-typed-clients-to-encapsulate-http-calls/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-building-background-task-and-services/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-configuring-a-job-to-run-on-a-schedule-with-quartz-net/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-coordinating-background-tasks-using-quartz-net/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-creating-headless-worker-services-using-ihost/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-creating-worker-service-from-template/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-installing-quartz-net-in-an-asp-net-core-application/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-running-background-tasks-on-a-timer/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-running-background-tasks-with-ihostedservice/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-running-worker-services-in-production/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-using-clustering-to-add-redundancy-to-background-tasks/</loc>
+         <lastmod>2022-11-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2022/ch-22-using-scoped-services-in-background-tasks/</loc>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/action-method/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/binding-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/bundling/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/claim/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/configuration-provider/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/csrf-attack/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/dependency-graph/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/di-container/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/directive/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/domain-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/endpoint/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/entity/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/filter-scope/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/hostname/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/layout/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/minification/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/model-binding/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/page-based-website/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/page-handler/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/path/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/pipeline/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/policy/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/principal/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/project-template/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/query-string/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/reverse-proxy/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/route-template/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/route-value/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/routing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/scaffolding/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/schema/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/secret-setting/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/segment/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/service/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/setting/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/structured-logging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/definitions/view-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/book-microservices-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2001/ch-1-microservice-soa-compare/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2001/ch-1-monolith/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-4-plus-1-view-model-of-architecture/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-decomposition-strategies/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-hexagonal-architecture/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-how-to-define-microservice-architecture/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-multilayer-architecture/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-services-api-definition/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-services-decomposition/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-system-operation-definition/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2002/ch-2-what-is-microservice-architecture/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-async-messaging-improves-availabilty/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-async-messaging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-concurrent-recievers/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-interprocess-communication/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-ipc-overview/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-message-broker-usage/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-message-duplicates/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-messaging-styles-realization/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-remote-procedure-invocation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-service-discovery/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2003/ch-3-transactional-messaging/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2004/ch-4-choreography-saga/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2004/ch-4-lack-of-isolation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2004/ch-4-microservice-transaction-control/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2004/ch-4-orchestration-saga/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2004/ch-4-saga-coordination/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2004/ch-4-saga-transaction-control/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-aggregate-domain-model-design/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-business-logic-templates/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-domain-driven-design/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-domain-events/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-domain-model/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-microservices-business-logic-design/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2005/ch-5-transaction-script/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-aggregate-methods-base-on-events/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-change-of-state/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-domain-events-evolution/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-event-sourcing-and-choreography-saga/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-event-sourcing-and-publishing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-event-sourcing-and-saga/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-event-sourcing-benefits/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-event-sourcing-business-logic/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-event-sourcing-drawbacks/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-event-sourcing-review/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-event-store-implementation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-idempotent-events-processing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-saga-orchestrator-creation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-saga-orchestrator-implementation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-saga-participant-implementation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-saving-aggregate/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-snapshots-improve-performance/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2006/ch-6-usual-data-storing-problems/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2007/ch-7-api-composition/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2007/ch-7-cqrs-benefits/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2007/ch-7-cqrs-database-selection/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2007/ch-7-cqrs-drawbacks/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2007/ch-7-cqrs-pattern-usage/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2007/ch-7-cqrs-views-add-and-update/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2007/ch-7-cqrs-views-design/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2007/ch-7-data-access-module-structure/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2007/ch-7-microservices-requests/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2008/ch-8-api-gateway-architecture/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2008/ch-8-api-gateway-design-difficulties/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2008/ch-8-api-gateway-implementation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2008/ch-8-api-gateway-ownership/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2008/ch-8-api-gateway-template/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2008/ch-8-external-api-patterns/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2008/ch-8-external-api-problems/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2009/ch-9-microservice-testing-drawbacks/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2009/ch-9-service-unit-tests-implementation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2009/ch-9-testing-microservices-part-1/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2009/ch-9-testing-techniques-review/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2010/ch-10-component-tests-writing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2010/ch-10-end-to-end-tests-writing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2010/ch-10-integration-tests-writing/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2010/ch-10-testing-microservices-part-2/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-configurable-services-design/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-enterprise-ready-services-implementation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-microservice-chassis/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-observable-services-design/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-secure-services-implementation/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-security-in-microservices/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-use-oauth-20/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2012/ch-12-microservices-deployment/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-authentication-and-authorization/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-data-consistency/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-integration-layer-design/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-microservices-monolith-interaction-design/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-new-features-as-services/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-old-features-as-services/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-refactoring-to-microservices/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-transition-strategies/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-transition-to-microservices/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2013/ch-13-views-and-sublayers-split/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/api/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authentication/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/authorization/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/cohesion/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/coupling/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/linked-list/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/optimistic-lock/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/pessimistic-lock/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F/semantic-versioning/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/cap-theorem/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/conways-law/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D1%8B/law-of-holes/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://garden.stalker-home.xyz/tags/</loc>
-         <lastmod>2022-11-08</lastmod>
+         <lastmod>2022-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
