@@ -2,6 +2,7 @@
 share: true
 tags:
  - microservice/testing
+ - testing
 ---
 # Написание интеграционных тестов
 ![[Pasted image 20211023125019.png]]
