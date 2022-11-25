@@ -1,6 +1,7 @@
 ---
 share: true
 tags:
+ - testing
  - microservice/testing
 ---
 # Разработка компонентных тестов
