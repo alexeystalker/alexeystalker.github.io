@@ -2,6 +2,7 @@
 share: true
 tags:
  - microservice/testing
+ - testing
 ---
 # Обзор методик тестирования
 > [!quote] Определение
