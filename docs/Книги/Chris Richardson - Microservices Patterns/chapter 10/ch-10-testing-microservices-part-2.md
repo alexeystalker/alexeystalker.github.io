@@ -2,6 +2,7 @@
 share: true
 tags:
  - microservice/testing
+ - testing
 ---
 # Тестирование микросервисов, часть 2
 Вспомним *пирамиду тестов*:
