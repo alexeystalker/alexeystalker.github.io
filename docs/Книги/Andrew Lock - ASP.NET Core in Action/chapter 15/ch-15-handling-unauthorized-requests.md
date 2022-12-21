@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore/authorization
+ - NET/authorization
  - security
 ---
 # Обработка запросов, не прошедших аутентификацию
