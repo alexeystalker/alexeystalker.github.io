@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore/authorization
+ - NET/authorization
  - security
 ---
 # Ручная авторизация запросов с помощью интерфейса IAuthorizationService
