@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore/authorization
+ - NET/authorization
  - security
 ---
 # Управление доступом с авторизацией на основе ресурсов

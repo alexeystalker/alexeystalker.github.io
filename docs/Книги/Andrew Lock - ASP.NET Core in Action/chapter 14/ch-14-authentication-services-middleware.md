@@ -1,7 +1,8 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore/authentication
+ - NET/ASPNETCore
+ - NET/authentication
  - security
 ---
 # Аутентификация в ASP.NET Core: сервисы и промежуточное ПО

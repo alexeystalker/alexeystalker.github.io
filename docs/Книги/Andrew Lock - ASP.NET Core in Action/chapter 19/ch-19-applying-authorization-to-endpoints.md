@@ -2,7 +2,7 @@
 share: true
 tags:
  - NET/ASPNETCore/endpoint
- - NET/ASPNETCore/authorization
+ - NET/authorization
 ---
 # Применение авторизации к конечным точкам
 Одним из основных преимуществ маршрутизации конечных точек является возможность легко применять [[ch-15-authorization|авторизацию]] к конечной точке. Для контроллеров веб-API и страниц Razor для этого используется атрибут `[Authorize]`.

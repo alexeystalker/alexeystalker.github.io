@@ -1,7 +1,8 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore/authorization
+ - NET/ASPNETCore
+ - NET/authorization
  - security
 ---
 # Авторизация в ASP.NET Core

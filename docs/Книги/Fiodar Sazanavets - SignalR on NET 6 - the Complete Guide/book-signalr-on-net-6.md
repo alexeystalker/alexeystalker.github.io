@@ -12,6 +12,7 @@ tags:
 #### [[ch-1-introduction-to-signalr|Глава 1 - Введение в SignalR]]
 #### [[ch-2-setting-up-your-project|Глава 2 - Подготовим проект]]
 #### [[ch-3-in-browser-signalr-clients|Глава 3 - Браузерные клиенты SignalR]]
+#### [[ch-4-external-signalr-clients|Глава 4 - Внешние клиенты SignalR]]
 
 ## Ссылки
 [Ссылка на магазин](https://leanpub.com/signalronnet6-thecompleteguide)

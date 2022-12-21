@@ -1,7 +1,8 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore/authorization
+ - NET/ASPNETCore
+ - NET/authorization
  - security
 ---
 # Создание политики со специальным требованием и обработчиком

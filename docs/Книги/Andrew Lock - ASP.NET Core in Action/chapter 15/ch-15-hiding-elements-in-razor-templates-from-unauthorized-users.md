@@ -1,7 +1,8 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore/authorization
+ - NET/Razor
+ - NET/authorization
  - security
 ---
 # Скрытие элементов в шаблонах Razor от незарегистрированных пользователей
