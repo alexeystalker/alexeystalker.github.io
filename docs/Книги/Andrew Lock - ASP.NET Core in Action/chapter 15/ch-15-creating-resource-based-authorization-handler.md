@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - NET/ASPNETCore/authorization
+ - NET/authorization
  - security
 ---
 # Создание обработчика AuthorizationHandler на основе ресурсов
