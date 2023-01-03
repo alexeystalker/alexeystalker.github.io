@@ -9,10 +9,12 @@
 Для контроллеров API же HTTP-метод принимает участие в самом процессе маршрутизации, для того, чтобы иметь возможность направить GET-запрос к одному методу действия, а POST-запрос - к другому, даже запросы использовали один URL-адрес. Этого требует логика построения RESTful API.
 ASP.NET Core предоставляет набор атрибутов, которые можно использовать для этих целей, например:" name="description"/>
 <link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2009/ch-9-handling-http-verbs/" rel="canonical"/>
+<link href="../ch-9-generating-response-from-a-model/" rel="prev"/>
+<link href="../ch-9-token-replacement/" rel="next"/>
 <link href="../../../../assets/logo/logo.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0" name="generator"/>
 <title>Обработка HTTP-методов с помощью маршрутизации на основе атрибутов - Цифровой сад и огород</title>
-<link href="../../../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.f79797b0.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -1363,6 +1365,11 @@ ASP.NET Core предоставляет набор атрибутов, кото�
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/libraries/Quartz.NET/">
+        Quartz.NET
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../../NET/libraries/library-commandlineparser/">
         CommandLineParser
       </a>
@@ -1420,11 +1427,6 @@ ASP.NET Core предоставляет набор атрибутов, кото�
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../NET/libraries/library-qrcode-on-net/">
         QrCodeGenerator
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../NET/libraries/library-quartz-net/">
-        Quartz.NET
       </a>
 </li>
 <li class="md-nav__item">
@@ -2105,11 +2107,6 @@ ASP.NET Core предоставляет набор атрибутов, кото�
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-layouts-partial-views-viewstart/">
-        Макеты, частичные представления и _ViewStart
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2007/ch-7-overriding-parent-layouts-using-sections/">
         Переопределение родительских макетов с помощью секций
       </a>
@@ -2117,11 +2114,6 @@ ASP.NET Core предоставляет набор атрибутов, кото�
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2007/ch-7-rendering-html-using-razor-views/">
         Визуализация HTML-кода с использованием представлений Razor
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-running-code-with-viewstart-and-viewimports/">
-        Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports
       </a>
 </li>
 <li class="md-nav__item">
@@ -2142,6 +2134,16 @@ ASP.NET Core предоставляет набор атрибутов, кото�
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2007/ch-7-views-rendering-user-interface/">
         Представления: визуализация пользовательского интерфейса
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2007/%D0%92%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%BC%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B8%20%D1%81%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E%20_ViewStart%20%D0%B8%20_ViewImports/">
+        Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2007/%D0%9C%D0%B0%D0%BA%D0%B5%D1%82%D1%8B%2C%20%D1%87%D0%B0%D1%81%D1%82%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B8%20_ViewStart/">
+        Макеты, частичные представления и _ViewStart
       </a>
 </li>
 </ul>
@@ -2245,11 +2247,6 @@ ASP.NET Core предоставляет набор атрибутов, кото�
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-9-common-conventions-apicontroller-attribute/">
-        Использование общепринятых соглашений с атрибутом [ApiController]
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../ch-9-creating-a-web-api/">
         Создание веб-API для мобильных и клиентских приложений с помощью MVC
       </a>
@@ -2273,6 +2270,11 @@ ASP.NET Core предоставляет набор атрибутов, кото�
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ch-9-token-replacement/">
         Использование замены маркера для уменьшения дублирования при маршрутизации на основе атрибутов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BF%D1%80%D0%B8%D0%BD%D1%8F%D1%82%D1%8B%D1%85%20%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%B8%D0%B9%20%D1%81%20%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%BE%D0%BC%20%5BApiController%5D/">
+        Использование общепринятых соглашений с атрибутом [ApiController]
       </a>
 </li>
 </ul>
@@ -2666,11 +2668,6 @@ ASP.NET Core предоставляет набор атрибутов, кото�
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2014/ch-14-authentication-for-apis-and-distributed-applications/">
-        Аутентификация для API и распределенных приложений
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2014/ch-14-authentication-services-middleware/">
         Аутентификация в ASP.NET Core: сервисы и промежуточное ПО
       </a>
@@ -2738,6 +2735,11 @@ ASP.NET Core предоставляет набор атрибутов, кото�
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2014/ch-14-what-is-asp-net-core-identity/">
         Что такое ASP.NET Core Identity?
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2014/%D0%90%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B4%D0%BB%D1%8F%20API%20%D0%B8%20%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9/">
+        Аутентификация для API и распределенных приложений
       </a>
 </li>
 </ul>
@@ -4408,6 +4410,41 @@ ASP.NET Core предоставляет набор атрибутов, кото�
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_3_5" id="__nav_14_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_14_3_5">
+          Chapter 04
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Chapter 04" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_14_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Chapter 04
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-external-signalr-clients/">
+        Внешние клиенты SignalR
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-setting-up-java-client/">
+        Настраиваем Java клиент
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-setting-up-net-client/">
+        Настраиваем .NET клиент
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-setting-up-raw-websocket-client/">
+        Настраиваем чистый Websocket клиент
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -4534,19 +4571,19 @@ ASP.NET Core предоставляет набор атрибутов, кото�
 <li><code>[HttpPut]</code> обрабатывает только PUT-запросы</li>
 </ul>
 <p>Такие атрибуты существуют для всех стандартных HTTP-методов. Эти атрибуты можно использовать вместо атрибута <code>[Route]</code>, чтобы указать, что метод действия должен соответствовать одному HTTP-методу:<br/>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AppointmentController</span><span class="w"></span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="na">[HttpGet("/appointments")]</span><span class="w"></span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">ListAppointments</span><span class="p">()</span><span class="w"></span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="cm">/*реализация*/</span><span class="w"></span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="na">[HttpPost("/appointments")]</span><span class="w"></span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">CreateAppointment</span><span class="p">()</span><span class="w"></span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="cm">/*реализация*/</span><span class="w"></span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AppointmentController</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="na">[HttpGet("/appointments")]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">ListAppointments</span><span class="p">()</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="cm">/*реализация*/</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="na">[HttpPost("/appointments")]</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">CreateAppointment</span><span class="p">()</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="cm">/*реализация*/</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span>
 </code></pre></div><br/>
 Если приложение получит запрос, совпадающий с шаблоном маршрута, но не совпадающий с нужным HTTP-методом, вернется ошибка <code>405 Method not allowed</code>.</p>
 <!-- taken from 
@@ -4652,8 +4689,8 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
-<script src="../../../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+<script src="../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
 <script src="../../../../assets/js/mathjax.js"></script>
 <script src="../../../../assets/js/utils.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

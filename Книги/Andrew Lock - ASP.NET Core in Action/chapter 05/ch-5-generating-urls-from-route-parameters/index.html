@@ -7,10 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Инфраструктура маршрутизации может использоваться и для динамической генерации URL-адресов во время выполнения. По сути, это процесс, обратный сопоставлению адреса запроса." name="description"/>
 <link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2005/ch-5-generating-urls-from-route-parameters/" rel="canonical"/>
+<link href="../ch-5-customizing-route-templates/" rel="prev"/>
+<link href="../ch-5-mapping-urls-using-routing/" rel="next"/>
 <link href="../../../../assets/logo/logo.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0" name="generator"/>
 <title>Генерация URL-адресов из параметров маршрута - Цифровой сад и огород</title>
-<link href="../../../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.f79797b0.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -1357,6 +1359,11 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/libraries/Quartz.NET/">
+        Quartz.NET
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../../NET/libraries/library-commandlineparser/">
         CommandLineParser
       </a>
@@ -1414,11 +1421,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../NET/libraries/library-qrcode-on-net/">
         QrCodeGenerator
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../NET/libraries/library-quartz-net/">
-        Quartz.NET
       </a>
 </li>
 <li class="md-nav__item">
@@ -2132,11 +2134,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-layouts-partial-views-viewstart/">
-        Макеты, частичные представления и _ViewStart
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2007/ch-7-overriding-parent-layouts-using-sections/">
         Переопределение родительских макетов с помощью секций
       </a>
@@ -2144,11 +2141,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2007/ch-7-rendering-html-using-razor-views/">
         Визуализация HTML-кода с использованием представлений Razor
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-running-code-with-viewstart-and-viewimports/">
-        Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports
       </a>
 </li>
 <li class="md-nav__item">
@@ -2169,6 +2161,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2007/ch-7-views-rendering-user-interface/">
         Представления: визуализация пользовательского интерфейса
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2007/%D0%92%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%BC%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B8%20%D1%81%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E%20_ViewStart%20%D0%B8%20_ViewImports/">
+        Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2007/%D0%9C%D0%B0%D0%BA%D0%B5%D1%82%D1%8B%2C%20%D1%87%D0%B0%D1%81%D1%82%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B8%20_ViewStart/">
+        Макеты, частичные представления и _ViewStart
       </a>
 </li>
 </ul>
@@ -2272,11 +2274,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2009/ch-9-common-conventions-apicontroller-attribute/">
-        Использование общепринятых соглашений с атрибутом [ApiController]
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2009/ch-9-creating-a-web-api/">
         Создание веб-API для мобильных и клиентских приложений с помощью MVC
       </a>
@@ -2299,6 +2296,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2009/ch-9-token-replacement/">
         Использование замены маркера для уменьшения дублирования при маршрутизации на основе атрибутов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2009/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BF%D1%80%D0%B8%D0%BD%D1%8F%D1%82%D1%8B%D1%85%20%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%B8%D0%B9%20%D1%81%20%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%BE%D0%BC%20%5BApiController%5D/">
+        Использование общепринятых соглашений с атрибутом [ApiController]
       </a>
 </li>
 </ul>
@@ -2692,11 +2694,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2014/ch-14-authentication-for-apis-and-distributed-applications/">
-        Аутентификация для API и распределенных приложений
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2014/ch-14-authentication-services-middleware/">
         Аутентификация в ASP.NET Core: сервисы и промежуточное ПО
       </a>
@@ -2764,6 +2761,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2014/ch-14-what-is-asp-net-core-identity/">
         Что такое ASP.NET Core Identity?
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2014/%D0%90%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B4%D0%BB%D1%8F%20API%20%D0%B8%20%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9/">
+        Аутентификация для API и распределенных приложений
       </a>
 </li>
 </ul>
@@ -4434,6 +4436,41 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_3_5" id="__nav_14_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_14_3_5">
+          Chapter 04
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Chapter 04" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_14_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Chapter 04
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-external-signalr-clients/">
+        Внешние клиенты SignalR
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-setting-up-java-client/">
+        Настраиваем Java клиент
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-setting-up-net-client/">
+        Настраиваем .NET клиент
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-setting-up-raw-websocket-client/">
+        Настраиваем чистый Websocket клиент
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -4581,69 +4618,69 @@
 <p>Инфраструктура маршрутизации может использоваться и для динамической генерации URL-адресов во время выполнения. По сути, это процесс, обратный сопоставлению адреса запроса.</p>
 <h2 id="url-razor">Создание URL-адресов для страницы Razor<a class="headerlink" href="#url-razor" title="Permanent link">¶</a></h2>
 <p>Создадим ссылку на страницу <code>Pages/Currency/View.cshtml</code>:<br/>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">IndexModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PageModel</span><span class="w"></span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnGet</span><span class="p">()</span><span class="w"></span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Url</span><span class="p">.</span><span class="n">Page</span><span class="p">(</span><span class="s">"Currency/View"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">"USD"</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">IndexModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PageModel</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnGet</span><span class="p">()</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Url</span><span class="p">.</span><span class="n">Page</span><span class="p">(</span><span class="s">"Currency/View"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"USD"</span><span class="w"> </span><span class="p">});</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
 </code></pre></div><br/>
 Здесь - <code>Url</code> - свойство в классе <code>PageModel</code>, экземпляр <code>IUrlHelper</code>. Можно указать <em>относительный</em> путь к файлу, или <em>абсолютный</em> (относительно папки Pages), начав путь с символа <code>/</code> (<code>"/Currency/View"</code>). Если в <a href="../../definitions/route-template/" title="шаблоне маршрута">шаблоне маршрута</a> страницы явно указан параметр (<code>"Currency/View/{code}"</code>), то значение будет включено в <a href="../../definitions/path/" title="путь">путь</a> (<code>"/currency/view/usd"</code>), иначе значение будет добавлено в <a href="../../definitions/query-string/" title="строку запроса">строку запроса</a> (<code>"/currency/view?code=USD"</code>).</p>
 <h2 id="url-mvc">Создание URL-адресов для контроллера MVC<a class="headerlink" href="#url-mvc" title="Permanent link">¶</a></h2>
 <p>Создадим ссылку на <a href="../../definitions/action-method/" title="метод действия">метод действия</a> <code>View</code> в контроллере <code>Currency</code>:<br/>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CurrencyController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Controller</span><span class="w"></span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="na">[HttpGet("currency/index")]</span><span class="w"></span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">Index</span><span class="p">()</span><span class="w"></span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Url</span><span class="p">.</span><span class="n">Action</span><span class="p">(</span><span class="s">"View"</span><span class="p">,</span><span class="w"> </span><span class="s">"Currency"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">"USD"</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">Content</span><span class="p">(</span><span class="s">$"The URL is {url}"</span><span class="p">);</span><span class="w"></span>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CurrencyController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Controller</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">{</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="na">[HttpGet("currency/index")]</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">Index</span><span class="p">()</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Url</span><span class="p">.</span><span class="n">Action</span><span class="p">(</span><span class="s">"View"</span><span class="p">,</span><span class="w"> </span><span class="s">"Currency"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"USD"</span><span class="w"> </span><span class="p">});</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">Content</span><span class="p">(</span><span class="s">$"The URL is {url}"</span><span class="p">);</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
 <a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="na">[HttpGet("currency/view/{code}")]</span><span class="w"></span>
-<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">View</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">code</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="cm">/*реализация метода*/</span><span class="w"></span>
-<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="na">[HttpGet("currency/view/{code}")]</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">View</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">code</span><span class="p">)</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="cm">/*реализация метода*/</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">}</span>
 </code></pre></div><br/>
 Здесь <code>Url</code> - свойство в классе Controller. В метод <code>Action</code> передается имя метода действия и имя контроллера, а также значение маршрута. Вместо использования строки для имени метода действия целесообразно использовать <code>nameof</code>.<br/>
 Если маршрутизация выполняется к методу того же контроллера, то можно использовать перегруженный метод <code>Action</code> без указания имени контроллера. IUrlHelper при построении адреса использует <em>внешние значения</em> (значения маршрута для текущего запроса), заменяя их предоставляемыми значениями.</p>
 <h2 id="url-actionresults">Создание URL-адресов с помощью ActionResults<a class="headerlink" href="#url-actionresults" title="Permanent link">¶</a></h2>
 <p>Часто возникает ситуация, когда URL-адрес не нужно отображать, а следует лишь перенаправить пользователя на новую страницу. Для этого можно использовать <code>ActionResult</code> для генерации URL-адреса.<br/>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CurrencyModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PageModel</span><span class="w"></span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">OnGetRedirectToPage</span><span class="p">()</span><span class="w"></span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">RedirectToPage</span><span class="p">(</span><span class="s">"Currency/View"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CurrencyModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">PageModel</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">{</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">OnGetRedirectToPage</span><span class="p">()</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">RedirectToPage</span><span class="p">(</span><span class="s">"Currency/View"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">});</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
 </code></pre></div><br/>
 Здесь сгенерированный адрес передается в качестве цели для редиректа.</p>
 <h2 id="url-_1">Создание URL-адресов из других частей вашего приложения<a class="headerlink" href="#url-_1" title="Permanent link">¶</a></h2>
 <p>Если требуется сгенерировать URL-адрес извне MVC-контроллера или обработчика страницы Razor, необходимо воспользоваться классом <code>LinkGenerator</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SomeClass</span><span class="w"></span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">LinkGenerator</span><span class="w"> </span><span class="n">_link</span><span class="p">;</span><span class="w"></span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">SomeClass</span><span class="p">(</span><span class="n">LinkGenerator</span><span class="w"> </span><span class="n">linkGenerator</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="n">_link</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">linkGenerator</span><span class="p">;</span><span class="w"></span>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SomeClass</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">{</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">LinkGenerator</span><span class="w"> </span><span class="n">_link</span><span class="p">;</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">SomeClass</span><span class="p">(</span><span class="n">LinkGenerator</span><span class="w"> </span><span class="n">linkGenerator</span><span class="p">)</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="n">_link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linkGenerator</span><span class="p">;</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
 <a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SomeMethod</span><span class="p">(</span><span class="n">HttpContext</span><span class="w"> </span><span class="n">httpContext</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">url1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">_link</span><span class="p">.</span><span class="n">GetPathByPage</span><span class="p">(</span><span class="n">httpContext</span><span class="p">,</span><span class="w"> </span><span class="s">"/Currency/View"</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
-<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">url2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">_link</span><span class="p">.</span><span class="n">GetPathByPage</span><span class="p">(</span><span class="s">"/Currency/View"</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
-<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">absoluteUrl</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">_link</span><span class="p">.</span><span class="n">GetUriByPage</span><span class="p">(</span><span class="w"></span>
-<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">            </span><span class="n">page</span><span class="p">:</span><span class="w"> </span><span class="s">"/Currency/View"</span><span class="p">,</span><span class="w"></span>
-<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">            </span><span class="n">handler</span><span class="p">:</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"></span>
-<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">            </span><span class="n">values</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
-<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">            </span><span class="n">scheme</span><span class="p">:</span><span class="w"> </span><span class="s">"https"</span><span class="p">,</span><span class="w"></span>
-<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">            </span><span class="n">host</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HostString</span><span class="p">(</span><span class="s">"example.com"</span><span class="p">);</span><span class="w"></span>
-<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SomeMethod</span><span class="p">(</span><span class="n">HttpContext</span><span class="w"> </span><span class="n">httpContext</span><span class="p">)</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">url1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_link</span><span class="p">.</span><span class="n">GetPathByPage</span><span class="p">(</span><span class="n">httpContext</span><span class="p">,</span><span class="w"> </span><span class="s">"/Currency/View"</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">});</span>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">url2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_link</span><span class="p">.</span><span class="n">GetPathByPage</span><span class="p">(</span><span class="s">"/Currency/View"</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">});</span>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">absoluteUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_link</span><span class="p">.</span><span class="n">GetUriByPage</span><span class="p">(</span>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">            </span><span class="n">page</span><span class="p">:</span><span class="w"> </span><span class="s">"/Currency/View"</span><span class="p">,</span>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">            </span><span class="n">handler</span><span class="p">:</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">            </span><span class="n">values</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">},</span>
+<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">            </span><span class="n">scheme</span><span class="p">:</span><span class="w"> </span><span class="s">"https"</span><span class="p">,</span>
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">            </span><span class="n">host</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HostString</span><span class="p">(</span><span class="s">"example.com"</span><span class="p">);</span>
+<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="p">)</span>
+<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="p">}</span>
 </code></pre></div><br/>
 Важно! Если в процессе генерации что-то пойдёт не так, LinkGenerator вернет <code>null</code>, поэтому нужно проверять результат перед использованием.</p>
 <div class="footnote">
@@ -4757,8 +4794,8 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
-<script src="../../../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+<script src="../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
 <script src="../../../../assets/js/mathjax.js"></script>
 <script src="../../../../assets/js/utils.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

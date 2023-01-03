@@ -5,17 +5,19 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ASP.NET Core часто используется для создания WebAPI для мобильных или браузерных одностраничных приложений, а также (при использовании микросервисной архитектуры) и отдельных сервисов.
-В этом случае подход, описанный в предыдущем разделе, неприменим.
-Чтобы решить эту проблему, аутентифицирующий код помещают в поставщика идентификационной информации.
+<meta content='При работе с представлениями неизбежна ситуация, когда во всех представлениях необходимо написать один и тот же код, например @using WebApplication1.Models, если во всех представлениях необходимо ссылаться на объекты из другого пространства имён, или
+@{
+    Layout = "_Layout";
+}
 
-В этом случае пользователь выполняет вход в учётную запись этого поставщика, а поставщик передает клиенту токены, которые в свою очередь передаются при запросе, предоставляя информацию о пользователе в WebAPI.
-Преимущества этого подхода:" name="description"/>
-<link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2014/ch-14-authentication-for-apis-and-distributed-applications/" rel="canonical"/>
+при использовании одного макета. Понятно, что необходимо выносить такой общий код. Для этих целей имеется два механизма: _ViewImports.cshtml и _ViewStart.cshtml.' name="description"/>
+<link href="https://garden.stalker-home.xyz/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B8/Andrew%20Lock%20-%20ASP.NET%20Core%20in%20Action/chapter%2007/%D0%92%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%BC%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B8%20%D1%81%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E%20_ViewStart%20%D0%B8%20_ViewImports/" rel="canonical"/>
+<link href="../ch-7-views-rendering-user-interface/" rel="prev"/>
+<link href="../%D0%9C%D0%B0%D0%BA%D0%B5%D1%82%D1%8B%2C%20%D1%87%D0%B0%D1%81%D1%82%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B8%20_ViewStart/" rel="next"/>
 <link href="../../../../assets/logo/logo.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0b3" name="generator"/>
-<title>Аутентификация для API и распределенных приложений - Цифровой сад и огород</title>
-<link href="../../../../assets/stylesheets/main.91872f81.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.0" name="generator"/>
+<title>Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports - Цифровой сад и огород</title>
+<link href="../../../../assets/stylesheets/main.f79797b0.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -37,20 +39,20 @@
 <link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet">
 <link href="https://unpkg.com/tippy.js@6/themes/translucent.css" rel="stylesheet">
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" referrerpolicy="no-referrer" rel="stylesheet">
-<meta content="Аутентификация для API и распределенных приложений" property="og:title"/>
-<meta content="Аутентификация для API и распределенных приложений" name="twitter:title"/>
-<meta content="ASP.NET Core часто используется для создания WebAPI для мобильных или браузерных одностраничных приложений, а также (при использовании микросервисной архитектуры) и отдельных сервисов.
-В этом случае подход, описанный в предыдущем разделе, неприменим.
-Чтобы решить эту проблему, аутентифицирующий код помещают в поставщика идентификационной информации.
+<meta content="Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports" property="og:title"/>
+<meta content="Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports" name="twitter:title"/>
+<meta content='При работе с представлениями неизбежна ситуация, когда во всех представлениях необходимо написать один и тот же код, например @using WebApplication1.Models, если во всех представлениях необходимо ссылаться на объекты из другого пространства имён, или
+@{
+    Layout = "_Layout";
+}
 
-В этом случае пользователь выполняет вход в учётную запись этого поставщика, а поставщик передает клиенту токены, которые в свою очередь передаются при запросе, предоставляя информацию о пользователе в WebAPI.
-Преимущества этого подхода:" name="description"/>
-<meta content="ASP.NET Core часто используется для создания WebAPI для мобильных или браузерных одностраничных приложений, а также (при использовании микросервисной архитектуры) и отдельных сервисов.
-В этом случае подход, описанный в предыдущем разделе, неприменим.
-Чтобы решить эту проблему, аутентифицирующий код помещают в поставщика идентификационной информации.
+при использовании одного макета. Понятно, что необходимо выносить такой общий код. Для этих целей имеется два механизма: _ViewImports.cshtml и _ViewStart.cshtml.' name="description"/>
+<meta content='При работе с представлениями неизбежна ситуация, когда во всех представлениях необходимо написать один и тот же код, например @using WebApplication1.Models, если во всех представлениях необходимо ссылаться на объекты из другого пространства имён, или
+@{
+    Layout = "_Layout";
+}
 
-В этом случае пользователь выполняет вход в учётную запись этого поставщика, а поставщик передает клиенту токены, которые в свою очередь передаются при запросе, предоставляя информацию о пользователе в WebAPI.
-Преимущества этого подхода:" name="twitter:description"/>
+при использовании одного макета. Понятно, что необходимо выносить такой общий код. Для этих целей имеется два механизма: _ViewImports.cshtml и _ViewStart.cshtml.' name="twitter:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="https://garden.stalker-home.xyz/" property="og:image"/>
 <meta content="https://garden.stalker-home.xyz/" name="twitter:image"/>
@@ -75,7 +77,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#api-1">
+<a class="md-skip" href="#_viewstart-_viewimports">
           Перейти к содержанию
         </a>
 </div>
@@ -99,7 +101,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Аутентификация для API и распределенных приложений
+              Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports
             
           </span>
 </div>
@@ -1372,6 +1374,11 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../../NET/libraries/Quartz.NET/">
+        Quartz.NET
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../../NET/libraries/library-commandlineparser/">
         CommandLineParser
       </a>
@@ -1429,11 +1436,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../NET/libraries/library-qrcode-on-net/">
         QrCodeGenerator
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../NET/libraries/library-quartz-net/">
-        Quartz.NET
       </a>
 </li>
 <li class="md-nav__item">
@@ -2091,8 +2093,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_1_8" id="__nav_14_1_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_1_8" id="__nav_14_1_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_14_1_8">
           Chapter 07
           <span class="md-nav__icon md-icon"></span>
@@ -2104,53 +2106,76 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-creating-dynamic-web-pages/">
+<a class="md-nav__link" href="../ch-7-creating-dynamic-web-pages/">
         Создание динамических веб-страниц с помощью Razor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-creating-razor-views/">
+<a class="md-nav__link" href="../ch-7-creating-razor-views/">
         Создание представлений Razor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-layouts-partial-views-viewstart/">
-        Макеты, частичные представления и _ViewStart
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-overriding-parent-layouts-using-sections/">
+<a class="md-nav__link" href="../ch-7-overriding-parent-layouts-using-sections/">
         Переопределение родительских макетов с помощью секций
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-rendering-html-using-razor-views/">
+<a class="md-nav__link" href="../ch-7-rendering-html-using-razor-views/">
         Визуализация HTML-кода с использованием представлений Razor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-running-code-with-viewstart-and-viewimports/">
-        Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-selecting-a-view-from-mvc-controller/">
+<a class="md-nav__link" href="../ch-7-selecting-a-view-from-mvc-controller/">
         Выбор представления из контроллера MVC
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-using-layouts-for-shared-markup/">
+<a class="md-nav__link" href="../ch-7-using-layouts-for-shared-markup/">
         Использование макетов для общей разметки
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-using-partial-views-to-encapsulate-markups/">
+<a class="md-nav__link" href="../ch-7-using-partial-views-to-encapsulate-markups/">
         Использование частичных представлений для инкапсуляции разметки
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2007/ch-7-views-rendering-user-interface/">
+<a class="md-nav__link" href="../ch-7-views-rendering-user-interface/">
         Представления: визуализация пользовательского интерфейса
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports
+      </a>
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_viewimports">
+    Импорт общих директив с помощью _ViewImports
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_viewstartcshtml">
+    Выполнение кода для каждого представления с помощью _ViewStart.cshtml
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%D0%9C%D0%B0%D0%BA%D0%B5%D1%82%D1%8B%2C%20%D1%87%D0%B0%D1%81%D1%82%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B8%20_ViewStart/">
+        Макеты, частичные представления и _ViewStart
       </a>
 </li>
 </ul>
@@ -2254,11 +2279,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../chapter%2009/ch-9-common-conventions-apicontroller-attribute/">
-        Использование общепринятых соглашений с атрибутом [ApiController]
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2009/ch-9-creating-a-web-api/">
         Создание веб-API для мобильных и клиентских приложений с помощью MVC
       </a>
@@ -2281,6 +2301,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../chapter%2009/ch-9-token-replacement/">
         Использование замены маркера для уменьшения дублирования при маршрутизации на основе атрибутов
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2009/%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BE%D0%B1%D1%89%D0%B5%D0%BF%D1%80%D0%B8%D0%BD%D1%8F%D1%82%D1%8B%D1%85%20%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%B8%D0%B9%20%D1%81%20%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%BE%D0%BC%20%5BApiController%5D/">
+        Использование общепринятых соглашений с атрибутом [ApiController]
       </a>
 </li>
 </ul>
@@ -2651,8 +2676,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_1_15" id="__nav_14_1_15" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_1_15" id="__nav_14_1_15" type="checkbox"/>
 <label class="md-nav__link" for="__nav_14_1_15">
           Chapter 14
           <span class="md-nav__icon md-icon"></span>
@@ -2664,89 +2689,88 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-adding-asp-net-core-identity-to-existing-project/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-adding-asp-net-core-identity-to-existing-project/">
         Добавляем ASP.NET Core Identity в существующий проект
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-asp-net-core-identity-data-model/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-asp-net-core-identity-data-model/">
         Модель данных ASP.NET Core Identity
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
-        Аутентификация для API и распределенных приложений
-      </a>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-authentication-services-middleware/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-authentication-services-middleware/">
         Аутентификация в ASP.NET Core: сервисы и промежуточное ПО
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-authentication/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-authentication/">
         Аутентификация: добавляем пользователей в приложение с помощью ASP.NET Core Identity
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-configuring-asp-net-identity-services-and-middleware/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-configuring-asp-net-identity-services-and-middleware/">
         Настройка сервисов ASP.NET Core Identity и промежуточного ПО
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-creating-a-project-from-template/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-creating-a-project-from-template/">
         Создание проекта из шаблона
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-creating-a-project-with-asp-net-core-identity/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-creating-a-project-with-asp-net-core-identity/">
         Создание проекта, в котором используется ASP.NET Core Identity
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-customizing-a-page-in-identity-default-ui/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-customizing-a-page-in-identity-default-ui/">
         Настройка страницы в пользовательском интерфейсе ASP.NET Core Identity по умолчанию
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-exploring-the-template/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-exploring-the-template/">
         Изучение шаблона в обозревателе решений
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-interacting-with-asp-net-core-identity/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-interacting-with-asp-net-core-identity/">
         Взаимодействие с ASP.NET Core Identity
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-introducing-authentication/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-introducing-authentication/">
         Знакомство с аутентификацией
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-managing-users-adding-custom-data/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-managing-users-adding-custom-data/">
         Управление пользователями: добавление специальных данных для пользователей
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-updating-ef-core-data-model-to-support-identity/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-updating-ef-core-data-model-to-support-identity/">
         Обновление модели данных EF Core для поддержки Identity
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-updating-razor-views-to-link-to-identity-ui/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-updating-razor-views-to-link-to-identity-ui/">
         Обновление представлений Razor для связи с пользовательским интерфейсом Identity
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-users-and-claims-in-asp-net-core/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-users-and-claims-in-asp-net-core/">
         Пользователи и утверждения в ASP.NET Core
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ch-14-what-is-asp-net-core-identity/">
+<a class="md-nav__link" href="../../chapter%2014/ch-14-what-is-asp-net-core-identity/">
         Что такое ASP.NET Core Identity?
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../chapter%2014/%D0%90%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B4%D0%BB%D1%8F%20API%20%D0%B8%20%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9/">
+        Аутентификация для API и распределенных приложений
       </a>
 </li>
 </ul>
@@ -4417,6 +4441,41 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_3_5" id="__nav_14_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_14_3_5">
+          Chapter 04
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Chapter 04" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_14_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Chapter 04
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-external-signalr-clients/">
+        Внешние клиенты SignalR
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-setting-up-java-client/">
+        Настраиваем Java клиент
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-setting-up-net-client/">
+        Настраиваем .NET клиент
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Fiodar%20Sazanavets%20-%20SignalR%20on%20NET%206%20-%20the%20Complete%20Guide/chapter%2004/ch-4-setting-up-raw-websocket-client/">
+        Настраиваем чистый Websocket клиент
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -4522,6 +4581,22 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_viewimports">
+    Импорт общих директив с помощью _ViewImports
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_viewstartcshtml">
+    Выполнение кода для каждого представления с помощью _ViewStart.cshtml
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -4529,36 +4604,27 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../../../tags/#netaspnetcore">NET/ASPNETCore</a>
-<a class="md-tag" href="../../../../tags/#netauthentication">NET/authentication</a>
-<a class="md-tag" href="../../../../tags/#security">security</a>
+<a class="md-tag" href="../../../../tags/#netrazor">NET/Razor</a>
 </nav>
-<h1 id="api-1">Аутентификация для API и распределенных приложений<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup><a class="headerlink" href="#api-1" title="Permanent link">¶</a></h1>
-<p>ASP.NET Core часто используется для создания WebAPI для мобильных или браузерных одностраничных приложений, а также (при использовании микросервисной архитектуры) и отдельных сервисов.<br/>
-В этом случае подход, <a href="../ch-14-authentication-services-middleware/" title="описанный">описанный</a> в предыдущем разделе, неприменим.<br/>
-Чтобы решить эту проблему, аутентифицирующий код помещают в <em>поставщика идентификационной информации</em>.<br/>
-<img alt="Pasted image 20220604123117.png" src="../../../../images/Pasted%20image%2020220604123117.png" title="Pasted image 20220604123117.png"><br/>
-В этом случае пользователь выполняет вход в учётную запись этого поставщика, а поставщик передает клиенту токены, которые в свою очередь передаются при запросе, предоставляя информацию о пользователе в WebAPI.<br/>
-Преимущества этого подхода:</img></p>
-<ul>
-<li><em>пользователи могут совместно использовать свою личность в нескольких сервисах</em>;</li>
-<li><em>уменьшение дублирования кода</em>;</li>
-<li><em>лёгкость добаавления новых поставщиков</em>.</li>
-</ul>
-<p>ASP.NET Core поддерживает такие архитектуры и потребление выпущенных токенов носителя, однако не включает в себя поддержку выпуска токенов. Нужно использовать стороннюю библиотеку или поставщика.<br/>
-Один из вариантов - использовать сторонние сервисы, такие как <a href="https://www.okta.com/">Okta</a>, <a href="https://auth0.com/">Auth0</a> или <a href="https://docs.microsoft.com/ru-ru/azure/active-directory-b2c/overview">Azure Active Directory B2C</a>.<br/>
-Еще вариант - создать собственного поставщика, например, с помощью библиотек <a href="https://github.com/openiddict">OpenIddict</a> или <a href="https://identityserver4.readthedocs.io/en/latest/">IdentityServer</a><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
-<div class="footnote">
+<h1 id="_viewstart-_viewimports">Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports<a class="headerlink" href="#_viewstart-_viewimports" title="Permanent link">¶</a></h1>
+<p>При работе с представлениями неизбежна ситуация, когда во всех представлениях необходимо написать один и тот же код, например <code>@using WebApplication1.Models</code>, если во всех представлениях необходимо ссылаться на объекты из другого пространства имён, или<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>@{
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    Layout = "_Layout";
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>}
+</code></pre></div><br/>
+при использовании одного макета. Понятно, что необходимо выносить такой общий код. Для этих целей имеется два механизма: _ViewImports.cshtml и _ViewStart.cshtml.</p>
+<h2 id="_viewimports">Импорт общих директив с помощью _ViewImports<a class="headerlink" href="#_viewimports" title="Permanent link">¶</a></h2>
+<p>Файл _ViewImports.cshtml содержит директивы, которые будут вставляться в верхнюю часть каждого представления. Файл _ViewImports.cshtml можно поместить в любую папку, и он будет применяться ко всем представлениям и вложенным папкам.<br/>
+Важно отметить, что во _ViewImports.cshtml помещаются <em>только</em> директивы.</p>
+<h2 id="_viewstartcshtml">Выполнение кода для каждого представления с помощью _ViewStart.cshtml<a class="headerlink" href="#_viewstartcshtml" title="Permanent link">¶</a></h2>
+<p>Если добавить файл _ViewStart.cshtml в папку Pages приложения, код в этом файле будет выполнять в начале каждой страницы Razor (но не для макетов и частичных представлений). Чаще всего этот файл применяется, чтобы задать макет по умолчанию:<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>@{
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    Layout = "_Layout";
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>}
+</code></pre></div></p>
 <hr/>
-<ol>
-<li id="fn:1">
-<p>См. также <a href="../../../Chris%20Richardson%20-%20Microservices%20Patterns/chapter%2011/ch-11-security-in-microservices/" title="главку о безопасности в микросервисах">главку о безопасности в микросервисах</a> в книге Криса Ричардсона <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-<li id="fn:2">
-<p>Подробнее о том, с чего начать, см. <a href="https://docs.microsoft.com/ru-ru/aspnet/core/security/authentication/identity-api-authorization?view=aspnetcore-6.0">тут</a> <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
-</li>
-</ol>
-</div>
+<p>Если требуется добавить дополнительные директивы или код к файлам в определенных папках, в этих папках создаются дополнительные файлы _ViewImports.cshtml или _ViewStart.cshtml. Они будут выполнены после файлов в корневой папке Pages.<br/>
+Важно помнить, что имена _ViewStart.cshtml и _ViewImports.cshtml нельзя изменять.</p>
 <!-- taken from 
 https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <hr/>
@@ -4566,7 +4632,7 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <small>
 <!-- mkdocs-git-revision-date-localized-plugin -->
 <u>Последнее обновление</u> :
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2022</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2023</span>
 <!-- mkdocs-git-revision-date-plugin -->
 </small>
 </div>
@@ -4662,8 +4728,8 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.208e55ea.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
-<script src="../../../../assets/javascripts/bundle.f1ef77e2.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+<script src="../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
 <script src="../../../../assets/js/mathjax.js"></script>
 <script src="../../../../assets/js/utils.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
