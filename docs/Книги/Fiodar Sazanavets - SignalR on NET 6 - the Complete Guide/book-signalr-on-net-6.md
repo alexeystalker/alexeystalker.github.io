@@ -13,6 +13,7 @@ tags:
 #### [[ch-2-setting-up-your-project|Глава 2 - Подготовим проект]]
 #### [[ch-3-in-browser-signalr-clients|Глава 3 - Браузерные клиенты SignalR]]
 #### [[ch-4-external-signalr-clients|Глава 4 - Внешние клиенты SignalR]]
+#### [[ch-5-sending-messages-to-clients-or-groups|Глава 5 - Отправка сообщений отдельным клиентам или группам клиентов]]
 
 ## Ссылки
 [Ссылка на магазин](https://leanpub.com/signalronnet6-thecompleteguide)
