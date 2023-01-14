@@ -1,5 +1,6 @@
 ---
-tags: [useful-tool]
+tags: 
+ - useful-tool
 share: true
 ---
 # MyHomeLib
