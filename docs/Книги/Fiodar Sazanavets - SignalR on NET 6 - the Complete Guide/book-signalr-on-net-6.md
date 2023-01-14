@@ -14,6 +14,7 @@ tags:
 #### [[ch-3-in-browser-signalr-clients|Глава 3 - Браузерные клиенты SignalR]]
 #### [[ch-4-external-signalr-clients|Глава 4 - Внешние клиенты SignalR]]
 #### [[ch-5-sending-messages-to-clients-or-groups|Глава 5 - Отправка сообщений отдельным клиентам или группам клиентов]]
+#### [[ch-6-streaming-in-signalr|Глава 6 - Стриминг в SignalR]]
 
 ## Ссылки
 [Ссылка на магазин](https://leanpub.com/signalronnet6-thecompleteguide)
