@@ -133,10 +133,10 @@ extra_css:
     - assets/css/custom_attributes.css
     - assets/css/customization.css
 extra:
-  comments: false #disable comments globally
+  comments: true #disable comments globally
   generate_graph: true #generate the graph of the site
   hooks:
-    strip_comments: true
+    strip_comments: false
     fix_heading: false
   analytics:
     provider: google
