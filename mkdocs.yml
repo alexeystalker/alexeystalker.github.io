@@ -130,10 +130,10 @@ extra_css:
     - assets/css/custom_attributes.css
     - assets/css/customization.css
 extra:
-  comments: true #disable comments globally
-  generate_graph: true #generate the graph of the site
-  attachments: 'assets/img' #path to the folder where the attachments are stored
-    no_page_found: "No pages found!" #message to display when no pages are found ; Add your own translation!
+  comments: true
+  generate_graph: true
+  attachments: 'assets/img'
+    no_page_found: "No pages found!"
   hooks:
     strip_comments: false
     fix_heading: false
