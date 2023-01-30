@@ -1,4 +1,4 @@
-const blogURL = location.origin;
+const blogURL = document.querySelector('meta[name="site_url"]') ? document.querySelector('meta[name="site_url"]').content : location.origin;
 let position = ['top', 'right', 'bottom', 'left'];
 try {
     const tip = tippy(`.md-content a[href^="${blogURL}"]`, {
@@ -16,6 +16,11 @@ try {
                     const parser = new DOMParser();
                     const doc = parser.parseFromString(html, 'text/html');
                     let firstPara = doc.querySelector('article');
+                    const firstHeader = doc.querySelector('h1');
+                    if (firstHeader && firstHeader.innerText === 'Index') {
+                        const realFileName = decodeURI(doc.querySelector('link[rel="canonical"]').href).split('/').filter(e => e).pop();
+                        firstHeader.innerText = realFileName;
+                    }
                     //broken link in first para
                     const brokenImage = firstPara.querySelectorAll('img');
                     if (brokenImage) {
@@ -23,6 +28,7 @@ try {
                             const encodedImage = brokenImage[i];
                             encodedImage.src = decodeURI(decodeURI(encodedImage.src));
                             //replace broken image with encoded image in first para
+                            encodedImage.src = encodedImage.src.replace(location.origin, blogURL);
                         }
                     }
                     const element1 = document.querySelector(`[id^="tippy"]`);
