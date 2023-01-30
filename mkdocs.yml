@@ -131,9 +131,8 @@ extra_css:
     - assets/css/customization.css
 extra:
   comments: true
-  generate_graph: true
+  generate_graph: false
   attachments: 'assets/img'
-    no_page_found: "No pages found!"
   hooks:
     strip_comments: false
     fix_heading: false
@@ -143,4 +142,4 @@ extra:
   social:
     - icon: fontawesome/brands/telegram
       link: https://t.me/AlexStalkerConnectionBot
-      name: Бот для связи
+      name: 'Бот для связи'
