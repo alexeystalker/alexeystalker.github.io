@@ -1,4 +1,6 @@
 ---
+aliases:
+ - HTTP/2
 tags: [HTTP, protocol]
 share: true
 ---
