@@ -1,6 +1,6 @@
 ---
 share: true
-tags: [NET/library, NET/testing]
+tags: [NET/library, testing]
 ---
 # Генерация случайных данных
 Библиотека для генерации случайных данных для тестирования Faker.Net.

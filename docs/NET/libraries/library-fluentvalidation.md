@@ -2,7 +2,7 @@
 share: true
 tags:
  - NET/ASPNETCore/validation
- - library
+ - NET/library
 ---
 # FluentValidation
 Библиотека для определения требований к валидации моделей.
