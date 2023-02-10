@@ -1,4 +1,6 @@
 ---
+aliases:
+ - gRPC
 tags: [protocol,gRPC]
 share: true
 ---
