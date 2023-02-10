@@ -1,4 +1,6 @@
 ---
+aliases:
+ - HttpMessageHandler
 share: true
 tags:
  - NET/HttpClient
