@@ -1,5 +1,5 @@
 ---
-tags: [NET/library]
+tags: [NET/library, HTTP]
 share: true
 ---
 # Polly
