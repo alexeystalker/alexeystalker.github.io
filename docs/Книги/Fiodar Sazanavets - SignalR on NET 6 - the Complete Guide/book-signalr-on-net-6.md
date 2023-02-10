@@ -2,7 +2,6 @@
 share: true
 tags:
  - NET/SignalR
- - книга
  - конспект
 ---
 # Книжка "SignalR на NET 6 - полное руководство"
@@ -15,6 +14,7 @@ tags:
 #### [[ch-4-external-signalr-clients|Глава 4 - Внешние клиенты SignalR]]
 #### [[ch-5-sending-messages-to-clients-or-groups|Глава 5 - Отправка сообщений отдельным клиентам или группам клиентов]]
 #### [[ch-6-streaming-in-signalr|Глава 6 - Стриминг в SignalR]]
+#### [[ch-7-advanced-signalr-configuration|Глава 7 - Продвинутая настройка SignalR]]
 
 ## Ссылки
 [Ссылка на магазин](https://leanpub.com/signalronnet6-thecompleteguide)
