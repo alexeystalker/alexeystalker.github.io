@@ -15,6 +15,7 @@ tags:
 #### [[ch-5-sending-messages-to-clients-or-groups|Глава 5 - Отправка сообщений отдельным клиентам или группам клиентов]]
 #### [[ch-6-streaming-in-signalr|Глава 6 - Стриминг в SignalR]]
 #### [[ch-7-advanced-signalr-configuration|Глава 7 - Продвинутая настройка SignalR]]
+#### [[ch-8-securing-your-signalr-applications|Глава 8 - Безопасность SignalR приложений]]
 
 ## Ссылки
 [Ссылка на магазин](https://leanpub.com/signalronnet6-thecompleteguide)

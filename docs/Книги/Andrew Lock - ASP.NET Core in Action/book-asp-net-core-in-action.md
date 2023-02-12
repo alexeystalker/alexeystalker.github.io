@@ -2,7 +2,6 @@
 share: true
 tags:
  - NET/ASPNETCore
- - книга
  - конспект
 ---
 # Книжка "ASP.NET Core в действии"

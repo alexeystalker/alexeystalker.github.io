@@ -1,5 +1,5 @@
 ---
-tags: [Obsidian/publish, github]
+tags: [Obsidian/plugin, github]
 share: true
 ---
 # Паблишер для Obsidian
