@@ -1,4 +1,9 @@
 ---
+aliases:
+ - авторизация
+ - авторизации
+ - авторизацией
+ - авторизацию
 tags: [definition, security]
 share: true
 ---
