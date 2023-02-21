@@ -12,6 +12,7 @@ share: true
 - [[range-agg|Range]]
 - [[filter-agg|Filter]]
 - [[terms-agg|Terms]]
+- [[nested-agg|Nested]]
 
 ## Ссылки
 https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket.html
