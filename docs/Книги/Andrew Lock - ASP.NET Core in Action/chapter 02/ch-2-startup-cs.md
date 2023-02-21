@@ -1,4 +1,6 @@
 ---
+aliases:
+ - startup.cs
 share: true
 tags:
  - NET/ASPNETCore

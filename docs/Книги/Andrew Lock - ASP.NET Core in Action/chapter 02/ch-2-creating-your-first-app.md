@@ -3,6 +3,7 @@ share: true
 tags:
  - NET/ASPNETCore
  - NET/dotnet
+ - NET/templates
 ---
 # Создание вашего первого приложения ASP.NET Core
 Подготовка и запуск приложения обычно включают в себя четыре основных шага:
