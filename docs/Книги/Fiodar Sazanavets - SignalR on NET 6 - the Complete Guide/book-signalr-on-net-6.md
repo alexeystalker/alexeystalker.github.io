@@ -20,6 +20,7 @@ tags:
 #### [[ch-7-advanced-signalr-configuration|Глава 7 - Продвинутая настройка SignalR]]
 #### [[ch-8-securing-your-signalr-applications|Глава 8 - Безопасность SignalR приложений]]
 #### [[ch-9-scaling-out-signalr-application|Глава 9 - Масштабирование приложения SignalR]]
+#### [[ch-10-introducing-azure-signalr-service|Глава 10 - Представляем Azure SignalR Service]]
 
 ## Ссылки
 [Ссылка на магазин](https://leanpub.com/signalronnet6-thecompleteguide)
