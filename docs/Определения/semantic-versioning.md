@@ -1,4 +1,7 @@
 ---
+aliases:
+ - semver
+ - семантическое версионирование
 tags: [versioning, numeration]
 share: true
 ---
