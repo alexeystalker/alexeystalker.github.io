@@ -1,4 +1,6 @@
 ---
+aliases:
+ - sentry
 share: true
 tags:
  - internet/service
