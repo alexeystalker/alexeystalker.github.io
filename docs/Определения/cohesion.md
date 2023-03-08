@@ -1,4 +1,8 @@
 ---
+aliases:
+ - связность
+ - связности
+ - связностью
 tags: [definition]
 share: true
 ---
