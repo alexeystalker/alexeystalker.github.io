@@ -1,4 +1,10 @@
 ---
+aliases:
+ - настройка
+ - настройки
+ - настройку
+ - настройкой
+ - настройке
 share: true
 tags:
  - NET/configuration
