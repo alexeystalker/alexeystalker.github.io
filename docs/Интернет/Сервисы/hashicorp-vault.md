@@ -8,7 +8,7 @@ tags:
  - on-premise/service
 ---
 # Hashicorp Vault
-Сервис для хранения секретных настроек. OpenSource, бесплатен при селф-хостинге.
+Сервис для хранения [[secret-setting|секретных настроек]]. OpenSource, бесплатен при селф-хостинге.
 
 ## Ссылки
 https://www.vaultproject.io/

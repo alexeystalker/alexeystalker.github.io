@@ -1,4 +1,10 @@
 ---
+aliases:
+ - секрет
+ - секрета
+ - секретом
+ - секрету
+ - секрете
 share: true
 tags:
  - NET/configuration
