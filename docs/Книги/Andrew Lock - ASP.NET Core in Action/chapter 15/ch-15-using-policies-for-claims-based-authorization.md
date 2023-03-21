@@ -10,7 +10,7 @@ tags:
 [[authentication|Аутентификация]] в ASP.NET Core [[ch-14-users-and-claims-in-asp-net-core|сосредоточена]] вокруг объекта `ClaimsPrincipal`, у которого имеется коллекция [[claim|утверждений]], содержащих информацию о пользователе.
 Эти утверждения можно, помимо прочего, использовать для [[authorization|авторизации]].
 
-В ASP.NET Core правила, определяющие, авторизован ли пользователь, инкапсулированы в [[policy|политике]]. Политики можно применять с помощью атрибута `[Authorize]`:
+В ASP.NET Core правила, определяющие, авторизован ли пользователь, инкапсулированы в [[authorization-policy|политике]]. Политики можно применять с помощью атрибута `[Authorize]`:
 ```csharp
 [Authorize("CanEnterSecurity")] //Указываем политику
 public class AirportSecurityModel : PageModel
