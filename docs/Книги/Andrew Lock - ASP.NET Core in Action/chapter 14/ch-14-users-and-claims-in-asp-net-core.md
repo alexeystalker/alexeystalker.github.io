@@ -5,7 +5,7 @@ tags:
  - security
 ---
 # Пользователи и утверждения в ASP.NET Core
-Концепция пользователя встроена в ASP.NET Core. Ранее мы [[ch-3-what-is-middleware|узнали]], что HTTP-сервер Kestrel создает объект [[httpcontext|HttpContext]] для каждого полученного запроса. Помимо прочего `HttpContext` предоставляет текущего [[principal|принципала]] запроса в качестве свойства `User`. 
+Концепция пользователя встроена в ASP.NET Core. Ранее мы [[ch-3-what-is-middleware|узнали]], что HTTP-сервер Kestrel создает объект [[httpcontext|HttpContext]] для каждого полученного запроса. Помимо прочего `HttpContext` предоставляет текущего [[aspnetcore-principal|принципала]] запроса в качестве свойства `User`. 
 ![[Pasted image 20220601192248.png]]
 Принципалы раеализованы в виде объектов `ClaimsPrincipal`, у которых есть коллекция [[claim|утверждений]].
 

@@ -3,7 +3,7 @@ share: true
 tags: [NET/WebApi]
 ---
 # Привязка модели из нескольких источников в один класс в ASP.NET Core
-Допустим, у нас есть следующий метод действия в ASP.NET API:
+Допустим, у нас есть следующий [[action-method|метод действия]] в ASP.NET API:
 ```csharp
 public IActionResult Post(
  [FromBody] 

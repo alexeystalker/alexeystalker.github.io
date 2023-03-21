@@ -1,4 +1,6 @@
 ---
+aliases:
+ - csrf
 share: true
 tags:
  - security
