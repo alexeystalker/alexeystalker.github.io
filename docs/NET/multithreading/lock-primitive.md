@@ -1,4 +1,6 @@
 ---
+aliases:
+ - lock
 tags: [NET/multithreading]
 share: true
 ---

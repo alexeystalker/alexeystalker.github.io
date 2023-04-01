@@ -1,4 +1,7 @@
 ---
+aliases:
+ - transactional outbox
+ - outbox
 share: true
 tags:
  - microservice/pattern
