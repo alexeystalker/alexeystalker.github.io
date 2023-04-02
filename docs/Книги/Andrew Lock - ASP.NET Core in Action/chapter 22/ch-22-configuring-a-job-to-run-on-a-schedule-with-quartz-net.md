@@ -48,7 +48,7 @@ public void ConfigureServices(IServiceCollection services)
 		q.UseMicrosoftDependencyInjectionScopedFactory();
 		//создаём уникальный ключ задания
 		var jobKey = new JobKey("Update exchange rates");
-		//Добавляем наше задание в контейнер зависимостей и связываем его с ключом задания
+		//Добавляем наше задание в [[di-container|контейнер зависимостей]] и связываем его с ключом задания
 		q.AddJob<UpdateExchangeRatesJob>(opts => opts.WithIdentity(jobKey));
 		//добавляем и настраиваем триггер
 		q.AddTrigger(opts => opts
