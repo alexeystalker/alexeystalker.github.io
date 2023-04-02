@@ -10,9 +10,10 @@ tags:
 
 1. Останавливаем все консьюмеры из нужной группы. Смысл в том, что, пока есть активные консьюмеры, команды изменения оффсета выполнять запрещено;
 3. пишем команду `kfk consumer-groups --describe --group %group_name%` - она покажет нам все топики, на которые подписана группа, их оффсеты и лаги;
-4. пишем команду `kfk consumer-groups --group %group_name% --reset-offsets --to-latest --execute --topic %topic_name%` ;
-5. снова пишем `kfk consumer-groups --describe --group %group_name%` - убеждаемся, что в интересующем нас топике лаг сброшен в ноль;
-6. запускаем консьюмеры.
+4. пишем команду 
+	`kfk consumer-groups --group %group_name% --reset-offsets --to-latest --execute --topic %topic_name%`
+1. снова пишем `kfk consumer-groups --describe --group %group_name%` - убеждаемся, что в интересующем нас топике лаг сброшен в ноль;
+2. запускаем консьюмеры.
 
 ## Параметры
 
