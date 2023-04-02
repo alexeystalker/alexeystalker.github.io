@@ -12,4 +12,4 @@ ASP.NET Core изначально разрабатывался как модул
 #### [[ch-10-di-in-asp-net-core|Внедрение зависимостей в ASP.NET Core]]
 
 
-[^1]: Хоть внедрение зависимостей и [[dependency-inversion-principle|принцип инверсии зависимостей]] связаны, это разные вещи. См. [статью](https://lostechies.com/derickbailey/2011/09/22/dependency-injection-is-not-the-same-as-the-dependency-inversion-principle/) 
+[^1]: Хоть [[dependency-injection-pattern|внедрение зависимостей]] и [[dependency-inversion-principle|принцип инверсии зависимостей]] связаны, это разные вещи. См. [статью](https://lostechies.com/derickbailey/2011/09/22/dependency-injection-is-not-the-same-as-the-dependency-inversion-principle/) 

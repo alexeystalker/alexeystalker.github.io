@@ -22,7 +22,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Теперь мы можем получить объект `IHttpClientFactory` через внедрение зависимостей:
+Теперь мы можем получить объект `IHttpClientFactory` через [[dependency-injection-pattern|внедрение зависимостей]]:
 ```csharp
 [ApiController]
 public class ValuesController : ControllerBase
@@ -52,6 +52,6 @@ public class ValuesController : ControllerBase
 > [!Note]- SocketsHttpHandler и IHttpClientFactory
 > Ограничения `HttpClient`, описанные в [[ch-21-calling-http-apis-problem-with-httpclient|предыдущем разделе]], применяются именно к `HttpClientHandler`. `IHttpClientFactory` управляет жизненным циклом и повторным использованием `HttpClientHandler`.
 > В .NET Core 2.1 была представлена замена `HttpClientHandler` - `SocketsHttpHandler`, в первую очередь нацеленная на повышение производительности и согласованности между платформами. *Также* `SocketsHttpHandler` можно настроить для использования пула соединений и повторного использования.
-> Несмотря на то, что использование `IHttpClientFactory` по прежнему предпочтительно, в сценарии, где нет внедрения зависимостей и где нельзя использовать `IHttpClientFactory`, можно активировать пул соединений `SocketsHttpHandler`, как описано [здесь](https://www.stevejgordon.co.uk/httpclient-connection-pooling-in-dotnet-core)
+> Несмотря на то, что использование `IHttpClientFactory` по прежнему предпочтительно, в сценарии, где нет [[dependency-injection-pattern|внедрения зависимостей]] и где нельзя использовать `IHttpClientFactory`, можно активировать пул соединений `SocketsHttpHandler`, как описано [здесь](https://www.stevejgordon.co.uk/httpclient-connection-pooling-in-dotnet-core)
 
 [^1]: Подробнее об этом [в блоге автора](https://andrewlock.net/exporing-the-code-behind-ihttpclientfactory/)
