@@ -1,4 +1,6 @@
 ---
+aliases:
+ - fluentvalidation
 share: true
 tags:
  - NET/ASPNETCore/validation
