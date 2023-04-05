@@ -25,10 +25,10 @@ const connection = new signalR.HubConnectionBuilder()
 - `headers` - заголовки, которые нужно добавить к запросу на подключение;
 	> [!warning] Внимание (от меня)
 	> В документации также сказано, что, цитирую “Note, setting headers in the browser will not work for WebSockets or the ServerSentEvents stream.” Видимо, в браузере передача заголовков не сработает
-- `accessTokenFactory` - фабрика токенов аутентификации; %%добавить ссылку на главу 8%%
+- `accessTokenFactory` - фабрика токенов аутентификации[^2];
 - `logMessageContent` - нужно ли добавлять содержимое сообщений в логи;
 - `skipNegotiation` - если используется WebSocket в качестве транспорта, эта опция позволяет пропустить предварительный этап. Иначе не используется;
-- `withCredentials` - если задано, данные входа будут отправлены при Кросс-доменном запросе(CORS)[^2]
+- `withCredentials` - если задано, данные входа будут отправлены при Кросс-доменном запросе(CORS)[^3]
 - `timeout` - таймаут для запросов HTTP. Не относится к LongPolling, SSE или WebSockets.
 
 `configureLogging` - метод для конфигурации логирования. Можно передать уровень логирования в виде строки или константы, или передать кастомный `ILogger`.
@@ -42,8 +42,8 @@ connection.keepAliveIntervalInMilliseconds = 15000;
 - `serverTimeoutInMilliseconds` - таймаут ожидания сообщения от сервера. При превышении соединение считается разорванным и вызывается обработчик `onclose`;
 - `keepAliveIntervalInMilliseconds` - интервал отправки пинг-сообщений на сервер. По умолчанию 15 секунд.
 
-[^1]: 
-	- [Документация HubConnectionBuilder](https://learn.microsoft.com/en-us/javascript/api/@microsoft/signalr/hubconnectionbuilder?view=signalr-js-latest)
+[^1]: - [Документация HubConnectionBuilder](https://learn.microsoft.com/en-us/javascript/api/@microsoft/signalr/hubconnectionbuilder?view=signalr-js-latest)
 	- [Документация с описанием настроек](https://learn.microsoft.com/en-us/javascript/api/@microsoft/signalr/ihttpconnectionoptions?view=signalr-js-latest)
 
-[^2]: [[ch-18-calling-web-apis-from-other-domains-using-cors|См. про CORS в книге Э. Лока]]
+[^2]:О аутентификации на клиентах [[ch-8-authentication-on-clients|тут]].
+[^3]:[[ch-18-calling-web-apis-from-other-domains-using-cors|См. про CORS в книге Э. Лока]]
