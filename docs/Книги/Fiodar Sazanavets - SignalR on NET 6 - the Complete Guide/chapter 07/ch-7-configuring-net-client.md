@@ -43,7 +43,7 @@ var hubConnection = new HubConnectionBuilder()
 ```
 Здесь мы использовали один из методов расширения `WithUrl()` с возможностью указания используемого транспорта в отдельном параметре. Здесь мы указали только `WebSockets`, но здесь также, как и в настройках можно объединять разные варианты при помощи побитового ИЛИ (так как enum `HttpTransportType` имеет атрибут `[Flags]`). Все возможные методы расширения указаны [здесь](https://learn.microsoft.com/ru-ru/dotnet/api/microsoft.aspnetcore.signalr.client.hubconnectionbuilder?view=aspnetcore-6.0#extension-methods).
 Кратко упомянем все показанные здесь настройки. [Документация по этим настройкам](https://learn.microsoft.com/ru-ru/dotnet/api/microsoft.aspnetcore.http.connections.client.httpconnectionoptions?view=aspnetcore-6.0). Если не указано иное, под "запросом" подразумевается запрос на подключение.
-- `AccessTokenProvider` - задаёт провайдер для токена доступа; %%добавить ссылку на главу 8%%
+- `AccessTokenProvider` - задаёт провайдер для токена доступа[^2];
 - `HttpMessageHandlerFactory` - задаёт делегат для создания обёртки или замены используемому `HttpMessageHandler`[^1]
 - `Headers` - заголовки, которые будут переданы с запросом;
 - `SkipNegotiation` - при использовании WebSocket в качестве транспорта этап предварительного соединения может быть пропущен. Поведение регулируется этой настройкой;
@@ -74,3 +74,4 @@ hubConnection.KeepAliveInterval = TimeSpan.FromSeconds(10);
 > Почему-то автор не упомянул здесь о методе расширения `WithAutomaticReconnect()`, (точнее, нескольких перегруженных методах) который позволяет задать политику автоматического переподключения при потере соединения. 
 
 [^1]: О создании кастомного `HttpMessageHandler` можно прочитать в [[ch-21-creating-custom-httpmessagehandler|книге Э. Лока]]
+[^2]:О аутентификации на клиентах [[ch-8-authentication-on-clients|тут]]

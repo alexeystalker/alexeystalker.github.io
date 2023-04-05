@@ -13,7 +13,7 @@ public class CurrencyConverterModel
 	public string Quantity { get; set; }
 }
 ```
-В FluentValidation правила валидации определяются в отдельном классе, на каждую модель по классу, обычно наследуясь от `AbstractValidator<>`. Создадим валидатор, аналогичный правилам из предыдущего раздела. Набор правил для проверки свойства создаётся, вызывая метод `RuleFor()` и добавляя методы правил. Данный способ называется FluentAPI, откуда и название библиотеки.
+В [[library-fluentvalidation|FluentValidation]] правила валидации определяются в отдельном классе, на каждую модель по классу, обычно наследуясь от `AbstractValidator<>`. Создадим валидатор, аналогичный правилам из предыдущего раздела. Набор правил для проверки свойства создаётся, вызывая метод `RuleFor()` и добавляя методы правил. Данный способ называется FluentAPI, откуда и название библиотеки.
 ```csharp
 public class CurrencyConverterModelValidator 
 	: AbstractValidator<CurrencyConverterModel>

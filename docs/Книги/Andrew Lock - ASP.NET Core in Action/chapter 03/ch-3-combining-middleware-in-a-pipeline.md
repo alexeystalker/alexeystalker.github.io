@@ -1,4 +1,7 @@
 ---
+aliases:
+ - конвейер промежуточного ПО
+ - конвейеру промежуточного ПО
 share: true
 tags:
  - NET/ASPNETCore/middleware
