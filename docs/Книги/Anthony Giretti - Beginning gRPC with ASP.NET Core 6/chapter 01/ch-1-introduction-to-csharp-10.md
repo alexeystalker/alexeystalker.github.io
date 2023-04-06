@@ -1,5 +1,6 @@
 ---
 share: true
+title: Введение в C# 10
 tags:
  - NET/NET6
 ---
