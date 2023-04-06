@@ -5,7 +5,7 @@ tags:
  - NET
 ---
 # Книжка “Начала использования gRPC с ASP.NET Core 6”
-**Построение приложений с использованием ASP.NET Core Razor Pages, Angular и лучших практик .NET 6**
+**Построение приложений с использованием ASP.NET Core, Razor Pages, Angular и лучших практик .NET 6**
 
 ## Часть I. Знакомство с .NET 6
 #### [[ch-1-welcome-to-modern-dot-net|Глава 1 — Добро пожаловать в современный .NET]]
