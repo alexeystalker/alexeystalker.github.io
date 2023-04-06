@@ -24,4 +24,20 @@ public class CountryCreateRequestValidator: AbstractValidator<CountryCreationReq
     }
 }
 ```
+Добавляем валидатор в файле **Program.cs**:
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddGrpc(options =>
+{
+	// прочие опции...
+    options.EnableMessageValidation(); //Метод расширения из пакета!
+});
+builder.Services.AddGrpcValidation(); //Добавляем сервисы валидации
+builder.Services.AddValidator<CountryCreateRequestValidator>(); //Добавляем сам валидатор
+
+// прочий код для запуска приложения...
+
+```
+
 Теперь, если мы попытаемся создать объект, но не выполним какое-либо условие (например, напишем поле Description меньше пяти символов) - получим ошибку `InvalidArgument`.
