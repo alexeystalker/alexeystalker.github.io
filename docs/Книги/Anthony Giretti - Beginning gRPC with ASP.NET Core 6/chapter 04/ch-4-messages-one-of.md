@@ -38,7 +38,7 @@ public global::Apress.Sample.gRPC.Country Country
 {
 	get 
 	{ 
-		return countryOrContinentCase_ == CountryOrContinentOneofCase. Country 
+		return countryOrContinentCase_ == CountryOrContinentOneofCase.Country 
 			? (global::Apress.Sample.gRPC.Country) countryOrContinent_ 
 			: null;
 	}
