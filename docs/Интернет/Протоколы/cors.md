@@ -4,8 +4,8 @@ tags:
  - CORS
  - protocol
 ---
-# CORS - Cross-origin resource sharing
-*Cross-origin resource sharing (CORS)* - протокол, позволяющий JavaScript делать запросы из одного домена в другой.
+# CORS — Cross-origin resource sharing
+*Cross-origin resource sharing (CORS)* — протокол, позволяющий JavaScript делать запросы из одного домена в другой.
 > [!tip] Определение
 > *Источники* считаются одинаковыми, если у них совпадают протокол (HTTP или HTTPS), домен и порт. Если приложение пытается получить доступ к ресурсу с помощью JavaScript и источники не идентичны, браузер блокирует запрос.
 
