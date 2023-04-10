@@ -1,4 +1,5 @@
 ---
+title: gRPC
 aliases:
  - gRPC
 tags: [protocol,gRPC]
