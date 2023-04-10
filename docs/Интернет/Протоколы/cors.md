@@ -1,4 +1,5 @@
 ---
+title: CORS
 share: true
 tags:
  - CORS
