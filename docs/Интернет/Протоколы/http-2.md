@@ -1,4 +1,5 @@
 ---
+title: HTTP/2
 aliases:
  - HTTP/2
 tags: [HTTP, protocol]
