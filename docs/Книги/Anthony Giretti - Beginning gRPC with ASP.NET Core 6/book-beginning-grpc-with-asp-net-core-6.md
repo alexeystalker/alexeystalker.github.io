@@ -16,6 +16,7 @@ tags:
 ## Часть III. gRPC и ASP.NET Core
 #### [[ch-5-creating-an-asp-net-core-grpc-application|Глава 5 — Создание приложения ASP.NET Core с gRPC]]
 #### [[ch-6-api-versioning|Глава 6 — Версионирование API]]
+#### [[ch-7-create-a-grpc-client|Глава 7 — Создание клиента gRPC]]
 
 
 ## Ссылки
