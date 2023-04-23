@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - protobuf/messages
+ - gRPC/protobuf/messages
 ---
 # Декларации сообщений
 > [!Note]- От меня
