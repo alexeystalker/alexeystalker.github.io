@@ -3,7 +3,7 @@ share: true
 aliases:
  - Well-Known Types
 tags:
- - protobuf/messages
+ - gRPC/protobuf/messages
 ---
 # Известные типы (Well-Known Types)
 `Any`, `Value`, `Struct`, `Wrappers`, `Timestamp` и `Duration` — это специальные типы с особым поведением, и поэтому они требуют особого подхода. Google предоставляет специальные файлы для импорта, а затем, при компиляции, используются специальные расширения, известные как *Protobuf’s Well-Known Types*.
