@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - protobuf/messages
+ - gRPC/protobuf/messages
 ---
 # Комментарии
 В файлы Protobuf можно добавлять комментарии. Возможный синтаксис:
