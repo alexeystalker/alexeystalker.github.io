@@ -2,7 +2,7 @@
 title: HTTP/2
 aliases:
  - HTTP/2
-tags: [HTTP, protocol]
+tags: [HTTP-2, protocol]
 share: true
 ---
 # HTTP/2
