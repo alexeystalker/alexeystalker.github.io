@@ -2,7 +2,7 @@
 share: true
 tags:
  - gRPC
- - HTTP/2
+ - HTTP-2
 ---
 # Запросы и ответы gRPC на основе HTTP/2
 Давайте рассмотрим, как gRPC работает через фреймы [[http-2|HTTP/2]].
