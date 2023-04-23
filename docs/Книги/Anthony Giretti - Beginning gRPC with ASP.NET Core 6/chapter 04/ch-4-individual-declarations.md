@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - protobuf/declarations
+ - gRPC/protobuf/declarations
 ---
 # Единичные декларации
 **Всегда** требуется указывать версию синтаксиса. Варианты:
