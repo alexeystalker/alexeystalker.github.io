@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - protobuf/messages
+ - gRPC/protobuf/messages
 ---
 # Bytes
 Язык Protobuf и gRPC поддерживают транспорт бинарных данных. Самый очевидный пример — загрузка файла. Рассмотрим сообщение `CountryImageUpload`, с полями `FileName`, `MimeType` и содержимым файла. 

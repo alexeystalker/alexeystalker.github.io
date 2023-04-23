@@ -2,7 +2,7 @@
 share: true
 tags:
  - gRPC
- - NET
+ - NET/ASPNETCore
 ---
 # Книжка “Начала использования gRPC с ASP.NET Core 6”
 **Построение приложений с использованием ASP.NET Core, Razor Pages, Angular и лучших практик .NET 6**

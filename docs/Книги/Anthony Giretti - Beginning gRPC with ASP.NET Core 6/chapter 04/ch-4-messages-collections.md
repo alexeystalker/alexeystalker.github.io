@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - protobuf/messages
+ - gRPC/protobuf/messages
 ---
 # Коллекции
 Коллекции поддерживаются языком Protobuf в виде списков и словарей.

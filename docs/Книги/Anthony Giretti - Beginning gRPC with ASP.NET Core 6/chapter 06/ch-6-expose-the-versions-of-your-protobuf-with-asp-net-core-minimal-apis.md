@@ -2,7 +2,7 @@
 share: true
 tags:
  - versioning
- - protobuf
+ - gRPC/protobuf
  - NET/ASPNETCore
 ---
 # Предоставляем версии файлов Protobuf при помощи ASP.NET Core Minimal API

@@ -1,7 +1,10 @@
 ---
 share: true
 tags:
- - gRPC
+ - gRPC/unary
+ - gRPC/server-streaming
+ - gRPC/client-streaming
+ - gRPC/duplex-streaming
  - NET/ASPNETCore
 ---
 # Пишем, конфигурируем и доставляем сервисы gRPC
