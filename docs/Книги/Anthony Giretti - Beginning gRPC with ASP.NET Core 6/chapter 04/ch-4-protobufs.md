@@ -1,7 +1,7 @@
 ---
 share: true
 tags:
- - protobuf
+ - gRPC/protobuf
 ---
 # Protobufs
 До того, как перейти к реализации gRPC-приложений на ASP.NET Core, необходимо разобраться с языком Protocol Buffers.
