@@ -17,6 +17,11 @@ tags:
 #### [[ch-5-creating-an-asp-net-core-grpc-application|Глава 5 — Создание приложения ASP.NET Core с gRPC]]
 #### [[ch-6-api-versioning|Глава 6 — Версионирование API]]
 #### [[ch-7-create-a-grpc-client|Глава 7 — Создание клиента gRPC]]
+#### Глава 8 — от WCF к gRPC
+> [!Note] От меня
+> в главе 8 автор рассказывает о сходствах и различиях технологий WCF и gRPC, а также о том, как перейти от WCF к gRPC, и нужно ли это делать. Я с WCF незнаком, и, так как эта тема мне пока не интересна, я пропущу эту главу.
+
+#### [[ch-9-import-and-display-data-with-asp-net-core-razor-pages-hosted-services-and-grpc|Глава 9 — Загружаем и отображаем данные с помощью страниц Razor, фоновых задач и gRPC]]
 
 
 ## Ссылки
