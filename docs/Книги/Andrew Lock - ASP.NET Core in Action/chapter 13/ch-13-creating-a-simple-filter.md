@@ -4,15 +4,15 @@ tags:
  - NET/ASPNETCore/filters
 ---
 # Создание простого фильтра
-Создадим самые примитивные фильтры - делающие некий вывод в консоль.
+Создадим самые примитивные фильтры — делающие некий вывод в консоль.
 
-Фильтр определенного типа реализуется с помощью одного из пары - синхронного и асинхронного - интерфейсов:
-- *фильтры авторизации* - `IAuthorizationFilter` и `IAsyncAuthorizationFilter`;
-- *фильтры ресурсов* - `IResourceFilter` и `IAsyncResourceFilter`;
-- *фильтры действий* - `IActionFilter` и `IAsyncActionFilter`;
-- *фильтры страниц* - `IPageFilter` и `IAsyncPageFilter`;
-- *фильтры исключений* - `IExceptionFilter` и `IAsyncExceptionFilter`;
-- *фильтры результатов* - `IResultFilter` и `IAsyncResultFilter`.
+Фильтр определенного типа реализуется с помощью одного из пары — синхронного и асинхронного — интерфейсов:
+- *фильтры авторизации* — `IAuthorizationFilter` и `IAsyncAuthorizationFilter`;
+- *фильтры ресурсов* — `IResourceFilter` и `IAsyncResourceFilter`;
+- *фильтры действий* — `IActionFilter` и `IAsyncActionFilter`;
+- *фильтры страниц* — `IPageFilter` и `IAsyncPageFilter`;
+- *фильтры исключений* — `IExceptionFilter` и `IAsyncExceptionFilter`;
+- *фильтры результатов* — `IResultFilter` и `IAsyncResultFilter`.
 
 Обычно фильтры реализуются как атрибуты C#, что позволяет использовать их для декорирования контроллеров, действий и страниц Razor Pages.
 Следует использовать один интерфейс из пары; если будут реализованы оба интерфейса, использоваться будет асинхронный.
