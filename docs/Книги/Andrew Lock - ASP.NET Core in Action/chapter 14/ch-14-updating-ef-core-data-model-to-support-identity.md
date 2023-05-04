@@ -4,7 +4,7 @@ tags:
  - NET/ASPNETCore/Identity
 ---
 # Обновление модели данных EF Core для поддержки Identity
-Прежде всего, создадим класс `ApplicationUser` - наследника `IdentityUser`:
+Прежде всего, создадим класс `ApplicationUser` — наследника `IdentityUser`:
 ```csharp
 public class ApplicationUser : IdentityUser { }
 ```
