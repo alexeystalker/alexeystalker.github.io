@@ -5,12 +5,12 @@ tags:
 ---
 # Обновление представлений Razor для связи с пользовательским интерфейсом Identity
 Добавим виджет Login в макет, а также убедимся, что страницы Identity используют тот же макет, что и остальная часть приложения.
-Сначала создадим файл Areas/Identity/Pages/\_ViewStart.cshtml и добавим туда следующее:
+Сначала создадим файл **Areas/Identity/Pages/\_ViewStart.cshtml** и добавим туда следующее:
 ```razor
 @{ Layout = "/Pages/Shared/_Layout.cshtml"; }
 ```
 Таким образом, для страниц Identiy используется тот же макет по умолчанию, что и в остальном приложении.
-Далее добавим \_LoginPartial.cshtml в Pages/Shared и определим виджет Login.
+Далее добавим **\_LoginPartial.cshtml** в **Pages/Shared** и определим виджет `Login`.
 ```razor
 @using Microsoft.AspNetCore.Identity
 @using RecipeApplication.Data;
@@ -41,7 +41,7 @@ else
 </ul>
 ```
 
-Фактически, это файл \_LoginPartial.cshtml из [[ch-14-creating-a-project-from-template|шаблона по умолчанию]], но с использованием `ApplicationUser`.
+Фактически, это файл **\_LoginPartial.cshtml** из [[ch-14-creating-a-project-from-template|шаблона по умолчанию]], но с использованием `ApplicationUser`.
 
 Теперь можно разместить в основном шаблоне
 ```html
