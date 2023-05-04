@@ -18,8 +18,8 @@ ASP.NET Core часто используется для создания WebAPI 
 - *лёгкость добаавления новых поставщиков*.
 
 ASP.NET Core поддерживает такие архитектуры и потребление выпущенных токенов носителя, однако не включает в себя поддержку выпуска токенов. Нужно использовать стороннюю библиотеку или поставщика.
-Один из вариантов - использовать сторонние сервисы, такие как [Okta](https://www.okta.com/), [Auth0](https://auth0.com/) или [Azure Active Directory B2C](https://docs.microsoft.com/ru-ru/azure/active-directory-b2c/overview).
-Еще вариант - создать собственного поставщика, например, с помощью библиотек [OpenIddict](https://github.com/openiddict) или [IdentityServer](https://identityserver4.readthedocs.io/en/latest/)[^2]
+Один из вариантов — использовать сторонние сервисы, такие как [Okta](https://www.okta.com/), [Auth0](https://auth0.com/) или [Azure Active Directory B2C](https://docs.microsoft.com/ru-ru/azure/active-directory-b2c/overview).
+Еще вариант — создать собственного поставщика, например, с помощью библиотек [OpenIddict](https://github.com/openiddict) или [IdentityServer](https://identityserver4.readthedocs.io/en/latest/)[^2]
 
 [^1]:См. также [[ch-11-security-in-microservices|главку о безопасности в микросервисах]] в книге Криса Ричардсона
 [^2]:Подробнее о том, с чего начать, см. [тут](https://docs.microsoft.com/ru-ru/aspnet/core/security/authentication/identity-api-authorization?view=aspnetcore-6.0)
