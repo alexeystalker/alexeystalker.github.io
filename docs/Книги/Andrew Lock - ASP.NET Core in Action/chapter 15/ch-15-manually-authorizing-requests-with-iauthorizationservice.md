@@ -40,7 +40,7 @@ public class EditModel : PageModel
 `IAuthorizationService` предоставляет метод `AuthorizeAsync`, которому требуются три вещи:
 - `ClaimsPrincipal`, в `PageModel` это свойство `User`;
 - авторизуемый ресурс `Recipe`;
-- политика - `"CanManageRecipe"`.
+- политика — `"CanManageRecipe"`.
 
 Попытка авторизации возвращает объект `AuthorizationResult`, успешность определяется свойством `Succeeded`.
 Также необходимо определить политику `"CanManageRecipe"`. Этот процесс совпадает с [[ch-15-creating-a-policy-with-custom-requirement-and-handler|таковым]] для декларативного подхода.
