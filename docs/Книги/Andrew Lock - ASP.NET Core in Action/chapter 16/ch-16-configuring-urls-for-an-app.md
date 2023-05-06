@@ -17,8 +17,8 @@ set ASPNETCORE_URLS=http://localhost:8000
 set ASPNETCORE_URLS=http://localhost:5001;http://*:5002
 ```
 При этом ASP.NET Core будет слушать два адреса:
-- `http://localhost:5001` - только на локальной машине;
-- `http://*:5002` - любой адрес с портом 5002
+- `http://localhost:5001` — только на локальной машине;
+- `http://*:5002` — любой адрес с портом 5002
 
 При этом другой адрес (кроме localhost) указывать нельзя.
 
