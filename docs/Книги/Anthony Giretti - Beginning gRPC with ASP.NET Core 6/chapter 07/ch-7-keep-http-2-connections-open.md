@@ -52,3 +52,4 @@ var handler = new SocketsHttpHandler
 > ```csharp
 > builder.Logging.AddFilter("Microsoft.AspNetCore", LogLevel.Trace);
 > ```
+> Подробнее о настройке уровней логирования на основе фильтров написано [[ch-17-changing-log-verbosity-with-filtering|здесь]].
