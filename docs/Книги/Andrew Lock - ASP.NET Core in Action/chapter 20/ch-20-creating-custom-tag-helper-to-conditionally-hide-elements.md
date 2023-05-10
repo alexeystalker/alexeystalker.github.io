@@ -51,4 +51,4 @@ public class IfTagHelper: TagHelper
 - переопределяем свойство `Order` - это гарантирует нам, что `IfTagHelper` будет выполнен первым в случае, если к элементу применено несколько тег-хелперов.
 
 > [!Note] Примечание
-> Важно не забыть [[ch-20-printing-environment-info-with-custom-tag-helper#Регистрация тег-хелпера|зарегистрировать]] свои тег-хелперы в файле \_ViewImports.cshtml при помощи директивы `@addTagHelper`.
+> Важно не забыть [[ch-20-printing-environment-info-with-custom-tag-helper#Регистрация тег-хелпера|зарегистрировать]] свои тег-хелперы в файле **\_ViewImports.cshtm**l при помощи директивы `@addTagHelper`.
