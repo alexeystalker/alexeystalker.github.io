@@ -36,7 +36,7 @@ public class Program
 - оба типа приложений должны явно добавлять ссылки на NuGet-пакеты EF Core.
 
 Наряду с этим, есть и различия:
-- атрибут `Sdk` элемента `Project` для воркера выглядит так: `Microsoft.NET.Sdk.Worker`, тогда как для ASP.NET Core - `Microsoft.NET.Sdk.Web`;
+- атрибут `Sdk` элемента `Project` для воркера выглядит так: `Microsoft.NET.Sdk.Worker`, тогда как для ASP.NET Core — `Microsoft.NET.Sdk.Web`;
 - сервис рабочей роли *должен* явно ссылаться на пакет Microsoft.Extensions.Hosting;
 - возможно, потребуется явно добавить зависимости, неявно включённые в ASP.NET Core. Например - Microsoft.Extensions.Http, предоставляющий `IHttpClientFactory`[^1].
 
