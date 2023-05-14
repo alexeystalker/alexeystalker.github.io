@@ -38,5 +38,5 @@ public class IntegrationTests: IClassFixture<WebApplicationFactory<Startup>>
 	Это необходимо, чтобы класс `WebApplicationFactory` мог найти конфигурационные и статические файлы;
 3. унаследовать тестовый класс от `IClassFixture<WebApplicationFactory<T>>`, где `T` - реальный класс в проекте приложения (по соглашению обычно используется класс `Startup`).
 	-  `WebApplicationFactory` использует ссылку на `T` для поиска метода `Program.CreateHostBuilder()` для создания `TestServer`;
-	-  `IClassFixture<TFixture>` - интерфейс-маркер для xUnit, указывающий на необходимость создать экземпляр `TFixture` и внедрить его в конструктор тестового класса. [Подробнее тут](https://xunit.net/docs/shared-context);
+	-  `IClassFixture<TFixture>` — интерфейс-маркер для xUnit, указывающий на необходимость создать экземпляр `TFixture` и внедрить его в конструктор тестового класса. [Подробнее тут](https://xunit.net/docs/shared-context);
 4. принять экземпляр `WebApplicationFactory<T>` в конструкторе тестового класса. Его можно использовать для создания тестового `HttpClient`.
