@@ -5,10 +5,11 @@ tags:
 ---
 # Настраиваем хаб SignalR
 ## Добавляем хаб SignalR в проект
-Следуя соглашениям MVC, добавим в наш проект папку Hubs. Затем добавим в эту папку новый файл **LearningHub.sc** со следующим содержимым:
+Следуя соглашениям MVC, добавим в наш проект папку **Hubs**. Затем добавим в эту папку новый файл **LearningHub.sc** со следующим содержимым:
 ```csharp
 using Microsoft.AspNetCore.SignalR;
 namespace SignalRServer.Hubs;
+
 public class LearningHub : Hub
 {
 	public async Task BroadcastMessage(string message)
