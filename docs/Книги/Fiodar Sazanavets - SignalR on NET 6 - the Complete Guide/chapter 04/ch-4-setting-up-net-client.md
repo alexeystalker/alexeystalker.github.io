@@ -23,7 +23,7 @@ var url = Console.ReadLine();
 //Создаем объект HubConnection
 var hubConnection = new HubConnectionBuilder().WithUrl(url).Build();
 ```
-Затем настроим обработку события `ReceiveMessage` - каждый раз, как сервер будет вызывать этот метод, будем выводить сообщение в консоль:
+Затем настроим обработку события `ReceiveMessage` — каждый раз, как сервер будет вызывать этот метод, будем выводить сообщение в консоль:
 ```csharp
 hubConnection.On<string>("ReceiveMessage",
 						message => Console.WriteLine($"SignalR Hub Message: {message}"));
