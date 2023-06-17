@@ -4,7 +4,8 @@ tags:
  - gRPC
 ---
 # Создание клиента gRPC
-> [! Note] От меня
+
+> [!Note] От меня
 > Мой код для этой главы [тут](https://github.com/alexeystalker/CountryServiceBook/tree/chapter-07)
 
 В этой главе мы разберём моменты, связанные с написанием клиента для gRPC-сервера.
