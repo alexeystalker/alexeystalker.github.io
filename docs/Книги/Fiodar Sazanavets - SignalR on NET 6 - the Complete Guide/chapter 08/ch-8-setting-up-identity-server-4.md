@@ -11,7 +11,7 @@ tags:
 ```bash
 dotnet new -i IdentityServer4.Templates
 ```
-Далее создадим проект из шаблона[^1], содержащего Admin UI - в этом шаблоне уже есть user-friedndly интерфейс:
+Далее создадим проект из шаблона[^1], содержащего Admin UI — в этом шаблоне уже есть user-friedndly интерфейс:
 
 ```bash
 dotnet new is4admin -o AuthProvider
