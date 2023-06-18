@@ -51,20 +51,20 @@ if (!response.IsSuccessStatusCode)
 Теперь, если кто-то откроет домашнюю страницу SignalRServer2 в браузере, все клиенты SignalR, подключённые к нашему хабу при помощи Azure SignalR Service, получат сообщение “Client connected to a secondary web application”.
 
 ## Полный список методов Azure SignalR Service REST API[^2]
-- `POST /api/v1/hubs/{hub}` - отправить сообщение всем клиентам хаба;
-- `POST /api/v1/hubs/{hub}/users/{id}` - отправить сообщение всем клиентам, соответствующим пользователю;
-- `POST /api/v1/hubs/{hub}/connections/{connectionId}` - отправить сообщение указаному подключению;
-- `GET /api/v1/hubs/{hub}/connections/{connectionId}` - проверить, существует ли подключение с указанным Id;
-- `DELETE /api/v1/hubs/{hub}/connections/{connectionId}` - закрыть подключение с указанным Id;
-- `POST /api/v1/hubs/{hub}/groups/{group}` - отправить сообщение всем клиентам в указанной группе;
-- `GET /api/v1/hubs/{hub}/groups/{group}` - проверить, есть ли подключения в указанной группе;
-- `GET /api/v1/hubs/{hub}/users/{user}` - проверить, есть ли подключения, соответствующие указанному пользователю;
-- `PUT /api/v1/hubs/{hub}/groups/{group}/connections/{connectionId}` - добавить подключение в группу;
-- `DELETE /api/v1/hubs/{hub}/groups/{group}/connections/{connectionId}` - удалить подключение из группы;
-- `GET /api/v1/hubs/{hub}/groups/{group}/users/{user}` - проверить, есть ли указанный пользователь в группе;
-- `PUT /api/v1/hubs/{hub}/groups/{group}/users/{user}` - добавить пользователя в группу;
-- `DELETE /api/v1/hubs/{hub}/groups/{group}/users/{user}` - удалить пользователя из группы;
-- `DELETE /api/v1/hubs/{hub}/users/{user}/groups` - удалить пользователя из всех групп.
+- `POST /api/v1/hubs/{hub}` — отправить сообщение всем клиентам хаба;
+- `POST /api/v1/hubs/{hub}/users/{id}` — отправить сообщение всем клиентам, соответствующим пользователю;
+- `POST /api/v1/hubs/{hub}/connections/{connectionId}` — отправить сообщение указаному подключению;
+- `GET /api/v1/hubs/{hub}/connections/{connectionId}` — проверить, существует ли подключение с указанным Id;
+- `DELETE /api/v1/hubs/{hub}/connections/{connectionId}` — закрыть подключение с указанным Id;
+- `POST /api/v1/hubs/{hub}/groups/{group}` — отправить сообщение всем клиентам в указанной группе;
+- `GET /api/v1/hubs/{hub}/groups/{group}` — проверить, есть ли подключения в указанной группе;
+- `GET /api/v1/hubs/{hub}/users/{user}` — проверить, есть ли подключения, соответствующие указанному пользователю;
+- `PUT /api/v1/hubs/{hub}/groups/{group}/connections/{connectionId}` — добавить подключение в группу;
+- `DELETE /api/v1/hubs/{hub}/groups/{group}/connections/{connectionId}` — удалить подключение из группы;
+- `GET /api/v1/hubs/{hub}/groups/{group}/users/{user}` — проверить, есть ли указанный пользователь в группе;
+- `PUT /api/v1/hubs/{hub}/groups/{group}/users/{user}` — добавить пользователя в группу;
+- `DELETE /api/v1/hubs/{hub}/groups/{group}/users/{user}` — удалить пользователя из группы;
+- `DELETE /api/v1/hubs/{hub}/users/{user}/groups` — удалить пользователя из всех групп.
 
 Как мы видим, здесь есть дополнительные, по сравнению с `HubContext`, методы. Появляется дополнительная сущность “пользователь”, с которой можно ассоциировать подключения, а также добавлять в группы. Чтобы использовать эту фичу, нужно добавить клейм `nameid` к полезной нагрузке вашего [[json-web-token|JWT]]. Это будет идентификатором пользователя, который можно будет использовать в методах API.
 ## Аутентификация в Azure SignalR Service REST API
