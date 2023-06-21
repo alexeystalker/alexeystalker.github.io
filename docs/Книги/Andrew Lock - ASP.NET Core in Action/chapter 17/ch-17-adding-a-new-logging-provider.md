@@ -5,7 +5,7 @@ tags:
 ---
 # Добавление нового поставщика журналирования в приложение
 Чтобы добавить нового поставщика журналирования, выполним следующие действия.
-1. Добавим Nuget-пакет поставщика, например NetEscapades.Extensions.Logging.RollingFile[^1]. Добавим либо при помощи Диспетчера пакетов в VS, ли командой
+1. Добавим Nuget-пакет поставщика, например NetEscapades.Extensions.Logging.RollingFile[^1]. Добавим либо при помощи Диспетчера пакетов в VS, либо командой
 	```bash
 	dotnet add package NetEscapades.Extensions.Logging.RollingFile
 	```

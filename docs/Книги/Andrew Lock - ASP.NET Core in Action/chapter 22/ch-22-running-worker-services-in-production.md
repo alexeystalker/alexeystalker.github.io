@@ -8,8 +8,8 @@ tags:
 # Запуск сервисов рабочей роли в промышленном окружении
 Очень часто воркеры разворачивают в промышленном окружении в виде службы Windows или демона Linux. В этом разделе рассмотрим, как добавить поддержку служб Windows или systemd для Linux.
 Для добавления поддержки нужно добавить следующие пакеты NuGet:
-- *Microsoft.Extensions.Hosting.Systemd* - добавляет поддержку для запуска приложения в виде приложения systemd. Добавляет метод расширения `UseSystemd()` для `IHostBuilder`;
-- *Microsoft.Extensions.Hosting.WindowsServices* - добавляет поддержку запуска приложения в качестве службы Windows. Добавляет метод `UseWindowsService()` для `IHostBuilder`.
+- *Microsoft.Extensions.Hosting.Systemd* — добавляет поддержку для запуска приложения в виде приложения systemd. Добавляет метод расширения `UseSystemd()` для `IHostBuilder`;
+- *Microsoft.Extensions.Hosting.WindowsServices* — добавляет поддержку запуска приложения в качестве службы Windows. Добавляет метод `UseWindowsService()` для `IHostBuilder`.
 
 Вот пример использования `UseWindowsService()`:
 ```csharp

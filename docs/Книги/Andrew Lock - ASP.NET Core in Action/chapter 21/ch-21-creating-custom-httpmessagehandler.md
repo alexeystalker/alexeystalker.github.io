@@ -1,4 +1,6 @@
 ---
+aliases:
+ - HttpMessageHandler
 share: true
 tags:
  - NET/HttpClient
@@ -6,7 +8,7 @@ tags:
 # Создание специального обработчика HttpMessageHandler
 Для большинства сторонних API при их вызове требуется некая форма аутентификации. Очень частым вариантом является добавление API-ключа (*ApiKey*) к исходящему запросу. Создадим собственный обработчик `HttpMessageHandler` для выполнения этой задачи.
 >[!note]- Примечание
->Более сложные API-интерфейсы могут использовать JWT (*Json Web Token*), полученные от поставщика идентификационной информации. В этом случае можно рассмотреть возможность использования [библиотеки IdentityModel](https://identitymodel.readthedocs.io), обеспечивающей точки интеграции для ASP.NET Core Identity и `IHttpClientFactory`.
+>Более сложные API-интерфейсы могут использовать [[json-web-token|JWT]], полученные от поставщика идентификационной информации. В этом случае можно рассмотреть возможность использования [библиотеки IdentityModel](https://identitymodel.readthedocs.io), обеспечивающей точки интеграции для ASP.NET Core Identity и `IHttpClientFactory`.
 
 Наш обработчик будет частью обработчиков `HttpClient`.
 ![[Pasted image 20221022131106.png]]

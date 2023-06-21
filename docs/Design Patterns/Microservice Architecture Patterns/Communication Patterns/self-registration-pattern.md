@@ -5,7 +5,7 @@ tags:
  - microservice/communication
  - microservice/discovery
 ---
-# Шаблон "Саморегистрация"
+# Шаблон “Саморегистрация”
 Экземпляр сервиса регистрирует себя в реестре.
 ## Ссылки
 https://microservices.io/patterns/self-registration.html

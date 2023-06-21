@@ -1,33 +1,45 @@
-.md-footer__inner {
+﻿.md-footer__inner {
   display: none !important;
 }
 
-.md-tabs {
-    background-color: #00000094;
+.md-typeset details.wiki,
+.md-typeset .admonition.wiki {
+    border-color: transparent;
+    background-color: transparent;
 }
 
-.md-nav__link[href*="tags"],
-.md-sidebar__inner > .md-nav.md-nav--primary.md-nav--lifted > .md-nav__title > .md-nav__button.md-logo > img,
-.dataview,
-.folderv,
-.md-tabs__item:nth-child(3)
-{
+.md-typeset .wiki>.admonition-title,
+.md-typeset .wiki>.summary {
     display: none;
 }
 
+.md-typeset .wiki>.admonition-title::before {
+    background-color: transparent;
+    -webkit-mask-image: var(--md-admonition-icon--grid);
+    mask-image: var(--md-admonition-icon--grid);
+}
 
+.admonition.wiki {
+    float: left;
+    margin-right: 0.8rem;
+    margin-top: 0;
+    width: 11.7rem;
+}
 
-.md-nav--primary .md-nav__title[for="__drawer"] {
-    font-size: xxx-large;
+.admonition.wiki h1 {
+    text-align: center;
+    padding-top: 0.5em;
+    margin-bottom: 0;
+}
+
+.admonition.wiki thead {
     display: none;
 }
 
-.md-typeset :is(.admonition, details) {
-    font-size: 1em;
+.admonition.wiki td:first-child {
+    font-weight: 600;
 }
 
-[data-md-color-scheme="default"],
-[data-md-color-scheme="slate"] {
-    --md-primary-fg-color: #6096db;
-    --md-accent-fg-color: #2a7bc2
+.admonition.wiki table {
+    border: 0;
 }

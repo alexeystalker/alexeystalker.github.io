@@ -4,7 +4,7 @@ tags:
  - NET/worker-service
 ---
 # Настройка запуска задания по расписанию с помощью Quartz.NET
-[[ch-22-running-background-tasks-with-ihostedservice|Ранее]] мы создали экземпляр сервиса, который скачивает курчы обмена валют и сохраняет результаты в БД с помощью EF Core. Теперь реализуем аналогичную логику для запуска по расписанию.
+[[ch-22-running-background-tasks-with-ihostedservice|Ранее]] мы создали экземпляр сервиса, который скачивает курсы обмена валют и сохраняет результаты в БД с помощью EF Core. Теперь реализуем аналогичную логику для запуска по расписанию.
 Рассмотрим такую реализацию интерфейса `IJob`:
 ```csharp
 public class UpdateExchangeRatesJob : IJob
@@ -48,7 +48,7 @@ public void ConfigureServices(IServiceCollection services)
 		q.UseMicrosoftDependencyInjectionScopedFactory();
 		//создаём уникальный ключ задания
 		var jobKey = new JobKey("Update exchange rates");
-		//Добавляем наше задание в контейнер зависимостей и связываем его с ключом задания
+		//Добавляем наше задание в [[di-container|контейнер зависимостей]] и связываем его с ключом задания
 		q.AddJob<UpdateExchangeRatesJob>(opts => opts.WithIdentity(jobKey));
 		//добавляем и настраиваем триггер
 		q.AddTrigger(opts => opts

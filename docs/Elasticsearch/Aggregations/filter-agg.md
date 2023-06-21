@@ -14,31 +14,18 @@ share: true
         				{
         					"terms": {
         						"status-tags": [
-        							"Active",
-        							"Bankruptcy",
-        							"Reorg",
-        							"Liquidating",
-        							"Unknown"
+        							"active",
+        							"not-so-active",
+        							"unknown"
         						]
         					}
         				},
         				{
         					"range": {
-        						"reg-date": {
+        						"user-reg-date": {
         							"gte": "00010101",
         							"lte": "20210729"
         						}
-        					}
-        				},
-        				{
-        					"bool": {
-        						"must_not": [
-        							{
-        								"exists": {
-        									"field": "rufb-nza"
-        								}
-        							}
-        						]
         					}
         				}
         			]

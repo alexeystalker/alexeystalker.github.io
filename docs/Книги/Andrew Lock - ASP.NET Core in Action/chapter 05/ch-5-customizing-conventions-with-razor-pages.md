@@ -51,5 +51,5 @@ public void ConfigureServices(IServiceCollection services)
 		});
 }
 ```
-Вместо замены маршрута (если бы мы [[ch-5-customizing-route-templates#Добавление сегмента в шаблон маршрута|редактировали]] [[directive|директиву]] `@page`), мы добавляем дополнительный.
+Вместо замены маршрута (если бы мы [[ch-5-customizing-route-templates#Добавление сегмента в шаблон маршрута|редактировали]] [[razor-directive|директиву]] `@page`), мы добавляем дополнительный.
 Все возможности по изменению соглашений доступны в [документации](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/razor-pages-conventions?view=aspnetcore-5.0).

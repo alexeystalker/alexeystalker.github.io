@@ -1,4 +1,7 @@
 ---
+aliases:
+ - transactional outbox
+ - outbox
 share: true
 tags:
  - microservice/pattern
@@ -6,7 +9,7 @@ tags:
  - microservice/messaging
  - microservice/transactions
 ---
-# Шаблон "публикация событий" или Outbox
+# Шаблон “публикация событий” или Outbox
 ![[Pasted image 20210916203747.png]]
 Предположим, что у приложения есть реляционная БД. Используем специальную таблицу `OUTBOX` для вставки сообщений в рамках транзакции бизнес-логики.
 Далее *ретранслятор* (это компонент сервиса) вычитывает сообщения из этой таблицы и отдает брокеру.

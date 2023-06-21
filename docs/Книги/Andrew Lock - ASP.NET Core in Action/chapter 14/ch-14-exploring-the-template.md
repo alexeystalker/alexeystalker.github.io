@@ -5,7 +5,7 @@ tags:
 ---
 # Изучение шаблона в обозревателе решений
 ![[Pasted image 20220605204146.png]]
-1. Пользовательский интерфейс по умолчанию содержится в **Areas/Identity** - там он создаётся пакетом Microsoft.AspNetCore.Identity.UI;
+1. Пользовательский интерфейс по умолчанию содержится в **Areas/Identity** — там он создаётся пакетом Microsoft.AspNetCore.Identity.UI;
 > [!Info]- Области
 > *Области* используются для группировки страниц Razor Pages в отдельные иерархии для организационных целей. [Подробнее](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/areas?view=aspnetcore-5.0)
 2. Шаблон включает в себя `DbContext` от EF Core и миграции, чтобы сконфигурировать БД [[ch-14-asp-net-core-identity-data-model|подробнее]];
@@ -35,7 +35,7 @@ public void ConfigureServices(IServiceCollection services)
 
  В файле Startup добавляется строчка в методе `Configure`: `app.UseAuthentication()`. Мы добавляем компонент `AuthenticationMiddleware`, как показано на рисунке:
 ![[Pasted image 20220601195031.png]]
-Очень важно расположение этого компонента - его нужно размещать после метода `UseRouting()` и перед методом `UseAuthorization()` и `UseEndpoints()`.
+Очень важно расположение этого компонента — его нужно размещать после метода `UseRouting()` и перед методом `UseAuthorization()` и `UseEndpoints()`.
 ```csharp
 public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {

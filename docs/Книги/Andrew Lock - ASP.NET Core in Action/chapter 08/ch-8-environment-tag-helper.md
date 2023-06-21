@@ -12,7 +12,7 @@ tags:
 	<div class="warning">You are currently on a testing environment</div>
 }
 ```
-Однако, есть способ лучше - воспользоваться поставляемым `EnvironmentTagHelper`:
+Однако, есть способ лучше — воспользоваться поставляемым `EnvironmentTagHelper`:
 ```html
 <environment include="Testing, Staging">
 	<div class="warning"> You are currently on a testing environment</div>

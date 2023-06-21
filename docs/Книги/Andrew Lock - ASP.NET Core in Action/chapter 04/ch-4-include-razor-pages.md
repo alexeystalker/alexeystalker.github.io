@@ -27,7 +27,7 @@ tags:
 	```
 4. В корень проекта добавляем новую папку Pages.
 5. ПКМ на папку Pages, выбираем **Add > RazorPage**
-6. Выбираем **Razor Page - Empty** и называем страницу Index.cshtml
+6. Выбираем **Razor Page — Empty** и называем страницу Index.cshtml
 7. Откроем файл Index.cshtml и заменим содержимое на это:
 	```razor
 	@page
@@ -47,4 +47,4 @@ tags:
 	</html>
 	```
 	
-Шаги 4-6 можно также выполнить, выполнив команду `dotnet new page -n Index -o Pages/` в каталоге проекта.
+Шаги 4–6 можно также выполнить, выполнив команду `dotnet new page -n Index -o Pages/` в каталоге проекта.

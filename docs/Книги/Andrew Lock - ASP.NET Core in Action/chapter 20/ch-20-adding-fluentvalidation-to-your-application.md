@@ -4,13 +4,13 @@ tags:
  - NET/ASPNETCore/validation
 ---
 # Добавляем FluentValidation в приложение
-Чтобы добавить FluentValidation в приложение, нужно сделать следующее:
+Чтобы добавить [[library-fluentvalidation|FluentValidation]] в приложение, нужно сделать следующее:
 1. Установить NuGet-пакет:
 	```bash
 	dotnet add package FluentValidation
 	```
 2. Добавить библиотеку в методе `ConfigureServices`, вызвав метод `AddFluentValidation`. Также можно добавить дополнительные настройки;
-3. Зарегистрировать валидаторы в контейнере зависимостей (можно использовать любую область действия):
+3. Зарегистрировать валидаторы в [[di-container|контейнере зависимостей]] (можно использовать любую область действия):
 	```csharp
 	services.AddScoped<IValidator<CurrencyConverterModelValidator>,
 		CurrencyConverterModelValidator>();

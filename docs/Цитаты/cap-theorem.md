@@ -1,4 +1,8 @@
 ---
+aliases:
+ - "CAP-теорема"
+ - "CAP-теореме"
+ - CAP
 tags: [цитата]
 share: true
 ---

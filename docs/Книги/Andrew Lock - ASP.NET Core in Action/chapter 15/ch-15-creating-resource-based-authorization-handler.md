@@ -32,7 +32,15 @@ public class IsRecipeOwnerHandler :
 	}
 }
 ```
+
 Здесь используется `UserManager` для загрузки [[ch-14-updating-ef-core-data-model-to-support-identity|сущности]] `ApplicationUser` на основе объекта `ClaimsPrincipal` из запроса.
+> [!Important] От меня
+> В примере проверка, что пользователь аутентифицирован, отдана на откуп `UserManager`. Если мы не используем ASP.NET Core Identity, а используем что-то своё, то в этом случае нужно проверять `ClaimsPrincipal` напрямую. Например, так:
+> ```csharp
+> if(!(context.User.Identity?.IsAuthenticated ?? false))
+>	return;
+> ```
+
 Также мы видим, что, помимо прочего, в метод `HandleRequirementAsync` передается ресурс `Recipe`; это объект, который [[ch-15-manually-authorizing-requests-with-iauthorizationservice|передавали]] в метод `AuthorizeAsync` в `IAuthorizationService`. Используем этот ресурс, чтобы проверить, что он создан текущим пользователем.
 
 Осталось только зарегистрировать обработчик в DI контейнере:
