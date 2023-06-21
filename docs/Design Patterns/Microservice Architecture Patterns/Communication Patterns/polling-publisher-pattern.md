@@ -6,7 +6,7 @@ tags:
  - microservice/messaging
  - microservice/transactions
 ---
-# Шаблон "Опрашивающий издатель"
+# Шаблон “Опрашивающий издатель”
 Пусть приложение использует реляционную БД, и [[transactional-outbox-pattern|хранит сообщения]] в таблице `OUTBOX`. Ретранслятор может вычитывать из этой таблицы неопубликованные записи обычным SQL запросом типа
 ```sql
 SELECT * FROM OUTBOX ORDERED BY ... ASC
