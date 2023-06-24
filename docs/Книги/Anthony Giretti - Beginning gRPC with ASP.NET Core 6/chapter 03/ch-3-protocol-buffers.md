@@ -4,7 +4,7 @@ tags:
  - gRPC/protobuf
 ---
 # Protocol Buffers
-Клиенту gRPC известны доступные процедуры и их входящие/исходящие параметры благодаря совместному использованию на клиенте и сервере Protocol Buffers - описаний схемы, во многом похожих на WDSL для сервисов SOAP, таких как *WCF (Windows Communication Foundation)*. %% Добавить ссылку на главу 8 %%
+Клиенту gRPC известны доступные процедуры и их входящие/исходящие параметры благодаря совместному использованию на клиенте и сервере Protocol Buffers - описаний схемы, во многом похожих на WDSL для сервисов SOAP, таких как *WCF (Windows Communication Foundation)*.
 Описание Protocol Buffers (Protobuf) хранится в файле `.proto`. Вот пример синтаксиса Protobuf для сервиса `CountryService` с процедурой `GetById()`, получающей параметр `CountrySearchRequest` и возвращающей сообщение `CountryReply`[^1]. 
 ```protobuf
 syntax = "proto3";
