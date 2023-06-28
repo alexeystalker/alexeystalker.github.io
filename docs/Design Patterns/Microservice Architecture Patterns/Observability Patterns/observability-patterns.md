@@ -5,9 +5,9 @@ tags:
  - microservice/observability
 ---
 # Шаблоны наблюдаемости
-- [[health-check-api-pattern|Шаблон "API проверки работоспособности"]]
-- [[log-aggregation-pattern|Шаблон "Агрегация журналов"]]
-- [[distributed-tracing-pattern|Шаблон "Распределенная трассировка"]]
-- [[exception-tracking-pattern|Шаблон "Отслеживание исключений"]]
-- [[application-metrics-pattern|Шаблон "Метрики приложения"]]
-- [[audit-logging-pattern|Шаблон "Ведение журнала аудита"]]
+- [[health-check-api-pattern|API проверки работоспособности]]
+- [[log-aggregation-pattern|Агрегация журналов]]
+- [[distributed-tracing-pattern|Распределенная трассировка]]
+- [[exception-tracking-pattern|Отслеживание исключений]]
+- [[application-metrics-pattern|Метрики приложения]]
+- [[audit-logging-pattern|Ведение журнала аудита]]
