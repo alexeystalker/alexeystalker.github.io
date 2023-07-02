@@ -3,7 +3,7 @@ share: true
 tags: [Elasticsearch/query, Elasticsearch/full-text]
 ---
 # Full-text queries
-*Полнотекстовые запросы* - запросы к [[analyze-api|проанализированным]] текстовым полям. Строка запроса анализируется тем же анализатором, что и поле во время индексирования.
+*Полнотекстовые запросы* — запросы к [[analyze-api|проанализированным]] текстовым полям. Строка запроса анализируется тем же анализатором, что и поле во время индексирования.
 - [[intervals-query|intervals]]
 - [[match-query|match]]
 - [[match-bool-prefix-query|match_bool_prefix]]
