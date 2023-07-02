@@ -16,5 +16,6 @@ share: true
 При построении запроса нужно обязательно указать параметр `min_children`. Даже если условие `min_children` не нужно в запросе, нужно указать `min_children:0`.
 ## Какие версии затронуты
 Баг поправлен в Lucene 8.8 и, cоответственно, в ElasticSearch 7.12. В issue указана версия Elasticsearch 7.4. Следовательно, аффектятся версии как минимум 7.4-7.11
+
 ## Ссылки
 https://github.com/elastic/elasticsearch/issues/64808
