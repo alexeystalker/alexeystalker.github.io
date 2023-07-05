@@ -12,7 +12,7 @@ tags:
 |Взаимодействие|Один к одному|Один ко многим|
 |---|---|---|
 |Синхронное|[Запрос/ответ](request-response-messaging)|--|
-|Асинхронное|[Асинхронный запрос/ответ](request-async-response-messaging), [однонаправленные уведомления](notifications-messaging)|[Издатель/подписчик](publish-subscribe-messaging), [издатель/асинхронные ответы](publish-async-response-messaging)|
+|Асинхронное|[Асинхронный запрос-ответ](request-async-response-messaging), [однонаправленные уведомления](notifications-messaging)|[Издатель/подписчик](publish-subscribe-messaging), [издатель/асинхронные ответы](publish-async-response-messaging)|
 
 ## Описание API
 API сервиса является контрактом между ним и его клиентами. [[ch-2-services-api-definition|Как говорилось в главе 2]], API состоит из операций, которыек клиент может вызывать и событий, публикуемых сервисом.
