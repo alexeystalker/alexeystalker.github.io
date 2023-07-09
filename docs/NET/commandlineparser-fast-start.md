@@ -22,12 +22,12 @@ namespace GetStartedSample
   }
 }
 ```
-`Options` - POCO класс, размеченный примерно так:
+`Options` — POCO класс, размеченный примерно так:
 ```csharp
 [Option('o',"option",HelpText = "Help text for option")]
 public string Option { get; set; }
 ```
-Также полезно сразу изучить пункт `Verbs` - это подкоманды в стиле git типа `git push`:
+Также полезно сразу изучить пункт `Verbs` — это подкоманды в стиле git типа `git push`:
 ```csharp
 static int Main(string[] args) =>
   Parser.Default.ParseArguments<AddOptions, CommitOptions, CloneOptions>(args)
