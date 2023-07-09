@@ -4,7 +4,7 @@ share: true
 ---
 # Interlocked
 Статический класс с набором методов, представляющих атомарные операции.
-Применять для обеспечения атомарности операции, не являющейся атомарной "обычным способом".
+Применять для обеспечения атомарности операции, не являющейся атомарной “обычным способом”.
 Является наиболее легковесным примитивом синхронизации.
 ## Методы
 Все методы являются атомарными операциями
@@ -17,7 +17,7 @@ public static int Add(ref int location1, int value);
 ```csharp
 public static int And(ref int location1, int value);
 ```
-выполняет побитовое "И" над двумя числами и заменяет первое число (`location1`) на результат операции. Возвращает исходное значение `location1`. Есть перегрузки для `int`, `long`, `uint`, `ulong`.
+выполняет побитовое “И” над двумя числами и заменяет первое число (`location1`) на результат операции. Возвращает исходное значение `location1`. Есть перегрузки для `int`, `long`, `uint`, `ulong`.
 ### CompareExchange
 ```csharp
 public static int CompareExchange(ref int location1, int value, int comparand);
@@ -73,7 +73,7 @@ public static void MemoryBarrierProcessWide();
 ```csharp
 public static int Or (ref int location1, int value);
 ```
-выполняет побитовое "ИЛИ" над двумя значениями и сохраняет результат в `location1`. Возвращает оригинальное значение `location1`. Перегрузки для `int`, `long`, `uint`, `ulong`.
+выполняет побитовое “ИЛИ” над двумя значениями и сохраняет результат в `location1`. Возвращает оригинальное значение `location1`. Перегрузки для `int`, `long`, `uint`, `ulong`.
 ### Read
 ```csharp
 public static long Read (ref long location);
