@@ -7,7 +7,7 @@ tags:
 # Используем Newtonsoft.Json в SignalR
 SignalR Core по умолчанию использует System.Text.Json для сериализации. Однако иногда требуется использовать наш любимый Newtonsoft.Json (aka Json.Net). Почему? Ну, например, если вы внедряете SignalR в существующий проект, и в вашем WebApi (так исторически сложилось) используется Newtonsoft.Json. А того хуже, если он используется с кастомными настройками, и вы хотите сохранить единообразие ваших json-ов.
 Для того, чтобы использовать Newtonsoft.Json, нужно:
-1. Подключить пакет [Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson) на сервере (если планируется использование шарпового клиента SignalR - то и в проект клиента тоже);
+1. Подключить пакет [Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson) на сервере (если планируется использование шарпового клиента SignalR — то и в проект клиента тоже);
 2. вызвать метод `AddNewtonsoftJsonProtocol()` в конфигурации после `AddSignalR`, вот так:
 	```csharp
 	builder.Services.AddSignalR().AddNewtonsoftJsonProtocol();
