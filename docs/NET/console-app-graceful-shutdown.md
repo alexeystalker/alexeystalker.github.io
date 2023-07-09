@@ -38,7 +38,7 @@ await tcs.Task;
 Console.WriteLine("Good bye");
 ```
 Как видим, для передачи информации о необходимости останова использован [[task-completion-source|TaskCompletionSource]]. 
-Также необходимо в обработчике сигнала SIGTERM проверять - а не получали ли мы SIGINT? Это нужно потому, что, например в Windows после SIGINT отправляется и SIGTERM. Вот что мы получим, запустив наше приложение:
+Также необходимо в обработчике сигнала SIGTERM проверять — а не получали ли мы SIGINT? Это нужно потому, что, например в Windows после SIGINT отправляется и SIGTERM. Вот что мы получим, запустив наше приложение:
 
 ```console
 Waiting for SIGINT/SIGTERM

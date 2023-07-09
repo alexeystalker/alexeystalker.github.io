@@ -6,7 +6,7 @@ tags:
   - NET/CancellationToken
 ---
 # CancellationTokenSource и утечка памяти
-В `CancellationTokenSource` запоминаются (до вызова `Cancel()`) все объекты, которые регистрируют собственный метод отмены. Вывод - если нужно регистрировать свой метод для каждого объекта в цикле, нужно создавать свой `CancellationTokenSource`  через `CreateLinkedTokenSource()`, то есть
+В `CancellationTokenSource` запоминаются (до вызова `Cancel()`) все объекты, которые регистрируют собственный метод отмены. Вывод — если нужно регистрировать свой метод для каждого объекта в цикле, нужно создавать свой `CancellationTokenSource`  через `CreateLinkedTokenSource()`, то есть
 ```csharp
 var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(parentCts.Token);
 ```

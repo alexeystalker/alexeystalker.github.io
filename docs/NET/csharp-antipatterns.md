@@ -6,8 +6,8 @@ tags: [NET/performance,NET/antipatterns]
 1. [[wait-sync|Синхронно ждать асинхронный код]];
 2. [[async-void|async void]];
 3. [[return-await|Ненужный return await]];
-4. Использование `ConcurrentBag<T>` - тормозит; стараемся использовать `ConcurrentQueue<T>`;
-5. Использование `ReaderWriterLock<T>` или `ReaderWriterLockSlim<T>` - тормозит. Лучше использовать `Monitor` под lock-ом;
+4. Использование `ConcurrentBag<T>` — тормозит; стараемся использовать `ConcurrentQueue<T>`;
+5. Использование `ReaderWriterLock<T>` или `ReaderWriterLockSlim<T>` — тормозит. Лучше использовать `Monitor` под lock-ом;
 6. [[lambda-vs-method-group|Избегать MethodGroup для статических методов]];
 7. [[enumequalsboxing|Делать Enum.Equals]];
 8. [[equality-structs|Использовать дефолтные]] методы сравнения в структурах;

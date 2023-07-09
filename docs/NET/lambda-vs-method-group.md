@@ -15,7 +15,7 @@ private static bool Filter(int element)
 	return i % 2 == 0;
 }
 ```
-Resharper обычно предлагает заменить лямбду на MethodGroup (то есть на `return _list.Where(Filter);`). Однако, MethodGroup - это синтаксический сахар, за которым скрывается следующее:
+Resharper обычно предлагает заменить лямбду на MethodGroup (то есть на `return _list.Where(Filter);`). Однако, MethodGroup — это синтаксический сахар, за которым скрывается следующее:
 ```csharp
 public IEnumerable<int> GetItems()
 {

@@ -3,7 +3,7 @@ share: true
 tags: [NET/dotnet, script]
 ---
 # Инструмент сценариев dotnet-script
-`dotnet-script` - инструмент для исполнения сценариев в среде .NET Core.
+`dotnet-script` — инструмент для исполнения сценариев в среде .NET Core.
 
 Для начала установим инструмент:
 ```bash
