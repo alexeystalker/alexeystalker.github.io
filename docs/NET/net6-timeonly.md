@@ -3,7 +3,7 @@ share: true
 tags: [NET/NET6]
 ---
 # Тип TimeOnly
-Тип `TimeOnly` - это структура, которая хранит _только_ время.
+Тип `TimeOnly` — это структура, которая хранит _только_ время.
 Примерно так:
 ```csharp
 TimeOnly t1 = new TimeOnly(16, 30);
