@@ -24,9 +24,9 @@ class Program
 В этом коде `End of program` будет напечатано раньше, чем `Processing done`, потому что `Task.Factory.StartNew` вернет `Task<Task>`(Таск с результатом Таск!)  а `await` ждёт только "внешний" таск. Правильно было бы написать либо `Task.Factory.StartNew(ProcessAsync).Unwrap()`, либо `await Task.Run(ProcessAsync)`.
 
 Существует три легитимных случая использования `Task.Factory.StartNew`
-1. Запуск таска на планировщике тасков (TaskScheduler), отлично от дефолтного
-2. Запуская таск на выделенном потоке (`TaskCreationOptions.LongRunning`)
-3. Ставя таск в глобальную очередь тредпула (`TaskCreationOptions.PreferFairness`)
+1. Запуск таска на планировщике тасков (TaskScheduler), отличного от дефолтного
+2. Запуск таска на выделенном потоке (`TaskCreationOptions.LongRunning`)
+3. Запуск таска в глобальной очереди тредпула (`TaskCreationOptions.PreferFairness`)
 
 В остальных случаях лучше не использовать `Task.Factory.StartNew`.
 ## Ссылки
