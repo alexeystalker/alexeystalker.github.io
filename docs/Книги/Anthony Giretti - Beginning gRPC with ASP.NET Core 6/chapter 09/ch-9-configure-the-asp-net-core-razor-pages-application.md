@@ -7,4 +7,4 @@ share: true
 2. Создать и сконфигурировать клиент gRPC при помощи `IHttpClientFactory`, а также зарегистрировать все зависимости в файле **Program.cs**.
 
 #### [[ch-9-create-a-background-task-for-handling-uploaded-file-data-and-create-a-channel-to-store-data|Создадим фоновую задачу для обработки загруженного файла и канал для хранения данных]]
-#### [[ch-9-create-and-configure-the-grpc-client-with-the -ihttpclientfactory-and-register-all-dependencies-in-the-program-cs-file|Создадим и сконфигурируем клиент gRPC при помощи IHttpClientFactory, а также зарегистрируем все зависимости в файле Program.cs]]
+#### [[ch-9-create-and-configure-the-grpc-client-with-the-ihttpclientfactory-and-register-all-dependencies-in-the-program-cs-file|Создадим и сконфигурируем клиент gRPC при помощи IHttpClientFactory, а также зарегистрируем все зависимости в файле Program.cs]]
