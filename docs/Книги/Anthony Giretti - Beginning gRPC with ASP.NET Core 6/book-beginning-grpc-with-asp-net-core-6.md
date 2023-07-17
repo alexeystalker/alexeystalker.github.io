@@ -25,6 +25,7 @@ tags:
 ## Часть IV. gRPC-web и ASP.NET Core
 #### [[ch-10-the-grpc-web-specification|Глава 10 — Обзор gRPC-web]]
 #### [[ch-11-create-a-grpc-web-service-from-a-grpc-service|Глава 11 — Делаем gRPC-web сервис из gRPC сервиса]]
+#### [[ch-12-import-and-display-data-with-angular-12-and-grpc-web|Глава 12 — Импортируем и показываем данные с помощью Angular 12 и gRPC-web]]
 
 ## Ссылки
 [Исходный код](https://github.com/Apress/beg-grpc-w-asp.net-core-6)
