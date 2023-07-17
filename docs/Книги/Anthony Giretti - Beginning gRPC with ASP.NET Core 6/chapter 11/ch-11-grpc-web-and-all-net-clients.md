@@ -39,7 +39,7 @@ public static IServiceCollection AddCountryServiceGrpcWebClient(this IServiceCol
 }
 ```
 > [!Note] От меня
-> В книге код написан так, как будто мы пишем отдельное консольное приложение. Я же, чтобы сократить количество добавляемого кода, создал ещё один метод расширения в библиотеке CountryWiki.DAL, о том, почему я решил сделать метод расширения, написано во врезке [[ch-9-create-and-configure-the-grpc-client-with-the -ihttpclientfactory-and-register-all-dependencies-in-the-program-cs-file|здесь]].
+> В книге код написан так, как будто мы пишем отдельное консольное приложение. Я же, чтобы сократить количество добавляемого кода, создал ещё один метод расширения в библиотеке CountryWiki.DAL, о том, почему я решил сделать метод расширения, написано во врезке [[ch-9-create-and-configure-the-grpc-client-with-the-ihttpclientfactory-and-register-all-dependencies-in-the-program-cs-file|здесь]].
 
 Основное интересующее нас действие в этом коде — создание `GrpcWebHandler`-а. Так как всё работает через HTTP, мы передаём `HttpClientHandler`. Вообще при создании `GrpcWebHandler` можно задать такие опции[^1]:
 - `InnerHandler` — внутренний обработчик HTTP;
