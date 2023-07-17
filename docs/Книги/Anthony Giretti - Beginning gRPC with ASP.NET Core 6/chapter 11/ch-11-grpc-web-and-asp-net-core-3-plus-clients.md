@@ -33,6 +33,6 @@ public static IServiceCollection AddCountryServiceGrpcWebAspNetCoreClient(
 }
 ```
 > [!Note] От меня
-> Как уже было [[ch-11-grpc-web-and-all-net-clients|здесь]] и [[ch-9-create-and-configure-the-grpc-client-with-the -ihttpclientfactory-and-register-all-dependencies-in-the-program-cs-file|здесь]], я оформляю код в виде метода расширения внутри проекта `CountryWiki.DAL`.
+> Как уже было [[ch-11-grpc-web-and-all-net-clients|здесь]] и [[ch-9-create-and-configure-the-grpc-client-with-the-ihttpclientfactory-and-register-all-dependencies-in-the-program-cs-file|здесь]], я оформляю код в виде метода расширения внутри проекта `CountryWiki.DAL`.
 
 Здесь мы перенесли назначение обработчика `GrpcWebHandler` в метод расширения `ConfigurePrimaryHttpMessageHandler`, а затем продолжили цепочку, как раньше.
