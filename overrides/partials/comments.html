@@ -1,25 +1,29 @@
-﻿<!-- Giscus -->
+<!-- Giscus -->
 {% set local_comments = "comments" | value_in_frontmatter(page.meta) %}
 {% set config_comments = "comments" | value_in_frontmatter(config.extra) %}
 {% set config_comments = False if config_comments is none else config.extra["comments"] %}
 {% set comments = config_comments if local_comments is none else page.meta['comments'] %}
 {% if comments %}
     <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
-<script src="https://giscus.app/client.js"
-        data-repo="alexeystalker/alexeystalker.github.io"
-        data-repo-id="R_kgDOHmHtlA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOHmHtlM4CQQAk"
-        data-mapping="url"
+
+    <script
+        src="https://giscus.app/client.js"
+        data-repo="<username>/<repository>"
+        data-repo-id="..."
+        data-category="..."
+        data-category-id="..."
+        data-mapping="pathname"
         data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark_dimmed"
-        data-lang="ru"
+        data-emit-metadata="1"
+        data-theme="light"
+        data-lang="en"
         crossorigin="anonymous"
         async
     >
     </script>
+
+    <!--- generate the script using https://giscus.app/ and replace the text above ! --->
+
     <script>
         var giscus = document.querySelector("script[src*=giscus]")
 
