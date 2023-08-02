@@ -44,95 +44,94 @@ import { UploadResultModel } from "../models/uploadResultModel";
 
 @Injectable()
 export class CountryService {
-  public GetAll(countries: CountryModel[]): void {
-    grpc.invoke(CountryServiceBrowser.GetAll,
-      {
-        request: new Empty(),
-        host: environment.host,
-        onMessage: (countryReply: CountryReply) => {
-          let country = new CountryModel();
-          CountryReplyMapper.Map(country, countryReply.toObject())
-          countries.push(country);
-        },
-        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => this.onEnd(code,
-          msg,
-          trailers,
-          "All countries have been downloaded")
-      });
-  }
+  public GetAll(countries: CountryModel[]): void {
+    grpc.invoke(CountryServiceBrowser.GetAll,
+      {
+        request: new Empty(),
+        host: environment.host,
+        onMessage: (countryReply: CountryReply) => {
+          let country = new CountryModel();
+          CountryReplyMapper.Map(country, countryReply.toObject())
+          countries.push(country);
+        },
+        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => this.onEnd(code,
+          msg,
+          trailers,
+          "All countries have been downloaded")
+      });
+  }
 
-  public Create(countriesToCreate: CountryCreationModel[], uploadResult: UploadResultModel, callback: Function): void {
-    let countriesCreationRequest = new CountriesCreationRequest();
-    CountryCreationModelMapper.Maps(countriesCreationRequest, countriesToCreate);
-    grpc.invoke(CountryServiceBrowser.Create,
-      {
-        request: countriesCreationRequest,
-        host: environment.host,
-        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => {
-          uploadResult.isProcessing = false;
-          callback();
-          this.onEnd(code, msg, trailers, "All countries have been created")
-        }
-      });
-  }
+  public Create(countriesToCreate: CountryCreationModel[], uploadResult: UploadResultModel, callback: Function): void {
+    let countriesCreationRequest = new CountriesCreationRequest();
+    CountryCreationModelMapper.Maps(countriesCreationRequest, countriesToCreate);
+    grpc.invoke(CountryServiceBrowser.Create,
+      {
+        request: countriesCreationRequest,
+        host: environment.host,
+        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => {
+          uploadResult.isProcessing = false;
+          callback();
+          this.onEnd(code, msg, trailers, "All countries have been created")
+        }
+      });
+  }
 
-  public Delete(id: number): void {
-    let request = new CountryIdRequest();
-    request.setId(id);
-    grpc.invoke(CountryServiceBrowser.Delete,
-      {
-        request: request,
-        host: environment.host,
-        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => this.onEnd(code, msg, trailers, 'Country with Id ${id} has been deleted')
-      });
-  }
+  public Delete(id: number): void {
+    let request = new CountryIdRequest();
+    request.setId(id);
+    grpc.invoke(CountryServiceBrowser.Delete,
+      {
+        request: request,
+        host: environment.host,
+        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => this.onEnd(code, msg, trailers, 'Country with Id ${id} has been deleted')
+      });
+  }
 
-  public Get(id: number, country: CountryModel): void {
-    let request = new CountryIdRequest();
-    request.setId(id);
-    grpc.invoke(CountryServiceBrowser.Get,
-      {
-        request: request,
-        host: environment.host,
-        onMessage: (countryReply: CountryReply) => {
-          CountryReplyMapper.Map(country, countryReply.toObject());
-        },
-        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => this.onEnd(code,
-          msg,
-          trailers,
-          'Country with Id ${id} was successfully found')
-      });
+  public Get(id: number, country: CountryModel): void {
+    let request = new CountryIdRequest();
+    request.setId(id);
+    grpc.invoke(CountryServiceBrowser.Get,
+      {
+        request: request,
+        host: environment.host,
+        onMessage: (countryReply: CountryReply) => {
+          CountryReplyMapper.Map(country, countryReply.toObject());
+        },
+        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => this.onEnd(code,
+          msg,
+          trailers,
+          'Country with Id ${id} was successfully found')
+      });
+  }
 
-  }
+  public Update(countryUpdateModel: CountryUpdateModel): void {
+    let request = new CountryUpdateRequest();
+    request.setId(countryUpdateModel.id);
+    request.setDescription(countryUpdateModel.description);
+    grpc.invoke(CountryServiceBrowser.Update,
+      {
+        request: request,
+        host: environment.host,
+        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => this.onEnd(code,
+          msg,
+          trailers,
+          'Country with Is ${countryUpdateModel.id} was successfully updated')
+      });
+  }
 
-  public Update(countryUpdateModel: CountryUpdateModel): void {
-    let request = new CountryUpdateRequest();
-    request.setId(countryUpdateModel.id);
-    request.setDescription(countryUpdateModel.description);
-    grpc.invoke(CountryServiceBrowser.Update,
-      {
-        request: request,
-        host: environment.host,
-        onEnd: (code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata) => this.onEnd(code,
-          msg,
-          trailers,
-          'Country with Is ${countryUpdateModel.id} was successfully updated')
-      });
-  }
-
-  private onEnd(code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata, endMessage: String): void {
-    if (code == grpc.Code.OK) {
-      console.log(endMessage);
-    } else {
-      console.log('Hit an error status: ${grpc.Code[code]}');
-      if (msg) {
-        console.log('message: ${msg}');
-      }
-      trailers.forEach(trailer => {
-        console.log('with the trailer ${trailer}: ${trailers.get(trailer)}');
-      });
-    }
-  }
+  private onEnd(code: grpc.Code, msg: string | undefined, trailers: grpc.Metadata, endMessage: String): void {
+    if (code == grpc.Code.OK) {
+      console.log(endMessage);
+    } else {
+      console.log('Hit an error status: ${grpc.Code[code]}');
+      if (msg) {
+        console.log('message: ${msg}');
+      }
+      trailers.forEach(trailer => {
+        console.log('with the trailer ${trailer}: ${trailers.get(trailer)}');
+      });
+    }
+  }
 }
 ```
 Здесь:
@@ -146,109 +145,109 @@ export class CountryService {
 Теперь приведём использованные модели, файлы которых разместим в папке **src/app/models**.
 ```ts
 import { ActionResultModel } from "./actionResultModel";
-import { CountryCreationModel } from "./countryCreationModel";  
+import { CountryCreationModel } from "./countryCreationModel";
 
 export class UploadResultModel extends ActionResultModel {
-  payload!: CountryCreationModel[];
-  isProcessing!: boolean;
+  payload!: CountryCreationModel[];
+  isProcessing!: boolean;
 }
 ```
 ```ts
 export class ActionResultModel {
-  success!: boolean;
-  errorMessage!: String;
+  success!: boolean;
+  errorMessage!: String;
 }
 ```
 ```ts
 export class CountryModel {
-  id!: number;
-  name!: String;
-  description!: String;
-  capitalCity!: String;
-  anthem!: String;
-  languages!: String[];
-  flagUri!: String;
+  id!: number;
+  name!: String;
+  description!: String;
+  capitalCity!: String;
+  anthem!: String;
+  languages!: String[];
+  flagUri!: String;
 }
 ```
 ```ts
 export class CountryUpdateModel {
-  id!: number;
-  description!: string;
+  id!: number;
+  description!: string;
 }
 ```
 Для `CountryCreationModel` нам потребуется ещё одна библиотека, `ts-json-object`. Эта библиотека позволяет добавлять аннотации к объявлению свойств класса с данными, например, пометить свойство как обязательное. При этом, если свойство не будет заполнено, возникнет исключение.
 Чтобы всё работало, ваш класс должен быть унаследован от класса `JSONObject`, который также предоставляет конструктор, в который можно передать объект анонимного класса, из которого будут заполнены свойства.
 Вот класс `countryCreationModel` с аннотированными свойствами.
 ```ts
-import { JSONObject } from "ts-json-object"  
+import { JSONObject } from "ts-json-object"
 
 export class CountryCreationModel extends JSONObject {
-  @JSONObject.required
-  name!: string;  
+  @JSONObject.required
+  name!: string;
 
-  @JSONObject.required
-  description!: string;  
+  @JSONObject.required
+  description!: string;
 
-  @JSONObject.required
-  capitalCity!: string;  
+  @JSONObject.required
+  capitalCity!: string;
 
-  @JSONObject.required
-  anthem!: string;  
+  @JSONObject.required
+  anthem!: string;
 
-  @JSONObject.required
-  flagUri!: string;  
+  @JSONObject.required
+  flagUri!: string;
 
-  @JSONObject.required
-  languages!: number[];
+  @JSONObject.required
+  languages!: number[];
 }
 ```
 В завершение раздела приведём код мапперов `CountryCreationMapper` и `CountryReplyMapper`.
 ```ts
 import { CountriesCreationRequest, CountryCreationRequest } from "../generated/country.shared_pb";
-import { CountryCreationModel } from "../models/countryCreationModel";  
+import { CountryCreationModel } from "../models/countryCreationModel";
 
 export class CountryCreationModelMapper {
-    public static Map(countryCreationRequest: CountryCreationRequest, countryCreationModel: CountryCreationModel) {
-        if(!countryCreationModel)
-            return;  
+    public static Map(countryCreationRequest: CountryCreationRequest, countryCreationModel: CountryCreationModel) {
+        if(!countryCreationModel)
+            return;
 
-        countryCreationRequest.setName(countryCreationModel.name);
-        countryCreationRequest.setDescription(countryCreationModel.description);
-        countryCreationRequest.setAnthem(countryCreationModel.anthem);
-        countryCreationRequest.setCapitalcity(countryCreationModel.capitalCity);
-        countryCreationRequest.setFlaguri(countryCreationModel.flagUri);
-        countryCreationRequest.setLanguagesList(countryCreationModel.languages);
-    }  
+        countryCreationRequest.setName(countryCreationModel.name);
+        countryCreationRequest.setDescription(countryCreationModel.description);
+        countryCreationRequest.setAnthem(countryCreationModel.anthem);
+        countryCreationRequest.setCapitalcity(countryCreationModel.capitalCity);
+        countryCreationRequest.setFlaguri(countryCreationModel.flagUri);
+        countryCreationRequest.setLanguagesList(countryCreationModel.languages);
+    }
 
-    public static Maps(countriesCreationRequest: CountriesCreationRequest, countriesCreationModel: CountryCreationModel[]) {
-        if(!countriesCreationModel)
-            return;  
+    public static Maps(countriesCreationRequest: CountriesCreationRequest, countriesCreationModel: CountryCreationModel[]) {
+        if(!countriesCreationModel)
+            return;
 
-        countriesCreationModel.map(x => {
-            let countryCreationRequest = new CountryCreationRequest();
-            CountryCreationModelMapper.Map(countryCreationRequest, x);
-            countriesCreationRequest.addCountries(countryCreationRequest);
-        });
-    }
+        countriesCreationModel.map(x => {
+            let countryCreationRequest = new CountryCreationRequest();
+            CountryCreationModelMapper.Map(countryCreationRequest, x);
+            countriesCreationRequest.addCountries(countryCreationRequest);
+        });
+    }
 }
 ```
 ```ts
 import { CountryReply } from "../generated/country.shared_pb";
-import { CountryModel } from "../models/countryModel";  
+import { CountryModel } from "../models/countryModel";
 
 export class CountryReplyMapper {
-    public static Map(country: CountryModel, countryReply: CountryReply.AsObject) {
-        if(country == null || countryReply == null)
-            return;  
+    public static Map(country: CountryModel, countryReply: CountryReply.AsObject) {
+        if(country == null || countryReply == null)
+            return;
 
-        country.id = countryReply.id;
-        country.name = countryReply.name;
-        country.description = countryReply.description;
-        country.capitalCity = countryReply.capitalcity;
-        country.flagUri = countryReply.flaguri;
-        country.anthem = countryReply.anthem;
-        country.languages = countryReply.languagesList;
-    }
+        country.id = countryReply.id;
+        country.name = countryReply.name;
+        country.description = countryReply.description;
+        country.capitalCity = countryReply.capitalcity;
+        country.flagUri = countryReply.flaguri;
+        country.anthem = countryReply.anthem;
+        country.languages = countryReply.languagesList;
+    }
 }
 ```
 
