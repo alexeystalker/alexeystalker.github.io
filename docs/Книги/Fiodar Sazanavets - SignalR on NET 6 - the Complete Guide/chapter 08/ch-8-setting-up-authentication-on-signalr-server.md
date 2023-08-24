@@ -2,7 +2,7 @@
 share: true
 tags:
  - NET/SignalR
- - security
+ - security/OIDC
  - NET/authentication
 ---
 # Настраиваем аутентификацию на сервере
