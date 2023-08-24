@@ -27,6 +27,7 @@ Obsidian индексирует все заметки в хранилище, ч�
 - [[obsidian-book-search-plugin|Book search]]
 - [[obsidian-local-images-plus-plugin|Local Images Plus]]
 - [[obsidian-smart-typography-plugin|Smart Typography]]
+- [[obsidian-commander-plugin|Commander]]
 
 
 [^1]: вернее, особого диалекта markdown
