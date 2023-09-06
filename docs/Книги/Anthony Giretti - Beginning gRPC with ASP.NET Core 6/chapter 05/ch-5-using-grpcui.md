@@ -1,14 +1,14 @@
 ---
 share: true
 aliases:
- - gRPCUi
+ - gRPCui
 tags:
- - gRPC/gRPCUi
+ - gRPC/gRPCui
  - gRPC/testing
 ---
-# gRPCUi
+# gRPCui
 
-gRPCUi — это инструмент, схожий по возможностям с [[ch-5-using-grpcurl|gRPCurl]], но обладающий собственным UI, похожим на Swagger.
+gRPCui — это инструмент, схожий по возможностям с [[ch-5-using-grpcurl|gRPCurl]], но обладающий собственным UI, похожим на Swagger.
 Чтобы установить его, выполним команду[^1]
 ```bash
 go install github.com/fullstorydev/grpcui/cmd/grpcui@latest
@@ -22,7 +22,7 @@ grpcui localhost:%тут порт приложения%
 gRPC Web UI available at http://127.0.0.1:51966/
 ```
 и автоматически откроет его в браузере по умолчанию
-![[Pasted image 20230401114542.png]]
+![[Pasted image 20230401114542.png|Pasted image 20230401114542.png]]
 В UI можно задавать параметры вызова (если необходимо) и выполнять запросы. При этом в ответе будут показаны заголовки ответа, данные, и затем [[ch-3-trailers|трейлеры]] ответа.
 
 Подробнее о использовании инструмента можно прочитать в [документации](https://github.com/fullstorydev/grpcui#usage)
