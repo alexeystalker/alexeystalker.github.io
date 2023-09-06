@@ -16,3 +16,5 @@ share: true
 - 11.12.22 Начинаю выкладывать конспект книги [[book-signalr-on-net-6|”SignalR на NET 6 - полное руководство”]] за авторством (не знаю, как это правильно записать на русском языке) Fiodar Sazanavets. 
 - 05.03.23 Закончил конспект [[book-signalr-on-net-6|”SignalR на NET 6 - полное руководство”]]
 - 06.04.23 Начинаю выкладывать [[book-beginning-grpc-with-asp-net-core-6|“Начала использования gRPC с ASP.NET Core 6”]] за авторством Anthony Giretti.
+- 24.08.23 Написал [[obsidian-advanced-file-creation|заметку]] о том, как сделать создание файлов из шаблона с вводом пользовательских данных в модальных окнах.
+- 06.09.23 Закончил конспект книги [[book-beginning-grpc-with-asp-net-core-6|“Начала использования gRPC с ASP.NET Core 6”]]
