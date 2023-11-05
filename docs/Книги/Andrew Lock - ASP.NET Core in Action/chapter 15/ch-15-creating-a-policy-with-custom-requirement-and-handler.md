@@ -6,11 +6,11 @@ tags:
  - security
 ---
 # Создание политики со специальным требованием и обработчиком
-Рассмотрим реализацию [[ch-15-creating-custom-policies|политики]] `"CanAccessLounge"`. (Составляющие политики - на рисунке)
-![[Pasted image 20220621191024.png]]
+Рассмотрим реализацию [[./ch-15-creating-custom-policies|политики]] `"CanAccessLounge"`. (Составляющие политики - на рисунке)
+![[../../../images/Pasted image 20220621191024.png|Pasted image 20220621191024.png]]
 ## Создание IAuthorizationRequirement для представления требования
 В терминах ASP.NET Core требование — это любой класс, реализующий интерфейс `IAuthorizationRequirement`. Это интерфейс-маркер, не имеющий методов.
-Обычно, требования — это просто POCO-классы. Например, `AllowedInLoungeRequirement` может вообще не иметь методов или свойств:
+Обычно, требования — это просто [[../../../Определения/poco-class|POCO]]-классы. Например, `AllowedInLoungeRequirement` может вообще не иметь методов или свойств:
 ```csharp
 public class AllowedInLoungeRequirement : IAuthorizationRequirement { }
 ```
@@ -80,7 +80,7 @@ public class FrequentFlyerHandler : AuthorizationHandler<AllowedInLoungeRequirem
 }
 ```
 В случае успеха обработчик помечает требование как успешно выполненное, вызывая метод `context.Succeed()` и передавая требование в качестве аргумента. Если у пользователя *нет* утверждения — обработчик ничего не делает.
-Такое поведение необходимо для реализации [[ch-15-the-building-blocks-of-policy|OR логики]] при композиции обработчиков.
+Такое поведение необходимо для реализации [[./ch-15-the-building-blocks-of-policy|OR логики]] при композиции обработчиков.
 Вот еще один обработчик для `AllowedInLoungeRequirement`:
 ```csharp
 public class IsAirlineEmployeeHandler : AuthorizationHandler<AllowedInLoungeRequirement>

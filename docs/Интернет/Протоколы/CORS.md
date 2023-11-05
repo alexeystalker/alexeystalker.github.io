@@ -15,4 +15,4 @@ tags:
 ## Ссылки
 [Спецификация](https://fetch.spec.whatwg.org/#http-cors-protocol)
 [Описание на developer.mozilla.org](https://developer.mozilla.org/ru/docs/Web/HTTP/CORS)
-[[ch-18-calling-web-apis-from-other-domains-using-cors|Раздел из книги Э. Лока, посвящённый настройке CORS в ASP.NET Core]]
+[[../../Книги/Andrew Lock - ASP.NET Core in Action/chapter 18/ch-18-calling-web-apis-from-other-domains-using-cors|Раздел из книги Э. Лока, посвящённый настройке CORS в ASP.NET Core]]

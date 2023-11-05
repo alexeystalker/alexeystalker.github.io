@@ -26,4 +26,4 @@ share: true
 - Обратные ссылки (в идеале - некий список карточек, ссылающихся на открытую карточку)
 
 ## Ссылки
-https://obsidianmkdocs.github.io/obsidian_mkdocs_publisher_docs/
+https://obsidian-publisher.netlify.app/
