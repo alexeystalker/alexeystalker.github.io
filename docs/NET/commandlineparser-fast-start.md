@@ -22,7 +22,7 @@ namespace GetStartedSample
   }
 }
 ```
-`Options` — POCO класс, размеченный примерно так:
+`Options` — [[../Определения/poco-class|POCO]] класс, размеченный примерно так:
 ```csharp
 [Option('o',"option",HelpText = "Help text for option")]
 public string Option { get; set; }
@@ -39,6 +39,6 @@ static int Main(string[] args) =>
 ```
 
 ## Ссылки
-[[library-commandlineparser|Библиотека CommandLineParser]]
+[[./libraries/library-commandlineparser|Библиотека CommandLineParser]]
 https://github.com/commandlineparser/commandline/wiki/Getting-Started
 https://github.com/commandlineparser/commandline/wiki/Verbs
