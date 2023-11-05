@@ -11,4 +11,4 @@ tags:
 #### [[./ch-7-using-layouts-for-shared-markup|Использование макетов для общей разметки]]
 #### [[./ch-7-overriding-parent-layouts-using-sections|Переопределение родительских макетов с помощью секций]]
 #### [[./ch-7-using-partial-views-to-encapsulate-markups|Использование частичных представлений для инкапсуляции разметки]]
-#### [[./Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports|Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports]]
+#### [[./ch-7-running-code-with-viewstart-and-viewimports|Выполнение кода в каждом представлении с помощью _ViewStart и _ViewImports]]

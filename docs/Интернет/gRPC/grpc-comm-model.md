@@ -8,7 +8,7 @@ share: true
 # gRPC (Remote Procedure Call от Google)
 gRPC — фреймворк для написания многоязычных клиентов и серверов 
 Представляет собой двоичный протокол на основе сообщений.
-В gRPC API описывается с помощью IDL на основе Protocol Buffers — многоязычного механизма сериализации структурированных данных от Google. Компилятор Protocol Buffer генерирует клиентские заглушки и серверные каркасы. Клиент и сервер обмениваются сообщениями в формате [[../../Книги/Anthony Giretti - Beginning gRPC with ASP.NET Core 6/chapter 04/ch-4-protobufs|Protocol Buffers]], используя [[../Протоколы/HTTP/2|HTTP/2]].
+В gRPC API описывается с помощью IDL на основе Protocol Buffers — многоязычного механизма сериализации структурированных данных от Google. Компилятор Protocol Buffer генерирует клиентские заглушки и серверные каркасы. Клиент и сервер обмениваются сообщениями в формате [[../../Книги/Anthony Giretti - Beginning gRPC with ASP.NET Core 6/chapter 04/ch-4-protobufs|Protocol Buffers]], используя [[../Протоколы/http-2|HTTP/2]].
 gRPC API поддерживает следующие подвиды [[../../Microservices/Messages/request-response-messaging|коммуникации “запрос-ответ”]]:
 - [[./grpc-unary-call|унарный вызов]] — одно сообщение запроса, одно сообщение ответа;
 - [[./grpc-client-streaming-call|клиентский поток]] — клиент отправляет поток сообщений одной структуры, сервер обрабатывает его и возвращает результат;
