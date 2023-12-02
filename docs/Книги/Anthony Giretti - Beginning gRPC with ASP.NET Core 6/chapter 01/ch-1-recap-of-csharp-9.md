@@ -30,7 +30,7 @@ var product = new Product {Name = "VideoGame", CategoryId = 1};
 var anotherProduct = new Product {Name = "VideoGame", CategoryId = 1};
 product.Equals(anotherProduct); //вернёт true
 ```
-В целом, record полезен при определении *DTO (Data Transfert Object)*, так как обеспечивает неизменяемость и сравнение по значению из коробки.
+В целом, record полезен при определении [[../../../Определения/data-transfer-object|DTO]], так как обеспечивает неизменяемость и сравнение по значению из коробки.
 ## Улучшенный pattern matching
 Pattern matching улучшился настолько, что позволяет использовать операции сравнения, а также булевы операторы `and`, `or` и `not`, а также комбинировать их.
 ```csharp
